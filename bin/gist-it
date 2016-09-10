@@ -1,0 +1,25 @@
+#!/usr/bin/env zsh
+
+DIR=$1
+DESC_FILE=$DIR/.description
+ID_FILE=$DIR/.id
+
+[[ $DIR ]] || { echo "Usage: $0 [dir]"; exit 1 }
+[[ -e $DESC_FILE ]] || { echo "Missing description $DESC_FILE"; exit 1 }
+
+DESC=`cat $DESC_FILE 2> /dev/null`
+ID=`cat $ID_FILE 2> /dev/null`
+
+setopt extendedglob
+
+if [[ $ID ]]; then
+  URL=`gist -d"$DESC" -u"$ID" $DIR/^.*`
+  echo "Updated: $URL"
+  echo "bl.ocks: https://bl.ocks.org/esturcke/$ID"
+else
+  URL=`gist -d"$DESC" $DIR/^.*`
+  ID=`echo $URL | cut -d/ -f4`
+  echo $ID > $ID_FILE
+  echo "Created: $URL"
+  echo "bl.ocks: https://bl.ocks.org/esturcke/$ID"
+fi
