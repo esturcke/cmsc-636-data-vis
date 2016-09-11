@@ -1,0 +1,19 @@
+{
+  "name": "cmsc-636-data-vis",
+  "version": "1.0.0",
+  "description": "CMSC 636 Data Visualization",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esturcke/cmsc-636-data-vis.git"
+  },
+  "author": "Erik J. Sturcke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esturcke/cmsc-636-data-vis/issues"
+  },
+  "homepage": "https://github.com/esturcke/cmsc-636-data-vis#readme"
+}
