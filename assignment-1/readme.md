@@ -12,7 +12,7 @@
 
 ## Part 2: Visualizations
 
-### Vis 1
+### [Vis 1](https://bl.ocks.org/esturcke/510d67c32b5949e55aaee750a6534113)
 
 ... [ steps to produce your images ]
 
