@@ -26,7 +26,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822611,FEMALE,13.0,5 to 14,9.0,1521,2010-05-26,NSFINJ,2387119757,2014-07-25,PC-OUTPT,Physical Therapist (Independent Practice),-NA-,"Orthopedics (BLA, BEA, BEF, BEZ, BEB, BEE, BEC, BED, BLB)",0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822263,FEMALE,25.0,25 to 34,27.0,-548,2012-09-12,NSFINJ,1271626971,2011-03-14,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,UN,-2023,617,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822763,MALE,30.0,25 to 34,25.0,1474,2010-06-14,VCODE,2253221337,2014-06-27,DC-OUTPT,"Specialist/Technologist, Other",4,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822599,FEMALE,50.0,45 to 64,48.0,855,2011-11-09,NSFINJ,2247272741,2014-03-13,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1864,1343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822599,FEMALE,50.0,45 to 64,48.0,855,2011-11-09,NSFINJ,2247272741,2014-03-13,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1864,1343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822355,MALE,71.0,65 and over,72.0,-394,2013-07-19,NSFINJ,1761512757,2012-06-20,PC-OUTPT,Physical Therapist (Independent Practice),-NA-,"Orthopedics (BLA, BEA, BEF, BEZ, BEB, BEE, BEC, BED, BLB)",0,UN,-2418,217,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822871,MALE,56.0,45 to 64,61.0,-1676,2014-09-11,NSFINJ,945375858,2010-02-08,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822536,FEMALE,36.0,35 to 44,39.0,-1033,2012-01-31,NSFINJ,681604625,2009-04-03,DC-OUTPT,Psychiatry & Neurology: Psychiatry,0,No valid match found.  Defaulted,0,UN,-1195,864,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
@@ -75,7 +75,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822102,MALE,31.0,25 to 34,31.0,11,2011-10-14,VCODE,1451621818,2011-10-25,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,20.0,18 to 24,24.0,-1673,2013-10-15,VCODE,652262110,2009-03-17,DC-OUTPT,"Specialist/Technologist, Other",0,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
 3822416,MALE,75.0,65 and over,78.0,-1047,2014-02-28,NSFINJ,1316230548,2011-04-18,PC-OUTPT,Clinic or other group practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2671,526,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822871,MALE,54.0,45 to 64,61.0,-2421,2014-09-11,NSFINJ,344364823,2008-01-25,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+3822871,MALE,54.0,45 to 64,61.0,-2421,2014-09-11,NSFINJ,344364823,2008-01-25,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
 3822599,FEMALE,47.0,45 to 64,48.0,-397,2011-11-09,NSFINJ,1148701762,2010-10-08,PC-OUTPT,Cardiovascular Disease,-NA-,"Internal Medicine Subspecialty (BAG, BAC, BAL, BAK, BAB, BAN, BAQ, BAS, BAM, BAF, BAJ, BAO, BAH, BAE, BAU, BAT, BAV)",0,UN,-1864,1343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822416,MALE,76.0,65 and over,78.0,-478,2014-02-28,NSFINJ,1855722780,2012-11-07,PC-OUTPT,Physical Therapist (Independent Practice),-NA-,"Orthopedics (BLA, BEA, BEF, BEZ, BEB, BEE, BEC, BED, BLB)",0,UN,-2671,526,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 3822546,MALE,54.0,45 to 64,52.0,755,2012-07-06,NSFINJ,2298137441,2014-07-31,DC-OUTPT,Nurse Practitioner: Primary Care,2,No valid match found.  Defaulted,0,UN,-2062,1176,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -169,7 +169,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822670,MALE,32.0,25 to 34,33.0,-674,2011-06-22,NSFINJ,781772036,2009-08-17,DC-OUTPT,Registered Nurse,0,No valid match found.  Defaulted,0,UN,-795,1227,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822241,MALE,34.0,25 to 34,36.0,-638,2012-07-17,VCODE,1142967474,2010-10-18,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,N,-1426,757,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822163,FEMALE,32.0,25 to 34,35.0,-1161,2015-01-20,NSFINJ,1480745147,2011-11-16,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,UN,-3007,223,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822986,FEMALE,51.0,45 to 64,56.0,-1649,2015-03-27,NSFINJ,1132914381,2010-09-20,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+3822986,FEMALE,51.0,45 to 64,56.0,-1649,2015-03-27,NSFINJ,1132914381,2010-09-20,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
 3822767,MALE,21.0,18 to 24,27.0,-2116,2013-03-22,VCODE,171457758,2007-06-06,DC-OUTPT,Preventative Medicine: Aerospace Medicine,0,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822762,MALE,0.0,0 to 4,2.0,-908,2012-02-11,NSFINJ,787856174,2009-08-17,PC-OUTPT,Pediatrics,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-918,987,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,20.0,18 to 24,24.0,-1706,2013-10-15,VCODE,628388396,2009-02-12,DC-OUTPT,Otolaryngology,0,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -177,7 +177,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822264,FEMALE,4.0,0 to 4,4.0,0,2012-09-12,NSFINJ,1768457586,2012-09-12,PC-INPT,No valid match found.  Defaulted,-NA-,No valid match found.  Defaulted,1,UN,-1791,963,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 3822611,FEMALE,12.0,5 to 14,9.0,1007,2010-05-26,NSFINJ,1876987456,2013-02-26,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822077,MALE,46.0,45 to 64,53.0,-2470,2015-01-13,NSFINJ,394290914,2008-04-09,DC-OUTPT,Internal Medicine: Gastroenterology,0,No valid match found.  Defaulted,0,UN,-2960,196,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822668,MALE,1.0,0 to 4,0.0,94,2010-09-26,NSFINJ,1211845672,2010-12-29,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-338,1832,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822668,MALE,1.0,0 to 4,0.0,94,2010-09-26,NSFINJ,1211845672,2010-12-29,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-338,1832,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822536,FEMALE,36.0,35 to 44,39.0,-816,2012-01-31,NSFINJ,857287790,2009-11-06,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-1195,864,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822986,FEMALE,48.0,45 to 64,56.0,-2632,2015-03-27,NSFINJ,340516518,2008-01-11,PC-OUTPT,Clinic or other group practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,27.0,25 to 34,31.0,-1131,2015-07-24,NSFINJ,1625892701,2012-06-18,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,UN,-2515,75,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
@@ -214,7 +214,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822102,MALE,32.0,25 to 34,31.0,187,2011-10-14,VCODE,1604293251,2012-04-18,PC-OUTPT,Radiology,-NA-,Radiology,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382269,FEMALE,25.0,25 to 34,22.0,836,2012-03-18,NSFINJ,2343838963,2014-07-02,PC-OUTPT,Obstetrics/Gynecology,-NA-,"Obstetrics/Gynecology (BCC, BCB, BCD, BCA)",0,UN,-152,1304,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,14.0,5 to 14,9.0,1832,2010-05-26,NSFINJ,2676256883,2015-06-01,PC-OUTPT,Nurse Practitioner,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822536,FEMALE,39.0,35 to 44,39.0,149,2012-01-31,NSFINJ,1744275825,2012-06-28,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1195,864,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822536,FEMALE,39.0,35 to 44,39.0,149,2012-01-31,NSFINJ,1744275825,2012-06-28,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1195,864,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,31.0,25 to 34,31.0,21,2011-10-14,VCODE,1478228566,2011-11-04,DC-OUTPT,Psychologist: Clinical,2,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,31.0,25 to 34,31.0,-52,2011-10-14,VCODE,1398235464,2011-08-23,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822763,MALE,29.0,25 to 34,25.0,1228,2010-06-14,VCODE,2042988983,2013-10-24,DC-OUTPT,Physical Therapist,2,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -781,7 +781,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822164,MALE,32.0,25 to 34,36.0,-1252,2013-07-09,NSFINJ,932695023,2010-02-03,DC-OUTPT,Physician Assistant,0,No valid match found.  Defaulted,0,UN,-2302,640,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822077,MALE,46.0,45 to 64,53.0,-2496,2015-01-13,NSFINJ,371555176,2008-03-14,DC-OUTPT,Nurse Practitioner: Primary Care,0,No valid match found.  Defaulted,0,UN,-2960,196,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822453,MALE,12.0,5 to 14,18.0,-2163,2013-04-25,NSFINJ,156454583,2007-05-24,PC-OUTPT,Pharmacy,-NA-,None,0,UN,-2369,844,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822871,MALE,54.0,45 to 64,61.0,-2491,2014-09-11,NSFINJ,294526349,2007-11-16,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822871,MALE,54.0,45 to 64,61.0,-2491,2014-09-11,NSFINJ,294526349,2007-11-16,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822599,FEMALE,43.0,35 to 44,48.0,-1659,2011-11-09,NSFINJ,127762677,2007-04-25,DC-TCON,Physician Assistant,0,No valid match found.  Defaulted,0,UN,-1864,1343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822599,FEMALE,44.0,35 to 44,48.0,-1364,2011-11-09,NSFINJ,357043855,2008-02-14,PC-OUTPT,Nurse Practitioner,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1864,1343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822767,MALE,22.0,18 to 24,27.0,-2011,2013-03-22,VCODE,239679373,2007-09-19,DC-OUTPT,Preventative Medicine: Aerospace Medicine,0,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
@@ -924,7 +924,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822536,FEMALE,35.0,35 to 44,39.0,-1195,2012-01-31,NSFINJ,536258901,2008-10-23,DC-OUTPT,Physician Assistant,0,No valid match found.  Defaulted,0,UN,-1195,864,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822767,MALE,25.0,25 to 34,27.0,-779,2013-03-22,VCODE,1244125309,2011-02-02,DC-OUTPT,General Practice,0,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
 3822108,MALE,25.0,25 to 34,26.0,-560,2014-02-28,NSFINJ,1663833153,2012-08-17,DC-OUTPT,Physician Assistant,2,No valid match found.  Defaulted,0,UN,-1402,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822986,FEMALE,51.0,45 to 64,56.0,-1537,2015-03-27,NSFINJ,1233747840,2011-01-10,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822986,FEMALE,51.0,45 to 64,56.0,-1537,2015-03-27,NSFINJ,1233747840,2011-01-10,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822668,MALE,0.0,0 to 4,0.0,-237,2010-09-26,NSFINJ,930682812,2010-02-01,DC-OUTPT,Pediatrics,0,No valid match found.  Defaulted,0,UN,-338,1832,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,13.0,5 to 14,9.0,1314,2010-05-26,NSFINJ,2122972222,2013-12-30,DC-OUTPT,Pediatrics,1,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822546,MALE,54.0,45 to 64,52.0,964,2012-07-06,NSFINJ,2488424856,2015-02-25,DC-OUTPT,Registered Nurse,0,No valid match found.  Defaulted,0,UN,-2062,1176,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -999,7 +999,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 382268,MALE,25.0,25 to 34,24.0,209,2013-10-15,VCODE,2230196835,2014-05-12,DC-OUTPT,Registered Nurse: Case Management,3,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822164,MALE,37.0,35 to 44,36.0,378,2013-07-09,NSFINJ,2296414122,2014-07-22,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,UN,-2302,640,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,26.0,25 to 34,24.0,429,2013-10-15,VCODE,2418151957,2014-12-18,DC-OUTPT,Registered Nurse: Case Management,1,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822102,MALE,32.0,25 to 34,31.0,137,2011-10-14,VCODE,1733020470,2012-02-28,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822102,MALE,32.0,25 to 34,31.0,137,2011-10-14,VCODE,1733020470,2012-02-28,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822268,MALE,41.0,35 to 44,42.0,-345,2013-06-27,NSFINJ,1643105261,2012-07-17,PC-OUTPT,Certified Clinical Social Worker,-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-2036,772,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,24.0,18 to 24,24.0,-4,2013-10-15,VCODE,2043185246,2013-10-11,DC-TCON,Family Medicine,0,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822046,MALE,7.0,5 to 14,3.0,1307,2011-04-10,NSFINJ,2425231893,2014-11-07,PC-OUTPT,Pediatrics,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1298,1404,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1020,7 +1020,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822280,MALE,26.0,25 to 34,26.0,21,2011-05-02,VCODE,1325120038,2011-05-23,DC-OUTPT,Counselor: Addiction (Substance Use Disorder),4,No valid match found.  Defaulted,0,UN,-1636,1437,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822763,MALE,29.0,25 to 34,25.0,1233,2010-06-14,VCODE,2048774753,2013-10-29,DC-OUTPT,Orthopaedic Surgery,1,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822280,MALE,22.0,18 to 24,26.0,-1630,2011-05-02,VCODE,42413364,2006-11-14,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-1636,1437,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-382268,MALE,25.0,25 to 34,24.0,135,2013-10-15,VCODE,2261613662,2014-02-27,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+382268,MALE,25.0,25 to 34,24.0,135,2013-10-15,VCODE,2261613662,2014-02-27,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822599,FEMALE,43.0,35 to 44,48.0,-1703,2011-11-09,NSFINJ,105072019,2007-03-12,DC-OUTPT,General Practice,0,No valid match found.  Defaulted,0,UN,-1864,1343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,25.0,25 to 34,24.0,337,2013-10-15,VCODE,2365026555,2014-09-17,DC-OUTPT,Family Medicine,0,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822264,FEMALE,0.0,0 to 4,4.0,-1595,2012-09-12,NSFINJ,422889169,2008-05-01,PC-OUTPT,Neurosurgery,-NA-,"Surgical Subspecialty (BBI, BBG, BBC, BBK, BBJ, BBH, BBB, BBZ, BBE)",0,UN,-1791,963,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1184,7 +1184,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822268,MALE,39.0,35 to 44,42.0,-1021,2013-06-27,NSFINJ,1120045404,2010-09-10,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2036,772,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822663,FEMALE,26.0,25 to 34,26.0,-7,2011-06-20,NSFINJ,1357371145,2011-06-13,PC-OUTPT,Pharmacy,-NA-,None,0,UN,-1216,717,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822767,MALE,30.0,25 to 34,27.0,913,2013-03-22,VCODE,2670439473,2015-09-21,DC-TCON,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822286,MALE,21.0,18 to 24,15.0,1898,2009-10-26,NSFINJ,2493843697,2015-01-06,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1061,2101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822286,MALE,21.0,18 to 24,15.0,1898,2009-10-26,NSFINJ,2493843697,2015-01-06,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1061,2101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,21.0,18 to 24,24.0,-1281,2013-10-15,VCODE,983194359,2010-04-13,DC-OUTPT,Physician Assistant,0,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822280,MALE,25.0,25 to 34,26.0,-515,2011-05-02,VCODE,882932250,2009-12-03,DC-OUTPT,Nurse Practitioner: Primary Care,0,No valid match found.  Defaulted,0,UN,-1636,1437,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,14.0,5 to 14,9.0,1755,2010-05-26,NSFINJ,2559631356,2015-03-16,PC-OUTPT,Clinical Psychologist (Billing Independently),-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-1318,1955,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
@@ -1225,7 +1225,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822530,FEMALE,27.0,25 to 34,31.0,-1359,2015-07-24,NSFINJ,1480738056,2011-11-03,DC-OUTPT,Orthopaedic Surgery,1,No valid match found.  Defaulted,0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822871,MALE,59.0,45 to 64,61.0,-703,2014-09-11,NSFINJ,1785389566,2012-10-08,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,9.0,5 to 14,9.0,34,2010-05-26,NSFINJ,1035064164,2010-06-29,DC-OUTPT,Registered Nurse,0,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822670,MALE,36.0,35 to 44,33.0,1096,2011-06-22,NSFINJ,2367995894,2014-06-22,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-795,1227,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822670,MALE,36.0,35 to 44,33.0,1096,2011-06-22,NSFINJ,2367995894,2014-06-22,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-795,1227,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,8.0,5 to 14,9.0,-553,2010-05-26,NSFINJ,558757076,2008-11-19,DC-OUTPT,Pediatrics,0,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,12.0,5 to 14,9.0,897,2010-05-26,NSFINJ,1765015005,2012-11-08,DC-OUTPT,Pediatrics,1,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,24.0,18 to 24,31.0,-2295,2015-07-24,NSFINJ,681999327,2009-04-11,PC-INPT,No valid match found.  Defaulted,-NA-,No valid match found.  Defaulted,0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1269,7 +1269,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822663,FEMALE,27.0,25 to 34,26.0,121,2011-06-20,NSFINJ,1476524116,2011-10-19,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1216,717,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 3822611,FEMALE,15.0,15 to 17,9.0,1944,2010-05-26,NSFINJ,2670477215,2015-09-21,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,9.0,5 to 14,9.0,-19,2010-05-26,NSFINJ,1010737064,2010-05-07,DC-OUTPT,Registered Nurse,0,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822530,FEMALE,31.0,25 to 34,31.0,0,2015-07-24,NSFINJ,2678786324,2015-07-24,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),1,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+3822530,FEMALE,31.0,25 to 34,31.0,0,2015-07-24,NSFINJ,2678786324,2015-07-24,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),1,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 3822268,MALE,37.0,35 to 44,42.0,-1806,2013-06-27,NSFINJ,471387281,2008-07-17,PC-OUTPT,Pharmacy,-NA-,None,0,UN,-2036,772,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822646,MALE,6.0,5 to 14,7.0,-57,2012-05-12,NSFINJ,1730921725,2012-03-16,PC-OUTPT,Certified Clinical Social Worker,-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-1207,765,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
 3822794,MALE,26.0,25 to 34,28.0,-879,2012-08-10,NSFINJ,957073770,2010-03-15,DC-OUTPT,Psychologist: Clinical,0,No valid match found.  Defaulted,0,UN,-2131,1126,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0
@@ -1295,7 +1295,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822102,MALE,31.0,25 to 34,31.0,97,2011-10-14,VCODE,1526184958,2012-01-19,DC-TCON,Family Medicine,1,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,14.0,5 to 14,9.0,1721,2010-05-26,NSFINJ,2417443781,2015-02-10,DC-OUTPT,Physician Assistant,0,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,31.0,25 to 34,31.0,52,2011-10-14,VCODE,1502650501,2011-12-05,DC-OUTPT,Orthopaedic Surgery,1,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822046,MALE,6.0,5 to 14,3.0,1132,2011-04-10,NSFINJ,2306725497,2014-05-16,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1298,1404,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822046,MALE,6.0,5 to 14,3.0,1132,2011-04-10,NSFINJ,2306725497,2014-05-16,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1298,1404,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822268,MALE,42.0,35 to 44,42.0,-212,2013-06-27,NSFINJ,1824458935,2012-11-27,PC-OUTPT,Clinical Psychologist (Billing Independently),-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-2036,772,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
 3822763,MALE,29.0,25 to 34,25.0,1367,2010-06-14,VCODE,2177146818,2014-03-12,DC-OUTPT,"Specialist/Technologist, Other",4,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,14.0,5 to 14,9.0,1622,2010-05-26,NSFINJ,2475191103,2014-11-03,PC-OUTPT,Mental Health Counselor,-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-1318,1955,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
@@ -1343,7 +1343,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822611,FEMALE,12.0,5 to 14,9.0,1184,2010-05-26,NSFINJ,1990762573,2013-08-22,DC-OUTPT,Pediatrics,0,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822333,FEMALE,16.0,15 to 17,20.0,-1472,2012-06-25,NSFINJ,459524251,2008-06-14,PC-OUTPT,"Facility charges - use for facility charges for outpatient services, (e.g.,ambulatory surgery, hospital services)",-NA-,Emergency Room (BIA),0,UN,-1998,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,31.0,25 to 34,31.0,-197,2011-10-14,VCODE,1269553930,2011-03-31,DC-OUTPT,Occupational Therapist,2,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
-3822530,FEMALE,30.0,25 to 34,31.0,-62,2015-07-24,NSFINJ,2626553424,2015-05-23,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+3822530,FEMALE,30.0,25 to 34,31.0,-62,2015-07-24,NSFINJ,2626553424,2015-05-23,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
 3822108,MALE,24.0,18 to 24,26.0,-687,2014-02-28,NSFINJ,1587398480,2012-04-12,DC-OUTPT,Psychiatry & Neurology: Psychiatry,1,No valid match found.  Defaulted,0,UN,-1402,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822668,MALE,1.0,0 to 4,0.0,115,2010-09-26,NSFINJ,1219469054,2011-01-19,DC-OUTPT,Nurse Practitioner: Pediatrics,2,No valid match found.  Defaulted,0,UN,-338,1832,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822108,MALE,25.0,25 to 34,26.0,-522,2014-02-28,NSFINJ,1775207956,2012-09-24,PC-OUTPT,Certified Clinical Social Worker,-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-1402,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
@@ -1475,7 +1475,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822364,MALE,67.0,65 and over,72.0,-1885,2013-07-27,NSFINJ,435230684,2008-05-29,PC-OUTPT,Orthopedic Surgery,-NA-,"Orthopedics (BLA, BEA, BEF, BEZ, BEB, BEE, BEC, BED, BLB)",0,UN,-2458,751,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822536,FEMALE,39.0,35 to 44,39.0,225,2012-01-31,NSFINJ,1684329464,2012-09-12,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-1195,864,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,13.0,5 to 14,9.0,1217,2010-05-26,NSFINJ,2118686689,2013-09-24,PC-OUTPT,Orthopedic Surgery,-NA-,"Orthopedics (BLA, BEA, BEF, BEZ, BEB, BEE, BEC, BED, BLB)",0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822871,MALE,60.0,45 to 64,61.0,-341,2014-09-11,NSFINJ,2114911398,2013-10-05,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822871,MALE,60.0,45 to 64,61.0,-341,2014-09-11,NSFINJ,2114911398,2013-10-05,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822536,FEMALE,39.0,35 to 44,39.0,160,2012-01-31,NSFINJ,1635586805,2012-07-09,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,UN,-1195,864,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822767,MALE,27.0,25 to 34,27.0,-57,2013-03-22,VCODE,1845191370,2013-01-24,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822164,MALE,37.0,35 to 44,36.0,562,2013-07-09,NSFINJ,2416824646,2015-01-22,DC-OUTPT,Registered Nurse,0,No valid match found.  Defaulted,0,UN,-2302,640,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1540,7 +1540,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822077,MALE,47.0,45 to 64,53.0,-2231,2015-01-13,NSFINJ,580504267,2008-12-04,DC-OUTPT,Internal Medicine: Pulmonary Disease,0,No valid match found.  Defaulted,0,UN,-2960,196,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
 3822077,MALE,46.0,45 to 64,53.0,-2451,2015-01-13,NSFINJ,395061436,2008-04-28,DC-OUTPT,Family Medicine,0,No valid match found.  Defaulted,0,UN,-2960,196,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822646,MALE,4.0,0 to 4,7.0,-1011,2012-05-12,NSFINJ,783869574,2009-08-05,PC-OUTPT,"Otology, Laryngology, Rhinology",-NA-,All other MEPRS codes,0,UN,-1207,765,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822670,MALE,36.0,35 to 44,33.0,1093,2011-06-22,NSFINJ,2367995893,2014-06-19,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-795,1227,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822670,MALE,36.0,35 to 44,33.0,1093,2011-06-22,NSFINJ,2367995893,2014-06-19,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-795,1227,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822333,FEMALE,19.0,18 to 24,20.0,-370,2012-06-25,NSFINJ,1367797696,2011-06-21,PC-OUTPT,"Facility charges - use for facility charges for outpatient services, (e.g.,ambulatory surgery, hospital services)",-NA-,Facility,0,UN,-1998,37,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
 3822767,MALE,24.0,18 to 24,27.0,-1276,2013-03-22,VCODE,803421124,2009-09-23,DC-OUTPT,Physician Assistant,0,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822663,FEMALE,25.0,25 to 34,26.0,-339,2011-06-20,NSFINJ,1068980810,2010-07-16,PC-OUTPT,General Surgery,-NA-,All other MEPRS codes,0,UN,-1216,717,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1588,12 +1588,12 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822286,MALE,15.0,15 to 17,15.0,-83,2009-10-26,NSFINJ,780470830,2009-08-04,DC-OUTPT,Nurse Practitioner: Primary Care,0,No valid match found.  Defaulted,0,UN,-1061,2101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822201,MALE,20.0,18 to 24,16.0,1350,2010-09-23,NSFINJ,2329825400,2014-06-04,PC-OUTPT,General Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1444,1364,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822670,MALE,33.0,25 to 34,33.0,-155,2011-06-22,NSFINJ,1229028968,2011-01-18,PC-OUTPT,Certified Clinical Social Worker,-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-795,1227,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
-3822986,FEMALE,51.0,45 to 64,56.0,-1634,2015-03-27,NSFINJ,1152116970,2010-10-05,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822986,FEMALE,51.0,45 to 64,56.0,-1634,2015-03-27,NSFINJ,1152116970,2010-10-05,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,25.0,25 to 34,31.0,-1864,2015-07-24,NSFINJ,1036787580,2010-06-16,DC-OUTPT,Nurse Practitioner: Primary Care,0,No valid match found.  Defaulted,0,UN,-2515,75,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0
 3822986,FEMALE,50.0,45 to 64,56.0,-2034,2015-03-27,NSFINJ,799549147,2009-08-31,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,30.0,25 to 34,31.0,-193,2015-07-24,NSFINJ,2508431428,2015-01-12,PC-OUTPT,Clinical Psychologist (Billing Independently),-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822763,MALE,25.0,25 to 34,25.0,8,2010-06-14,VCODE,1036027266,2010-06-22,DC-OUTPT,Family Medicine,0,No valid match found.  Defaulted,1,Y,-1289,1914,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
-3822871,MALE,59.0,45 to 64,61.0,-716,2014-09-11,NSFINJ,1788736001,2012-09-25,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+3822871,MALE,59.0,45 to 64,61.0,-716,2014-09-11,NSFINJ,1788736001,2012-09-25,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
 3822599,FEMALE,46.0,45 to 64,48.0,-463,2011-11-09,NSFINJ,1089134265,2010-08-03,DC-OUTPT,Internal Medicine,0,No valid match found.  Defaulted,0,UN,-1864,1343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822871,MALE,58.0,45 to 64,61.0,-973,2014-09-11,NSFINJ,1536103716,2012-01-12,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822164,MALE,33.0,25 to 34,36.0,-1126,2013-07-09,NSFINJ,1036397787,2010-06-09,DC-OUTPT,Physician Assistant,0,No valid match found.  Defaulted,0,UN,-2302,640,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1643,7 +1643,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822663,FEMALE,28.0,25 to 34,26.0,659,2011-06-20,NSFINJ,1946819320,2013-04-09,PC-OUTPT,Pharmacy,-NA-,None,0,UN,-1216,717,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822453,MALE,17.0,15 to 17,18.0,-451,2013-04-25,NSFINJ,1544888960,2012-01-30,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2369,844,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822438,MALE,49.0,45 to 64,48.0,379,2012-04-19,NSFINJ,1980715778,2013-05-03,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,Y,-1961,1203,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
-3822611,FEMALE,11.0,5 to 14,9.0,581,2010-05-26,NSFINJ,1521934446,2011-12-28,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822611,FEMALE,11.0,5 to 14,9.0,581,2010-05-26,NSFINJ,1521934446,2011-12-28,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822364,MALE,71.0,65 and over,72.0,-326,2013-07-27,NSFINJ,1772023070,2012-09-04,PC-OUTPT,Orthopedic Surgery,-NA-,"Orthopedics (BLA, BEA, BEF, BEZ, BEB, BEE, BEC, BED, BLB)",0,UN,-2458,751,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822164,MALE,38.0,35 to 44,36.0,639,2013-07-09,NSFINJ,2514649275,2015-04-09,DC-OUTPT,Registered Nurse,0,No valid match found.  Defaulted,0,UN,-2302,640,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822763,MALE,29.0,25 to 34,25.0,1388,2010-06-14,VCODE,2204274286,2014-04-02,DC-OUTPT,"Specialist/Technologist, Other",4,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1729,7 +1729,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822871,MALE,57.0,45 to 64,61.0,-1281,2014-09-11,NSFINJ,1288300754,2011-03-10,PC-OUTPT,Ophthalmology,-NA-,"Optometry (BHC, BBD)",0,UN,-2900,340,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0
 3822599,FEMALE,47.0,45 to 64,48.0,-138,2011-11-09,NSFINJ,1366128960,2011-06-24,PC-OUTPT,Cardiovascular Disease,-NA-,"Internal Medicine Subspecialty (BAG, BAC, BAL, BAK, BAB, BAN, BAQ, BAS, BAM, BAF, BAJ, BAO, BAH, BAE, BAU, BAT, BAV)",0,UN,-1864,1343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,25.0,25 to 34,31.0,-1871,2015-07-24,NSFINJ,1036229465,2010-06-09,DC-OUTPT,Registered Nurse,0,No valid match found.  Defaulted,0,UN,-2515,75,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
-3822432,MALE,17.0,15 to 17,17.0,214,2012-09-17,NSFINJ,1963815687,2013-04-19,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1933,963,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822432,MALE,17.0,15 to 17,17.0,214,2012-09-17,NSFINJ,1963815687,2013-04-19,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1933,963,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,29.0,25 to 34,31.0,-462,2015-07-24,NSFINJ,2227492729,2014-04-18,DC-TCON,Nurse Practitioner: Primary Care,2,No valid match found.  Defaulted,0,UN,-2515,75,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,22.0,18 to 24,24.0,-960,2013-10-15,VCODE,1245267030,2011-02-28,DC-OUTPT,Social Worker,2,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
 3822364,MALE,67.0,65 and over,72.0,-1619,2013-07-27,NSFINJ,647004089,2009-02-19,PC-OUTPT,Certified Clinical Social Worker,-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-2458,751,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
@@ -1868,14 +1868,14 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822432,MALE,17.0,15 to 17,17.0,114,2012-09-17,NSFINJ,1880156913,2013-01-09,PC-OUTPT,"Facility charges - use for facility charges for outpatient services, (e.g.,ambulatory surgery, hospital services)",-NA-,Facility,0,UN,-1933,963,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,32.0,25 to 34,31.0,283,2011-10-14,VCODE,1635476307,2012-07-23,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,31.0,25 to 34,31.0,39,2015-07-24,NSFINJ,2642793638,2015-09-01,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-2515,75,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0
-3822611,FEMALE,14.0,5 to 14,9.0,1717,2010-05-26,NSFINJ,2598218731,2015-02-06,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822611,FEMALE,14.0,5 to 14,9.0,1717,2010-05-26,NSFINJ,2598218731,2015-02-06,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,25.0,25 to 34,24.0,216,2013-10-15,VCODE,2253484679,2014-05-19,DC-OUTPT,Registered Nurse: Case Management,3,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,32.0,25 to 34,31.0,192,2011-10-14,VCODE,1589659173,2012-04-23,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822767,MALE,25.0,25 to 34,27.0,-968,2013-03-22,VCODE,1060168125,2010-07-28,DC-OUTPT,Family Medicine,0,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
 3822763,MALE,30.0,25 to 34,25.0,1754,2010-06-14,VCODE,2515069046,2015-04-03,DC-OUTPT,"Specialist/Technologist, Other",2,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,12.0,5 to 14,9.0,848,2010-05-26,NSFINJ,1685059084,2012-09-20,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,14.0,5 to 14,9.0,1926,2010-05-26,NSFINJ,2644618601,2015-09-03,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822611,FEMALE,12.0,5 to 14,9.0,833,2010-05-26,NSFINJ,1692728007,2012-09-05,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822611,FEMALE,12.0,5 to 14,9.0,833,2010-05-26,NSFINJ,1692728007,2012-09-05,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382269,FEMALE,25.0,25 to 34,22.0,913,2012-03-18,NSFINJ,2331656938,2014-09-17,DC-OUTPT,Advanced Practice Midwife,2,No valid match found.  Defaulted,0,UN,-152,1304,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,31.0,25 to 34,31.0,-14,2011-10-14,VCODE,1424369881,2011-09-30,DC-TCON,Family Medicine,1,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,25.0,25 to 34,24.0,240,2013-10-15,VCODE,2253477929,2014-06-12,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1918,7 +1918,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822611,FEMALE,12.0,5 to 14,9.0,978,2010-05-26,NSFINJ,1882599938,2013-01-28,PC-OUTPT,Medical Supply Co,-NA-,None,0,UN,-1318,1955,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
 3822767,MALE,25.0,25 to 34,27.0,-742,2013-03-22,VCODE,1269116941,2011-03-11,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,32.0,25 to 34,31.0,145,2011-10-14,VCODE,1573911649,2012-03-07,DC-OUTPT,Physician Assistant,2,No valid match found.  Defaulted,1,Y,-1583,957,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
-3822986,FEMALE,53.0,45 to 64,56.0,-844,2015-03-27,NSFINJ,1849889779,2012-12-03,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822986,FEMALE,53.0,45 to 64,56.0,-844,2015-03-27,NSFINJ,1849889779,2012-12-03,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,32.0,25 to 34,31.0,180,2011-10-14,VCODE,1588813879,2012-04-11,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,31.0,25 to 34,31.0,-232,2011-10-14,VCODE,1247660349,2011-02-24,DC-OUTPT,Social Worker: Clinical,2,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,31.0,25 to 34,31.0,38,2011-10-14,VCODE,1477489606,2011-11-21,DC-OUTPT,Registered Nurse: Case Management,3,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -1961,7 +1961,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822317,FEMALE,60.0,45 to 64,61.0,-386,2009-12-24,NSFINJ,603572931,2008-12-03,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1055,1251,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
 3822611,FEMALE,11.0,5 to 14,9.0,715,2010-05-26,NSFINJ,1610254058,2012-05-10,DC-OUTPT,Pediatrics,1,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822453,MALE,13.0,5 to 14,18.0,-1843,2013-04-25,NSFINJ,405043941,2008-04-08,PC-OUTPT,Urology,-NA-,"Internal Medicine Subspecialty (BAG, BAC, BAL, BAK, BAB, BAN, BAQ, BAS, BAM, BAF, BAJ, BAO, BAH, BAE, BAU, BAT, BAV)",0,UN,-2369,844,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822530,FEMALE,30.0,25 to 34,31.0,-262,2015-07-24,NSFINJ,2434311927,2014-11-04,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822530,FEMALE,30.0,25 to 34,31.0,-262,2015-07-24,NSFINJ,2434311927,2014-11-04,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822268,MALE,42.0,35 to 44,42.0,0,2013-06-27,NSFINJ,2015665117,2013-06-27,PC-OUTPT,General Practice,-NA-,Emergency Room (BIA),1,UN,-2036,772,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 3822611,FEMALE,12.0,5 to 14,9.0,853,2010-05-26,NSFINJ,1685088853,2012-09-25,DC-OUTPT,Pediatrics,1,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822432,MALE,19.0,18 to 24,17.0,854,2012-09-17,NSFINJ,2507651017,2015-01-19,PC-OUTPT,Pharmacy,-NA-,None,0,UN,-1933,963,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2034,7 +2034,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822794,MALE,25.0,25 to 34,28.0,-1334,2012-08-10,NSFINJ,582161189,2008-12-15,DC-OUTPT,Family Medicine,0,No valid match found.  Defaulted,0,UN,-2131,1126,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822763,MALE,28.0,25 to 34,25.0,765,2010-06-14,VCODE,1637681702,2012-07-18,DC-OUTPT,Physician Assistant,2,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822280,MALE,25.0,25 to 34,26.0,-468,2011-05-02,VCODE,905578511,2010-01-19,DC-OUTPT,Physician Assistant,0,No valid match found.  Defaulted,0,UN,-1636,1437,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822986,FEMALE,53.0,45 to 64,56.0,-948,2015-03-27,NSFINJ,1677841164,2012-08-21,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+3822986,FEMALE,53.0,45 to 64,56.0,-948,2015-03-27,NSFINJ,1677841164,2012-08-21,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
 3822453,MALE,19.0,18 to 24,18.0,467,2013-04-25,NSFINJ,2384959382,2014-08-05,PC-OUTPT,Family Practice,-NA-,All other MEPRS codes,0,UN,-2369,844,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822268,MALE,41.0,35 to 44,42.0,-247,2013-06-27,NSFINJ,1788304459,2012-10-23,PC-OUTPT,Pharmacy,-NA-,None,0,UN,-2036,772,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,9.0,5 to 14,9.0,47,2010-05-26,NSFINJ,1061494493,2010-07-12,DC-OUTPT,Registered Nurse,0,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2065,7 +2065,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822763,MALE,30.0,25 to 34,25.0,1500,2010-06-14,VCODE,2295858419,2014-07-23,DC-OUTPT,"Specialist/Technologist, Other",4,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822164,MALE,37.0,35 to 44,36.0,366,2013-07-09,NSFINJ,2296390590,2014-07-10,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,UN,-2302,640,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822280,MALE,26.0,25 to 34,26.0,-46,2011-05-02,VCODE,1270511062,2011-03-17,DC-OUTPT,Social Worker,2,No valid match found.  Defaulted,0,UN,-1636,1437,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
-382268,MALE,25.0,25 to 34,24.0,273,2013-10-15,VCODE,2377420866,2014-07-15,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+382268,MALE,25.0,25 to 34,24.0,273,2013-10-15,VCODE,2377420866,2014-07-15,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822317,FEMALE,63.0,45 to 64,61.0,890,2009-12-24,NSFINJ,1749438773,2012-06-01,PC-OUTPT,General Practice,-NA-,Emergency Room (BIA),0,UN,-1055,1251,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
 3822280,MALE,26.0,25 to 34,26.0,53,2011-05-02,VCODE,1350279734,2011-06-24,DC-OUTPT,Psychiatry & Neurology: Psychiatry,1,No valid match found.  Defaulted,0,UN,-1636,1437,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
 3822546,MALE,46.0,45 to 64,52.0,-2058,2012-07-06,NSFINJ,22116807,2006-11-17,DC-OUTPT,Family Medicine,0,No valid match found.  Defaulted,0,UN,-2062,1176,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2129,7 +2129,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822077,MALE,46.0,45 to 64,53.0,-2416,2015-01-13,NSFINJ,443233149,2008-06-02,DC-OUTPT,Physical Therapist,0,No valid match found.  Defaulted,0,UN,-2960,196,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822453,MALE,15.0,15 to 17,18.0,-1254,2013-04-25,NSFINJ,870992596,2009-11-18,PC-OUTPT,General Practice,-NA-,Emergency Room (BIA),0,UN,-2369,844,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822286,MALE,13.0,5 to 14,15.0,-819,2009-10-26,NSFINJ,206804171,2007-07-30,PC-OUTPT,Radiology,-NA-,Radiology,0,UN,-1061,2101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822871,MALE,54.0,45 to 64,61.0,-2509,2014-09-11,NSFINJ,278087306,2007-10-29,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822871,MALE,54.0,45 to 64,61.0,-2509,2014-09-11,NSFINJ,278087306,2007-10-29,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822163,FEMALE,30.0,25 to 34,35.0,-1841,2015-01-20,NSFINJ,905966367,2010-01-05,DC-OUTPT,Obstetrics & Gynecology,0,No valid match found.  Defaulted,0,UN,-3007,223,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,7.0,5 to 14,9.0,-776,2010-05-26,NSFINJ,394852242,2008-04-10,DC-OUTPT,Pediatrics,0,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822241,MALE,36.0,35 to 44,36.0,119,2012-07-17,VCODE,1767478391,2012-11-13,DC-OUTPT,Psychologist: Clinical,2,No valid match found.  Defaulted,0,N,-1426,757,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2173,7 +2173,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822762,MALE,0.0,0 to 4,2.0,-887,2012-02-11,NSFINJ,809087856,2009-09-07,PC-OUTPT,Pediatrics,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-918,987,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822871,MALE,60.0,45 to 64,61.0,-93,2014-09-11,NSFINJ,2321748592,2014-06-10,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822317,FEMALE,61.0,45 to 64,61.0,0,2009-12-24,NSFINJ,900668246,2009-12-24,PC-OUTPT,General Practice,-NA-,Emergency Room (BIA),1,UN,-1055,1251,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
-3822611,FEMALE,13.0,5 to 14,9.0,1534,2010-05-26,NSFINJ,2387933383,2014-08-07,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822611,FEMALE,13.0,5 to 14,9.0,1534,2010-05-26,NSFINJ,2387933383,2014-08-07,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,32.0,25 to 34,31.0,342,2011-10-14,VCODE,1686553375,2012-09-20,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,25.0,25 to 34,24.0,20,2013-10-15,VCODE,2047741824,2013-11-04,DC-OUTPT,Counselor: Addiction (Substance Use Disorder),0,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822599,No valid match found.  Defaulted,49.0,45 to 64,48.0,610,2011-11-09,NSFINJ,2067109338,2013-07-11,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1864,1343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2266,9 +2266,9 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822286,MALE,17.0,15 to 17,15.0,456,2009-10-26,NSFINJ,1236350675,2011-01-25,PC-OUTPT,Orthopedic Surgery,-NA-,"Orthopedics (BLA, BEA, BEF, BEZ, BEB, BEE, BEC, BED, BLB)",0,UN,-1061,2101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,27.0,25 to 34,31.0,-1232,2015-07-24,NSFINJ,1572972603,2012-03-09,DC-OUTPT,Occupational Therapist,2,No valid match found.  Defaulted,0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,11.0,5 to 14,9.0,819,2010-05-26,NSFINJ,1662327816,2012-08-22,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822871,MALE,61.0,45 to 64,61.0,4,2014-09-11,NSFINJ,2423404522,2014-09-15,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+3822871,MALE,61.0,45 to 64,61.0,4,2014-09-11,NSFINJ,2423404522,2014-09-15,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
 3822871,MALE,60.0,45 to 64,61.0,-113,2014-09-11,NSFINJ,2311911563,2014-05-21,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0,0
-3822046,MALE,4.0,0 to 4,3.0,464,2011-04-10,NSFINJ,1640314014,2012-07-17,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1298,1404,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822046,MALE,4.0,0 to 4,3.0,464,2011-04-10,NSFINJ,1640314014,2012-07-17,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1298,1404,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,30.0,25 to 34,31.0,-364,2015-07-24,NSFINJ,2385007719,2014-07-25,PC-OUTPT,Physical Therapist (Independent Practice),-NA-,"Orthopedics (BLA, BEA, BEF, BEZ, BEB, BEE, BEC, BED, BLB)",0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,29.0,25 to 34,31.0,-597,2015-07-24,NSFINJ,2167988401,2013-12-04,PC-OUTPT,Clinical Psychologist (Billing Independently),-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-2515,75,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
 3822108,MALE,25.0,25 to 34,26.0,-498,2014-02-28,NSFINJ,1696869362,2012-10-18,DC-OUTPT,Social Worker,2,No valid match found.  Defaulted,0,UN,-1402,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2329,7 +2329,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822670,MALE,33.0,25 to 34,33.0,-191,2011-06-22,NSFINJ,1209866649,2010-12-13,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-795,1227,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822333,FEMALE,20.0,18 to 24,20.0,7,2012-06-25,NSFINJ,1639348804,2012-07-02,PC-OUTPT,General Practice,-NA-,Emergency Room (BIA),0,UN,-1998,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822767,MALE,25.0,25 to 34,27.0,-940,2013-03-22,VCODE,1085301969,2010-08-25,DC-OUTPT,Family Medicine,0,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822530,FEMALE,26.0,25 to 34,31.0,-1544,2015-07-24,NSFINJ,1333568276,2011-05-02,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+3822530,FEMALE,26.0,25 to 34,31.0,-1544,2015-07-24,NSFINJ,1333568276,2011-05-02,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
 3822416,MALE,79.0,65 and over,78.0,361,2014-02-28,NSFINJ,2544982132,2015-02-24,PC-OUTPT,Clinic or other group practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2671,526,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,21.0,18 to 24,24.0,-1266,2013-10-15,VCODE,981916970,2010-04-28,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,12.0,5 to 14,9.0,868,2010-05-26,NSFINJ,1697318124,2012-10-10,DC-OUTPT,Pediatrics,1,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2562,7 +2562,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822794,MALE,28.0,25 to 34,28.0,3,2012-08-10,NSFINJ,1662727059,2012-08-13,DC-OUTPT,Physician Assistant,2,No valid match found.  Defaulted,1,UN,-2131,1126,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 3822663,FEMALE,27.0,25 to 34,26.0,108,2011-06-20,NSFINJ,1458281569,2011-10-06,PC-OUTPT,Neurology,-NA-,"Internal Medicine Subspecialty (BAG, BAC, BAL, BAK, BAB, BAN, BAQ, BAS, BAM, BAF, BAJ, BAO, BAH, BAE, BAU, BAT, BAV)",0,UN,-1216,717,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822536,FEMALE,40.0,35 to 44,39.0,524,2012-01-31,NSFINJ,1959999103,2013-07-08,DC-OUTPT,Physical Medicine & Rehabilitation,0,No valid match found.  Defaulted,0,UN,-1195,864,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822663,FEMALE,26.0,25 to 34,26.0,0,2011-06-20,NSFINJ,1368171789,2011-06-20,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),1,UN,-1216,717,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+3822663,FEMALE,26.0,25 to 34,26.0,0,2011-06-20,NSFINJ,1368171789,2011-06-20,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),1,UN,-1216,717,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 382269,FEMALE,25.0,25 to 34,22.0,865,2012-03-18,NSFINJ,2296124098,2014-07-31,DC-OUTPT,Social Worker,2,No valid match found.  Defaulted,0,UN,-152,1304,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382269,FEMALE,24.0,18 to 24,22.0,656,2012-03-18,NSFINJ,2123276426,2014-01-03,DC-OUTPT,"Specialist/Technologist, Other",4,No valid match found.  Defaulted,0,UN,-152,1304,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822763,MALE,29.0,25 to 34,25.0,1400,2010-06-14,VCODE,2226413939,2014-04-14,DC-OUTPT,Physical Therapist,2,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2713,7 +2713,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822416,MALE,71.0,65 and over,78.0,-2243,2014-02-28,NSFINJ,343622741,2008-01-08,PC-OUTPT,Orthopedic Surgery,-NA-,"Orthopedics (BLA, BEA, BEF, BEZ, BEB, BEE, BEC, BED, BLB)",0,UN,-2671,526,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822763,MALE,25.0,25 to 34,25.0,-145,2010-06-14,VCODE,904412501,2010-01-20,DC-OUTPT,Physician Assistant,0,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,27.0,25 to 34,31.0,-1400,2015-07-24,NSFINJ,1428115624,2011-09-23,DC-OUTPT,Nurse Practitioner: Primary Care,2,No valid match found.  Defaulted,0,UN,-2515,75,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0
-3822670,MALE,34.0,25 to 34,33.0,131,2011-06-22,NSFINJ,1476817037,2011-10-31,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-795,1227,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822670,MALE,34.0,25 to 34,33.0,131,2011-06-22,NSFINJ,1476817037,2011-10-31,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-795,1227,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822646,MALE,4.0,0 to 4,7.0,-942,2012-05-12,NSFINJ,837844804,2009-10-13,PC-OUTPT,Pediatrics,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1207,765,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822536,FEMALE,36.0,35 to 44,39.0,-820,2012-01-31,NSFINJ,856973112,2009-11-02,DC-OUTPT,Physician Assistant,0,No valid match found.  Defaulted,0,UN,-1195,864,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822108,MALE,24.0,18 to 24,26.0,-718,2014-02-28,NSFINJ,1573084035,2012-03-12,DC-OUTPT,Physician Assistant,2,No valid match found.  Defaulted,0,UN,-1402,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2741,7 +2741,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822438,MALE,47.0,45 to 64,48.0,-225,2012-04-19,NSFINJ,1427737939,2011-09-07,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,Y,-1961,1203,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822599,FEMALE,44.0,35 to 44,48.0,-1176,2011-11-09,NSFINJ,489712812,2008-08-20,DC-OUTPT,Social Worker: Clinical,0,No valid match found.  Defaulted,0,UN,-1864,1343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,32.0,25 to 34,31.0,157,2011-10-14,VCODE,1574861590,2012-03-19,DC-OUTPT,Pharmacist,2,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822611,FEMALE,12.0,5 to 14,9.0,912,2010-05-26,NSFINJ,1829869115,2012-11-23,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822611,FEMALE,12.0,5 to 14,9.0,912,2010-05-26,NSFINJ,1829869115,2012-11-23,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822986,FEMALE,56.0,45 to 64,56.0,52,2015-03-27,NSFINJ,2620114530,2015-05-18,PC-OUTPT,Clinic or other group practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822438,MALE,50.0,45 to 64,48.0,967,2012-04-19,NSFINJ,2467610505,2014-12-12,PC-OUTPT,Pharmacy,-NA-,None,0,Y,-1961,1203,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,25.0,25 to 34,24.0,48,2013-10-15,VCODE,2095604811,2013-12-02,DC-OUTPT,Pharmacist,2,No valid match found.  Defaulted,1,Y,-2542,463,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0
@@ -2835,7 +2835,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822163,FEMALE,32.0,25 to 34,35.0,-1091,2015-01-20,NSFINJ,1526737415,2012-01-25,DC-OUTPT,"Specialist/Technologist, Other",4,No valid match found.  Defaulted,0,UN,-3007,223,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822453,MALE,13.0,5 to 14,18.0,-1883,2013-04-25,NSFINJ,362715351,2008-02-28,PC-OUTPT,Clinical Psychologist (Billing Independently),-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-2369,844,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822767,MALE,23.0,18 to 24,27.0,-1582,2013-03-22,VCODE,558461503,2008-11-21,DC-OUTPT,Physician Assistant,0,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
-3822164,MALE,34.0,25 to 34,36.0,-786,2013-07-09,NSFINJ,1340876806,2011-05-15,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-2302,640,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822164,MALE,34.0,25 to 34,36.0,-786,2013-07-09,NSFINJ,1340876806,2011-05-15,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-2302,640,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822108,MALE,23.0,18 to 24,26.0,-1206,2014-02-28,NSFINJ,1166346453,2010-11-10,DC-OUTPT,"Specialist/Technologist, Other",0,No valid match found.  Defaulted,0,UN,-1402,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,14.0,5 to 14,9.0,1925,2010-05-26,NSFINJ,2644668122,2015-09-02,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822286,MALE,18.0,18 to 24,15.0,837,2009-10-26,NSFINJ,1558374400,2012-02-10,PC-OUTPT,Neurology,-NA-,"Internal Medicine Subspecialty (BAG, BAC, BAL, BAK, BAB, BAN, BAQ, BAS, BAM, BAF, BAJ, BAO, BAH, BAE, BAU, BAT, BAV)",0,UN,-1061,2101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -3207,7 +3207,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822364,MALE,67.0,65 and over,72.0,-1796,2013-07-27,NSFINJ,506208488,2008-08-26,PC-OUTPT,Cardiovascular Disease,-NA-,"Internal Medicine Subspecialty (BAG, BAC, BAL, BAK, BAB, BAN, BAQ, BAS, BAM, BAF, BAJ, BAO, BAH, BAE, BAU, BAT, BAV)",0,UN,-2458,751,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822416,MALE,77.0,65 and over,78.0,-161,2014-02-28,NSFINJ,2110158755,2013-09-20,PC-OUTPT,Gastroenterology,-NA-,"Internal Medicine Subspecialty (BAG, BAC, BAL, BAK, BAB, BAN, BAQ, BAS, BAM, BAF, BAJ, BAO, BAH, BAE, BAU, BAT, BAV)",0,UN,-2671,526,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822663,FEMALE,26.0,25 to 34,26.0,-216,2011-06-20,NSFINJ,1179374939,2010-11-16,PC-OUTPT,Neurology,-NA-,"Internal Medicine Subspecialty (BAG, BAC, BAL, BAK, BAB, BAN, BAQ, BAS, BAM, BAF, BAJ, BAO, BAH, BAE, BAU, BAT, BAV)",0,UN,-1216,717,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822986,FEMALE,49.0,45 to 64,56.0,-2323,2015-03-27,NSFINJ,573319863,2008-11-15,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822986,FEMALE,49.0,45 to 64,56.0,-2323,2015-03-27,NSFINJ,573319863,2008-11-15,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822763,MALE,27.0,25 to 34,25.0,422,2010-06-14,VCODE,1399789429,2011-08-10,DC-OUTPT,Chiropractor,4,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822268,MALE,40.0,35 to 44,42.0,-884,2013-06-27,NSFINJ,1232346699,2011-01-25,PC-OUTPT,Podiatry - Surgical Chiropody,-NA-,"Orthopedics (BLA, BEA, BEF, BEZ, BEB, BEE, BEC, BED, BLB)",0,UN,-2036,772,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822268,MALE,40.0,35 to 44,42.0,-779,2013-06-27,NSFINJ,1333512555,2011-05-10,PC-OUTPT,Dermatology,-NA-,All other MEPRS codes,0,UN,-2036,772,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -3279,7 +3279,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822663,FEMALE,25.0,25 to 34,26.0,-377,2011-06-20,NSFINJ,1037473006,2010-06-08,DC-OUTPT,"Specialist/Technologist, Other",0,No valid match found.  Defaulted,0,UN,-1216,717,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,31.0,25 to 34,31.0,116,2011-10-14,VCODE,1550675945,2012-02-07,DC-OUTPT,Registered Nurse: Case Management,3,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822416,No valid match found.  Defaulted,77.0,65 and over,78.0,-227,2014-02-28,NSFINJ,2063239512,2013-07-16,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2671,526,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822986,FEMALE,53.0,45 to 64,56.0,-932,2015-03-27,NSFINJ,1690728226,2012-09-06,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822986,FEMALE,53.0,45 to 64,56.0,-932,2015-03-27,NSFINJ,1690728226,2012-09-06,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822108,MALE,25.0,25 to 34,26.0,-435,2014-02-28,NSFINJ,1818560482,2012-12-20,DC-OUTPT,Social Worker,2,No valid match found.  Defaulted,0,UN,-1402,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
 3822280,MALE,26.0,25 to 34,26.0,-4,2011-05-02,VCODE,1297422330,2011-04-28,DC-OUTPT,Occupational Therapist,0,No valid match found.  Defaulted,0,UN,-1636,1437,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,31.0,25 to 34,31.0,-213,2011-10-14,VCODE,1269079425,2011-03-15,DC-OUTPT,Audiologist,2,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
@@ -3317,7 +3317,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822763,MALE,25.0,25 to 34,25.0,7,2010-06-14,VCODE,1036026968,2010-06-21,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822794,MALE,27.0,25 to 34,28.0,-640,2012-08-10,NSFINJ,1167281030,2010-11-09,DC-OUTPT,Military Health Care Provider/Independent Duty Medical Technicians (IDMT),4,No valid match found.  Defaulted,0,UN,-2131,1126,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822670,MALE,33.0,25 to 34,33.0,0,2011-06-22,NSFINJ,1363082022,2011-06-22,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",1,UN,-795,1227,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
-3822986,FEMALE,52.0,45 to 64,56.0,-1267,2015-03-27,NSFINJ,1465189863,2011-10-07,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+3822986,FEMALE,52.0,45 to 64,56.0,-1267,2015-03-27,NSFINJ,1465189863,2011-10-07,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
 3822763,MALE,29.0,25 to 34,25.0,1389,2010-06-14,VCODE,2205522210,2014-04-03,DC-OUTPT,Physical Therapist,2,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,27.0,25 to 34,31.0,-1218,2015-07-24,NSFINJ,1576378116,2012-03-23,DC-OUTPT,Occupational Therapist,2,No valid match found.  Defaulted,0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822546,MALE,51.0,45 to 64,52.0,-202,2012-07-06,NSFINJ,1511636091,2011-12-17,PC-OUTPT,Pharmacy,-NA-,None,0,UN,-2062,1176,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -3382,7 +3382,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822263,FEMALE,23.0,18 to 24,27.0,-1414,2012-09-12,NSFINJ,535267770,2008-10-29,DC-OUTPT,"Specialist/Technologist, Other",0,No valid match found.  Defaulted,0,UN,-2023,617,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822077,MALE,46.0,45 to 64,53.0,-2421,2015-01-13,NSFINJ,419475341,2008-05-28,DC-OUTPT,Family Medicine,0,No valid match found.  Defaulted,0,UN,-2960,196,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,25.0,25 to 34,31.0,-2122,2015-07-24,NSFINJ,829739233,2009-10-01,DC-OUTPT,Emergency Medicine,0,No valid match found.  Defaulted,0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822871,MALE,54.0,45 to 64,61.0,-2323,2014-09-11,NSFINJ,430632899,2008-05-02,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+3822871,MALE,54.0,45 to 64,61.0,-2323,2014-09-11,NSFINJ,430632899,2008-05-02,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
 3822453,MALE,15.0,15 to 17,18.0,-1074,2013-04-25,NSFINJ,1020948246,2010-05-17,PC-OUTPT,Psychiatry,-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-2369,844,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
 3822201,MALE,16.0,15 to 17,16.0,0,2010-09-23,NSFINJ,1137449843,2010-09-23,PC-OUTPT,General Practice,-NA-,Emergency Room (BIA),1,UN,-1444,1364,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 3822599,FEMALE,44.0,35 to 44,48.0,-1365,2011-11-09,NSFINJ,348519770,2008-02-13,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-1864,1343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -3495,7 +3495,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822102,MALE,31.0,25 to 34,31.0,87,2011-10-14,VCODE,1529458605,2012-01-09,DC-OUTPT,Registered Nurse: Case Management,3,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,32.0,25 to 34,31.0,145,2011-10-14,VCODE,1709937867,2012-03-07,PC-OUTPT,Medical Supply Co,-NA-,None,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,32.0,25 to 34,31.0,150,2011-10-14,VCODE,1575307278,2012-03-12,DC-TCON,Family Medicine,1,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822046,MALE,7.0,5 to 14,3.0,1280,2011-04-10,NSFINJ,2437954999,2014-10-11,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1298,1404,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822046,MALE,7.0,5 to 14,3.0,1280,2011-04-10,NSFINJ,2437954999,2014-10-11,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1298,1404,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822794,MALE,29.0,25 to 34,28.0,122,2012-08-10,NSFINJ,1817321321,2012-12-10,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,UN,-2131,1126,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,33.0,25 to 34,31.0,600,2011-10-14,VCODE,1934203803,2013-06-05,DC-OUTPT,Registered Nurse: Case Management,3,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822767,MALE,26.0,25 to 34,27.0,-616,2013-03-22,VCODE,1377136670,2011-07-15,DC-OUTPT,Psychologist: Clinical,0,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -3609,7 +3609,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822077,MALE,51.0,45 to 64,53.0,-712,2015-01-13,NSFINJ,1885508435,2013-01-31,PC-OUTPT,Pharmacy,-NA-,None,0,UN,-2960,196,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,25.0,25 to 34,24.0,288,2013-10-15,VCODE,2296146863,2014-07-30,DC-OUTPT,Registered Nurse: Case Management,3,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822438,MALE,48.0,45 to 64,48.0,6,2012-04-19,NSFINJ,1589609449,2012-04-25,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,Y,-1961,1203,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822871,MALE,61.0,45 to 64,61.0,34,2014-09-11,NSFINJ,2440465901,2014-10-15,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822871,MALE,61.0,45 to 64,61.0,34,2014-09-11,NSFINJ,2440465901,2014-10-15,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822077,MALE,47.0,45 to 64,53.0,-2259,2015-01-13,NSFINJ,561326233,2008-11-06,DC-OUTPT,"Specialist/Technologist, Other",0,No valid match found.  Defaulted,0,UN,-2960,196,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822871,MALE,58.0,45 to 64,61.0,-916,2014-09-11,NSFINJ,1583295792,2012-03-09,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
 3822871,MALE,61.0,45 to 64,61.0,24,2014-09-11,NSFINJ,2434066653,2014-10-05,PC-OUTPT,General Surgery,-NA-,Emergency Room (BIA),0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -3798,7 +3798,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822164,MALE,37.0,35 to 44,36.0,505,2013-07-09,NSFINJ,2416455331,2014-11-26,DC-OUTPT,Registered Nurse,0,No valid match found.  Defaulted,0,UN,-2302,640,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822536,FEMALE,39.0,35 to 44,39.0,246,2012-01-31,NSFINJ,1696585527,2012-10-03,DC-OUTPT,Physician Assistant,2,No valid match found.  Defaulted,0,UN,-1195,864,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,30.0,25 to 34,31.0,-121,2015-07-24,NSFINJ,2512332437,2015-03-25,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822530,FEMALE,30.0,25 to 34,31.0,-368,2015-07-24,NSFINJ,2379811229,2014-07-21,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822530,FEMALE,30.0,25 to 34,31.0,-368,2015-07-24,NSFINJ,2379811229,2014-07-21,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822453,MALE,18.0,18 to 24,18.0,69,2013-04-25,NSFINJ,2039164504,2013-07-03,PC-OUTPT,Physical Therapist (Independent Practice),-NA-,"Orthopedics (BLA, BEA, BEF, BEZ, BEB, BEE, BEC, BED, BLB)",0,UN,-2369,844,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,23.0,18 to 24,24.0,-524,2013-10-15,VCODE,1613211216,2012-05-09,DC-OUTPT,Emergency Medicine,1,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822763,MALE,29.0,25 to 34,25.0,1470,2010-06-14,VCODE,2253257598,2014-06-23,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -3947,7 +3947,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822046,MALE,4.0,0 to 4,3.0,183,2011-04-10,NSFINJ,1470132198,2011-10-10,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1298,1404,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,14.0,5 to 14,9.0,1867,2010-05-26,NSFINJ,2591978610,2015-07-06,DC-OUTPT,Nurse Practitioner: Pediatrics,0,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822536,FEMALE,39.0,35 to 44,39.0,133,2012-01-31,NSFINJ,1625111560,2012-06-12,DC-TCON,Nurse Practitioner: Primary Care,2,No valid match found.  Defaulted,0,UN,-1195,864,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822871,MALE,55.0,45 to 64,61.0,-2261,2014-09-11,NSFINJ,477964991,2008-07-03,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+3822871,MALE,55.0,45 to 64,61.0,-2261,2014-09-11,NSFINJ,477964991,2008-07-03,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
 3822763,MALE,27.0,25 to 34,25.0,618,2010-06-14,VCODE,1552594049,2012-02-22,DC-OUTPT,Physician Assistant,2,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822280,MALE,26.0,25 to 34,26.0,-186,2011-05-02,VCODE,1142615943,2010-10-28,DC-OUTPT,Physician Assistant,2,No valid match found.  Defaulted,0,UN,-1636,1437,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0
 382268,MALE,24.0,18 to 24,24.0,-14,2013-10-15,VCODE,2112573205,2013-10-01,PC-OUTPT,Nurse Practitioner,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,Y,-2542,463,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
@@ -4100,7 +4100,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822599,FEMALE,45.0,45 to 64,48.0,-929,2011-11-09,NSFINJ,679788090,2009-04-24,DC-OUTPT,Advanced Practice Midwife,0,No valid match found.  Defaulted,0,UN,-1864,1343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,31.0,25 to 34,31.0,101,2011-10-14,VCODE,1525990000,2012-01-23,DC-OUTPT,Registered Nurse: Case Management,3,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822663,FEMALE,25.0,25 to 34,26.0,-410,2011-06-20,NSFINJ,1014933627,2010-05-06,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1216,717,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
-3822611,FEMALE,11.0,5 to 14,9.0,672,2010-05-26,NSFINJ,1722755280,2012-03-28,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822611,FEMALE,11.0,5 to 14,9.0,672,2010-05-26,NSFINJ,1722755280,2012-03-28,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822263,FEMALE,22.0,18 to 24,27.0,-1728,2012-09-12,NSFINJ,305474500,2007-12-20,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-2023,617,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822871,MALE,59.0,45 to 64,61.0,-654,2014-09-11,NSFINJ,1826876720,2012-11-26,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
 3822767,MALE,25.0,25 to 34,27.0,-877,2013-03-22,VCODE,1140880385,2010-10-27,DC-OUTPT,General Practice,1,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -4157,7 +4157,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822201,MALE,13.0,5 to 14,16.0,-1344,2010-09-23,NSFINJ,76332850,2007-01-18,PC-OUTPT,Podiatry - Surgical Chiropody,-NA-,"Orthopedics (BLA, BEA, BEF, BEZ, BEB, BEE, BEC, BED, BLB)",0,UN,-1444,1364,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822794,MALE,24.0,18 to 24,28.0,-1502,2012-08-10,NSFINJ,443414473,2008-06-30,DC-OUTPT,"Specialist/Technologist, Other",0,No valid match found.  Defaulted,0,UN,-2131,1126,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822077,MALE,47.0,45 to 64,53.0,-2217,2015-01-13,NSFINJ,581449926,2008-12-18,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-2960,196,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822986,FEMALE,49.0,45 to 64,56.0,-2384,2015-03-27,NSFINJ,532283885,2008-09-15,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822986,FEMALE,49.0,45 to 64,56.0,-2384,2015-03-27,NSFINJ,532283885,2008-09-15,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822077,MALE,46.0,45 to 64,53.0,-2633,2015-01-13,NSFINJ,258414691,2007-10-29,DC-OUTPT,"Specialist/Technologist, Other",0,No valid match found.  Defaulted,0,UN,-2960,196,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822767,MALE,22.0,18 to 24,27.0,-1779,2013-03-22,VCODE,417987756,2008-05-08,DC-OUTPT,Family Medicine,0,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822670,MALE,32.0,25 to 34,33.0,-503,2011-06-22,NSFINJ,930533276,2010-02-04,DC-OUTPT,Family Medicine,0,No valid match found.  Defaulted,0,UN,-795,1227,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
@@ -4212,7 +4212,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822077,MALE,46.0,45 to 64,53.0,-2632,2015-01-13,NSFINJ,258241385,2007-10-30,DC-OUTPT,"Specialist/Technologist, Other",0,No valid match found.  Defaulted,0,UN,-2960,196,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,31.0,25 to 34,31.0,-66,2011-10-14,VCODE,1409041012,2011-08-09,PC-OUTPT,Medical Supply Co,-NA-,None,0,Y,-1583,957,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
 3822077,MALE,53.0,45 to 64,53.0,6,2015-01-13,NSFINJ,2518272733,2015-01-19,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2960,196,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822611,FEMALE,12.0,5 to 14,9.0,936,2010-05-26,NSFINJ,1838097293,2012-12-17,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1318,1955,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+3822611,FEMALE,12.0,5 to 14,9.0,936,2010-05-26,NSFINJ,1838097293,2012-12-17,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1318,1955,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
 3822599,FEMALE,45.0,45 to 64,48.0,-989,2011-11-09,NSFINJ,629698800,2009-02-23,DC-OUTPT,Social Worker: Clinical,0,No valid match found.  Defaulted,0,UN,-1864,1343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,30.0,25 to 34,31.0,-284,2015-07-24,NSFINJ,2475281399,2014-10-13,PC-OUTPT,Clinical Psychologist (Billing Independently),-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,22.0,18 to 24,24.0,-960,2013-10-15,VCODE,1244983481,2011-02-28,DC-OUTPT,Otolaryngology,0,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -4517,7 +4517,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822670,MALE,32.0,25 to 34,33.0,-639,2011-06-22,NSFINJ,805392540,2009-09-21,DC-OUTPT,Family Medicine,0,No valid match found.  Defaulted,0,UN,-795,1227,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822163,FEMALE,32.0,25 to 34,35.0,-1093,2015-01-20,NSFINJ,1526061546,2012-01-23,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,UN,-3007,223,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822241,MALE,35.0,35 to 44,36.0,-105,2012-07-17,VCODE,1589000834,2012-04-03,DC-OUTPT,Physician Assistant,2,No valid match found.  Defaulted,0,N,-1426,757,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822530,FEMALE,26.0,25 to 34,31.0,-1825,2015-07-24,NSFINJ,1080655922,2010-07-25,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
+3822530,FEMALE,26.0,25 to 34,31.0,-1825,2015-07-24,NSFINJ,1080655922,2010-07-25,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
 3822663,FEMALE,25.0,25 to 34,26.0,-404,2011-06-20,NSFINJ,1026820870,2010-05-12,PC-OUTPT,Home Health Care Agency,-NA-,Home,0,UN,-1216,717,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822763,MALE,31.0,25 to 34,25.0,1906,2010-06-14,VCODE,2645427082,2015-09-02,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,Y,-1289,1914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822986,FEMALE,51.0,45 to 64,56.0,-1597,2015-03-27,NSFINJ,1180824417,2010-11-11,PC-OUTPT,Orthopedic Surgery,-NA-,"Orthopedics (BLA, BEA, BEF, BEZ, BEB, BEE, BEC, BED, BLB)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -4687,7 +4687,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822767,MALE,27.0,25 to 34,27.0,-25,2013-03-22,VCODE,1874451296,2013-02-25,DC-OUTPT,Physician Assistant,2,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822317,FEMALE,63.0,45 to 64,61.0,819,2009-12-24,NSFINJ,1720517350,2012-03-22,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1055,1251,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0
 3822280,MALE,26.0,25 to 34,26.0,81,2011-05-02,VCODE,1376245555,2011-07-22,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-1636,1437,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822280,MALE,30.0,25 to 34,26.0,1210,2011-05-02,VCODE,2402432176,2014-08-24,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-1636,1437,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822280,MALE,30.0,25 to 34,26.0,1210,2011-05-02,VCODE,2402432176,2014-08-24,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-1636,1437,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822767,MALE,28.0,25 to 34,27.0,363,2013-03-22,VCODE,2203134332,2014-03-20,DC-OUTPT,Family Medicine,1,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
 3822546,MALE,46.0,45 to 64,52.0,-2062,2012-07-06,NSFINJ,21854794,2006-11-13,DC-OUTPT,Family Medicine,0,No valid match found.  Defaulted,0,UN,-2062,1176,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822355,MALE,73.0,65 and over,72.0,171,2013-07-19,NSFINJ,2457284552,2014-01-06,PC-OUTPT,Medical Supply Co,-NA-,None,0,UN,-2418,217,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -4711,7 +4711,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822416,MALE,74.0,65 and over,78.0,-1229,2014-02-28,NSFINJ,1159498649,2010-10-18,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2671,526,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822646,MALE,7.0,5 to 14,7.0,242,2012-05-12,NSFINJ,1859691494,2013-01-09,PC-OUTPT,Pharmacy,-NA-,None,0,UN,-1207,765,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,13.0,5 to 14,9.0,1203,2010-05-26,NSFINJ,2136396196,2013-09-10,PC-OUTPT,Optometrist,-NA-,"Optometry (BHC, BBD)",0,UN,-1318,1955,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
-3822530,FEMALE,27.0,25 to 34,31.0,-1134,2015-07-24,NSFINJ,1755599564,2012-06-15,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
+3822530,FEMALE,27.0,25 to 34,31.0,-1134,2015-07-24,NSFINJ,1755599564,2012-06-15,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
 3822416,MALE,76.0,65 and over,78.0,-480,2014-02-28,NSFINJ,1854673839,2012-11-05,PC-OUTPT,Clinic or other group practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2671,526,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 3822871,MALE,61.0,45 to 64,61.0,-82,2014-09-11,NSFINJ,2339652158,2014-06-21,PC-OUTPT,Pharmacy,-NA-,None,0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822871,MALE,61.0,45 to 64,61.0,-41,2014-09-11,NSFINJ,2384963724,2014-08-01,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -4757,7 +4757,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822611,FEMALE,11.0,5 to 14,9.0,720,2010-05-26,NSFINJ,1619937067,2012-05-15,PC-OUTPT,Physical Therapist (Independent Practice),-NA-,"Orthopedics (BLA, BEA, BEF, BEZ, BEB, BEE, BEC, BED, BLB)",0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822794,MALE,26.0,25 to 34,28.0,-1011,2012-08-10,NSFINJ,855581704,2009-11-03,DC-OUTPT,Physician Assistant,0,No valid match found.  Defaulted,0,UN,-2131,1126,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822599,FEMALE,44.0,35 to 44,48.0,-1365,2011-11-09,NSFINJ,350327094,2008-02-13,DC-OUTPT,"Specialist/Technologist, Other",0,No valid match found.  Defaulted,0,UN,-1864,1343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822986,FEMALE,49.0,45 to 64,56.0,-2394,2015-03-27,NSFINJ,521188415,2008-09-05,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0
+3822986,FEMALE,49.0,45 to 64,56.0,-2394,2015-03-27,NSFINJ,521188415,2008-09-05,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0
 3822077,MALE,45.0,45 to 64,53.0,-2762,2015-01-13,NSFINJ,173441223,2007-06-22,DC-OUTPT,Internal Medicine: Critical Care Medicine,0,No valid match found.  Defaulted,0,UN,-2960,196,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822453,MALE,13.0,5 to 14,18.0,-1791,2013-04-25,NSFINJ,433308628,2008-05-30,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2369,844,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822986,FEMALE,52.0,45 to 64,56.0,-1164,2015-03-27,NSFINJ,1545773920,2012-01-18,PC-OUTPT,Clinic or other group practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -4810,7 +4810,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822416,MALE,71.0,65 and over,78.0,-2397,2014-02-28,NSFINJ,225270675,2007-08-07,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2671,526,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822163,FEMALE,33.0,25 to 34,35.0,-727,2015-01-20,NSFINJ,1843301637,2013-01-23,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,UN,-3007,223,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822163,FEMALE,28.0,25 to 34,35.0,-2454,2015-01-20,NSFINJ,420188199,2008-05-02,DC-OUTPT,Optometrist,0,No valid match found.  Defaulted,0,UN,-3007,223,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822670,MALE,36.0,35 to 44,33.0,1087,2011-06-22,NSFINJ,2338802170,2014-06-13,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-795,1227,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822670,MALE,36.0,35 to 44,33.0,1087,2011-06-22,NSFINJ,2338802170,2014-06-13,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-795,1227,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822280,MALE,25.0,25 to 34,26.0,-515,2011-05-02,VCODE,879604729,2009-12-03,DC-OUTPT,"Specialist/Technologist, Other",0,No valid match found.  Defaulted,0,UN,-1636,1437,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 3822164,MALE,33.0,25 to 34,36.0,-1142,2013-07-09,NSFINJ,1010918642,2010-05-24,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-2302,640,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382269,FEMALE,23.0,18 to 24,22.0,115,2012-03-18,NSFINJ,1637262160,2012-07-11,DC-OUTPT,Nurse Practitioner: Primary Care,2,No valid match found.  Defaulted,0,UN,-152,1304,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
@@ -4819,9 +4819,9 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822767,MALE,23.0,18 to 24,27.0,-1416,2013-03-22,VCODE,705794453,2009-05-06,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822416,MALE,79.0,65 and over,78.0,488,2014-02-28,NSFINJ,2650043983,2015-07-01,PC-OUTPT,Clinic or other group practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2671,526,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822670,MALE,32.0,25 to 34,33.0,-510,2011-06-22,NSFINJ,905845797,2010-01-28,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-795,1227,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822611,FEMALE,11.0,5 to 14,9.0,828,2010-05-26,NSFINJ,1677333918,2012-08-31,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822611,FEMALE,11.0,5 to 14,9.0,828,2010-05-26,NSFINJ,1677333918,2012-08-31,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822268,MALE,37.0,35 to 44,42.0,-1811,2013-06-27,NSFINJ,478186819,2008-07-12,PC-OUTPT,General Practice,-NA-,Emergency Room (BIA),0,UN,-2036,772,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822530,FEMALE,27.0,25 to 34,31.0,-1453,2015-07-24,NSFINJ,1407806813,2011-08-01,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822530,FEMALE,27.0,25 to 34,31.0,-1453,2015-07-24,NSFINJ,1407806813,2011-08-01,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822767,MALE,26.0,25 to 34,27.0,-472,2013-03-22,VCODE,1504540175,2011-12-06,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822986,FEMALE,52.0,45 to 64,56.0,-1166,2015-03-27,NSFINJ,1545773921,2012-01-16,PC-OUTPT,Clinic or other group practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822432,MALE,16.0,15 to 17,17.0,-88,2012-09-17,NSFINJ,1847874283,2012-06-21,PC-OUTPT,Miscellaneous,-NA-,None,0,UN,-1933,963,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -4939,7 +4939,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822767,MALE,25.0,25 to 34,27.0,-912,2013-03-22,VCODE,1112682990,2010-09-22,DC-OUTPT,Family Medicine,0,No valid match found.  Defaulted,0,N,-2338,915,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0
 3822763,MALE,29.0,25 to 34,25.0,1425,2010-06-14,VCODE,2230135425,2014-05-09,DC-OUTPT,Nurse Practitioner: Psychiatric/Mental Health,2,No valid match found.  Defaulted,0,Y,-1289,1914,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
 3822084,MALE,15.0,15 to 17,16.0,-556,2015-01-27,NSFINJ,1990896221,2013-07-20,DC-OUTPT,Emergency Medicine,1,No valid match found.  Defaulted,0,UN,-2966,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822611,FEMALE,11.0,5 to 14,9.0,796,2010-05-26,NSFINJ,1655557045,2012-07-30,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822611,FEMALE,11.0,5 to 14,9.0,796,2010-05-26,NSFINJ,1655557045,2012-07-30,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822794,MALE,29.0,25 to 34,28.0,41,2012-08-10,NSFINJ,1693218278,2012-09-20,PC-OUTPT,Clinical Psychologist (Billing Independently),-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-2131,1126,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
 3822416,MALE,77.0,65 and over,78.0,-113,2014-02-28,NSFINJ,2145538861,2013-11-07,PC-OUTPT,Clinic or other group practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2671,526,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,28.0,25 to 34,31.0,-812,2015-07-24,NSFINJ,1903741806,2013-05-03,DC-OUTPT,Counselor: Addiction (Substance Use Disorder),4,No valid match found.  Defaulted,0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -4961,7 +4961,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822611,FEMALE,10.0,5 to 14,9.0,232,2010-05-26,NSFINJ,1242387211,2011-01-13,PC-OUTPT,Radiology,-NA-,Radiology,1,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 382268,MALE,23.0,18 to 24,24.0,-519,2013-10-15,VCODE,1612197718,2012-05-14,DC-OUTPT,Registered Nurse,3,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822280,MALE,26.0,25 to 34,26.0,-5,2011-05-02,VCODE,1297449896,2011-04-27,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-1636,1437,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822530,FEMALE,27.0,25 to 34,31.0,-1135,2015-07-24,NSFINJ,1740156298,2012-06-14,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0
+3822530,FEMALE,27.0,25 to 34,31.0,-1135,2015-07-24,NSFINJ,1740156298,2012-06-14,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0
 3822280,MALE,24.0,18 to 24,26.0,-901,2011-05-02,VCODE,561368455,2008-11-12,DC-OUTPT,"Specialist/Technologist, Other",0,No valid match found.  Defaulted,0,UN,-1636,1437,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 3822871,MALE,58.0,45 to 64,61.0,-892,2014-09-11,NSFINJ,1592394176,2012-04-02,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,27.0,25 to 34,31.0,-1213,2015-07-24,NSFINJ,1577033988,2012-03-28,DC-OUTPT,Occupational Therapist,2,No valid match found.  Defaulted,0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -5005,7 +5005,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822871,MALE,57.0,45 to 64,61.0,-1296,2014-09-11,NSFINJ,1263676808,2011-02-23,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
 3822046,MALE,0.0,0 to 4,3.0,-1296,2011-04-10,NSFINJ,236794230,2007-09-22,DC-INPT,Pediatrics,0,Obstetrics (MDC 14 or 15),0,UN,-1298,1404,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822599,FEMALE,51.0,45 to 64,48.0,1343,2011-11-09,NSFINJ,2651066984,2015-07-14,PC-OUTPT,Family Practice,-NA-,All other MEPRS codes,0,UN,-1864,1343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822670,MALE,32.0,25 to 34,33.0,-516,2011-06-22,NSFINJ,928730577,2010-01-22,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-795,1227,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+3822670,MALE,32.0,25 to 34,33.0,-516,2011-06-22,NSFINJ,928730577,2010-01-22,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-795,1227,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,12.0,5 to 14,9.0,1071,2010-05-26,NSFINJ,1906738045,2013-05-01,DC-OUTPT,Pediatrics,1,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822453,MALE,15.0,15 to 17,18.0,-1120,2013-04-25,NSFINJ,986583401,2010-04-01,PC-OUTPT,General Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2369,844,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822286,MALE,16.0,15 to 17,15.0,127,2009-10-26,NSFINJ,959983651,2010-03-02,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1061,2101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -5058,7 +5058,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822453,MALE,16.0,15 to 17,18.0,-727,2013-04-25,NSFINJ,1317532563,2011-04-29,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2369,844,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,32.0,25 to 34,31.0,453,2011-10-14,VCODE,1844040923,2013-01-09,DC-OUTPT,Registered Nurse: Case Management,3,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822280,MALE,27.0,25 to 34,26.0,147,2011-05-02,VCODE,1427230661,2011-09-26,DC-OUTPT,Counselor: Addiction (Substance Use Disorder),0,No valid match found.  Defaulted,0,UN,-1636,1437,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822530,FEMALE,26.0,25 to 34,31.0,-1654,2015-07-24,NSFINJ,1231712132,2011-01-12,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822530,FEMALE,26.0,25 to 34,31.0,-1654,2015-07-24,NSFINJ,1231712132,2011-01-12,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 382268,MALE,25.0,25 to 34,24.0,30,2013-10-15,VCODE,2095370002,2013-11-14,DC-OUTPT,Physician Assistant,2,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 3822102,MALE,32.0,25 to 34,31.0,259,2011-10-14,VCODE,1623548743,2012-06-29,DC-TCON,Family Medicine,1,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822416,MALE,76.0,65 and over,78.0,-625,2014-02-28,NSFINJ,1751053110,2012-06-13,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2671,526,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -5300,18 +5300,18 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822546,MALE,54.0,45 to 64,52.0,662,2012-07-06,NSFINJ,2226660807,2014-04-29,DC-OUTPT,Family Medicine,1,No valid match found.  Defaulted,0,UN,-2062,1176,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822871,MALE,61.0,45 to 64,61.0,116,2014-09-11,NSFINJ,2521817052,2015-01-05,PC-OUTPT,Internal Medicine,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2900,340,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0
 3822355,MALE,72.0,65 and over,72.0,116,2013-07-19,NSFINJ,2166787866,2013-11-12,PC-OUTPT,Clinic or other group practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2418,217,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822986,FEMALE,53.0,45 to 64,56.0,-920,2015-03-27,NSFINJ,1814816949,2012-09-18,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822986,FEMALE,53.0,45 to 64,56.0,-920,2015-03-27,NSFINJ,1814816949,2012-09-18,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,13.0,5 to 14,9.0,1380,2010-05-26,NSFINJ,2249533056,2014-03-06,PC-OUTPT,Physical Therapist (Independent Practice),-NA-,"Orthopedics (BLA, BEA, BEF, BEZ, BEB, BEE, BEC, BED, BLB)",0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,12.0,5 to 14,9.0,1164,2010-05-26,NSFINJ,1990762919,2013-08-02,DC-OUTPT,Pediatrics,1,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822663,FEMALE,26.0,25 to 34,26.0,-220,2011-06-20,NSFINJ,1186494596,2010-11-12,PC-OUTPT,"Facility charges - use for facility charges for outpatient services, (e.g.,ambulatory surgery, hospital services)",-NA-,Facility,0,UN,-1216,717,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822871,MALE,59.0,45 to 64,61.0,-715,2014-09-11,NSFINJ,1773998603,2012-09-26,PC-OUTPT,Psychiatry,-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-2900,340,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
-3822986,FEMALE,51.0,45 to 64,56.0,-1585,2015-03-27,NSFINJ,1186992290,2010-11-23,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+3822986,FEMALE,51.0,45 to 64,56.0,-1585,2015-03-27,NSFINJ,1186992290,2010-11-23,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-2980,104,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
 3822611,FEMALE,12.0,5 to 14,9.0,1143,2010-05-26,NSFINJ,2038367598,2013-07-12,PC-OUTPT,Pharmacy,-NA-,None,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,29.0,25 to 34,31.0,-455,2015-07-24,NSFINJ,2291222522,2014-04-25,PC-OUTPT,General Practice,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822530,FEMALE,28.0,25 to 34,31.0,-1053,2015-07-24,NSFINJ,1691426381,2012-09-04,PC-OUTPT,General Practice,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
 3822108,MALE,25.0,25 to 34,26.0,-498,2014-02-28,NSFINJ,1793012428,2012-10-18,PC-OUTPT,Certified Clinical Social Worker,-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-1402,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
 3822416,MALE,78.0,65 and over,78.0,105,2014-02-28,NSFINJ,2344454722,2014-06-13,PC-OUTPT,Clinic or other group practice,-NA-,Emergency Room (BIA),0,UN,-2671,526,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822333,FEMALE,19.0,18 to 24,20.0,-456,2012-06-25,NSFINJ,1295301400,2011-03-27,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-1998,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822333,FEMALE,19.0,18 to 24,20.0,-456,2012-06-25,NSFINJ,1295301400,2011-03-27,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-1998,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822355,MALE,71.0,65 and over,72.0,-436,2013-07-19,NSFINJ,1615998273,2012-05-09,PC-OUTPT,Pharmacy,-NA-,None,0,UN,-2418,217,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822102,MALE,31.0,25 to 34,31.0,-219,2011-10-14,VCODE,1271294342,2011-03-09,DC-OUTPT,Psychologist: Clinical,2,No valid match found.  Defaulted,0,Y,-1583,957,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
 3822077,MALE,53.0,45 to 64,53.0,0,2015-01-13,NSFINJ,2494343938,2015-01-13,PC-OUTPT,Family Practice,-NA-,All other MEPRS codes,1,UN,-2960,196,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
@@ -5407,7 +5407,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 382268,MALE,23.0,18 to 24,24.0,-637,2013-10-15,VCODE,1528938151,2012-01-17,DC-OUTPT,Physician Assistant,2,No valid match found.  Defaulted,0,Y,-2542,463,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822646,MALE,4.0,0 to 4,7.0,-829,2012-05-12,NSFINJ,941583597,2010-02-03,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1207,765,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822670,MALE,34.0,25 to 34,33.0,58,2011-06-22,NSFINJ,1414620522,2011-08-19,PC-OUTPT,Psychiatry,-NA-,"Mental Health (BFD, BFE, BFF, BFA, BFB, BFC)",0,UN,-795,1227,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822432,MALE,12.0,5 to 14,17.0,-1712,2012-09-17,NSFINJ,331586782,2008-01-10,PC-OUTPT,Physicianﾕs Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1933,963,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3822432,MALE,12.0,5 to 14,17.0,-1712,2012-09-17,NSFINJ,331586782,2008-01-10,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-1933,963,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822263,FEMALE,22.0,18 to 24,27.0,-1909,2012-09-12,NSFINJ,172892020,2007-06-22,DC-OUTPT,Registered Nurse,0,No valid match found.  Defaulted,0,UN,-2023,617,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822663,FEMALE,25.0,25 to 34,26.0,-402,2011-06-20,NSFINJ,1021547580,2010-05-14,PC-OUTPT,Radiology,-NA-,Radiology,0,UN,-1216,717,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822670,MALE,34.0,25 to 34,33.0,57,2011-06-22,NSFINJ,1415663296,2011-08-18,PC-OUTPT,Family Practice,-NA-,"Primary Care (BGA, BHA, BDA, BAA, BJA, BHB, BHI, BDC, BDB, BKA, BHZ, BGZ, BHH)",0,UN,-795,1227,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
@@ -5573,7 +5573,7 @@ id,gender,age,ageGroup,ageInjury,daysSinceInjury,dateInjury,injuryType,encounter
 3822740,MALE,26.0,25 to 34,26.0,-18,2011-09-09,VCODE,1397716928,2011-08-22,DC-OUTPT,Family Medicine,1,No valid match found.  Defaulted,0,Y,-1316,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822646,MALE,7.0,5 to 14,7.0,330,2012-05-12,NSFINJ,1951796926,2013-04-07,PC-OUTPT,Internal Medicine,-NA-,Emergency Room (BIA),0,UN,-1207,765,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,12.0,5 to 14,9.0,1006,2010-05-26,NSFINJ,1877231862,2013-02-25,DC-OUTPT,Pediatrics,0,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3822530,FEMALE,29.0,25 to 34,31.0,-521,2015-07-24,NSFINJ,2248691485,2014-02-18,PC-OUTPT,Physicianﾕs Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+3822530,FEMALE,29.0,25 to 34,31.0,-521,2015-07-24,NSFINJ,2248691485,2014-02-18,PC-OUTPT,Physicianﾃ不 Assistant,-NA-,Emergency Room (BIA),0,UN,-2515,75,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
 3822663,FEMALE,25.0,25 to 34,26.0,-560,2011-06-20,NSFINJ,885457121,2009-12-07,PC-OUTPT,General Surgery,-NA-,All other MEPRS codes,0,UN,-1216,717,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 3822611,FEMALE,11.0,5 to 14,9.0,708,2010-05-26,NSFINJ,1613415905,2012-05-03,DC-TCON,Pediatrics,1,No valid match found.  Defaulted,0,UN,-1318,1955,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
 3822536,FEMALE,39.0,35 to 44,39.0,197,2012-01-31,NSFINJ,1662896579,2012-08-15,DC-OUTPT,No valid match found.  Defaulted,0,No valid match found.  Defaulted,0,UN,-1195,864,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
