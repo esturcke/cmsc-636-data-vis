@@ -36,6 +36,7 @@ const normalize = row => {
       source            : row.encounterSource,
       providerSpecialty : row.providerSpecialty,
       providerType      : row.providerType,
+      productLine       : row.productLine,
     }],
   }
 }
