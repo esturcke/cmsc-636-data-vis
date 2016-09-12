@@ -11,7 +11,7 @@
     "url": "git+https://github.com/esturcke/cmsc-636-data-vis.git"
   },
   "author": "Erik J. Sturcke",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/esturcke/cmsc-636-data-vis/issues"
   },
