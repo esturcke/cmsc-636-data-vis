@@ -19,7 +19,10 @@ const normalize = row => ({
   gender : normalizeGender(row),
   injury : {
     date : normalizeInjuryDate(row),
-  }
+  },
+  encounters : [{
+    id : row.encounterId,
+  }],
 })
 
 // Reorganize the data
@@ -33,12 +36,13 @@ const constantMerge = (patient, row, field) => {
 const merge = (patient, row) => {
   if (!patient) return row
   return {
-    id     : patient.id,
-    gender : constantMerge(patient, row, "gender"),
-    injury : constantMerge(patient, row, "injury"),
+    id         : patient.id,
+    gender     : constantMerge(patient, row, "gender"),
+    injury     : constantMerge(patient, row, "injury"),
+    encounters : [ ...patient.encounters, ...row.encounters ],
   }
 }
 
 const data = assignWith(...rows.map(r => ({ [r.id] : normalize(r) })), merge)
 
-console.log(data)
+console.log(JSON.stringify(data, undefined, 2))
