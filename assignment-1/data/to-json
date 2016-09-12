@@ -18,6 +18,7 @@ const normalize = row => ({
   id     : row.id,
   gender : normalizeGender(row),
   injury : {
+    age  : parseInt(row.ageInjury),
     date : normalizeInjuryDate(row),
   },
   encounters : [{
