@@ -4,6 +4,10 @@ const fs         = require("fs")
 const d3         = require("d3")
 const assignWith = require("lodash/assignWith")
 const isNull     = require("lodash/isNull")
+const flow       = require("lodash/flow")
+const sortBy     = require("lodash/sortBy")
+const mapValues  = require("lodash/mapValues")
+const assign     = require("lodash/assign")
 const assert     = require("assert")
 
 // Read the data
@@ -80,6 +84,12 @@ const merge = (patient, row) => {
   }
 }
 
-const data = assignWith(...rows.map(r => ({ [r.id] : normalize(r) })), merge)
+const data = flow(
+  // Reorganize rows of encounters into a set of patient records
+  rows => assignWith(...rows.map(r => ({ [r.id] : normalize(r) })), merge),
 
-console.log(JSON.stringify(data, undefined, 2))
+  // Sort the encounters
+  data => mapValues(assign(data, { encouters : sortBy(data.encounters, e => e.date) }))
+)(rows)
+
+console.info(JSON.stringify(data, undefined, 2))
