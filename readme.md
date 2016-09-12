@@ -6,4 +6,4 @@
 
 ## Assignments
 
-  - [Assignment 1: Visualization Construction](assignment-1/readme.md) 
+  - [Assignment 1: Visualization Construction](https://github.com/esturcke/cmsc-636-data-vis/tree/master/assignment-1)
