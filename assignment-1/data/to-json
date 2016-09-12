@@ -35,6 +35,7 @@ const normalize = row => {
       daysSinceInjury   : daysSinceInjury,
       source            : row.encounterSource,
       providerSpecialty : row.providerSpecialty,
+      providerType      : row.providerType,
     }],
   }
 }
