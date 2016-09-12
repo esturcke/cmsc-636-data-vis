@@ -89,7 +89,7 @@ const data = flow(
   rows => assignWith(...rows.map(r => ({ [r.id] : normalize(r) })), merge),
 
   // Sort the encounters
-  data => mapValues(assign(data, { encouters : sortBy(data.encounters, e => e.date) }))
+  data => mapValues(data, v => assign(v, { encounters : sortBy(v.encounters, e => e.date) }))
 )(rows)
 
 console.info(JSON.stringify(data, undefined, 2))
