@@ -12,18 +12,18 @@ const text = fs.readFileSync(FILE, { encoding : "utf8" })
 const rows = d3.csvParse(text)
 
 const DEFAULTED = "No valid match found.  Defaulted"
-const normalizeGender = ({ gender })     => gender === DEFAULTED ? null : gender.toLowerCase()
-const normalizeInjuryDate = ({ injuryDate }) => Date.parse(injuryDate)
+const normalizeGender = ({ gender }) => gender === DEFAULTED ? null : gender.toLowerCase()
 const normalize = row => ({
   id     : row.id,
   gender : normalizeGender(row),
   injury : {
     age  : parseInt(row.ageInjury),
-    date : normalizeInjuryDate(row),
+    date : Date.parse(row.injuryDate),
   },
   encounters : [{
-    id  : row.encounterId,
-    age : parseInt(row.age),
+    id   : row.encounterId,
+    age  : parseInt(row.age),
+    date : Date.parse(row.encounterDate),
   }],
 })
 
