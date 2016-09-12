@@ -5,7 +5,8 @@
     "injury": {
       "age": 24,
       "date": 1381795200000,
-      "type": "VCODE"
+      "type": "VCODE",
+      "warRelated": true
     },
     "encounters": [
       {
@@ -4218,7 +4219,8 @@
     "injury": {
       "age": 22,
       "date": 1332028800000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -5494,7 +5496,8 @@
     "injury": {
       "age": 3,
       "date": 1302393600000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -6099,7 +6102,8 @@
     "injury": {
       "age": 53,
       "date": 1421107200000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -8607,7 +8611,8 @@
     "injury": {
       "age": 16,
       "date": 1422316800000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -8827,7 +8832,8 @@
     "injury": {
       "age": 31,
       "date": 1318550400000,
-      "type": "VCODE"
+      "type": "VCODE",
+      "warRelated": true
     },
     "encounters": [
       {
@@ -14096,7 +14102,8 @@
     "injury": {
       "age": 26,
       "date": 1393545600000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -15691,7 +15698,8 @@
     "injury": {
       "age": 35,
       "date": 1421712000000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -16758,7 +16766,8 @@
     "injury": {
       "age": 36,
       "date": 1373328000000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -17594,7 +17603,8 @@
     "injury": {
       "age": 16,
       "date": 1285200000000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -17968,7 +17978,8 @@
     "injury": {
       "age": 8,
       "date": 1381190400000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -18254,7 +18265,8 @@
     "injury": {
       "age": 36,
       "date": 1342483200000,
-      "type": "VCODE"
+      "type": "VCODE",
+      "warRelated": false
     },
     "encounters": [
       {
@@ -19486,7 +19498,8 @@
     "injury": {
       "age": 27,
       "date": 1347408000000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -20124,7 +20137,8 @@
     "injury": {
       "age": 4,
       "date": 1347408000000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -20586,7 +20600,8 @@
     "injury": {
       "age": 42,
       "date": 1372291200000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -21873,7 +21888,8 @@
     "injury": {
       "age": 26,
       "date": 1304294400000,
-      "type": "VCODE"
+      "type": "VCODE",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -23941,7 +23957,8 @@
     "injury": {
       "age": 15,
       "date": 1256515200000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -24403,7 +24420,8 @@
     "injury": {
       "age": 61,
       "date": 1261612800000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -24942,7 +24960,8 @@
     "injury": {
       "age": 20,
       "date": 1340582400000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -25492,7 +25511,8 @@
     "injury": {
       "age": 72,
       "date": 1374192000000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -26867,7 +26887,8 @@
     "injury": {
       "age": 72,
       "date": 1374883200000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -29287,7 +29308,8 @@
     "injury": {
       "age": 78,
       "date": 1393545600000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -32092,7 +32114,8 @@
     "injury": {
       "age": 17,
       "date": 1347840000000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -32488,7 +32511,8 @@
     "injury": {
       "age": 48,
       "date": 1334793600000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": true
     },
     "encounters": [
       {
@@ -33225,7 +33249,8 @@
     "injury": {
       "age": 18,
       "date": 1366848000000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -35436,7 +35461,8 @@
     "injury": {
       "age": 31,
       "date": 1437696000000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -38384,7 +38410,8 @@
     "injury": {
       "age": 39,
       "date": 1327968000000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -41112,7 +41139,8 @@
     "injury": {
       "age": 52,
       "date": 1341532800000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -42146,7 +42174,8 @@
     "injury": {
       "age": 48,
       "date": 1320796800000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -44137,7 +44166,8 @@
     "injury": {
       "age": 9,
       "date": 1274832000000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -48130,7 +48160,8 @@
     "injury": {
       "age": 7,
       "date": 1336780800000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -48889,7 +48920,8 @@
     "injury": {
       "age": 26,
       "date": 1308528000000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -50275,7 +50307,8 @@
     "injury": {
       "age": 0,
       "date": 1285459200000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -50770,7 +50803,8 @@
     "injury": {
       "age": 33,
       "date": 1308700800000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -51353,7 +51387,8 @@
     "injury": {
       "age": 26,
       "date": 1315526400000,
-      "type": "VCODE"
+      "type": "VCODE",
+      "warRelated": true
     },
     "encounters": [
       {
@@ -51496,7 +51531,8 @@
     "injury": {
       "age": 2,
       "date": 1328918400000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -51870,7 +51906,8 @@
     "injury": {
       "age": 25,
       "date": 1276473600000,
-      "type": "VCODE"
+      "type": "VCODE",
+      "warRelated": true
     },
     "encounters": [
       {
@@ -55918,7 +55955,8 @@
     "injury": {
       "age": 27,
       "date": 1363910400000,
-      "type": "VCODE"
+      "type": "VCODE",
+      "warRelated": false
     },
     "encounters": [
       {
@@ -58206,7 +58244,8 @@
     "injury": {
       "age": 28,
       "date": 1344556800000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -59647,7 +59686,8 @@
     "injury": {
       "age": 61,
       "date": 1410393600000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {
@@ -61836,7 +61876,8 @@
     "injury": {
       "age": 56,
       "date": 1427414400000,
-      "type": "NSFINJ"
+      "type": "NSFINJ",
+      "warRelated": null
     },
     "encounters": [
       {

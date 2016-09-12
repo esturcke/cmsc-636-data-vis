@@ -13,7 +13,9 @@ const rows = d3.csvParse(text)
 
 const DEFAULTED = "No valid match found.  Defaulted"
 const normalizeGender = ({ gender }) => gender === DEFAULTED ? null : gender.toLowerCase()
-const normalizeFlag   = flag => flag === "0" ? false : flag === "1" ? true : null
+const normalizeFlag   = flag =>
+  flag === "0" || flag === "N" ? false :
+  flag === "1" || flag === "Y" ? true  : null
 const normalize = row => {
   const injuryDate      = Date.parse(row.injuryDate)
   const encounterDate   = Date.parse(row.encounterDate)
@@ -25,9 +27,10 @@ const normalize = row => {
     id     : row.id,
     gender : normalizeGender(row),
     injury : {
-      age  : parseInt(row.ageInjury),
-      date : injuryDate,
-      type : row.injuryType,
+      age        : parseInt(row.ageInjury),
+      date       : injuryDate,
+      type       : row.injuryType,
+      warRelated : normalizeFlag(row.warRelated),
     },
     encounters : [{
       id                : row.encounterId,
