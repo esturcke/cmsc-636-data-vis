@@ -13,23 +13,29 @@ const rows = d3.csvParse(text)
 
 const DEFAULTED = "No valid match found.  Defaulted"
 const normalizeGender = ({ gender }) => gender === DEFAULTED ? null : gender.toLowerCase()
+const normalizeInjuryDate = ({ injuryDate }) => Date.parse(injuryDate)
 const normalize = row => ({
   id     : row.id,
   gender : normalizeGender(row),
+  injury : {
+    date : normalizeInjuryDate(row),
+  }
 })
 
 // Reorganize the data
 const constantMerge = (patient, row, field) => {
   if (isNull(patient[field])) return row[field]
   if (isNull(row[field]))     return patient[field]
-  assert.equal(row[field], patient[field], `Field ${field} is not constant for ${row.id}: ${patient[field]} -> ${row[field]}`)
+  assert.deepEqual(row[field], patient[field], `Field ${field} is not constant for ${row.id}: ${patient[field]} -> ${row[field]}`)
   return patient[field]
 }
 
 const merge = (patient, row) => {
   if (!patient) return row
   return {
-    gender : constantMerge(patient, row, "gender")
+    id     : patient.id,
+    gender : constantMerge(patient, row, "gender"),
+    injury : constantMerge(patient, row, "injury"),
   }
 }
 
