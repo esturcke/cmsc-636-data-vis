@@ -13,19 +13,28 @@ const rows = d3.csvParse(text)
 
 const DEFAULTED = "No valid match found.  Defaulted"
 const normalizeGender = ({ gender }) => gender === DEFAULTED ? null : gender.toLowerCase()
-const normalize = row => ({
-  id     : row.id,
-  gender : normalizeGender(row),
-  injury : {
-    age  : parseInt(row.ageInjury),
-    date : Date.parse(row.injuryDate),
-  },
-  encounters : [{
-    id   : row.encounterId,
-    age  : parseInt(row.age),
-    date : Date.parse(row.encounterDate),
-  }],
-})
+const normalize = row => {
+  const injuryDate      = Date.parse(row.injuryDate)
+  const encounterDate   = Date.parse(row.encounterDate)
+  const daysSinceInjury = parseInt(row.daysSinceInjury)
+
+  assert.equal((encounterDate - injuryDate) / (1000 * 60 * 60 * 24), daysSinceInjury)
+
+  return {
+    id     : row.id,
+    gender : normalizeGender(row),
+    injury : {
+      age  : parseInt(row.ageInjury),
+      date : injuryDate,
+    },
+    encounters : [{
+      id              : row.encounterId,
+      age             : parseInt(row.age),
+      date            : encounterDate,
+      daysSinceInjury : daysSinceInjury,
+    }],
+  }
+}
 
 // Reorganize the data
 const constantMerge = (patient, row, field) => {
