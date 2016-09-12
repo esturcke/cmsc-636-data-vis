@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/esturcke/cmsc-636-data-vis/issues"
   },
-  "homepage": "https://github.com/esturcke/cmsc-636-data-vis#readme"
+  "homepage": "https://github.com/esturcke/cmsc-636-data-vis#readme",
+  "dependencies": {
+    "csv-parse": "^1.1.7",
+    "d3": "^4.2.2",
+    "lodash": "^4.15.0"
+  }
 }

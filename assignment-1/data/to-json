@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+const fs         = require("fs")
+const d3         = require("d3")
+const assignWith = require("lodash/assignWith")
+const isNull     = require("lodash/isNull")
+const assert     = require("assert")
+
+// Read the data
+const FILE = "./ehr-raw.csv"
+const text = fs.readFileSync(FILE, { encoding : "utf8" })
+const rows = d3.csvParse(text)
+
+const DEFAULTED = "No valid match found.  Defaulted"
+const normalizeGender = ({ gender }) => gender === DEFAULTED ? null : gender.toLowerCase()
+const normalize = row => ({
+  id     : row.id,
+  gender : normalizeGender(row),
+})
+
+// Reorganize the data
+const constantMerge = (patient, row, field) => {
+  if (isNull(patient[field])) return row[field]
+  if (isNull(row[field]))     return patient[field]
+  assert.equal(row[field], patient[field], `Field ${field} is not constant for ${row.id}: ${patient[field]} -> ${row[field]}`)
+  return patient[field]
+}
+
+const merge = (patient, row) => {
+  if (!patient) return row
+  return {
+    gender : constantMerge(patient, row, "gender")
+  }
+}
+
+const data = assignWith(...rows.map(r => ({ [r.id] : normalize(r) })), merge)
+
+console.log(data)
