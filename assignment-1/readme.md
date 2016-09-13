@@ -24,9 +24,12 @@ a JSON object keyed by patient ID with information about the injury as well as
 an array of encounters. Along with this, I normalized the date and flags. I also
 did a number of sanity checks that the patient and injury information didn’t
 change between encounters. The gender field had some defaulted values that had
-to be cleaned up as well. Otherwise the data was consistent.
+to be cleaned up as well. Otherwise the data looked consistent. That is until
+I started looking at the ages at each encounter and time of injury.
 
 ### [Vis 1](https://bl.ocks.org/esturcke/510d67c32b5949e55aaee750a6534113)
+
+The first visualization grapples with the age inconsistencies.
 
 ... [ steps to produce your images ]
 
