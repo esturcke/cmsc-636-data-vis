@@ -13,11 +13,11 @@ ID=`cat $ID_FILE 2> /dev/null`
 setopt extendedglob
 
 if [[ $ID ]]; then
-  URL=`gist -d"$DESC" -u"$ID" $DIR/^.*`
+  URL=`gist -p -d"$DESC" -u"$ID" $DIR/^.*`
   echo "Updated: $URL"
   echo "bl.ocks: https://bl.ocks.org/esturcke/$ID"
 else
-  URL=`gist -d"$DESC" $DIR/^.*`
+  URL=`gist -p -d"$DESC" $DIR/^.*`
   ID=`echo $URL | cut -d/ -f4`
   echo $ID > $ID_FILE
   echo "Created: $URL"
