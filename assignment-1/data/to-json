@@ -8,6 +8,7 @@ const flow       = require("lodash/flow")
 const sortBy     = require("lodash/sortBy")
 const mapValues  = require("lodash/mapValues")
 const assign     = require("lodash/assign")
+const values     = require("lodash/values")
 const assert     = require("assert")
 
 // Read the data
@@ -89,7 +90,10 @@ const data = flow(
   rows => assignWith(...rows.map(r => ({ [r.id] : normalize(r) })), merge),
 
   // Sort the encounters
-  data => mapValues(data, v => assign(v, { encounters : sortBy(v.encounters, e => e.date) }))
+  data => mapValues(data, v => assign(v, { encounters : sortBy(v.encounters, e => e.date) })),
+
+  // Just keep the values
+  data => values(data)
 )(rows)
 
 console.info(JSON.stringify(data, undefined, 2))
