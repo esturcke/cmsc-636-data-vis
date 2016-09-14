@@ -35,6 +35,8 @@ The first visualization grapples with the age inconsistencies.
 
 ### Vis 2
 
+The second visualization tries to look at symptoms prior pre and post injury.
+
 ... [ steps to produce your images ]
 
 ### Vis 3
