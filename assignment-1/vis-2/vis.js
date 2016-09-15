@@ -1,6 +1,6 @@
 "use strict"
 
-/* global d3  */
+/* global d3 */
 
 // patient data source
 const data = "https://gist.githubusercontent.com/esturcke/2c0a1dcfa6bce8e37f697e8525c814c2/raw/afe880efa6221efb896762c60c86aba4aa47a41e/ehr.json"
@@ -37,7 +37,7 @@ d3.json(data, (error, data) => {
   if (error) throw error
 
   x.domain([-300, 300])
-  y.domain([d3.min(data, injuryAge), d3.max(data, injuryAge)])
+  y.domain([0, d3.max(data, injuryAge)])
 
   // join patients and create groups for each
   const patients = svg.selectAll(".patient")
