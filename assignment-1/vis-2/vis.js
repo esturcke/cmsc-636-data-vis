@@ -30,8 +30,9 @@ const to        = (xVal, yVal) => datum => translate(x(xVal(datum)), y(yVal(datu
 const svg = d3.select("body").append("svg")
   .attr("width", area[0])
   .attr("height", area[1])
-  .append("g")
-    .attr("transform", translate(margin.left, margin.top))
+  .append("g").attrs({
+    transform : translate(margin.left, margin.top)
+  })
 
 d3.json(data, (error, data) => {
   if (error) throw error
@@ -46,16 +47,18 @@ d3.json(data, (error, data) => {
   const patients = svg.selectAll(".patient")
     .data(data)
     .enter()
-    .append("g")
-      .classed("patient", true)
+    .append("g").attrs({
+      class : "patient",
+    })
 
   // join encounters and create a circle for each
   const encounters = patients.selectAll(".encounter")
     .data(({ patient }) => patient.encounters.map(encounter => ({ patient, encounter })))
     .enter()
-    .append("circle")
-      .classed("encounter", true)
-      .attr("r", 2)
-      .attr("opacity", 0.5)
-      .attr("transform", to(daysFromInjury, injuryAge))
+    .append("circle").attrs({
+      class     : "encounter",
+      r         : 2,
+      opacity   : 0.5,
+      transform : to(daysFromInjury, injuryAge),
+    })
 })
