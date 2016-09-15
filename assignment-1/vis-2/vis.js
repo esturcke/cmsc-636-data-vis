@@ -3,7 +3,7 @@
 /* global d3  */
 
 // patient data source
-const data = "./ehr.json"
+const data = "https://gist.githubusercontent.com/esturcke/2c0a1dcfa6bce8e37f697e8525c814c2/raw/afe880efa6221efb896762c60c86aba4aa47a41e/ehr.json"
 
 // time conversion
 const msInDays = t => t / 1000 / 3600 / 24

@@ -33,7 +33,7 @@ The first visualization grapples with the age inconsistencies.
 
 ... [ steps to produce your images ]
 
-### Vis 2
+### [Vis 2](https://bl.ocks.org/esturcke/65673642c2221dd7f0ef428e13ab782b)
 
 The second visualization tries to look at symptoms prior pre and post injury.
 
