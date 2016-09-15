@@ -36,7 +36,10 @@ const svg = d3.select("body").append("svg")
 d3.json(data, (error, data) => {
   if (error) throw error
 
-  x.domain([-300, 300])
+  x.domain([
+    d3.min(data, ({ patient }) => d3.min(patient.encounters, encounter => daysFromInjury({ patient, encounter }))),
+    d3.max(data, ({ patient }) => d3.max(patient.encounters, encounter => daysFromInjury({ patient, encounter }))),
+  ])
   y.domain([0, d3.max(data, injuryAge)])
 
   // join patients and create groups for each
