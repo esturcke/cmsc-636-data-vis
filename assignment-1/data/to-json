@@ -93,7 +93,7 @@ const data = flow(
   data => mapValues(data, v => assign(v, { encounters : sortBy(v.encounters, e => e.date) })),
 
   // Just keep the values
-  data => values(data)
+  data => values(data).map(patient => ({ patient }))
 )(rows)
 
 console.info(JSON.stringify(data, undefined, 2))
