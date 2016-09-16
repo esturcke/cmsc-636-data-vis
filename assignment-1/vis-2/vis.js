@@ -6,12 +6,12 @@
 const data = "https://gist.githubusercontent.com/esturcke/2c0a1dcfa6bce8e37f697e8525c814c2/raw/afe880efa6221efb896762c60c86aba4aa47a41e/ehr.json"
 
 // time conversion
-const msInDays = t => t / 1000 / 3600 / 24
+const msInYears = t => t / 1000 / 3600 / 24 / 365.25
 
 // derived data
-const injuryAge      = ({ patient }) => patient.injury.age
-const encounterAge   = ({ encounter }) => encounter.age
-const daysFromInjury = ({ patient : { injury }, encounter }) => msInDays(encounter.date - injury.date)
+const injuryAge       = ({ patient }) => patient.injury.age
+const encounterAge    = ({ encounter }) => encounter.age
+const yearsFromInjury = ({ patient : { injury }, encounter }) => msInYears(encounter.date - injury.date)
 
 // SVG area dimensions
 const area   = [960, 500]
@@ -31,15 +31,15 @@ const svg = d3.select("body").append("svg")
   .attr("width", area[0])
   .attr("height", area[1])
   .append("g").attrs({
-    transform : translate(margin.left, margin.top)
+    transform : translate(margin.left, margin.top),
   })
 
 d3.json(data, (error, data) => {
   if (error) throw error
 
   x.domain([
-    d3.min(data, ({ patient }) => d3.min(patient.encounters, encounter => daysFromInjury({ patient, encounter }))),
-    d3.max(data, ({ patient }) => d3.max(patient.encounters, encounter => daysFromInjury({ patient, encounter }))),
+    d3.min(data, ({ patient }) => d3.min(patient.encounters, encounter => yearsFromInjury({ patient, encounter }))),
+    d3.max(data, ({ patient }) => d3.max(patient.encounters, encounter => yearsFromInjury({ patient, encounter }))),
   ])
   y.domain([0, d3.max(data, injuryAge)])
 
@@ -47,6 +47,11 @@ d3.json(data, (error, data) => {
   svg.append("g").attrs({ transform : translate(0, height) }).call(d3.axisBottom(x))
   svg.append("g").attrs({ transform : translate(-5, 0) }).call(d3.axisLeft(y))
 
+function byNum(a,b) {
+    return a - b;
+}
+  console.log(data.map(({ patient }) => patient.injury.age).sort(byNum))
+  console.log(data.map(({ patient }) => patient.injury.age).sort(byNum).length)
   // join patients and create groups for each
   const patients = svg.selectAll(".patient")
     .data(data)
@@ -63,6 +68,6 @@ d3.json(data, (error, data) => {
       class     : "encounter",
       r         : 2,
       opacity   : 0.5,
-      transform : to(daysFromInjury, injuryAge),
+      transform : to(yearsFromInjury, injuryAge),
     })
 })
