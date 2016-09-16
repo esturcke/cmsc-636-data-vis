@@ -1,1 +1,13 @@
-/* Here is the style */
+body {
+  margin  : 0;
+  padding : 0;
+}
+
+body, text {
+  font-family           : "Fira Sans", sans-serif;
+  font-feature-settings : "onum" 1, "tnum" 1;
+}
+
+text {
+  letter-spacing : 0.05em;
+}

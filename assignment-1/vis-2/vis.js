@@ -15,7 +15,7 @@ const daysFromInjury = ({ patient : { injury }, encounter }) => msInDays(encount
 
 // SVG area dimensions
 const area   = [960, 500]
-const margin = { top : 20, right : 20, bottom : 20, left : 20 }
+const margin = { top : 40, right : 40, bottom : 100, left : 60 }
 const height = area[1] - margin.top  - margin.bottom
 const width  = area[0] - margin.left - margin.right
 
@@ -42,6 +42,10 @@ d3.json(data, (error, data) => {
     d3.max(data, ({ patient }) => d3.max(patient.encounters, encounter => daysFromInjury({ patient, encounter }))),
   ])
   y.domain([0, d3.max(data, injuryAge)])
+
+  // set up axes
+  svg.append("g").attrs({ transform : translate(0, height) }).call(d3.axisBottom(x))
+  svg.append("g").attrs({ transform : translate(-5, 0) }).call(d3.axisLeft(y))
 
   // join patients and create groups for each
   const patients = svg.selectAll(".patient")
