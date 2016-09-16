@@ -48,6 +48,15 @@ d3.json(data, (error, data) => {
   svg.append("g").attrs({ transform : translate(0, height + 10) }).call(d3.axisBottom(x))
   svg.append("g").attrs({ transform : translate(-5, 0) }).call(d3.axisLeft(y))
 
+  // add vertical line for time of injury
+  svg.append("line").attrs({
+    class : "injury-line",
+    x1    : x(0),
+    y1    : -10,
+    x2    : x(0),
+    y2    : height + 10,
+  })
+
   // join patients and create groups for each
   const patients = svg.selectAll(".patient")
     .data(data)
