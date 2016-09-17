@@ -39,6 +39,8 @@ const ageBands = [
 const translate = (x, y) => `translate(${x} ${y})`
 const to        = (xVal, yVal) => datum => translate(x(xVal(datum)), y(yVal(datum)))
 
+const encounter = ({ patient, encounter }, i, nodes) => d3.select(nodes[i]).append("circle").attrs({ r : 2, opacity : 0.5 })
+
 // setup SVG area to draw on
 const svg = d3.select("body").append("svg")
   .attr("width", area[0])
@@ -95,10 +97,8 @@ d3.json(data, (error, data) => {
   const encounters = patients.selectAll(".encounter")
     .data(({ patient }) => patient.encounters.map(encounter => ({ patient, encounter })))
     .enter()
-    .append("circle").attrs({
-      class     : "encounter",
-      r         : 2,
-      opacity   : 0.5,
+    .append("g").attrs({
       transform : to(yearsFromInjury, index),
     })
+    .each(encounter)
 })
