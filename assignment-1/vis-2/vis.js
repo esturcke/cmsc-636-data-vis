@@ -24,6 +24,18 @@ const width  = area[0] - margin.left - margin.right
 const x = d3.scaleLinear().range([0, width]).nice()
 const y = d3.scaleLinear().range([height, 0]).nice()
 
+// age bands
+const ageBands = [
+  [ 0,  9],
+  [10, 19],
+  [20, 29],
+  [30, 39],
+  [40, 49],
+  [50, 59],
+  [60, 69],
+  [70, 79],
+]
+
 const translate = (x, y) => `translate(${x} ${y})`
 const to        = (xVal, yVal) => datum => translate(x(xVal(datum)), y(yVal(datum)))
 
@@ -44,9 +56,23 @@ d3.json(data, (error, data) => {
   ])
   y.domain([d3.min(data, index), d3.max(data, index)])
 
+  // set up age bands
+  const spacing = (y(0) - y(1)) / 2 + 1
+  const bands = svg.append("g").attrs({ class : "bands" })
+  ageBands.forEach(([min, max]) => {
+    const patients = data.filter(patient => min <= injuryAge(patient) && injuryAge(patient) <= max)
+    const y1 = y(index(patients[patients.length - 1])) - spacing
+    const y2 = y(index(patients[0])) + spacing
+    bands.append("rect").attrs({
+      x      : -25,
+      width  : width + 50,
+      y      : y1,
+      height : y2 - y1,
+    })
+  })
+
   // set up axes
   svg.append("g").attrs({ transform : translate(0, height + 10) }).call(d3.axisBottom(x))
-  svg.append("g").attrs({ transform : translate(-5, 0) }).call(d3.axisLeft(y))
 
   // add vertical line for time of injury
   svg.append("line").attrs({
