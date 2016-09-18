@@ -65,8 +65,8 @@ const encounter = ({ encounter }, i, nodes) => {
 const encounterSymptoms = ({ encounter }, i, nodes) => {
   const current = d3.select(nodes[i])
   symptoms
-		.filter(symptom => encounter[symptom])
-		.forEach((symptom, i) => current.append("circle").attrs({
+    .filter(symptom => encounter[symptom])
+    .forEach((symptom, i) => current.append("circle").attrs({
       class     : "symptom",
       fill      : symptomColor(symptom),
       transform : `translate(0 ${5 - 2 - i * 5})`,
