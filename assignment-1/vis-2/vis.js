@@ -24,18 +24,6 @@ const width  = area[0] - margin.left - margin.right
 const x = d3.scaleLinear().range([0, width]).nice()
 const y = d3.scaleLinear().range([height, 0]).nice()
 
-// age bands
-const ageBands = [
-  [ 0,  9],
-  [10, 19],
-  [20, 29],
-  [30, 39],
-  [40, 49],
-  [50, 59],
-  [60, 69],
-  [70, 79],
-]
-
 const translate = (x, y) => `translate(${x} ${y})`
 const to        = (xVal, yVal) => datum => translate(x(xVal(datum)), y(yVal(datum)))
 
@@ -92,11 +80,24 @@ d3.json(data, (error, data) => {
 
   // set up age bands
   const spacing = (y(0) - y(1)) / 2 + 1
+  const ageBands = [
+    [ 0,  9],
+    [10, 19],
+    [20, 29],
+    [30, 39],
+    [40, 49],
+    [50, 59],
+    [60, 69],
+    [70, 79],
+  ].map(([min, max]) => {
+    const inBand = data.filter(patient => min <= injuryAge(patient) && injuryAge(patient) <= max)
+    const y1 = y(index(inBand[inBand.length - 1])) - spacing
+    const y2 = y(index(inBand[0])) + spacing
+    return { min, max, y1, y2 }
+  })
+
   const bands = svg.append("g").attrs({ class : "bands" })
-  ageBands.forEach(([min, max]) => {
-    const patients = data.filter(patient => min <= injuryAge(patient) && injuryAge(patient) <= max)
-    const y1 = y(index(patients[patients.length - 1])) - spacing
-    const y2 = y(index(patients[0])) + spacing
+  ageBands.forEach(({ y1, y2 }) => {
     bands.append("rect").attrs({
       x      : -25,
       width  : width + 50,
@@ -147,7 +148,7 @@ d3.json(data, (error, data) => {
 
   // add fixed legend and y-axis
   const fixed = d3.select("body").append("svg").classed("fixed", true).attrs({
-    width  : area[0],
+    width  : 100,
     height : area[1],
   })
   .append("g").attrs({
