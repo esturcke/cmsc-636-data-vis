@@ -15,7 +15,7 @@ const yearsFromInjury = ({ patient : { injury }, encounter }) => msInYears(encou
 const index           = ({ patient : { i } }) => i
 
 // SVG area dimensions
-const area   = [1460, 960]
+const area   = [3000, 1100]
 const margin = { top : 40, right : 40, bottom : 100, left : 60 }
 const height = area[1] - margin.top  - margin.bottom
 const width  = area[0] - margin.left - margin.right
@@ -55,15 +55,22 @@ const symptoms = [
   "pcs",
   "endocrine",
 ]
+
+const symptomColor  = d3.scaleOrdinal(d3.schemeCategory20).domain(symptoms)
 const encounter = ({ encounter }, i, nodes) => {
   const current = d3.select(nodes[i])
   current.append("line").attrs({ class : "encounter", x1 : 0, x2 : 0, y1 : -5, y2 : 5 })
-  symptoms.forEach(
-    (symtom, j) => encounter[symtom] ? current.append("circle").attrs({
+}
+
+const encounterSymptoms = ({ encounter }, i, nodes) => {
+  const current = d3.select(nodes[i])
+  symptoms
+		.filter(symptom => encounter[symptom])
+		.forEach((symptom, i) => current.append("circle").attrs({
       class     : "symptom",
-      transform : `translate(4) rotate(${j * 360 / (symptoms.length)} -4 0)`,
-    }) : null
-  )
+      fill      : symptomColor(symptom),
+      transform : `translate(0 ${5 - 2 - i * 5})`,
+    }))
 }
 
 // setup SVG area to draw on
@@ -119,11 +126,20 @@ d3.json(data, (error, data) => {
     })
 
   // join encounters and create a circle for each
-  const encounters = patients.selectAll(".encounter")
+  patients.selectAll(".encounter")
     .data(({ patient }) => patient.encounters.map(encounter => ({ patient, encounter })))
     .enter()
     .append("g").attrs({
       transform : to(yearsFromInjury, index),
     })
     .each(encounter)
+
+  // join encounters and create a circle for each
+  patients.selectAll(".encounterSymptoms")
+    .data(({ patient }) => patient.encounters.map(encounter => ({ patient, encounter })))
+    .enter()
+    .append("g").attrs({
+      transform : to(yearsFromInjury, index),
+    })
+    .each(encounterSymptoms)
 })
