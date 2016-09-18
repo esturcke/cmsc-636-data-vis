@@ -15,7 +15,7 @@ const yearsFromInjury = ({ patient : { injury }, encounter }) => msInYears(encou
 const index           = ({ patient : { i } }) => i
 
 // SVG area dimensions
-const area   = [960, 960]
+const area   = [1460, 960]
 const margin = { top : 40, right : 40, bottom : 100, left : 60 }
 const height = area[1] - margin.top  - margin.bottom
 const width  = area[0] - margin.left - margin.right
@@ -39,7 +39,32 @@ const ageBands = [
 const translate = (x, y) => `translate(${x} ${y})`
 const to        = (xVal, yVal) => datum => translate(x(xVal(datum)), y(yVal(datum)))
 
-const encounter = ({ patient, encounter }, i, nodes) => d3.select(nodes[i]).append("circle").attrs({ r : 2, opacity : 0.5 })
+//
+const symptoms = [
+  "ptsd",
+  "speech",
+  "anxiety",
+  "depression",
+  "headache",
+  "sleep",
+  "audiology",
+  "vision",
+  "neurologic",
+  "alzheimer",
+  "cognitive",
+  "pcs",
+  "endocrine",
+]
+const encounter = ({ encounter }, i, nodes) => {
+  const current = d3.select(nodes[i])
+  current.append("line").attrs({ class : "encounter", x1 : 0, x2 : 0, y1 : -5, y2 : 5 })
+  symptoms.forEach(
+    (symtom, j) => encounter[symtom] ? current.append("circle").attrs({
+      class     : "symptom",
+      transform : `translate(4) rotate(${j * 360 / (symptoms.length)} -4 0)`,
+    }) : null
+  )
+}
 
 // setup SVG area to draw on
 const svg = d3.select("body").append("svg")

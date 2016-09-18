@@ -24,3 +24,12 @@ text {
 .bands > rect:nth-child(even) {
   fill : #f3f3f3;
 }
+
+.encounter {
+  stroke : rgba(190, 190, 190, 0.75);
+}
+
+.symptom {
+  r       : 2;
+  opacity : 0.1;
+}
