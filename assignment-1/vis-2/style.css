@@ -9,7 +9,12 @@ body, text {
 }
 
 text {
-  letter-spacing : 0.05em;
+  fill      : #333;
+  font-size : 12px;
+}
+
+text.right {
+  text-anchor : end;
 }
 
 .injury-line {
@@ -31,4 +36,10 @@ text {
 
 .symptom {
   r : 3;
+}
+
+.fixed {
+  position : fixed;
+  top      : 0;
+  left     : 0;
 }

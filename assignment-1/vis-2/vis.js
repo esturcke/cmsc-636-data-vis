@@ -105,16 +105,13 @@ d3.json(data, (error, data) => {
     })
   })
 
-  // set up axes
-  svg.append("g").attrs({ transform : translate(0, height + 10) }).call(d3.axisBottom(x))
-
   // add vertical line for time of injury
   svg.append("line").attrs({
     class : "injury-line",
     x1    : x(0),
-    y1    : -10,
+    y1    : -18,
     x2    : x(0),
-    y2    : height + 10,
+    y2    : height + 30,
   })
 
   // join patients and create groups for each
@@ -142,4 +139,32 @@ d3.json(data, (error, data) => {
       transform : to(yearsFromInjury, index),
     })
     .each(encounterSymptoms)
+
+  // set up x-axis
+  svg.append("g")
+    .attrs({ transform : translate(0, height + 28) })
+    .call(d3.axisBottom(x))
+
+  // add fixed legend and y-axis
+  const fixed = d3.select("body").append("svg").classed("fixed", true).attrs({
+    width  : area[0],
+    height : area[1],
+  })
+  .append("g").attrs({
+    transform : translate(margin.left, margin.top),
+  })
+
+  fixed.append("text")
+    .text("Years before/after injury")
+    .attrs({
+      class     : "label",
+      transform : translate(0, height + 22),
+    })
+
+  fixed.append("text")
+    .text("Age at time of injury")
+    .attrs({
+      class     : "right",
+      transform : "rotate(-90)",
+    })
 })
