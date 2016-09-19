@@ -63,9 +63,9 @@ The first visualization grapples with the age inconsistencies.
 
 ... [ steps to produce your images ]
 
-### [Vis 2](https://bl.ocks.org/esturcke/65673642c2221dd7f0ef428e13ab782b)
+### [Vis 3](https://bl.ocks.org/esturcke/65673642c2221dd7f0ef428e13ab782b)
 
-![Vis 2](./vis-2.png)
+![Vis 3](./vis-3.png)
 
 The second vis tries to look at the data holistically by plotting the symptoms
 recorded at each encounter both before and after the injury. The task is to gain
@@ -93,10 +93,6 @@ Still, you can pick up on trends of encounter density after injuries for some
 patients, whereas others already were having many encounters. Similarly with
 symptoms, some patients and a pretty strong increase in symptoms starting right
 after the injury, while others had many symptoms before the injury as well.
-
-### Vis 3
-
-... [ steps to produce your images ]
 
 ### Vis 4
 
