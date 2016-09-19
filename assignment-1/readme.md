@@ -57,7 +57,7 @@ change between encounters. The gender field had some defaulted values that had
 to be cleaned up as well. Otherwise the data looked consistent. That is until
 I started looking at the ages at each encounter and time of injury.
 
-### [Vis 1: Patient Age Consistancy Check](https://bl.ocks.org/esturcke/510d67c32b5949e55aaee750a6534113)
+### [Vis 1: Patient Age Consistancy Check](https://bl.ocks.org/esturcke/6eaed68fee8879fc58977ad0d9e8083a)
 
 ![Vis 1](./vis-1.png)
 
