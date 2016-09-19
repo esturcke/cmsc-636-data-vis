@@ -120,9 +120,22 @@ patients, whereas others already were having many encounters. Similarly with
 symptoms, some patients and a pretty strong increase in symptoms starting right
 after the injury, while others had many symptoms before the injury as well.
 
-### Vis 4
+### Vis 4: Age/Gender/War Related Injury Demographics
 
-... [ steps to produce your images ]
+![Vis 4](./vis-4.png)
+
+The first 3 visualizations much longer than anticipated so I switched to something simpler.
+I gave Tableau another chance to look at some simple demographics data. The task is to
+understand the demographic distribute. Importing the data was quick and simple.
+I then dragged age, gender and war related onto the sheet and it built a quick
+visual table. I filtered out the unknown genders (although as discussed above
+this could be reconstructed). I'm not confidant about interpreting the data since each
+line could correspond to multiple patients.
+
+I then discovered that I could create a mark corresponding to the count of distinct IDs.
+I assigned this count to the size. This gives some indication when there are multiple
+patients injured at the same age. I might have preferred a cluster of equal sized dots since
+the counts of patients is very small, but I couldn't figure out how to do that.
 
 ### The Good and the Bad
 
