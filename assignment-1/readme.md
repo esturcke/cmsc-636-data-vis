@@ -120,7 +120,7 @@ patients, whereas others already were having many encounters. Similarly with
 symptoms, some patients and a pretty strong increase in symptoms starting right
 after the injury, while others had many symptoms before the injury as well.
 
-### Vis 4: Age/Gender/War Related Injury Demographics
+### [Vis 4: Age/Gender/War Related Injury Demographics](https://public.tableau.com/views/GenderAgeWarRelatedDemographics/Sheet2?:embed=y&:display_count=yes)
 
 ![Vis 4](./vis-4.png)
 
