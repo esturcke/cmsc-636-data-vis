@@ -61,6 +61,20 @@ const encounterSymptoms = ({ encounter }, i, nodes) => {
     }))
 }
 
+const bandLabel = ({ min, max, y1, y2 }, i, nodes) => {
+  const node = d3.select(nodes[i])
+  const tick = 5
+  node.append("path").attrs({
+    fill   : "none",
+    stroke : "#000",
+    d      : `M ${tick} 0 L 0 0 L 0 ${y2 - y1} L ${tick} ${y2 - y1}`,
+  })
+  node.append("text").text(`${min}–${max}`).attrs({
+    "text-anchor" : "middle",
+    transform     : `translate(-8 ${(y2 - y1) / 2}) rotate(-90)`,
+  })
+}
+
 // setup SVG area to draw on
 const svg = d3.select("body").append("svg")
   .attr("width", area[0])
@@ -79,7 +93,6 @@ d3.json(data, (error, data) => {
   y.domain([d3.min(data, index), d3.max(data, index)])
 
   // set up age bands
-  const spacing = (y(0) - y(1)) / 2 + 1
   const ageBands = [
     [ 0,  9],
     [10, 19],
@@ -91,8 +104,10 @@ d3.json(data, (error, data) => {
     [70, 79],
   ].map(([min, max]) => {
     const inBand = data.filter(patient => min <= injuryAge(patient) && injuryAge(patient) <= max)
-    const y1 = y(index(inBand[inBand.length - 1])) - spacing
-    const y2 = y(index(inBand[0])) + spacing
+    const i1 = index(inBand[inBand.length - 1]) + 0.5
+    const i2 = index(inBand[0]) - 0.5
+    const y1 = y(i1)
+    const y2 = y(i2)
     return { min, max, y1, y2 }
   })
 
@@ -143,29 +158,47 @@ d3.json(data, (error, data) => {
 
   // set up x-axis
   svg.append("g")
-    .attrs({ transform : translate(0, height + 28) })
+    .attrs({ transform : translate(0, height + 48) })
     .call(d3.axisBottom(x))
 
   // add fixed legend and y-axis
   const fixed = d3.select("body").append("svg").classed("fixed", true).attrs({
-    width  : 100,
+    width  : 300,
     height : area[1],
   })
   .append("g").attrs({
-    transform : translate(margin.left, margin.top),
+    transform : translate(50, margin.top),
   })
+
+  fixed.append("rect")
+    .attrs({
+      class  : "mask",
+      x      : -margin.left,
+      y      : -margin.top,
+      height : height + margin.top,
+      width  : margin.left + 10,
+    })
 
   fixed.append("text")
     .text("Years before/after injury")
     .attrs({
       class     : "label",
-      transform : translate(0, height + 22),
+      transform : translate(30, height + 42),
     })
 
   fixed.append("text")
     .text("Age at time of injury")
     .attrs({
-      class     : "right",
-      transform : "rotate(-90)",
+      transform : `translate(-15 ${height}) rotate(-90)`,
     })
+
+  fixed.selectAll(".band-label")
+    .data(ageBands)
+    .enter()
+    .append("g").attrs({
+      class : "band-label",
+      transform : ({ y1 }) => translate(10, y1),
+    })
+    .each(bandLabel)
+
 })

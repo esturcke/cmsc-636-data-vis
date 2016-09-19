@@ -43,3 +43,8 @@ text.right {
   top      : 0;
   left     : 0;
 }
+
+.mask {
+  fill : #fff;
+  opacity : 0.75;
+}
