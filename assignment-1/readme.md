@@ -80,7 +80,7 @@ The age is still captured by patient order, but the grouping prevents overlaps
 across patients. As an added bonus, the vis captures age demographic information
 by the width of each of the groups.
 
-Finally, I added the symptoms at each encounter, coded using color.
+Finally, I added the symptoms at each encounter, coded using color. The vis 
 
 ### Vis 3
 
@@ -89,3 +89,32 @@ Finally, I added the symptoms at each encounter, coded using color.
 ### Vis 4
 
 ... [ steps to produce your images ]
+
+### The Good and the Bad
+
+#### Tableau
+
+Tableau tries to classify the different types of data and can make inferences
+and suggest ways to visualize based on those data types.
+
+ - **Good**: Tableau detects the data types and based on that can structure
+   visualizations appropriately.
+ - **Good**: Simple yet powerful drag and drop interface.
+ - **Bad**: If the data structure is not straight forward, it's difficult to
+   manipulate Tableau to capture the data correctly.
+
+#### D3
+
+With D3, you describe every aspect of going from data to visualization. In my
+experience, this is the reason for both the good and the bad. 
+
+ - **Good**: D3 is extremely flexible and you can describe every aspect.
+ - **Good**: Because you are describing every aspect, you maintain a very clear
+   awareness of how the data is being maipulated and the vis is being
+   generated.
+ - **Bad**: D3 only gives you convenience functions for data manipulation,
+   binding data, and describing how the data gets transformed into the visual
+   form. This leaves a lot of work to the person creating the vis. 
+
+
+
