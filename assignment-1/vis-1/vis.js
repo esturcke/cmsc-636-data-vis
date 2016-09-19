@@ -3,7 +3,7 @@
 /* global d3 */
 
 // patient data source
-const data = "https://gist.githubusercontent.com/esturcke/2c0a1dcfa6bce8e37f697e8525c814c2/raw/17efba6b3c7d7831fd4cbfaa18a25b54b29299e1/ehr.json"
+const data = "https://gist.githubusercontent.com/esturcke/2c0a1dcfa6bce8e37f697e8525c814c2/raw/aa86bdba4c69c22b0635e46e16906c0dc8693797/ehr.json"
 
 // SVG area dimensions
 const area   = [960, 960]
@@ -27,12 +27,10 @@ const y = d3.scaleLinear().range([height, 0]).nice()
 
 // time conversion
 const msInYears = t => t / 1000 / 3600 / 24 / 365.25
-const yearsInMs = t => t * 1000 * 3600 * 24 * 365.25
 
 // derived data
 const injuryAge       = ({ patient }) => patient.injury.age
 const encounterAge    = ({ encounter }) => encounter.age
-const birthDate       = ({ encounter : { age, date } }) => [date - yearsInMs(age + 1), date - yearsInMs(age)]
 const yearsFromInjury = ({ patient : { injury }, encounter }) => msInYears(encounter.date - injury.date)
 const index           = ({ patient : { i } }) => i
 

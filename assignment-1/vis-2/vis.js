@@ -3,7 +3,7 @@
 /* global d3 */
 
 // patient data source
-const data = "https://gist.githubusercontent.com/esturcke/2c0a1dcfa6bce8e37f697e8525c814c2/raw/17efba6b3c7d7831fd4cbfaa18a25b54b29299e1/ehr.json"
+const data = "https://gist.githubusercontent.com/esturcke/2c0a1dcfa6bce8e37f697e8525c814c2/raw/aa86bdba4c69c22b0635e46e16906c0dc8693797/ehr.json"
 
 // SVG area dimensions
 const area   = [960, 960]
