@@ -6,11 +6,41 @@
 
 ### [Tableau Public](https://public.tableau.com/s/)
 
-...
+Tableau is very quick to get started with. I was able to import the CSV EHR
+data and it automatically identifies what data can be used as a dimension and
+what is a measurement. It also identified data types for each piece of data
+(although I couldn’t get it to treat the symptoms as booleans).  Creating
+graphs is also quick by simply dragging data onto a central work area.
+Creating derived data is also pretty straightforward by creating functions that
+involve other fields. 
+
+The difficulties started to crop up when I tried making sense of the EHR data
+and graphs. The data is a bit tricky because it’s hierarchical, but flattened
+to a two dimensional spread sheet with redundant data. There looks to be a way
+to describe heirarchy in Tableau, but I was not able to figure it out. So in the
+end, it was easy to create pretty graphs, but I'm not sure if what I was graphing
+actually made sense or if the duplication and hierarchy present in the data was
+throwing off everything.
 
 ### [D3.js](https://d3js.org/)
 
-...
+D3 was a very different experience. It was much harder to get started. It supplies
+you with the basic primitives to manipulate data, bind it to DOM elements and use
+that bound data to create and manipulate DOM elements. It is very capable, but
+even simple things like creating a legend, or creating non-standard axes was
+challenging. But because it’s all Javascript programming, I never felt stuck and I
+always had a clear understating of what was going on with the data. It was
+just sometimes frustrating how seemingly simple things could not be
+expressed simply in D3.
+
+I also found that data joining or binding to be a bit tricky. It one of the core
+principles of D3 and creating declarative visualizations, but it’s been a bit hard
+to wrap my mind around.
+
+But in terms of flexibility and customization D3 really shines. Everything that
+can be represented in Javascript can be done with D3. There are no canned visualizations,
+but rather functions that help manipulate data and manipulate the DOM based on that
+data. There are also tons of tutorials and examples online.
 
 ## Part 2: Visualizations
 
