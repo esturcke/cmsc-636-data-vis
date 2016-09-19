@@ -63,11 +63,25 @@ The first visualization grapples with the age inconsistencies.
 
 ... [ steps to produce your images ]
 
-### [Vis 3](https://bl.ocks.org/esturcke/65673642c2221dd7f0ef428e13ab782b)
+### [Vis 2: Encounter Frequency Before and After Injury](https://bl.ocks.org/esturcke/cb2b6ee34b6e9eb4fc3b21979a031762)
+
+![Vis 2](./vis-2.png)
+
+The second vis shows the frequency of encounters before and after the injury. Each
+encounter is represented by a faint vertical bar so that more frequent encounters
+can be represented by darker areas. The task here is to which patients have had sudden
+increases in visits post trauma and which have had little increase.
+
+There are some patients where the frequency of visits increased priory to the injury
+and some where the encounters increased months to a year before the injury. This
+could point to bad data, or that there is a secondary injury/illness, that might
+also account for symptoms reported.
+
+### [Vis 3: Symptoms Before and After Injury](https://bl.ocks.org/esturcke/65673642c2221dd7f0ef428e13ab782b)
 
 ![Vis 3](./vis-3.png)
 
-The second vis tries to look at the data holistically by plotting the symptoms
+The third vis tries to look at the data holistically by plotting the symptoms
 recorded at each encounter both before and after the injury. The task is to gain
 an overall understanding of the data and begin to identify trends of
 symptom/injury relationships.
