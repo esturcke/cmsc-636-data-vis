@@ -9,6 +9,8 @@ const sortBy     = require("lodash/sortBy")
 const mapValues  = require("lodash/mapValues")
 const assign     = require("lodash/assign")
 const values     = require("lodash/values")
+const min        = require("lodash/min")
+const max        = require("lodash/max")
 const assert     = require("assert")
 
 // Read the data
@@ -22,6 +24,7 @@ const normalizeFlag   = flag =>
   flag === "0" || flag === "N" ? false :
   flag === "1" || flag === "Y" ? true  : null
 const yearsInMs = t => t * 1000 * 3600 * 24 * 365.25
+const msInDays  = t => t / 1000 / 3600 / 24
 
 const birthDateRange = (date, age) => [date - yearsInMs(age + 1), date - yearsInMs(age)]
 const normalize = row => {
@@ -95,6 +98,12 @@ const data = flow(
 
   // Sort the encounters
   data => mapValues(data, v => assign(v, { encounters : sortBy(v.encounters, e => e.date) })),
+
+  // Find birth date range
+  data => mapValues(data, v => assign(v, { birthDateRange : [max(v.encounters.map(e => e.birthDateRange[0])), min(v.encounters.map(e => e.birthDateRange[1]))] })),
+
+  // Find average birth date and range
+  data => mapValues(data, v => assign(v, { birthDate : (v.birthDateRange[0] + v.birthDateRange[1])/2, birthDateRangeWidth : msInDays(v.birthDateRange[1] - v.birthDateRange[0]) })),
 
   // Just keep the values, sorted by age at injury
   data => values(data).sort((a, b) => a.injury.age - b.injury.age).map((patient, i) => Object.assign(patient, { i })).map(patient => ({ patient }))
