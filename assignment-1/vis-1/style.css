@@ -1,1 +1,59 @@
-/* Here is the style */
+body {
+  margin  : 0;
+  padding : 0;
+}
+
+body, text {
+  font-family           : "Fira Sans", sans-serif;
+  font-feature-settings : "onum" 1, "tnum" 1;
+}
+
+text {
+  fill      : #333;
+  font-size : 12px;
+}
+
+text.right {
+  text-anchor : end;
+}
+
+.injury-line {
+  stroke       : rgba(0, 0, 0, 0.1);
+  stroke-width : 1;
+}
+
+.bands > rect:nth-child(odd) {
+  fill : #fff;
+}
+
+.bands > rect:nth-child(even) {
+  fill : #f3f3f3;
+}
+
+.encounter {
+  stroke : rgba(130, 130, 130, 0.25);
+}
+
+.symptom {
+  r : 3;
+}
+
+.fixed {
+  position : fixed;
+  top      : 0;
+  left     : 0;
+}
+
+.mask {
+  fill : #fff;
+  opacity : 0.75;
+}
+
+.legend rect {
+  fill   : #fff;
+  stroke : #ccc;
+}
+
+.legend-label {
+  font-weight : bold;
+}
