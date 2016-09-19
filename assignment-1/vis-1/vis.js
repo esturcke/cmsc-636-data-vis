@@ -34,9 +34,13 @@ const encounterAge    = ({ encounter }) => encounter.age
 const yearsFromInjury = ({ patient : { injury }, encounter }) => msInYears(encounter.date - injury.date)
 const index           = ({ patient : { i } }) => i
 
-const encounter = ({ encounter }, i, nodes) => {
+const birthScale = d3.scaleLinear().range([-3, 3]).domain([-1, 1])
+const encounter = ({ patient : { birthDate }, encounter : { birthDateRange } }, i, nodes) => {
   const current = d3.select(nodes[i])
-  current.append("line").attrs({ class : "encounter", x1 : 0, x2 : 0, y1 : -5, y2 : 5 })
+  const yTop    = birthScale(msInYears(birthDateRange[0] - birthDate))
+  const yBottom = birthScale(msInYears(birthDateRange[1] - birthDate))
+  current.append("line").attrs({ class : "birth-range", x1 : -3, x2 : 3, y1 : yTop, y2 : yTop })
+  current.append("line").attrs({ class : "birth-range", x1 : -3, x2 : 3, y1 : yBottom, y2 : yBottom })
 }
 
 const bandLabel = ({ min, max, y1, y2 }, i, nodes) => {
@@ -124,7 +128,7 @@ d3.json(data, (error, data) => {
 
   // add fixed legend and y-axis
   const fixed = d3.select("body").append("svg").classed("fixed", true).attrs({
-    width  : 300,
+    width  : 500,
     height : area[1],
   })
   .append("g").attrs({
@@ -164,17 +168,18 @@ d3.json(data, (error, data) => {
 
   const legend = fixed.append("g").attrs({
     class     : "legend",
-    transform : translate(20, height - 150),
+    transform : translate(20, height - 30),
   })
   legend.append("rect").attrs({
     x         : 0,
     y         : 0,
-    width     : 160,
-    height    : 160,
+    width     : 280,
+    height    : 32,
   })
-  legend.append("text").text("Encounters").attrs({ class : "legend-label", transform : translate(5, 12) })
+  legend.append("text").text("One year window relative to estimated birth date").attrs({ class : "legend-label", transform : translate(5, 12) })
   legend.append("g").attrs({ transform : translate(70, 8) }).selectAll("encounter").data([1, 3, 5, 6, 12, 15, 19]).enter()
     .append("line").attrs({ class : "encounter", x1 : x => x, x2 : x => x, y1 : -5, y2 : 5 })
-  legend.append("text").text("Symptoms").attrs({ class : "legend-label", transform : translate(5, 24) })
+  legend.append("line").attrs({ transform : translate(10, 22), class : "birth-range", x1 : -6, x2 : 6, y1 : birthScale(0.5), y2 : birthScale(0.5) })
+  legend.append("line").attrs({ transform : translate(10, 22), class : "birth-range", x1 : -6, x2 : 6, y1 : birthScale(-0.5), y2 : birthScale(-0.5) })
 
 })

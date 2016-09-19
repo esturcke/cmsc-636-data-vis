@@ -57,11 +57,23 @@ change between encounters. The gender field had some defaulted values that had
 to be cleaned up as well. Otherwise the data looked consistent. That is until
 I started looking at the ages at each encounter and time of injury.
 
-### [Vis 1](https://bl.ocks.org/esturcke/510d67c32b5949e55aaee750a6534113)
+### [Vis 1: Patient Age Consistancy Check](https://bl.ocks.org/esturcke/510d67c32b5949e55aaee750a6534113)
 
-The first visualization grapples with the age inconsistencies.
+![Vis 1](./vis-1.png)
 
-... [ steps to produce your images ]
+The first visualization grapples with possible the age inconsistencies. For each
+encounter I calculated a 1 year window of possible birth dates based on the age
+at encounter and the date of encounter. Sweeping over all encounters closes
+that window. It turns out that there is actually no inconsistency in the ages
+(i.e. this window does not go to 0 for any patient). 
+
+It did turn out to still be interesting to graph these windows relative to the mean
+date within the windows of possible birth dates. The relative windows for each
+encounter have a step with a 1 year period. This would allow the birth date to
+be reconstructed with even higher accuracy (assuming we know if the ages at the
+time of encounters were rounded down as is typically when self reporting age or
+if it was rounded to the nearest integer as might be the case if the ages were
+calculated based on the actual birth date.
 
 ### [Vis 2: Encounter Frequency Before and After Injury](https://bl.ocks.org/esturcke/cb2b6ee34b6e9eb4fc3b21979a031762)
 

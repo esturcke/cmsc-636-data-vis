@@ -30,8 +30,8 @@ text.right {
   fill : #f3f3f3;
 }
 
-.encounter {
-  stroke : rgba(130, 130, 130, 0.25);
+.birth-range {
+  stroke : rgba(130, 130, 130, 0.75);
 }
 
 .symptom {
