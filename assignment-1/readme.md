@@ -68,10 +68,13 @@ The first visualization grapples with the age inconsistencies.
 ![Vis 2](./vis-2.png)
 
 The second vis tries to look at the data holistically by plotting the symptoms
-recorded at each encounter both before and after the injury. This vis took by
-far the longest. As described above, it started with manipulating the data to
-captures the hierarchy of symptoms belonging to encounters which in turn 
-belong to patients.
+recorded at each encounter both before and after the injury. The task is to gain
+an overall understanding of the data and begin to identify trends of
+symptom/injury relationships.
+
+This vis took by far the longest. As described above, it started with
+manipulating the data to captures the hierarchy of symptoms belonging to
+encounters which in turn belong to patients.
 
 I then worked on displaying each encounter by time relative
 to the injury and age of the patient at the time of injure. I made some changes
@@ -80,7 +83,16 @@ The age is still captured by patient order, but the grouping prevents overlaps
 across patients. As an added bonus, the vis captures age demographic information
 by the width of each of the groups.
 
-Finally, I added the symptoms at each encounter, coded using color. The vis 
+Finally, I added the symptoms at each encounter, coded using color. With 12
+symptoms (stress was excluded as it was false for all patients/encounters), this
+is pushing the limits describing categorical data with color. Additionally, the
+encounters are very dense and so there is a lot of overlap between symptom
+dots.
+
+Still, you can pick up on trends of encounter density after injuries for some
+patients, whereas others already were having many encounters. Similarly with
+symptoms, some patients and a pretty strong increase in symptoms starting right
+after the injury, while others had many symptoms before the injury as well.
 
 ### Vis 3
 
