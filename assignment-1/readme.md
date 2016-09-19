@@ -65,9 +65,22 @@ The first visualization grapples with the age inconsistencies.
 
 ### [Vis 2](https://bl.ocks.org/esturcke/65673642c2221dd7f0ef428e13ab782b)
 
-The second visualization tries to look at symptoms prior pre and post injury.
+[Vis 2](./vis-2.png)
 
-... [ steps to produce your images ]
+The second vis tries to look at the data holistically by plotting the symptoms
+recorded at each encounter both before and after the injury. This vis took by
+far the longest. As described above, it started with manipulating the data to
+captures the hierarchy of symptoms belonging to encounters which in turn 
+belong to patients.
+
+I then worked on displaying each encounter by time relative
+to the injury and age of the patient at the time of injure. I made some changes
+to the vertical axis to group patients into age groups rather than by specific age.
+The age is still captured by patient order, but the grouping prevents overlaps
+across patients. As an added bonus, the vis captures age demographic information
+by the width of each of the groups.
+
+Finally, I added the symptoms at each encounter, coded using color.
 
 ### Vis 3
 
