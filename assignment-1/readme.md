@@ -18,7 +18,7 @@ The difficulties started to crop up when I tried making sense of the EHR data
 and graphs. The data is a bit tricky because it’s hierarchical, but flattened
 to a two dimensional spread sheet with redundant data. There looks to be a way
 to describe heirarchy in Tableau, but I was not able to figure it out. So in the
-end, it was easy to create pretty graphs, but I'm not sure if what I was graphing
+end, it was easy to create pretty graphs, but I’m not sure if what I was graphing
 actually made sense or if the duplication and hierarchy present in the data was
 throwing off everything.
 
@@ -129,13 +129,13 @@ I gave Tableau another chance to look at some simple demographics data. The task
 understand the demographic distribute. Importing the data was quick and simple.
 I then dragged age, gender and war related onto the sheet and it built a quick
 visual table. I filtered out the unknown genders (although as discussed above
-this could be reconstructed). I'm not confidant about interpreting the data since each
+this could be reconstructed). I’m not confidant about interpreting the data since each
 line could correspond to multiple patients.
 
 I then discovered that I could create a mark corresponding to the count of distinct IDs.
 I assigned this count to the size. This gives some indication when there are multiple
 patients injured at the same age. I might have preferred a cluster of equal sized dots since
-the counts of patients is very small, but I couldn't figure out how to do that.
+the counts of patients is very small, but I couldn’t figure out how to do that.
 
 ### The Good and the Bad
 
@@ -147,7 +147,7 @@ and suggest ways to visualize based on those data types.
  - **Good**: Tableau detects the data types and based on that can structure
    visualizations appropriately.
  - **Good**: Simple yet powerful drag and drop interface.
- - **Bad**: If the data structure is not straight forward, it's difficult to
+ - **Bad**: If the data structure is not straight forward, it’s difficult to
    manipulate Tableau to capture the data correctly.
 
 #### D3
