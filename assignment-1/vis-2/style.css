@@ -48,3 +48,12 @@ text.right {
   fill : #fff;
   opacity : 0.75;
 }
+
+.legend rect {
+  fill   : #fff;
+  stroke : #ccc;
+}
+
+.legend-label {
+  font-weight : bold;
+}

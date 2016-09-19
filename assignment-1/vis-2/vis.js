@@ -189,7 +189,7 @@ d3.json(data, (error, data) => {
   fixed.append("text")
     .text("Age at time of injury")
     .attrs({
-      transform : `translate(-15 ${height}) rotate(-90)`,
+      transform : `translate(-12 ${height}) rotate(-90)`,
     })
 
   fixed.selectAll(".band-label")
@@ -200,5 +200,28 @@ d3.json(data, (error, data) => {
       transform : ({ y1 }) => translate(10, y1),
     })
     .each(bandLabel)
+
+  const legend = fixed.append("g").attrs({
+    class     : "legend",
+    transform : translate(20, height - 150),
+  })
+  legend.append("rect").attrs({
+    x         : 0,
+    y         : 0,
+    width     : 160,
+    height    : 160,
+  })
+  legend.append("text").text("Encounters").attrs({ class : "legend-label", transform : translate(5, 12) })
+  legend.append("g").attrs({ transform : translate(70, 8) }).selectAll("encounter").data([1, 3, 5, 6, 12, 15, 19]).enter()
+    .append("line").attrs({ class : "encounter", x1 : x => x, x2 : x => x, y1 : -5, y2 : 5 })
+  legend.append("text").text("Symptoms").attrs({ class : "legend-label", transform : translate(5, 24) })
+  legend.selectAll("symptom-key").data(symptoms).enter()
+    .append("g").attrs({ transform : (_, i) => translate(80, 24 + (symptoms.length - i - 1) * 11) })
+    .each((symptom, i, nodes) => {
+      const node = d3.select(nodes[i])
+      node.append("circle").attrs({ transform : translate(-5, -3), class : "symptom", fill : symptomColor(symptom) })
+      node.append("text").text(symptom).attrs({ stroke : "none", fill : "#eee" })
+    })
+
 
 })
