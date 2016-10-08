@@ -1,20 +1,38 @@
 # Assignment 3: MultiD with Parallel Coordinates: Overview Technique
 
-[Assigment statement](https://sites.google.com/a/umbc.edu/datavisualization/assignments/assignment-3)
+- [Assigment statement](https://sites.google.com/a/umbc.edu/datavisualization/assignments/assignment-3)
+- [Source vis](http://pathrings.umbc.edu/tumor/)
 
-## Part 1: Design
+## Part 1: Design & Discussion
 
-### Group Names
+### Problem to Address
+
+The primary question I would like to address is that of showing the data distribution:
+
+> 1). The data follows a bimodal distribution (2 peaks) on one of the variables
+> (IL-5). In other words, the lines all bunched up in about two places roughly
+> when we turn off some therapies, in the figure below. Other variables may
+> have outliers and may follow different distributions. Parallel coordinates do
+> not let one see the distribution easily.
+>
+> How would you visualize distributions in data on specific variables with the
+> parallel coordinates? (hint (maybe): think of it this way, if you were to
+> generate histogram of the distribution - the peaks and how many are in each
+> peak.
+
+### Group Idea from Class Discussion
+
+#### Members
 
  - Kyle Boyer
  - Erik Sturcke
 
-### Group Idea: Edge Bundling
+#### Idea: Edge Bundling
 
 Inspired by [hierarchical edge bundling](https://bl.ocks.org/mbostock/7607999)
 discussed in class, our group idea was to use similar techniques to group
 similar edges between parallel coordinate axes. The idea is that this would
-remove some of the clutter, expecially when view all data points, and help
+remove some of the clutter, especially when view all data points, and help
 identify general trends in the data.
 
 This would primarily hope to address issue (2):
@@ -25,8 +43,11 @@ This would primarily hope to address issue (2):
 > similar items with aggregation and how to represent such an aggregation.
 
 To some extend cleaning up the graphs might also help see bimodal distributions
-clearer as long as the bundling is done in such a way that a single therapy may
-potentially split and bundle towards multiple areas. I’m not sure what it would
-entail to do this.
+of issue (1) clearer as long as the bundling is done in such a way that a
+single therapy may potentially split and bundle towards multiple areas. I’m not
+sure what it would entail to do this, but perhaps varying something like the
+bundling strength parameter might work.
+
+### Sketch
 
 ## Part 2: Implementation
