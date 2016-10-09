@@ -3,49 +3,49 @@
 /* global d3, _ */
 
 const width = document.body.clientWidth,
-   height = d3.max([document.body.clientHeight-540, 240])
+  height = d3.max([document.body.clientHeight - 540, 240])
 
 const m = [60, 0, 10, 0],
-    w = width - m[1] - m[3],
-    h = height - m[0] - m[2],
-    xscale = d3.scale.ordinal().rangePoints([0, w], 1),
-    yscale = {},
-    dragging = {},
-    line = d3.svg.line(),
-    axis = d3.svg.axis().orient("left").ticks(1+height/50),
-    excluded_groups = []
+  w = width - m[1] - m[3],
+  h = height - m[0] - m[2],
+  xscale = d3.scale.ordinal().rangePoints([0, w], 1),
+  yscale = {},
+  dragging = {},
+  line = d3.svg.line(),
+  axis = d3.svg.axis().orient("left").ticks(1 + height / 50),
+  excluded_groups = []
 
 let data,
-    brush_count = 0,
-    render_speed = 50,
-    foreground,
-    background,
-    highlighted,
-    dimensions,
-    legend
+  brush_count = 0,
+  render_speed = 50,
+  foreground,
+  background,
+  highlighted,
+  dimensions,
+  legend
 
 const colors = {
-  "AIP": '#a6cee3', // [166,206,227],
-  "AIV": '#b2df8a', //[178,223,138],
-  "IPV": '#fb9a99', // [251,154,153], , ,
-  "APV": '#fdbf6f', //[253,191,111],
-  "AIPV":'#cab2d6', //[202,178,214],
-  "Untreated": '#ffff99', // [255,255,153]
-   "AIP Tumor": '#1f78b4', // [166,206,227],
-  "AIV Tumor": '#33a02c', //[178,223,138], '#', '#', '#', '#'
-  "IPV Tumor": '#e31a1c', // [251,154,153], , ,
-  "APV Tumor": '#ff7f00', //[253,191,111],
-  "AIPV Tumor":'#6a3d9a', //[202,178,214],
-  "Untreated Tumor": '#b15928' // [255,255,153]
+  "AIP": "#a6cee3", // [166,206,227],
+  "AIV": "#b2df8a", //[178,223,138],
+  "IPV": "#fb9a99", // [251,154,153], , ,
+  "APV": "#fdbf6f", //[253,191,111],
+  "AIPV":"#cab2d6", //[202,178,214],
+  "Untreated": "#ffff99", // [255,255,153]
+  "AIP Tumor": "#1f78b4", // [166,206,227],
+  "AIV Tumor": "#33a02c", //[178,223,138], '#', '#', '#', '#'
+  "IPV Tumor": "#e31a1c", // [251,154,153], , ,
+  "APV Tumor": "#ff7f00", //[253,191,111],
+  "AIPV Tumor":"#6a3d9a", //[202,178,214],
+  "Untreated Tumor": "#b15928" // [255,255,153]
 }
 
 const colors2 = {
-  "AIP": '#1f78b4', // [166,206,227],
-  "AIV": '#33a02c', //[178,223,138], '#', '#', '#', '#'
-  "IPV": '#e31a1c', // [251,154,153], , ,
-  "APV": '#ff7f00', //[253,191,111],
-  "AIPV":'#6a3d9a', //[202,178,214],
-  "Untreated": '#b15928' // [255,255,153]
+  "AIP": "#1f78b4", // [166,206,227],
+  "AIV": "#33a02c", //[178,223,138], '#', '#', '#', '#'
+  "IPV": "#e31a1c", // [251,154,153], , ,
+  "APV": "#ff7f00", //[253,191,111],
+  "AIPV":"#6a3d9a", //[202,178,214],
+  "Untreated": "#b15928" // [255,255,153]
 }
 
 //const colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f', '#cab2d6', '#ffff99']
@@ -61,19 +61,19 @@ d3.selectAll("canvas")
 
 
 // Foreground canvas for primary view
-foreground = document.getElementById('foreground').getContext('2d')
+foreground = document.getElementById("foreground").getContext("2d")
 foreground.globalCompositeOperation = "destination-over"
 foreground.strokeStyle = "rgba(0,100,160,0.1)"
 foreground.lineWidth = 1.7
-foreground.fillText("Loading...",w/2,h/2)
+foreground.fillText("Loading...",w / 2,h / 2)
 
 // Highlight canvas for temporary interactions
-highlighted = document.getElementById('highlight').getContext('2d')
+highlighted = document.getElementById("highlight").getContext("2d")
 highlighted.strokeStyle = "rgba(0,100,160,1)"
 highlighted.lineWidth = 4
 
 // Background canvas
-background = document.getElementById('background').getContext('2d')
+background = document.getElementById("background").getContext("2d")
 background.strokeStyle = "rgba(0,100,160,0.1)"
 background.lineWidth = 1.7
 
@@ -89,7 +89,7 @@ d3.csv("tumor.csv", function(raw_data) {
   // Convert quantitative scales to floats
   data = raw_data.map(function(d) {
     for (const k in d) {
-      if (!_.isNaN(raw_data[0][k] - 0) && k != 'id') {
+      if (!_.isNaN(raw_data[0][k] - 0) && k != "id") {
         d[k] = parseFloat(d[k]) || 0
       }
     }
@@ -97,7 +97,7 @@ d3.csv("tumor.csv", function(raw_data) {
   })
 
 
-const dims =  ["Tumor mass (mg)",
+  const dims =  ["Tumor mass (mg)",
 "Organ",
 "Therapy",
 //"Mouse number",
@@ -134,9 +134,9 @@ const dims =  ["Tumor mass (mg)",
 "TNFa",
 "VEGF"]
 
-const min = 0.001147767
-const max = 70
-  xscale.domain(dimensions =dims.filter(function(k) {
+  const min = 0.001147767
+  const max = 70
+  xscale.domain(dimensions = dims.filter(function(k) {
     return (_.isNumber(data[0][k]))    && (yscale[k] =  (k === "Tumor mass (mg)") ?  d3.scale.log().domain([7, 1703]).range([h, 0])  :  // (yscale[k] = d3.scale.linear()
               d3.scale.log()
               .domain([min, max])
@@ -166,7 +166,7 @@ const max = 70
           this.__dragged__ = true
 
           // Feedback for axis deletion if dropped
-          if (dragging[d] < 12 || dragging[d] > w-12) {
+          if (dragging[d] < 12 || dragging[d] > w - 12) {
             d3.select(this).select(".background").style("fill", "#b00")
           } else {
             d3.select(this).select(".background").style("fill", null)
@@ -186,7 +186,7 @@ const max = 70
           }
 
           // remove axis if dragged all the way left
-          if (dragging[d] < 12 || dragging[d] > w-12) {
+          if (dragging[d] < 12 || dragging[d] > w - 12) {
             remove_axis(d,g)
           }
 
@@ -202,16 +202,16 @@ const max = 70
           delete dragging[d]
         }))
 
-  const formatter = d3.format(',.0f')
-  const logFormatter = d3.format('.3f')
+  const formatter = d3.format(",.0f")
+  const logFormatter = d3.format(".3f")
   // Add an axis and title.
   g.append("svg:g")
       .attr("class", "axis")
       .attr("transform", "translate(0,0)")
-      .each(function(d) { d3.select(this).call(axis.scale(yscale[d]).tickFormat(function(d){ return d>=1 ? formatter(d) : logFormatter(d)} ).tickValues([0.001, 0.01, 0.1, 0.5, 1.0, 10, 20, 40, 60])) })   //
+      .each(function(d) { d3.select(this).call(axis.scale(yscale[d]).tickFormat(function(d) { return d >= 1 ? formatter(d) : logFormatter(d)} ).tickValues([0.001, 0.01, 0.1, 0.5, 1.0, 10, 20, 40, 60])) })   //
     .append("svg:text")
       .attr("text-anchor", "middle")
-      .attr("y", function(d,i) { return i%2 == 0 ? -14 : -30 } )
+      .attr("y", function(d,i) { return i % 2 == 0 ? -14 : -30 } )
       .attr("x", 0)
       .attr("class", "label")
       .text(String)
@@ -250,14 +250,14 @@ function gray_copy(source, target) {
 // http://www.html5rocks.com/en/tutorials/canvas/imagefilters/
 function grayscale(pixels, args) {
   const d = pixels.data
-  for (const i=0; i<d.length; i+=4) {
+  for (const i = 0; i < d.length; i += 4) {
     const r = d[i]
-    const g = d[i+1]
-    const b = d[i+2]
+    const g = d[i + 1]
+    const b = d[i + 2]
     // CIE luminance for the RGB
     // The human eye is bad at seeing red and blue, so we de-emphasize them.
-    const v = 0.2126*r + 0.7152*g + 0.0722*b
-    d[i] = d[i+1] = d[i+2] = v
+    const v = 0.2126 * r + 0.7152 * g + 0.0722 * b
+    d[i] = d[i + 1] = d[i + 2] = v
   }
   return pixels
 }
@@ -307,7 +307,7 @@ function create_legend(colors,brush) {
 // render polylines i to i+render_speed
 function render_range(selection, i, max, opacity) {
   selection.slice(i,max).forEach(function(d) {
-     const col = (d.Organ === 'Tumor')? color2(d.Therapy,opacity) : color(d.Therapy,opacity)
+    const col = (d.Organ === "Tumor") ? color2(d.Therapy,opacity) : color(d.Therapy,opacity)
     path(d, foreground,col)
   })
 }
@@ -332,13 +332,13 @@ function data_table(unsortedSample) {
     .append("span")
       .attr("class", "color-block")
       .style("background", function(d) {
-        const col = (d.Organ === 'Tumor')? color2(d.Therapy,0.85) : color(d.Therapy,0.85)
+        const col = (d.Organ === "Tumor") ? color2(d.Therapy,0.85) : color(d.Therapy,0.85)
         return col })
 
   table
     .append("span")
       .text(function(d) {
-        return d.Organ + ", Therapy: " + d.Therapy + ", Tumor mass (mg): " + d['Tumor mass (mg)']  })
+        return d.Organ + ", Therapy: " + d.Therapy + ", Tumor mass (mg): " + d["Tumor mass (mg)"]  })
 }
 
 // Adjusts rendering speed
@@ -353,7 +353,7 @@ function optimize(timer) {
 function render_stats(i,n,render_speed) {
   d3.select("#rendered-count").text(i)
   d3.select("#rendered-bar")
-    .style("width", (100*i/n) + "%")
+    .style("width", (100 * i / n) + "%")
   d3.select("#render-speed").text(render_speed)
 }
 
@@ -361,15 +361,15 @@ function render_stats(i,n,render_speed) {
 function selection_stats(opacity, n, total) {
   d3.select("#data-count").text(total)
   d3.select("#selected-count").text(n)
-  d3.select("#selected-bar").style("width", (100*n/total) + "%")
-  d3.select("#opacity").text((""+(opacity*100)).slice(0,4) + "%")
+  d3.select("#selected-bar").style("width", (100 * n / total) + "%")
+  d3.select("#opacity").text(("" + (opacity * 100)).slice(0,4) + "%")
 }
 
 // Highlight single polyline
 function highlight(d) {
   d3.select("#foreground").style("opacity", "0.25")
   d3.selectAll(".row").style("opacity", function(p) { return (d.Therapy == p) ? null : "0.3" })
-  const col = (d.Organ === 'Tumor')? color2(d.Therapy,1) : color(d.Therapy,1)
+  const col = (d.Organ === "Tumor") ? color2(d.Therapy,1) : color(d.Therapy,1)
   path(d, highlighted, col)
 }
 
@@ -424,21 +424,21 @@ function path(d, ctx, color) {
 function path(d, ctx, color) {
   if (color) ctx.strokeStyle = color
   ctx.beginPath()
-  let x0 = xscale(0)-3,
-      y0 = yscale[dimensions[0]](d[dimensions[0]])   // left edge
+  let x0 = xscale(0) - 3,
+    y0 = yscale[dimensions[0]](d[dimensions[0]])   // left edge
   ctx.moveTo(x0,y0)
   dimensions.map(function(p,i) {
     const x = xscale(p),
-        y = yscale[p](d[p])
-    const cp1x = x - 0.88*(x-x0)
+      y = yscale[p](d[p])
+    const cp1x = x - 0.88 * (x - x0)
     const cp1y = y0
-    const cp2x = x - 0.12*(x-x0)
+    const cp2x = x - 0.12 * (x - x0)
     const cp2y = y
     ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
     x0 = x
     y0 = y
   })
-  ctx.lineTo(x0+3, y0)                               // right edge
+  ctx.lineTo(x0 + 3, y0)                               // right edge
   ctx.stroke()
 }
 
@@ -464,37 +464,37 @@ function position(d) {
 function brush() {
   brush_count++
   const actives = dimensions.filter(function(p) { return !yscale[p].brush.empty() }),
-      extents = actives.map(function(p) { return yscale[p].brush.extent() })
+    extents = actives.map(function(p) { return yscale[p].brush.extent() })
 
   // hack to hide ticks beyond extent
-  const b = d3.selectAll('.dimension')[0]
+  const b = d3.selectAll(".dimension")[0]
     .forEach(function(element, i) {
       const dimension = d3.select(element).data()[0]
       if (_.include(actives, dimension)) {
         const extent = extents[actives.indexOf(dimension)]
         d3.select(element)
-          .selectAll('text')
-          .style('font-weight', 'bold')
-          .style('font-size', '13px')
-          .style('display', function() {
+          .selectAll("text")
+          .style("font-weight", "bold")
+          .style("font-size", "13px")
+          .style("display", function() {
             const value = d3.select(this).data()
             return extent[0] <= value && value <= extent[1] ? null : "none"
           })
       } else {
         d3.select(element)
-          .selectAll('text')
-          .style('font-size', null)
-          .style('font-weight', null)
-          .style('display', null)
+          .selectAll("text")
+          .style("font-size", null)
+          .style("font-weight", null)
+          .style("display", null)
       }
       d3.select(element)
-        .selectAll('.label')
-        .style('display', null)
+        .selectAll(".label")
+        .style("display", null)
     })
 
 
   // bold dimensions with label
-  d3.selectAll('.label')
+  d3.selectAll(".label")
     .style("font-weight", function(dimension) {
       if (_.include(actives, dimension)) return "bold"
       return null
@@ -504,18 +504,18 @@ function brush() {
   const selected = []
   data
     .filter(function(d) {
-       const result = true
-      excluded_groups.forEach(function(group){
-        const org = ''
-        const id = group.indexOf('Tumor')
-        if( id >= 0) {
-          org = 'Tumor'
+      const result = true
+      excluded_groups.forEach(function(group) {
+        const org = ""
+        const id = group.indexOf("Tumor")
+        if ( id >= 0) {
+          org = "Tumor"
           id--
-          if(group.substring(0, id) === d.Therapy && org === d.Organ  ) result = false
+          if (group.substring(0, id) === d.Therapy && org === d.Organ  ) result = false
         }
-        else{
-           org = 'Lymph Node'
-          if(group === d.Therapy && org === d.Organ) result = false }
+        else {
+          org = "Lymph Node"
+          if (group === d.Therapy && org === d.Organ) result = false }
       })
       // const inc = !(_.contains(excluded_groups, d.Therapy) &&   )
       return result
@@ -542,7 +542,7 @@ function brush() {
 
   // total by Medicare status
 
-const hash = {"AIP": 0,
+  const hash = {"AIP": 0,
             "AIV": 1,
             "AIPV": 2,
             "APV": 3,
@@ -557,23 +557,23 @@ const hash = {"AIP": 0,
             }
 
   const tallies = {} // _(selected).groupBy(function(d) {return d.Therapy})
-  tallies['AIP'] = []
-  tallies['AIV'] = []
-  tallies['AIPV'] = []
-  tallies['APV'] = []
-  tallies['IPV'] = []
-  tallies['Untreated']= []
-  tallies['AIP Tumor'] = []
-  tallies['AIV Tumor'] = []
-  tallies['AIPV Tumor'] = []
-  tallies['APV Tumor'] = []
-  tallies['IPV Tumor'] = []
-  tallies['Untreated Tumor']= []
+  tallies["AIP"] = []
+  tallies["AIV"] = []
+  tallies["AIPV"] = []
+  tallies["APV"] = []
+  tallies["IPV"] = []
+  tallies["Untreated"] = []
+  tallies["AIP Tumor"] = []
+  tallies["AIV Tumor"] = []
+  tallies["AIPV Tumor"] = []
+  tallies["APV Tumor"] = []
+  tallies["IPV Tumor"] = []
+  tallies["Untreated Tumor"] = []
 
 
-  _(selected).forEach(function(obj){
-      const cat = ''+ obj.Therapy + (obj.Organ === 'Tumor' ? " Tumor" : "")
-      tallies[cat].push(obj)
+  _(selected).forEach(function(obj) {
+    const cat = '' + obj.Therapy + (obj.Organ === "Tumor" ? " Tumor" : "")
+    tallies[cat].push(obj)
   })
 
   // include empty groups
@@ -590,7 +590,7 @@ const hash = {"AIP": 0,
 
   legend.selectAll(".color-bar")
     .style("width", function(d) {
-      return Math.ceil(600*tallies[d].length/data.length) + "px"
+      return Math.ceil(600 * tallies[d].length / data.length) + "px"
     })
 
   legend.selectAll(".tally")
@@ -604,21 +604,21 @@ const hash = {"AIP": 0,
 // render a set of polylines on a canvas
 function paths(selected, ctx, count) {
   const n = selected.length,
-      opacity = d3.min([2/Math.pow(n,0.3),1])
+    opacity = d3.min([2 / Math.pow(n,0.3),1])
   let i = 0,
-      timer = (new Date()).getTime()
+    timer = (new Date()).getTime()
   selection_stats(opacity, n, data.length)
 
   const shuffled_data = _.shuffle(selected)
 
   data_table(shuffled_data.slice(0,108))
 
-  ctx.clearRect(0,0,w+1,h+1)
+  ctx.clearRect(0,0,w + 1,h + 1)
 
   // render all lines until finished or a new brush event
-  function animloop(){
+  function animloop() {
     if (i >= n || count < brush_count) return true
-    const max = d3.min([i+render_speed, n])
+    const max = d3.min([i + render_speed, n])
     render_range(shuffled_data, i, max, opacity)
     render_stats(max,n,render_speed)
     i = max
@@ -655,7 +655,7 @@ function update_ticks(d, extent) {
   d3.selectAll(".axis")
     .each(function(d,i) {
       // hide lines for better performance
-      d3.select(this).selectAll('line').style("display", "none")
+      d3.select(this).selectAll("line").style("display", "none")
 
       // transition axis numbers
       d3.select(this)
@@ -664,13 +664,13 @@ function update_ticks(d, extent) {
         .call(axis.scale(yscale[d]))
 
       // bring lines back
-      d3.select(this).selectAll('line').transition().delay(800).style("display", null)
+      d3.select(this).selectAll("line").transition().delay(800).style("display", null)
 
       d3.select(this)
-        .selectAll('text')
-        .style('font-weight', null)
-        .style('font-size', null)
-        .style('display', null)
+        .selectAll("text")
+        .style("font-weight", null)
+        .style("font-size", null)
+        .style("display", null)
     })
 }
 
@@ -699,7 +699,7 @@ function rescale() {
 // Get polylines within extents
 function actives() {
   const actives = dimensions.filter(function(p) { return !yscale[p].brush.empty() }),
-      extents = actives.map(function(p) { return yscale[p].brush.extent() })
+    extents = actives.map(function(p) { return yscale[p].brush.extent() })
 
   // filter extents and excluded groups
   const selected = []
@@ -708,10 +708,10 @@ function actives() {
       return !_.contains(excluded_groups, d.Hospital)
     })
     .map(function(d) {
-    return actives.every(function(p, i) {
+      return actives.every(function(p, i) {
       return extents[i][0] <= d[p] && d[p] <= extents[i][1]
     }) ? selected.push(d) : null
-  })
+    })
 
   // free text search
   const query = d3.select("#search")[0][0].value
@@ -736,7 +736,7 @@ function export_csv() {
 // scale to window size
 window.onresize = function() {
   width = document.body.clientWidth,
-  height = d3.max([document.body.clientHeight-500, 220])
+  height = d3.max([document.body.clientHeight - 500, 220])
 
   w = width - m[1] - m[3],
   h = height - m[0] - m[2]
@@ -768,7 +768,7 @@ window.onresize = function() {
   brush_count++
 
   // update axis placement
-  axis = axis.ticks(1+height/50),
+  axis = axis.ticks(1 + height / 50),
   d3.selectAll(".axis")
     .each(function(d) { d3.select(this).call(axis.scale(yscale[d])) })
 
