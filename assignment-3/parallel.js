@@ -1,11 +1,5 @@
 "use strict"
 
-// Interactive ACG Scoping App
-// Parallel Coordinates
-// Copyright (c) 2012, Kai Chang.
-// Released under the BSD License: http://opensource.org/licenses/BSD-3-Clause
-// Modifications and adaptations by Dwight Barry, 2014.
-
 var width = document.body.clientWidth,
     height = d3.max([document.body.clientHeight-540, 240]);
 
