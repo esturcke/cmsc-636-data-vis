@@ -1,5 +1,7 @@
 "use strict"
 
+/* global d3, _ */
+
 const width = document.body.clientWidth,
    height = d3.max([document.body.clientHeight-540, 240])
 
