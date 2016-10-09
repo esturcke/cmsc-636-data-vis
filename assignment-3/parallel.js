@@ -1,3 +1,5 @@
+"use strict"
+
 // Interactive ACG Scoping App
 // Parallel Coordinates
 // Copyright (c) 2012, Kai Chang.
@@ -19,7 +21,7 @@ var m = [60, 0, 10, 0],
     foreground,
     background,
     highlighted,
-    dimensions,                           
+    dimensions,
     legend,
     render_speed = 50,
     brush_count = 0,
@@ -28,13 +30,13 @@ var m = [60, 0, 10, 0],
 var colors = {
   "AIP": '#a6cee3', // [166,206,227],
   "AIV": '#b2df8a', //[178,223,138],
-  "IPV": '#fb9a99', // [251,154,153], , , 
+  "IPV": '#fb9a99', // [251,154,153], , ,
   "APV": '#fdbf6f', //[253,191,111],
   "AIPV":'#cab2d6', //[202,178,214],
   "Untreated": '#ffff99', // [255,255,153]
    "AIP Tumor": '#1f78b4', // [166,206,227],
   "AIV Tumor": '#33a02c', //[178,223,138], '#', '#', '#', '#'
-  "IPV Tumor": '#e31a1c', // [251,154,153], , , 
+  "IPV Tumor": '#e31a1c', // [251,154,153], , ,
   "APV Tumor": '#ff7f00', //[253,191,111],
   "AIPV Tumor":'#6a3d9a', //[202,178,214],
   "Untreated Tumor": '#b15928' // [255,255,153]
@@ -43,7 +45,7 @@ var colors = {
 var colors2 = {
   "AIP": '#1f78b4', // [166,206,227],
   "AIV": '#33a02c', //[178,223,138], '#', '#', '#', '#'
-  "IPV": '#e31a1c', // [251,154,153], , , 
+  "IPV": '#e31a1c', // [251,154,153], , ,
   "APV": '#ff7f00', //[253,191,111],
   "AIPV":'#6a3d9a', //[202,178,214],
   "Untreated": '#b15928' // [255,255,153]
@@ -136,12 +138,12 @@ var dims =  ["Tumor mass (mg)",
 "VEGF"];
 
 var min = 0.001147767;
-var max = 70; 
+var max = 70;
   xscale.domain(dimensions =dims.filter(function(k) {
     return (_.isNumber(data[0][k]))    && (yscale[k] =  (k === "Tumor mass (mg)") ?  d3.scale.log().domain([7, 1703]).range([h, 0])  :  // (yscale[k] = d3.scale.linear()
               d3.scale.log()
               .domain([min, max])
-              .range([h, 0])); 
+              .range([h, 0]));
       //.domain(d3.extent(data, function(d) { return +d[k]; }))
      // .range([h, 0]));
   }));
@@ -176,7 +178,7 @@ var max = 70;
         .on("dragend", function(d) {
           if (!this.__dragged__) {
             // no movement, invert axis
-            var extent = invert_axis(d);
+            //var extent = invert_axis(d);
 
           } else {
             // reorder axes
@@ -201,14 +203,14 @@ var max = 70;
           delete this.__origin__;
           delete dragging[d];
         }))
-  
+
   var formatter = d3.format(',.0f');
   var logFormatter = d3.format('.3f');
   // Add an axis and title.
   g.append("svg:g")
       .attr("class", "axis")
       .attr("transform", "translate(0,0)")
-      .each(function(d) { d3.select(this).call(axis.scale(yscale[d]).tickFormat(function(d){ if(d>=1) return formatter(d); else return logFormatter(d);} ).tickValues([0.001, 0.01, 0.1, 0.5, 1.0, 10, 20, 40, 60])); })   // 
+      .each(function(d) { d3.select(this).call(axis.scale(yscale[d]).tickFormat(function(d){ if(d>=1) return formatter(d); else return logFormatter(d);} ).tickValues([0.001, 0.01, 0.1, 0.5, 1.0, 10, 20, 40, 60])); })   //
     .append("svg:text")
       .attr("text-anchor", "middle")
       .attr("y", function(d,i) { return i%2 == 0 ? -14 : -30 } )
@@ -263,7 +265,7 @@ function grayscale(pixels, args) {
 };
 
 function create_legend(colors,brush) {
- 
+
   // create legend
   var legend_data = d3.select("#legend")
     .html("")
@@ -274,7 +276,7 @@ function create_legend(colors,brush) {
   var legend = legend_data
     .enter().append("div")
       .attr("title", "Hide group")
-      .on("click", function(d) { 
+      .on("click", function(d) {
         // toggle group
         if (_.contains(excluded_groups, d)) {
           d3.select(this).attr("title", "Hide group")
@@ -295,19 +297,19 @@ function create_legend(colors,brush) {
   legend
     .append("span")
     .attr("class", "tally")
-    .text(function(d,i) { return 0});  
+    .text(function(d,i) { return 0});
 
   legend
     .append("span")
-    .text(function(d,i) 
-      { var t = d; 
-        if( d.indexOf('Tumor') < 0) t += ' Lymph';  
-       return " " + t});  
+    .text(function(d,i)
+      { var t = d;
+        if( d.indexOf('Tumor') < 0) t += ' Lymph';
+       return " " + t});
 
   return legend;
 }
- 
-// render polylines i to i+render_speed 
+
+// render polylines i to i+render_speed
 function render_range(selection, i, max, opacity) {
   selection.slice(i,max).forEach(function(d) {
      var col = (d.Organ === 'Tumor')? color2(d.Therapy,opacity) : color(d.Therapy,opacity);
@@ -334,17 +336,17 @@ function data_table(sample) {
   table
     .append("span")
       .attr("class", "color-block")
-      .style("background", function(d) { 
-        var col = (d.Organ === 'Tumor')? color2(d.Therapy,0.85) : color(d.Therapy,0.85); 
+      .style("background", function(d) {
+        var col = (d.Organ === 'Tumor')? color2(d.Therapy,0.85) : color(d.Therapy,0.85);
         return col; })
 
   table
     .append("span")
-      .text(function(d) { 
+      .text(function(d) {
         return d.Organ + ", Therapy: " + d.Therapy + ", Tumor mass (mg): " + d['Tumor mass (mg)'] ; })
 }
 
-// Adjusts rendering speed 
+// Adjusts rendering speed
 function optimize(timer) {
   var delta = (new Date()).getTime() - timer;
   render_speed = Math.max(Math.ceil(render_speed * 30 / delta), 8);
@@ -448,13 +450,13 @@ function path(d, ctx, color) {
 function color(d,a) {
   var c = colors[d];
   //return ["hsla(",c[0],",",c[1],"%,",c[2],"%,",a,")"].join("");
-  return c; 
+  return c;
 }
- 
+
 function color2(d,a) {
   var c = colors2[d];
   //return ["hsla(",c[0],",",c[1],"%,",c[2],"%,",a,")"].join("");
-  return c; 
+  return c;
 }
 
 function position(d) {
@@ -479,7 +481,7 @@ function brush() {
           .selectAll('text')
           .style('font-weight', 'bold')
           .style('font-size', '13px')
-          .style('display', function() { 
+          .style('display', function() {
             var value = d3.select(this).data();
             return extent[0] <= value && value <= extent[1] ? null : "none"
           });
@@ -495,7 +497,7 @@ function brush() {
         .style('display', null);
     });
     ;
- 
+
   // bold dimensions with label
   d3.selectAll('.label')
     .style("font-weight", function(dimension) {
@@ -510,8 +512,8 @@ function brush() {
        var result = true;
       excluded_groups.forEach(function(group){
         var org = '';
-        var id = group.indexOf('Tumor'); 
-        if( id >= 0) { 
+        var id = group.indexOf('Tumor');
+        if( id >= 0) {
           org = 'Tumor';
           id--;
           if(group.substring(0, id) === d.Therapy && org === d.Organ  ) result = false;
@@ -519,7 +521,7 @@ function brush() {
         else{
            org = 'Lymph Node';
           if(group === d.Therapy && org === d.Organ) result = false; }
-      }); 
+      });
       // var inc = !(_.contains(excluded_groups, d.Therapy) &&   );
       return result;
     })
@@ -544,7 +546,7 @@ function brush() {
   };
 
   // total by Medicare status
-  
+
 var hash = {"AIP": 0,
             "AIV": 1,
             "AIPV": 2,
@@ -579,7 +581,7 @@ var hash = {"AIP": 0,
       if(obj.Organ === 'Tumor'){
           cat += ' Tumor';
       }
-      
+
       tallies[cat].push(obj);
   });
 
@@ -602,7 +604,7 @@ var hash = {"AIP": 0,
 
   legend.selectAll(".tally")
     .text(function(d,i) {
-      return tallies[d].length });  
+      return tallies[d].length });
 
   // Render selected lines
   paths(selected, foreground, brush_count, true);
@@ -617,7 +619,7 @@ function paths(selected, ctx, count) {
 
   selection_stats(opacity, n, data.length)
 
-  shuffled_data = _.shuffle(selected);
+  const shuffled_data = _.shuffle(selected);
 
   data_table(shuffled_data.slice(0,108));
 
@@ -762,7 +764,7 @@ window.onresize = function() {
       .attr("height", h + m[0] + m[2])
     .select("g")
       .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
-  
+
   xscale = d3.scale.ordinal().rangePoints([0, w], 1).domain(dimensions);
   dimensions.forEach(function(d) {
     yscale[d].range([h, 0]);
@@ -810,7 +812,7 @@ function remove_axis(d,g) {
   dimensions = _.difference(dimensions, [d]);
   xscale.domain(dimensions);
   g.attr("transform", function(p) { return "translate(" + position(p) + ")"; });
-  g.filter(function(p) { return p == d; }).remove(); 
+  g.filter(function(p) { return p == d; }).remove();
   update_ticks();
 }
 
