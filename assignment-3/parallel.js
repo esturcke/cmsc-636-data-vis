@@ -61,7 +61,7 @@ foreground = document.getElementById("foreground").getContext("2d")
 foreground.globalCompositeOperation = "destination-over"
 foreground.strokeStyle = "rgba(0,100,160,0.1)"
 foreground.lineWidth = 1.7
-foreground.fillText("Loading...",w / 2,h / 2)
+foreground.fillText("Loading...", w / 2, h / 2)
 
 // Highlight canvas for temporary interactions
 highlighted = document.getElementById("highlight").getContext("2d")
@@ -80,23 +80,19 @@ const svg = d3.select("svg")
   .append("svg:g")
     .attr("transform", "translate(" + m[3] + "," + m[0] + ")")
 
+
+const processAttribute = (value, attribute) => ["Organ", "Therapy"].includes(attribute) ? value : parseFloat(value)
+const processItems = items => items.map(item => _.mapValues(item, processAttribute))
+
 // Load the data and visualization
 d3.csv("tumor.csv", function(raw_data) {
   // Convert quantitative scales to floats
-  data = raw_data.map(function(d) {
-    for (const k in d) {
-      if (!_.isNaN(raw_data[0][k] - 0) && k != "id") {
-        d[k] = parseFloat(d[k]) || 0
-      }
-    }
-    return d
-  })
+  data = processItems(raw_data)
 
   const dims =  [
     "Tumor mass (mg)",
     "Organ",
     "Therapy",
-    //"Mouse number",
     "Eotaxin",
     "G-CSF",
     "GM-CSF",
@@ -138,8 +134,6 @@ d3.csv("tumor.csv", function(raw_data) {
               d3.scale.log()
               .domain([min, max])
               .range([h, 0]))
-      //.domain(d3.extent(data, function(d) { return +d[k] }))
-     // .range([h, 0]))
   }))
 
   // Add a status element for each dimension.
@@ -344,8 +338,8 @@ function selection_stats(opacity, n, total) {
 // Highlight single polyline
 function highlight(d) {
   d3.select("#foreground").style("opacity", "0.25")
-  d3.selectAll(".row").style("opacity", function(p) { return (d.Therapy == p) ? null : "0.3" })
-  const col = (d.Organ === "Tumor") ? color2(d.Therapy,1) : color(d.Therapy,1)
+  d3.selectAll(".row").style("opacity", p => d.Therapy === p ? null : "0.3")
+  const col = d.Organ === "Tumor" ? color2(d.Therapy,1) : color(d.Therapy,1)
   path(d, highlighted, col)
 }
 
