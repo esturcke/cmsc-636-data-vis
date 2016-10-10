@@ -2,62 +2,59 @@
 
 /* global d3, _ */
 
-let width = document.body.clientWidth,
-  height = d3.max([document.body.clientHeight - 540, 240])
+let width  = document.body.clientWidth
+let height = d3.max([document.body.clientHeight - 540, 240])
 
-const m = [60, 0, 10, 0],
-  yscale = {},
-  dragging = {}
+const m = [60, 0, 10, 0]
+const yscale = {}
+const dragging = {}
 
-let data,
-  w = width - m[1] - m[3],
-  h = height - m[0] - m[2],
-  brush_count = 0,
-  render_speed = 50,
-  excluded_groups = [],
-  xscale = d3.scale.ordinal().rangePoints([0, w], 1),
-  axis = d3.svg.axis().orient("left").ticks(1 + height / 50),
-  foreground,
-  background,
-  highlighted,
-  dimensions,
-  legend
+let data
+let w = width - m[1] - m[3]
+let h = height - m[0] - m[2]
+let brush_count = 0
+let render_speed = 50
+let excluded_groups = []
+let xscale = d3.scale.ordinal().rangePoints([0, w], 1)
+let axis = d3.svg.axis().orient("left").ticks(1 + height / 50)
+let foreground
+let background
+let highlighted
+let dimensions
+let legend
 
 const colors = {
-  "AIP": "#a6cee3", // [166,206,227],
-  "AIV": "#b2df8a", //[178,223,138],
-  "IPV": "#fb9a99", // [251,154,153], , ,
-  "APV": "#fdbf6f", //[253,191,111],
-  "AIPV":"#cab2d6", //[202,178,214],
-  "Untreated": "#ffff99", // [255,255,153]
-  "AIP Tumor": "#1f78b4", // [166,206,227],
-  "AIV Tumor": "#33a02c", //[178,223,138], '#', '#', '#', '#'
-  "IPV Tumor": "#e31a1c", // [251,154,153], , ,
-  "APV Tumor": "#ff7f00", //[253,191,111],
-  "AIPV Tumor":"#6a3d9a", //[202,178,214],
-  "Untreated Tumor": "#b15928", // [255,255,153]
+  "AIP"             : "#a6cee3",
+  "AIV"             : "#b2df8a",
+  "IPV"             : "#fb9a99",
+  "APV"             : "#fdbf6f",
+  "AIPV"            : "#cab2d6",
+  "Untreated"       : "#ffff99",
+  "AIP Tumor"       : "#1f78b4",
+  "AIV Tumor"       : "#33a02c",
+  "IPV Tumor"       : "#e31a1c",
+  "APV Tumor"       : "#ff7f00",
+  "AIPV Tumor"      : "#6a3d9a",
+  "Untreated Tumor" : "#b15928",
 }
 
 const colors2 = {
-  "AIP": "#1f78b4", // [166,206,227],
-  "AIV": "#33a02c", //[178,223,138], '#', '#', '#', '#'
-  "IPV": "#e31a1c", // [251,154,153], , ,
-  "APV": "#ff7f00", //[253,191,111],
-  "AIPV":"#6a3d9a", //[202,178,214],
-  "Untreated": "#b15928", // [255,255,153]
+  "AIP"       : "#1f78b4",
+  "AIV"       : "#33a02c",
+  "IPV"       : "#e31a1c",
+  "APV"       : "#ff7f00",
+  "AIPV"      : "#6a3d9a",
+  "Untreated" : "#b15928",
 }
-
-//const colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f', '#cab2d6', '#ffff99']
 
 // Scale chart and canvas height
 d3.select("#chart")
-    .style("height", (h + m[0] + m[2]) + "px")
+  .style("height", (h + m[0] + m[2]) + "px")
 
 d3.selectAll("canvas")
-    .attr("width", w)
-    .attr("height", h)
-    .style("padding", m.join("px ") + "px")
-
+  .attr("width", w)
+  .attr("height", h)
+  .style("padding", m.join("px ") + "px")
 
 // Foreground canvas for primary view
 foreground = document.getElementById("foreground").getContext("2d")
