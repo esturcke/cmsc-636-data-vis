@@ -95,43 +95,44 @@ d3.csv("tumor.csv", function(raw_data) {
     return d
   })
 
-
-  const dims =  ["Tumor mass (mg)",
-"Organ",
-"Therapy",
-//"Mouse number",
-"Eotaxin",
-"G-CSF",
-"GM-CSF",
-"IFNg",
-"IL-1a",
-"IL-1b",
-"IL-2",
-"IL-3",
-"IL-4",
-"IL-5",
-"IL-6",
-"IL-7",
-"IL-9",
-"IL-10",
-"IL-12p40",
-"IL-12p70",
-"IL-13",
-"IL-15",
-"IL-17",
-"IP-10",
-"KC",
-"LIF",
-"LIX",
-"M-CSF",
-"MCP-1",
-"MIG",
-"MIP-1a",
-"MIP-1b",
-"MIP-2",
-"RANTES",
-"TNFa",
-"VEGF"]
+  const dims =  [
+    "Tumor mass (mg)",
+    "Organ",
+    "Therapy",
+    //"Mouse number",
+    "Eotaxin",
+    "G-CSF",
+    "GM-CSF",
+    "IFNg",
+    "IL-1a",
+    "IL-1b",
+    "IL-2",
+    "IL-3",
+    "IL-4",
+    "IL-5",
+    "IL-6",
+    "IL-7",
+    "IL-9",
+    "IL-10",
+    "IL-12p40",
+    "IL-12p70",
+    "IL-13",
+    "IL-15",
+    "IL-17",
+    "IP-10",
+    "KC",
+    "LIF",
+    "LIX",
+    "M-CSF",
+    "MCP-1",
+    "MIG",
+    "MIP-1a",
+    "MIP-1b",
+    "MIP-2",
+    "RANTES",
+    "TNFa",
+    "VEGF",
+  ]
 
   const min = 0.001147767
   const max = 70
@@ -254,9 +255,9 @@ function create_legend(colors,brush) {
       .attr("title", "Hide group")
       .on("click", function(d) {
         // toggle group
-        if (_.contains(excluded_groups, d)) {
+        if (excluded_groups.includes(d)) {
           d3.select(this).attr("title", "Hide group")
-          excluded_groups = _.difference(excluded_groups,[d])
+          excluded_groups = _.filter(excluded_groups, g => g !== d)
           brush()
         } else {
           d3.select(this).attr("title", "Show group")
@@ -407,7 +408,7 @@ function brush() {
   d3.selectAll(".dimension")[0]
     .forEach(function(element) {
       const dimension = d3.select(element).data()[0]
-      if (_.include(actives, dimension)) {
+      if (actives.includes(dimension)) {
         const extent = extents[actives.indexOf(dimension)]
         d3.select(element)
           .selectAll("text")
@@ -433,7 +434,7 @@ function brush() {
   // bold dimensions with label
   d3.selectAll(".label")
     .style("font-weight", function(dimension) {
-      if (_.include(actives, dimension)) return "bold"
+      if (actives.includes(dimension)) return "bold"
       return null
     })
 
@@ -441,6 +442,7 @@ function brush() {
   let selected = []
   data
     .filter(function(d) {
+      let result = true
       excluded_groups.forEach(function(group) {
         let org = ""
         let id = group.indexOf("Tumor")
@@ -448,15 +450,15 @@ function brush() {
           org = "Tumor"
           id--
           if (group.substring(0, id) === d.Therapy && org === d.Organ  )
-            return false
+            result = false
         }
         else {
           org = "Lymph Node"
           if (group === d.Therapy && org === d.Organ)
-            return false
+            result = false
         }
       })
-      return true
+      return result
     })
     .map(function(d) {
       return actives.every(function(p, dimension) {
@@ -503,7 +505,7 @@ function brush() {
 
 
   legend
-    .style("text-decoration", function(d) { return _.contains(excluded_groups,d) ? "line-through" : null })
+    .style("text-decoration", function(d) { return excluded_groups.includes(d) ? "line-through" : null })
     .attr("class", function(d) {
       return (tallies[d].length > 0)
            ? "row"
@@ -626,7 +628,7 @@ function actives() {
   // filter extents and excluded groups
   let selected = []
   data.filter(function(d) {
-    return !_.contains(excluded_groups, d.Hospital)
+    return !excluded_groups.includes(d.Hospital)
   }).map(function(d) {
     return actives.every(function(p, i) {
       return extents[i][0] <= d[p] && d[p] <= extents[i][1]
