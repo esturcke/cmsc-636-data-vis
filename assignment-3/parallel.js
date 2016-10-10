@@ -595,63 +595,6 @@ function update_ticks(d, extent) {
     })
 }
 
-// Rescale to new dataset domain
-function rescale() {
-  // reset yscales, preserving inverted state
-  dimensions.forEach(function(d) {
-    if (yscale[d].inverted) {
-      yscale[d] = d3.scale.linear()
-          .domain(d3.extent(data, function(p) { return +p[d] }))
-          .range([0, h])
-      yscale[d].inverted = true
-    } else {
-      yscale[d] = d3.scale.linear()
-          .domain(d3.extent(data, function(p) { return +p[d] }))
-          .range([h, 0])
-    }
-  })
-
-  update_ticks()
-
-  // Render selected data
-  paths(data, foreground, brush_count)
-}
-
-// Get polylines within extents
-function actives() {
-  const actives = dimensions.filter(function(p) { return !yscale[p].brush.empty() }),
-    extents = actives.map(function(p) { return yscale[p].brush.extent() })
-
-  // filter extents and excluded groups
-  let selected = []
-  data.filter(function(d) {
-    return !excluded_groups.includes(d.Hospital)
-  }).map(function(d) {
-    return actives.every(function(p, i) {
-      return extents[i][0] <= d[p] && d[p] <= extents[i][1]
-    }) ? selected.push(d) : null
-  })
-
-  // free text search
-  const query = d3.select("#search")[0][0].value
-  if (query > 0) {
-    selected = search(selected, query)
-  }
-
-  return selected
-}
-
-// Export data
-function export_csv() {
-  const keys = d3.keys(data[0])
-  const rows = actives().map(function(row) {
-    return keys.map(function(k) { return row[k] })
-  })
-  const csv = d3.csv.format([keys].concat(rows)).replace(/\n/g,"<br/>\n")
-  const styles = "<style>body { font-family: sans-serif font-size: 12px }</style>"
-  window.open("text/csv").document.write(styles + csv)
-}
-
 // scale to window size
 window.onresize = function() {
   width = document.body.clientWidth,
@@ -695,28 +638,6 @@ window.onresize = function() {
   brush()
 }
 
-// Remove all but selected from the dataset
-function keep_data() {
-  const new_data = actives()
-  if (new_data.length == 0) {
-    alert("I don't mean to be rude, but I can't let you remove all the data.\n\nTry removing some brushes to get your data back. Then click 'Keep' when you've selected data you want to look closer at.")
-    return false
-  }
-  data = new_data
-  rescale()
-}
-
-// Exclude selected from the dataset
-function exclude_data() {
-  const new_data = _.difference(data, actives())
-  if (new_data.length == 0) {
-    alert("I don't mean to be rude, but I can't let you remove all the data.\n\nTry selecting just a few data points then clicking 'Exclude'.")
-    return false
-  }
-  data = new_data
-  rescale()
-}
-
 function remove_axis(d,g) {
   dimensions = _.difference(dimensions, [d])
   xscale.domain(dimensions)
@@ -725,9 +646,6 @@ function remove_axis(d,g) {
   update_ticks()
 }
 
-d3.select("#keep-data").on("click", keep_data)
-d3.select("#exclude-data").on("click", exclude_data)
-d3.select("#export-data").on("click", export_csv)
 d3.select("#search").on("keyup", brush)
 
 
