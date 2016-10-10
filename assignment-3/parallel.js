@@ -80,7 +80,7 @@ const svg = d3.select("svg")
   .append("svg:g")
     .attr("transform", "translate(" + m[3] + "," + m[0] + ")")
 
-
+//
 const processAttribute = (value, attribute) => ["Organ", "Therapy"].includes(attribute) ? value : parseFloat(value)
 const processItems = items => items.map(item => _.mapValues(item, processAttribute))
 
@@ -91,8 +91,6 @@ d3.csv("tumor.csv", function(raw_data) {
 
   const dims =  [
     "Tumor mass (mg)",
-    "Organ",
-    "Therapy",
     "Eotaxin",
     "G-CSF",
     "GM-CSF",
@@ -129,12 +127,12 @@ d3.csv("tumor.csv", function(raw_data) {
 
   const min = 0.001147767
   const max = 70
-  xscale.domain(dimensions = dims.filter(function(k) {
-    return (_.isNumber(data[0][k]))    && (yscale[k] =  (k === "Tumor mass (mg)") ?  d3.scale.log().domain([7, 1703]).range([h, 0])  :  // (yscale[k] = d3.scale.linear()
-              d3.scale.log()
-              .domain([min, max])
-              .range([h, 0]))
-  }))
+  dimensions = dims.filter(function(k) {
+    return (yscale[k] = (k === "Tumor mass (mg)")
+      ? d3.scale.log().domain([7, 1703]).range([h, 0])
+      : d3.scale.log().domain([min, max]).range([h, 0]))
+  })
+  xscale.domain(dimensions)
 
   // Add a status element for each dimension.
   const g = svg.selectAll(".dimension")
@@ -165,14 +163,9 @@ d3.csv("tumor.csv", function(raw_data) {
         })
         .on("dragend", function(d) {
           let extent
-          if (!this.__dragged__) {
-            // no movement, invert axis
-            //const extent = invert_axis(d)
-
-          } else {
+          if (this.__dragged__) {
             // reorder axes
             d3.select(this).transition().attr("transform", "translate(" + xscale(d) + ")")
-
             extent = yscale[d].brush.extent()
           }
 
@@ -372,15 +365,11 @@ function path(d, ctx, color) {
 }
 
 function color(d) {
-  const c = colors[d]
-  //return ["hsla(",c[0],",",c[1],"%,",c[2],"%,",a,")"].join("")
-  return c
+  return colors[d]
 }
 
 function color2(d) {
-  const c = colors2[d]
-  //return ["hsla(",c[0],",",c[1],"%,",c[2],"%,",a,")"].join("")
-  return c
+  return colors2[d]
 }
 
 function position(d) {
@@ -392,8 +381,8 @@ function position(d) {
 // TODO refactor
 function brush() {
   brush_count++
-  const actives = dimensions.filter(function(p) { return !yscale[p].brush.empty() }),
-    extents = actives.map(function(p) { return yscale[p].brush.extent() })
+  const actives = dimensions.filter(p => !yscale[p].brush.empty()),
+    extents = actives.map(p => yscale[p].brush.extent())
 
   // hack to hide ticks beyond extent
   d3.selectAll(".dimension")[0]
