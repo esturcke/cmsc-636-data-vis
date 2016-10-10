@@ -2,22 +2,21 @@
 
 /* global d3, _ */
 
-const width = document.body.clientWidth,
+let width = document.body.clientWidth,
   height = d3.max([document.body.clientHeight - 540, 240])
 
 const m = [60, 0, 10, 0],
-  w = width - m[1] - m[3],
-  h = height - m[0] - m[2],
-  xscale = d3.scale.ordinal().rangePoints([0, w], 1),
   yscale = {},
-  dragging = {},
-  line = d3.svg.line(),
-  axis = d3.svg.axis().orient("left").ticks(1 + height / 50),
-  excluded_groups = []
+  dragging = {}
 
 let data,
+  w = width - m[1] - m[3],
+  h = height - m[0] - m[2],
   brush_count = 0,
   render_speed = 50,
+  excluded_groups = [],
+  xscale = d3.scale.ordinal().rangePoints([0, w], 1),
+  axis = d3.svg.axis().orient("left").ticks(1 + height / 50),
   foreground,
   background,
   highlighted,
@@ -36,7 +35,7 @@ const colors = {
   "IPV Tumor": "#e31a1c", // [251,154,153], , ,
   "APV Tumor": "#ff7f00", //[253,191,111],
   "AIPV Tumor":"#6a3d9a", //[202,178,214],
-  "Untreated Tumor": "#b15928" // [255,255,153]
+  "Untreated Tumor": "#b15928", // [255,255,153]
 }
 
 const colors2 = {
@@ -45,7 +44,7 @@ const colors2 = {
   "IPV": "#e31a1c", // [251,154,153], , ,
   "APV": "#ff7f00", //[253,191,111],
   "AIPV":"#6a3d9a", //[202,178,214],
-  "Untreated": "#b15928" // [255,255,153]
+  "Untreated": "#b15928", // [255,255,153]
 }
 
 //const colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f', '#cab2d6', '#ffff99']
@@ -241,27 +240,6 @@ d3.csv("tumor.csv", function(raw_data) {
 
 })
 
-// copy one canvas to another, grayscale
-function gray_copy(source, target) {
-  const pixels = source.getImageData(0,0,w,h)
-  target.putImageData(grayscale(pixels),0,0)
-}
-
-// http://www.html5rocks.com/en/tutorials/canvas/imagefilters/
-function grayscale(pixels, args) {
-  const d = pixels.data
-  for (const i = 0; i < d.length; i += 4) {
-    const r = d[i]
-    const g = d[i + 1]
-    const b = d[i + 2]
-    // CIE luminance for the RGB
-    // The human eye is bad at seeing red and blue, so we de-emphasize them.
-    const v = 0.2126 * r + 0.7152 * g + 0.0722 * b
-    d[i] = d[i + 1] = d[i + 2] = v
-  }
-  return pixels
-}
-
 function create_legend(colors,brush) {
 
   // create legend
@@ -289,17 +267,17 @@ function create_legend(colors,brush) {
 
   legend
     .append("span")
-    .style("background", function(d,i) {return color(d,0.85) })
+    .style("background", function(d) {return color(d,0.85) })
     .attr("class", "color-bar")
 
   legend
     .append("span")
     .attr("class", "tally")
-    .text(function(d,i) { return 0})
+    .text(function() { return 0 })
 
   legend
     .append("span")
-    .text(function(d,i) { return " " + d + (d.indexOf("Tumor") < 0 ? " Lymph" : "") })
+    .text(function(d) { return " " + d + (d.indexOf("Tumor") < 0 ? " Lymph" : "") })
 
   return legend
 }
@@ -380,54 +358,13 @@ function unhighlight() {
   highlighted.clearRect(0,0,w,h)
 }
 
-/*
-function invert_axis(d) {
-  // save extent before inverting
-  if (!yscale[d].brush.empty()) {
-    const extent = yscale[d].brush.extent()
-  }
-  if (yscale[d].inverted == true) {
-    yscale[d].range([h, 0])
-    d3.selectAll('.label')
-      .filter(function(p) { return p == d })
-      .style("text-decoration", null)
-    yscale[d].inverted = false
-  } else {
-    yscale[d].range([0, h])
-    d3.selectAll('.label')
-      .filter(function(p) { return p == d })
-      .style("text-decoration", "underline")
-    yscale[d].inverted = true
-  }
-  return extent
-}
-*/
-
-// Draw a single polyline
-/*
-function path(d, ctx, color) {
-  if (color) ctx.strokeStyle = color
-  const x = xscale(0)-15
-      y = yscale[dimensions[0]](d[dimensions[0]])   // left edge
-  ctx.beginPath()
-  ctx.moveTo(x,y)
-  dimensions.map(function(p,i) {
-    x = xscale(p),
-    y = yscale[p](d[p])
-    ctx.lineTo(x, y)
-  })
-  ctx.lineTo(x+15, y)                               // right edge
-  ctx.stroke()
-}
-*/
-
 function path(d, ctx, color) {
   if (color) ctx.strokeStyle = color
   ctx.beginPath()
   let x0 = xscale(0) - 3,
     y0 = yscale[dimensions[0]](d[dimensions[0]])   // left edge
   ctx.moveTo(x0,y0)
-  dimensions.map(function(p,i) {
+  dimensions.map(function(p) {
     const x = xscale(p),
       y = yscale[p](d[p])
     const cp1x = x - 0.88 * (x - x0)
@@ -442,13 +379,13 @@ function path(d, ctx, color) {
   ctx.stroke()
 }
 
-function color(d,a) {
+function color(d) {
   const c = colors[d]
   //return ["hsla(",c[0],",",c[1],"%,",c[2],"%,",a,")"].join("")
   return c
 }
 
-function color2(d,a) {
+function color2(d) {
   const c = colors2[d]
   //return ["hsla(",c[0],",",c[1],"%,",c[2],"%,",a,")"].join("")
   return c
@@ -467,8 +404,8 @@ function brush() {
     extents = actives.map(function(p) { return yscale[p].brush.extent() })
 
   // hack to hide ticks beyond extent
-  const b = d3.selectAll(".dimension")[0]
-    .forEach(function(element, i) {
+  d3.selectAll(".dimension")[0]
+    .forEach(function(element) {
       const dimension = d3.select(element).data()[0]
       if (_.include(actives, dimension)) {
         const extent = extents[actives.indexOf(dimension)]
@@ -501,24 +438,25 @@ function brush() {
     })
 
   // Get lines within extents
-  const selected = []
+  let selected = []
   data
     .filter(function(d) {
-      const result = true
       excluded_groups.forEach(function(group) {
-        const org = ""
-        const id = group.indexOf("Tumor")
+        let org = ""
+        let id = group.indexOf("Tumor")
         if ( id >= 0) {
           org = "Tumor"
           id--
-          if (group.substring(0, id) === d.Therapy && org === d.Organ  ) result = false
+          if (group.substring(0, id) === d.Therapy && org === d.Organ  )
+            return false
         }
         else {
           org = "Lymph Node"
-          if (group === d.Therapy && org === d.Organ) result = false }
+          if (group === d.Therapy && org === d.Organ)
+            return false
+        }
       })
-      // const inc = !(_.contains(excluded_groups, d.Therapy) &&   )
-      return result
+      return true
     })
     .map(function(d) {
       return actives.every(function(p, dimension) {
@@ -540,22 +478,6 @@ function brush() {
     d3.select("#exclude-data").attr("disabled", "disabled")
   }
 
-  // total by Medicare status
-
-  const hash = {"AIP": 0,
-            "AIV": 1,
-            "AIPV": 2,
-            "APV": 3,
-            "IPV": 4,
-            "Untreated":5,
-            "AIPt": 6,
-            "AIVt": 7,
-            "AIPVt": 8,
-            "APVt": 9,
-            "IPVt": 10,
-            "Untreatedt":11
-            }
-
   const tallies = {} // _(selected).groupBy(function(d) {return d.Therapy})
   tallies["AIP"] = []
   tallies["AIV"] = []
@@ -572,7 +494,7 @@ function brush() {
 
 
   _(selected).forEach(function(obj) {
-    const cat = '' + obj.Therapy + (obj.Organ === "Tumor" ? " Tumor" : "")
+    const cat = "" + obj.Therapy + (obj.Organ === "Tumor" ? " Tumor" : "")
     tallies[cat].push(obj)
   })
 
@@ -594,7 +516,7 @@ function brush() {
     })
 
   legend.selectAll(".tally")
-    .text(function(d,i) {
+    .text(function(d) {
       return tallies[d].length })
 
   // Render selected lines
@@ -653,7 +575,7 @@ function update_ticks(d, extent) {
 
   // update axes
   d3.selectAll(".axis")
-    .each(function(d,i) {
+    .each(function(d) {
       // hide lines for better performance
       d3.select(this).selectAll("line").style("display", "none")
 
@@ -677,7 +599,7 @@ function update_ticks(d, extent) {
 // Rescale to new dataset domain
 function rescale() {
   // reset yscales, preserving inverted state
-  dimensions.forEach(function(d,i) {
+  dimensions.forEach(function(d) {
     if (yscale[d].inverted) {
       yscale[d] = d3.scale.linear()
           .domain(d3.extent(data, function(p) { return +p[d] }))
@@ -702,16 +624,14 @@ function actives() {
     extents = actives.map(function(p) { return yscale[p].brush.extent() })
 
   // filter extents and excluded groups
-  const selected = []
-  data
-    .filter(function(d) {
-      return !_.contains(excluded_groups, d.Hospital)
-    })
-    .map(function(d) {
-      return actives.every(function(p, i) {
+  let selected = []
+  data.filter(function(d) {
+    return !_.contains(excluded_groups, d.Hospital)
+  }).map(function(d) {
+    return actives.every(function(p, i) {
       return extents[i][0] <= d[p] && d[p] <= extents[i][1]
     }) ? selected.push(d) : null
-    })
+  })
 
   // free text search
   const query = d3.select("#search")[0][0].value
@@ -778,7 +698,7 @@ window.onresize = function() {
 
 // Remove all but selected from the dataset
 function keep_data() {
-  new_data = actives()
+  const new_data = actives()
   if (new_data.length == 0) {
     alert("I don't mean to be rude, but I can't let you remove all the data.\n\nTry removing some brushes to get your data back. Then click 'Keep' when you've selected data you want to look closer at.")
     return false
@@ -789,7 +709,7 @@ function keep_data() {
 
 // Exclude selected from the dataset
 function exclude_data() {
-  new_data = _.difference(data, actives())
+  const new_data = _.difference(data, actives())
   if (new_data.length == 0) {
     alert("I don't mean to be rude, but I can't let you remove all the data.\n\nTry selecting just a few data points then clicking 'Exclude'.")
     return false
@@ -847,6 +767,6 @@ function light_theme() {
 }
 
 function search(selection,str) {
-  pattern = new RegExp(str,"i")
+  const pattern = new RegExp(str,"i")
   return _(selection).filter(function(d) { return pattern.exec(d.id) })
 }
