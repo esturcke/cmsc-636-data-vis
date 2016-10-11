@@ -141,7 +141,7 @@ d3.csv("tumor.csv", function(raw_data) {
           g.attr("transform", function(d) { return "translate(" + position(d) + ")" })
           brush_count++
           this.__dragged__ = true
-
+          brush()
         })
         .on("dragend", function(d) {
           let extent
