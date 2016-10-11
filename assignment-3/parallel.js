@@ -17,7 +17,6 @@ let excluded_groups = []
 let xscale = d3.scale.ordinal().rangePoints([0, w], 1)
 let axis = d3.svg.axis().orient("left").ticks(1 + height / 50)
 let foreground
-let background
 let highlighted
 let dimensions
 let legend
@@ -66,11 +65,6 @@ foreground.fillText("Loading...", w / 2, h / 2)
 highlighted = document.getElementById("highlight").getContext("2d")
 highlighted.strokeStyle = "rgba(0,100,160,1)"
 highlighted.lineWidth = 4
-
-// Background canvas
-background = document.getElementById("background").getContext("2d")
-background.strokeStyle = "rgba(0,100,160,0.1)"
-background.lineWidth = 1.7
 
 // SVG for ticks, labels, and interactions
 const svg = d3.select("svg")
@@ -148,12 +142,6 @@ d3.csv("tumor.csv", function(raw_data) {
           brush_count++
           this.__dragged__ = true
 
-          // Feedback for axis deletion if dropped
-          if (dragging[d.label] < 12 || dragging[d.label] > w - 12) {
-            d3.select(this).select(".background").style("fill", "#b00")
-          } else {
-            d3.select(this).select(".background").style("fill", null)
-          }
         })
         .on("dragend", function(d) {
           let extent
