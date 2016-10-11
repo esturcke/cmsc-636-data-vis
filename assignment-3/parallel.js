@@ -128,25 +128,10 @@ d3.csv("tumor.csv", function(raw_data) {
       .attr("class", "dimension")
       .attr("transform", ({ label }) => `translate(${xscale(label)})`)
       .call(d3.behavior.drag()
-        .on("dragstart", function(d) {
-        })
         .on("drag", function(d) {
-          dimensions.sort(function(a, b) { return position(a) - position(b) })
           xscale.domain(dimensions.map(({ label }) => label))
-          g.attr("transform", function(d) { return "translate(" + position(d) + ")" })
+          g.attr("transform", d => `translate(${position(d)})`)
           brush_count++
-          brush()
-        })
-        .on("dragend", function(d) {
-          let extent
-            extent = d.scale.brush.extent()
-
-          // TODO required to avoid a bug
-          xscale.domain(dimensions.map(({ label }) => label))
-          update_ticks(d, extent)
-
-          // rerender
-          d3.select("#foreground").style("opacity", null)
           brush()
         }))
 
@@ -463,7 +448,7 @@ function brush() {
       return tallies[d].length })
 
   // Render selected lines
-  paths(selected, foreground, brush_count, true)
+  paths(selected, foreground, brush_count)
 }
 
 // render a set of polylines on a canvas
