@@ -6,7 +6,6 @@ let width  = document.body.clientWidth
 let height = d3.max([document.body.clientHeight - 540, 240])
 
 const m = [60, 0, 10, 0]
-const dragging = {}
 
 let data
 let w = width - m[1] - m[3]
@@ -130,31 +129,17 @@ d3.csv("tumor.csv", function(raw_data) {
       .attr("transform", ({ label }) => `translate(${xscale(label)})`)
       .call(d3.behavior.drag()
         .on("dragstart", function(d) {
-          dragging[d.label] = this.__origin__ = xscale(d.label)
-          this.__dragged__ = false
-          d3.select("#foreground").style("opacity", "0.35")
         })
         .on("drag", function(d) {
-          dragging[d.label] = Math.min(w, Math.max(0, this.__origin__ += d3.event.dx))
           dimensions.sort(function(a, b) { return position(a) - position(b) })
           xscale.domain(dimensions.map(({ label }) => label))
           g.attr("transform", function(d) { return "translate(" + position(d) + ")" })
           brush_count++
-          this.__dragged__ = true
           brush()
         })
         .on("dragend", function(d) {
           let extent
-          if (this.__dragged__) {
-            // reorder axes
-            d3.select(this).transition().attr("transform", "translate(" + xscale(d.label) + ")")
             extent = d.scale.brush.extent()
-          }
-
-          // remove axis if dragged all the way left
-          if (dragging[d.label] < 12 || dragging[d.label] > w - 12) {
-            remove_axis(d,g)
-          }
 
           // TODO required to avoid a bug
           xscale.domain(dimensions.map(({ label }) => label))
@@ -163,9 +148,6 @@ d3.csv("tumor.csv", function(raw_data) {
           // rerender
           d3.select("#foreground").style("opacity", null)
           brush()
-          delete this.__dragged__
-          delete this.__origin__
-          delete dragging[d]
         }))
 
   const formatter = d3.format(",.0f")
@@ -354,7 +336,7 @@ function color2(d) {
   return colors2[d]
 }
 
-const position = ({ label }) => dragging[label] || xscale(label)
+const position = ({ label }) => xscale(label)
 
 // Handles a brush event, toggling the display of foreground lines.
 // TODO refactor
