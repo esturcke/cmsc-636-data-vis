@@ -6,7 +6,6 @@ let width  = document.body.clientWidth
 let height = d3.max([document.body.clientHeight - 540, 240])
 
 const m = [60, 0, 10, 0]
-const yscale = {}
 const dragging = {}
 
 let data
@@ -89,7 +88,7 @@ d3.csv("tumor.csv", function(raw_data) {
   // Convert quantitative scales to floats
   data = processItems(raw_data)
 
-  const dims =  [
+  dimensions =  [
     "Tumor mass (mg)",
     "Eotaxin",
     "G-CSF",
@@ -123,39 +122,34 @@ d3.csv("tumor.csv", function(raw_data) {
     "RANTES",
     "TNFa",
     "VEGF",
-  ]
+  ].map(label => ({
+    label,
+    scale : d3.scale.log().domain(label === "Tumor mass (mg)" ? [7, 1703] : [0.001, 70]).range([h, 0]),
+  }))
 
-  const min = 0.001147767
-  const max = 70
-  dimensions = dims.filter(function(k) {
-    return (yscale[k] = (k === "Tumor mass (mg)")
-      ? d3.scale.log().domain([7, 1703]).range([h, 0])
-      : d3.scale.log().domain([min, max]).range([h, 0]))
-  })
-  xscale.domain(dimensions)
+  xscale.domain(dimensions.map(({ label }) => label))
 
-  // Add a status element for each dimension.
   const g = svg.selectAll(".dimension")
       .data(dimensions)
     .enter().append("svg:g")
       .attr("class", "dimension")
-      .attr("transform", function(d) { return "translate(" + xscale(d) + ")" })
+      .attr("transform", ({ label }) => `translate(${xscale(label)})`)
       .call(d3.behavior.drag()
         .on("dragstart", function(d) {
-          dragging[d] = this.__origin__ = xscale(d)
+          dragging[d.label] = this.__origin__ = xscale(d.label)
           this.__dragged__ = false
           d3.select("#foreground").style("opacity", "0.35")
         })
         .on("drag", function(d) {
-          dragging[d] = Math.min(w, Math.max(0, this.__origin__ += d3.event.dx))
+          dragging[d.label] = Math.min(w, Math.max(0, this.__origin__ += d3.event.dx))
           dimensions.sort(function(a, b) { return position(a) - position(b) })
-          xscale.domain(dimensions)
+          xscale.domain(dimensions.map(({ label }) => label))
           g.attr("transform", function(d) { return "translate(" + position(d) + ")" })
           brush_count++
           this.__dragged__ = true
 
           // Feedback for axis deletion if dropped
-          if (dragging[d] < 12 || dragging[d] > w - 12) {
+          if (dragging[d.label] < 12 || dragging[d.label] > w - 12) {
             d3.select(this).select(".background").style("fill", "#b00")
           } else {
             d3.select(this).select(".background").style("fill", null)
@@ -165,17 +159,17 @@ d3.csv("tumor.csv", function(raw_data) {
           let extent
           if (this.__dragged__) {
             // reorder axes
-            d3.select(this).transition().attr("transform", "translate(" + xscale(d) + ")")
-            extent = yscale[d].brush.extent()
+            d3.select(this).transition().attr("transform", "translate(" + xscale(d.label) + ")")
+            extent = d.scale.brush.extent()
           }
 
           // remove axis if dragged all the way left
-          if (dragging[d] < 12 || dragging[d] > w - 12) {
+          if (dragging[d.label] < 12 || dragging[d.label] > w - 12) {
             remove_axis(d,g)
           }
 
           // TODO required to avoid a bug
-          xscale.domain(dimensions)
+          xscale.domain(dimensions.map(({ label }) => label))
           update_ticks(d, extent)
 
           // rerender
@@ -192,20 +186,20 @@ d3.csv("tumor.csv", function(raw_data) {
   g.append("svg:g")
       .attr("class", "axis")
       .attr("transform", "translate(0,0)")
-      .each(function(d) { d3.select(this).call(axis.scale(yscale[d]).tickFormat(function(d) { return d >= 1 ? formatter(d) : logFormatter(d)} ).tickValues([0.001, 0.01, 0.1, 0.5, 1.0, 10, 20, 40, 60])) })   //
+      .each(function(d) { d3.select(this).call(axis.scale(d.scale).tickFormat(function(d) { return d >= 1 ? formatter(d) : logFormatter(d)} ).tickValues([0.001, 0.01, 0.1, 0.5, 1.0, 10, 20, 40, 60])) })   //
     .append("svg:text")
       .attr("text-anchor", "middle")
       .attr("y", function(d,i) { return i % 2 == 0 ? -14 : -30 } )
       .attr("x", 0)
       .attr("class", "label")
-      .text(String)
+      .text(({ label }) => label)
       .append("title")
         .text("Click to invert. Drag to reorder")
 
   // Add and store a brush for each axis.
   g.append("svg:g")
       .attr("class", "brush")
-      .each(function(d) { d3.select(this).call(yscale[d].brush = d3.svg.brush().y(yscale[d]).on("brush", brush)) })
+      .each(function(d) { d3.select(this).call(d.scale.brush = d3.svg.brush().y(d.scale).on("brush", brush)) })
     .selectAll("rect")
       .style("visibility", null)
       .attr("x", -23)
@@ -271,7 +265,7 @@ function create_legend(colors,brush) {
 function render_range(selection, i, max, opacity) {
   selection.slice(i,max).forEach(function(d) {
     const col = (d.Organ === "Tumor") ? color2(d.Therapy,opacity) : color(d.Therapy,opacity)
-    path(d, foreground,col)
+    path(d, foreground, col)
   })
 }
 
@@ -346,12 +340,12 @@ function unhighlight() {
 function path(d, ctx, color) {
   if (color) ctx.strokeStyle = color
   ctx.beginPath()
-  let x0 = xscale(0) - 3,
-    y0 = yscale[dimensions[0]](d[dimensions[0]])   // left edge
+  let x0 = xscale(dimensions[0].label) - 3,
+    y0 = dimensions[0].scale(d[dimensions[0].label])
   ctx.moveTo(x0,y0)
   dimensions.map(function(p) {
-    const x = xscale(p),
-      y = yscale[p](d[p])
+    const x = xscale(p.label),
+      y = p.scale(d[p.label])
     const cp1x = x - 0.88 * (x - x0)
     const cp1y = y0
     const cp2x = x - 0.12 * (x - x0)
@@ -372,17 +366,14 @@ function color2(d) {
   return colors2[d]
 }
 
-function position(d) {
-  const v = dragging[d]
-  return v == null ? xscale(d) : v
-}
+const position = ({ label }) => dragging[label] || xscale(label)
 
 // Handles a brush event, toggling the display of foreground lines.
 // TODO refactor
 function brush() {
   brush_count++
-  const actives = dimensions.filter(p => !yscale[p].brush.empty()),
-    extents = actives.map(p => yscale[p].brush.extent())
+  const actives = dimensions.filter(p => !p.scale.brush.empty()),
+    extents = actives.map(p => p.scale.brush.extent())
 
   // hack to hide ticks beyond extent
   d3.selectAll(".dimension")[0]
@@ -442,7 +433,7 @@ function brush() {
     })
     .map(function(d) {
       return actives.every(function(p, dimension) {
-        return extents[dimension][0] <= d[p] && d[p] <= extents[dimension][1]
+        return extents[dimension][0] <= d[p.label] && d[p.label] <= extents[dimension][1]
       }) ? selected.push(d) : null
     })
 
@@ -541,14 +532,14 @@ function update_ticks(d, extent) {
     // single tick
     if (extent) {
       // restore previous extent
-      brush_el.call(yscale[d].brush = d3.svg.brush().y(yscale[d]).extent(extent).on("brush", brush))
+      brush_el.call(d.scale.brush = d3.svg.brush().y(d.scale).extent(extent).on("brush", brush))
     } else {
-      brush_el.call(yscale[d].brush = d3.svg.brush().y(yscale[d]).on("brush", brush))
+      brush_el.call(d.scale.brush = d3.svg.brush().y(d.scale).on("brush", brush))
     }
   } else {
     // all ticks
     d3.selectAll(".brush")
-      .each(function(d) { d3.select(this).call(yscale[d].brush = d3.svg.brush().y(yscale[d]).on("brush", brush)) })
+      .each(function(d) { d3.select(this).call(d.scale.brush = d3.svg.brush().y(d.scale).on("brush", brush)) })
   }
 
   brush_count++
@@ -565,7 +556,7 @@ function update_ticks(d, extent) {
       d3.select(this)
         .transition()
         .duration(720)
-        .call(axis.scale(yscale[d]))
+        .call(axis.scale(d.scale))
 
       // bring lines back
       d3.select(this).selectAll("line").transition().delay(800).style("display", null)
@@ -600,22 +591,22 @@ window.onresize = function() {
     .select("g")
       .attr("transform", "translate(" + m[3] + "," + m[0] + ")")
 
-  xscale = d3.scale.ordinal().rangePoints([0, w], 1).domain(dimensions)
+  xscale = d3.scale.ordinal().rangePoints([0, w], 1).domain(dimensions.map(({ label }) => label))
   dimensions.forEach(function(d) {
-    yscale[d].range([h, 0])
+    d.scale.range([h, 0])
   })
 
   d3.selectAll(".dimension")
-    .attr("transform", function(d) { return "translate(" + xscale(d) + ")" })
+    .attr("transform", function(d) { return "translate(" + xscale(d.label) + ")" })
   // update brush placement
   d3.selectAll(".brush")
-    .each(function(d) { d3.select(this).call(yscale[d].brush = d3.svg.brush().y(yscale[d]).on("brush", brush)) })
+    .each(function(d) { d3.select(this).call(d.scale.brush = d3.svg.brush().y(d.scale).on("brush", brush)) })
   brush_count++
 
   // update axis placement
   axis = axis.ticks(1 + height / 50),
   d3.selectAll(".axis")
-    .each(function(d) { d3.select(this).call(axis.scale(yscale[d])) })
+    .each(function(d) { d3.select(this).call(axis.scale(d.scale)) })
 
   // render data
   brush()
@@ -623,7 +614,7 @@ window.onresize = function() {
 
 function remove_axis(d,g) {
   dimensions = _.difference(dimensions, [d])
-  xscale.domain(dimensions)
+  xscale.domain(dimensions.map(({ label }) => label))
   g.attr("transform", function(p) { return "translate(" + position(p) + ")" })
   g.filter(function(p) { return p == d }).remove()
   update_ticks()
