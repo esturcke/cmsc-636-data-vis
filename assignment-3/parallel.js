@@ -127,13 +127,6 @@ d3.csv("tumor.csv", function(raw_data) {
     .enter().append("svg:g")
       .attr("class", "dimension")
       .attr("transform", ({ label }) => `translate(${xscale(label)})`)
-      .call(d3.behavior.drag()
-        .on("drag", function(d) {
-          xscale.domain(dimensions.map(({ label }) => label))
-          g.attr("transform", d => `translate(${position(d)})`)
-          brush_count++
-          brush()
-        }))
 
   const formatter = d3.format(",.0f")
   const logFormatter = d3.format(".3f")
