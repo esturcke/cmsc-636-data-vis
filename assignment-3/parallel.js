@@ -72,50 +72,69 @@ const svg = d3.select("svg")
   .append("svg:g")
     .attr("transform", "translate(" + m[3] + "," + m[0] + ")")
 
+
+const ratioAttributes = [
+  "Tumor mass (mg)",
+  "Eotaxin",
+  "G-CSF",
+  "GM-CSF",
+  "IFNg",
+  "IL-1a",
+  "IL-1b",
+  "IL-2",
+  "IL-3",
+  "IL-4",
+  "IL-5",
+  "IL-6",
+  "IL-7",
+  "IL-9",
+  "IL-10",
+  "IL-12p40",
+  "IL-12p70",
+  "IL-13",
+  "IL-15",
+  "IL-17",
+  "IP-10",
+  "KC",
+  "LIF",
+  "LIX",
+  "M-CSF",
+  "MCP-1",
+  "MIG",
+  "MIP-1a",
+  "MIP-1b",
+  "MIP-2",
+  "RANTES",
+  "TNFa",
+  "VEGF",
+]
+
 //
 const processAttribute = (value, attribute) => ["Organ", "Therapy"].includes(attribute) ? value : parseFloat(value)
-const processItems = items => items.map(item => _.mapValues(item, processAttribute))
+const itemType = ({ Therapy, Organ }) => `${Therapy} ${Organ}`
+const processItem = _.flow(
+  item => _.mapValues(item, processAttribute),
+  item => Object.assign(item, { type : itemType(item) })
+)
+
+const attributeStats = items => _.flow(
+  attributes => attributes.map(attribute => [attribute, items.map(item => item[attribute]).sort()]),
+  _.fromPairs
+)(ratioAttributes)
+const typeStats = _.flow(
+  data   => _.groupBy(data, "type"),
+  groups => _.mapValues(groups, attributeStats)
+)
 
 // Load the data and visualization
 d3.csv("tumor.csv", function(raw_data) {
   // Convert quantitative scales to floats
-  data = processItems(raw_data)
+  data = raw_data.map(processItem)
 
-  dimensions =  [
-    "Tumor mass (mg)",
-    "Eotaxin",
-    "G-CSF",
-    "GM-CSF",
-    "IFNg",
-    "IL-1a",
-    "IL-1b",
-    "IL-2",
-    "IL-3",
-    "IL-4",
-    "IL-5",
-    "IL-6",
-    "IL-7",
-    "IL-9",
-    "IL-10",
-    "IL-12p40",
-    "IL-12p70",
-    "IL-13",
-    "IL-15",
-    "IL-17",
-    "IP-10",
-    "KC",
-    "LIF",
-    "LIX",
-    "M-CSF",
-    "MCP-1",
-    "MIG",
-    "MIP-1a",
-    "MIP-1b",
-    "MIP-2",
-    "RANTES",
-    "TNFa",
-    "VEGF",
-  ].map(label => ({
+  // Collect therapy/organ summaries
+  const stats = typeStats(data)
+
+  dimensions = ratioAttributes.map(label => ({
     label,
     scale : d3.scale.log().domain(label === "Tumor mass (mg)" ? [7, 1703] : [0.001, 70]).range([h, 0]),
   }))
