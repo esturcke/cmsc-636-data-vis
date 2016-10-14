@@ -479,33 +479,14 @@ function brush() {
   })
 
   // Add median line
-  boxPlots.append("line").attr({
-    x1     : -5,
-    x2     : 5,
-    y1     : ({ y }) => y[2],
-    y2     : ({ y }) => y[2],
-  })
-
-  // Box
-  boxPlots.append("rect").attr({
-    x      : -5,
-    width  : 10,
-    y      : ({ y }) => y[3],
-    height : ({ y }) => y[1] - y[3],
-  })
-
-  // Whiskers
-  boxPlots.append("line").attr({
-    x1     : -5,
-    x2     : 5,
-    y1     : ({ y }) => y[0],
-    y2     : ({ y }) => y[0],
-  })
-  boxPlots.append("line").attr({
-    x1     : -5,
-    x2     : 5,
-    y1     : ({ y }) => y[4],
-    y2     : ({ y }) => y[4],
+  const w = 5
+  boxPlots.append("path").attr({
+    d : ({ y }) => `
+      M -${w / 2} ${y[1]} h ${w} V ${y[3]} h -${w} Z
+      M -${w / 2} ${y[0]} h ${w}
+      M -${w / 2} ${y[2]} h ${w}
+      M -${w / 2} ${y[4]} h ${w}
+    `,
   })
 
   // Render selected lines

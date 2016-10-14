@@ -59,7 +59,7 @@ canvas, svg {
 .dark .background {
   fill: none;
 }
-.axis .tick line, .axis path {
+.axis .tick line, path.domain {
   fill: none;
   stroke: #777;
   stroke-width: 1;
