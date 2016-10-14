@@ -476,7 +476,6 @@ function brush() {
 
   // Add median line
   boxPlots.append("line").attr({
-    class  : "median",
     stroke : ({ type }) => colors[type],
     x1     : -5,
     x2     : 5,
@@ -486,17 +485,29 @@ function brush() {
 
   // Box
   boxPlots.append("rect").attr({
-    class  : "quartile",
     stroke : ({ type }) => colors[type],
     x      : -5,
     width  : 10,
-    y      : ({ y }) => y[1],
-    height : ({ y }) => y[0] - y[1],
+    y      : ({ y }) => y[3],
+    height : ({ y }) => y[1] - y[3],
     fill   : "none",
   })
 
   // Whiskers
-  // const whiskers =
+  boxPlots.append("line").attr({
+    stroke : ({ type }) => colors[type],
+    x1     : -5,
+    x2     : 5,
+    y1     : ({ y }) => y[0],
+    y2     : ({ y }) => y[0],
+  })
+  boxPlots.append("line").attr({
+    stroke : ({ type }) => colors[type],
+    x1     : -5,
+    x2     : 5,
+    y1     : ({ y }) => y[4],
+    y2     : ({ y }) => y[4],
+  })
 
   // Render selected lines
   paths(selected, foreground, brush_count)
