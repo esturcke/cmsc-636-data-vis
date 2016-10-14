@@ -489,6 +489,11 @@ function brush() {
     `,
   })
 
+  boxPlots.append("path").attr("stroke-dasharray", "1, 5").attr("d", ({ y }) => `
+    M 0 ${y[0]} V ${y[1]}
+    M 0 ${y[3]} V ${y[4]}
+  `)
+
   // Render selected lines
   paths(selected, foreground, brush_count)
 }
