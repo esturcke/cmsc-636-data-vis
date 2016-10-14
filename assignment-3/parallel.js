@@ -456,18 +456,21 @@ function brush() {
 
   //updateBoxPlots(selected)
 
-  const boxPlotValues = values => { const a = [
+  const boxPlotValues = values => [
     d3.quantile(values, .05),
     d3.quantile(values, .25),
     d3.quantile(values, .50),
     d3.quantile(values, .75),
     d3.quantile(values, .95),
-  ]; console.log(a); return a }
+  ]
 
   // Collect selected therapy/organ summaries
   const stats = typeStats(selected)
   const boxPlots = d3.selectAll(".axis").selectAll(".box-plot")
-    .data(({ label, scale }) => _.map(stats, (attributes, type) => ({ type, label, values : boxPlotValues(attributes[label]).map(scale) })))
+    .data(
+      ({ label, scale }) => _.map(stats, (attributes, type) => ({ type, label, values : boxPlotValues(attributes[label]).map(scale) })),
+      ({ label, type  }) => `${label}-${type}`
+    )
   boxPlots.enter().append("g").attr("class", "box-plot")
   boxPlots.exit().remove()
 
@@ -484,7 +487,7 @@ function brush() {
   medians.exit().remove()
 
   // Box
-  const quartiles = boxPlots.selectAll(".quartile").data(({ values, type }) => { console.log(values); return [ { y : [values[1], values[3]], color : colors[type] } ] })
+  const quartiles = boxPlots.selectAll(".quartile").data(({ values, type }) => [ { y : [values[1], values[3]], color : colors[type] } ] )
   quartiles.enter().append("rect").attr({
     class  : "quartile",
     stroke : ({ color }) => color,
