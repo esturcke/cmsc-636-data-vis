@@ -466,38 +466,34 @@ function brush() {
 
   // Collect selected therapy/organ summaries
   const stats = typeStats(selected)
-  const boxPlots = d3.selectAll(".axis").selectAll(".box-plot")
+  const boxPlotsData = d3.selectAll(".axis").selectAll(".box-plot")
     .data(
-      ({ label, scale }) => _.map(stats, (attributes, type) => ({ type, label, values : boxPlotValues(attributes[label]).map(scale) })),
+      ({ label, scale }) => _.map(stats, (attributes, type) => ({ type, label, y : boxPlotValues(attributes[label]).map(scale) })),
       ({ label, type  }) => `${label}-${type}`
     )
-  boxPlots.enter().append("g").attr("class", "box-plot")
-  boxPlots.exit().remove()
+  boxPlotsData.exit().remove()
+  const boxPlots = boxPlotsData.enter().append("g").attr("class", "box-plot")
 
   // Add median line
-  const medians = boxPlots.selectAll(".median").data(({ values, type }) => [ { y : values[2], color : colors[type] } ])
-  medians.enter().append("line").attr({
+  boxPlots.append("line").attr({
     class  : "median",
-    stroke : ({ color }) => color,
+    stroke : ({ type }) => colors[type],
     x1     : -5,
     x2     : 5,
-    y1     : ({ y }) => y,
-    y2     : ({ y }) => y,
+    y1     : ({ y }) => y[2],
+    y2     : ({ y }) => y[2],
   })
-  medians.exit().remove()
 
   // Box
-  const quartiles = boxPlots.selectAll(".quartile").data(({ values, type }) => [ { y : [values[1], values[3]], color : colors[type] } ] )
-  quartiles.enter().append("rect").attr({
+  boxPlots.append("rect").attr({
     class  : "quartile",
-    stroke : ({ color }) => color,
+    stroke : ({ type }) => colors[type],
     x      : -5,
     width  : 10,
     y      : ({ y }) => y[1],
-    height : ({ y }) => { /*console.log(y);*/ return y[0] - y[1] },
+    height : ({ y }) => y[0] - y[1],
     fill   : "none",
   })
-  quartiles.exit().remove()
 
   // Whiskers
   // const whiskers =
