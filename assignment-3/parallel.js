@@ -472,11 +472,14 @@ function brush() {
       ({ label, type  }) => `${label}-${type}`
     )
   boxPlotsData.exit().remove()
-  const boxPlots = boxPlotsData.enter().append("g").attr("class", "box-plot")
+  const boxPlots = boxPlotsData.enter().append("g").attr({
+    class  : "box-plot",
+    stroke : ({ type }) => colors[type],
+    fill   : "none",
+  })
 
   // Add median line
   boxPlots.append("line").attr({
-    stroke : ({ type }) => colors[type],
     x1     : -5,
     x2     : 5,
     y1     : ({ y }) => y[2],
@@ -485,24 +488,20 @@ function brush() {
 
   // Box
   boxPlots.append("rect").attr({
-    stroke : ({ type }) => colors[type],
     x      : -5,
     width  : 10,
     y      : ({ y }) => y[3],
     height : ({ y }) => y[1] - y[3],
-    fill   : "none",
   })
 
   // Whiskers
   boxPlots.append("line").attr({
-    stroke : ({ type }) => colors[type],
     x1     : -5,
     x2     : 5,
     y1     : ({ y }) => y[0],
     y2     : ({ y }) => y[0],
   })
   boxPlots.append("line").attr({
-    stroke : ({ type }) => colors[type],
     x1     : -5,
     x2     : 5,
     y1     : ({ y }) => y[4],
