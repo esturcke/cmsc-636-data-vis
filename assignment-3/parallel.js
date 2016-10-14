@@ -111,12 +111,13 @@ const ratioAttributes = [
 
 //
 const processAttribute = (value, attribute) => ["Organ", "Therapy"].includes(attribute) ? value : parseFloat(value)
-const itemType = ({ Therapy, Organ }) => `${Therapy} ${Organ}`
+const itemType = ({ Therapy, Organ }) => Organ === "Tumor" ? `${Therapy} ${Organ}` : Therapy
 const processItem = _.flow(
   item => _.mapValues(item, processAttribute),
   item => Object.assign(item, { type : itemType(item) })
 )
 
+// Collect therapy/organ summaries
 const attributeStats = items => _.flow(
   attributes => attributes.map(attribute => [attribute, items.map(item => item[attribute]).sort()]),
   _.fromPairs
@@ -130,9 +131,6 @@ const typeStats = _.flow(
 d3.csv("tumor.csv", function(raw_data) {
   // Convert quantitative scales to floats
   data = raw_data.map(processItem)
-
-  // Collect therapy/organ summaries
-  const stats = typeStats(data)
 
   dimensions = ratioAttributes.map(label => ({
     label,
@@ -432,7 +430,6 @@ function brush() {
   tallies["IPV Tumor"] = []
   tallies["Untreated Tumor"] = []
 
-
   _(selected).forEach(function(obj) {
     const cat = "" + obj.Therapy + (obj.Organ === "Tumor" ? " Tumor" : "")
     tallies[cat].push(obj)
@@ -451,13 +448,56 @@ function brush() {
     })
 
   legend.selectAll(".color-bar")
-    .style("width", function(d) {
-      return Math.ceil(600 * tallies[d].length / data.length) + "px"
-    })
+    .style("width", d => Math.ceil(600 * tallies[d].length / data.length) + "px")
 
   legend.selectAll(".tally")
     .text(function(d) {
       return tallies[d].length })
+
+  //updateBoxPlots(selected)
+
+  const boxPlotValues = values => { const a = [
+    d3.quantile(values, .05),
+    d3.quantile(values, .25),
+    d3.quantile(values, .50),
+    d3.quantile(values, .75),
+    d3.quantile(values, .95),
+  ]; console.log(a); return a }
+
+  // Collect selected therapy/organ summaries
+  const stats = typeStats(selected)
+  const boxPlots = d3.selectAll(".axis").selectAll(".box-plot")
+    .data(({ label, scale }) => _.map(stats, (attributes, type) => ({ type, label, values : boxPlotValues(attributes[label]).map(scale) })))
+  boxPlots.enter().append("g").attr("class", "box-plot")
+  boxPlots.exit().remove()
+
+  // Add median line
+  const medians = boxPlots.selectAll(".median").data(({ values, type }) => [ { y : values[2], color : colors[type] } ])
+  medians.enter().append("line").attr({
+    class  : "median",
+    stroke : ({ color }) => color,
+    x1     : -5,
+    x2     : 5,
+    y1     : ({ y }) => y,
+    y2     : ({ y }) => y,
+  })
+  medians.exit().remove()
+
+  // Box
+  const quartiles = boxPlots.selectAll(".quartile").data(({ values, type }) => { console.log(values); return [ { y : [values[1], values[3]], color : colors[type] } ] })
+  quartiles.enter().append("rect").attr({
+    class  : "quartile",
+    stroke : ({ color }) => color,
+    x      : -5,
+    width  : 10,
+    y      : ({ y }) => y[1],
+    height : ({ y }) => { /*console.log(y);*/ return y[0] - y[1] },
+    fill   : "none",
+  })
+  quartiles.exit().remove()
+
+  // Whiskers
+  // const whiskers =
 
   // Render selected lines
   paths(selected, foreground, brush_count)
@@ -577,14 +617,6 @@ window.onresize = function() {
 
   // render data
   brush()
-}
-
-function remove_axis(d,g) {
-  dimensions = _.difference(dimensions, [d])
-  xscale.domain(dimensions.map(({ label }) => label))
-  g.attr("transform", function(p) { return "translate(" + position(p) + ")" })
-  g.filter(function(p) { return p == d }).remove()
-  update_ticks()
 }
 
 d3.select("#search").on("keyup", brush)
