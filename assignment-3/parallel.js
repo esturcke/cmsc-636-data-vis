@@ -466,13 +466,13 @@ function brush() {
 
   // Collect selected therapy/organ summaries
   const stats = typeStats(selected)
-  const boxPlotsData = d3.selectAll(".axis").selectAll(".box-plot")
+  const boxPlots = d3.selectAll(".axis").selectAll(".box-plot")
     .data(
       ({ label, scale }) => _.map(stats, (attributes, type) => ({ type, label, y : boxPlotValues(attributes[label]).map(scale) })),
       ({ label, type  }) => `${label}-${type}`
     )
-  boxPlotsData.exit().remove()
-  const boxPlots = boxPlotsData.enter().append("g").attr({
+  boxPlots.exit().remove()
+  boxPlots.enter().append("g").attr({
     class  : "box-plot",
     stroke : ({ type }) => colors[type],
     fill   : "none",
@@ -480,6 +480,7 @@ function brush() {
 
   // Add median line
   const w = 5
+  boxPlots.selectAll("path").remove()
   boxPlots.append("path").attr({
     d : ({ y }) => `
       M -${w / 2} ${y[1]} h ${w} V ${y[3]} h -${w} Z
