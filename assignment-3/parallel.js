@@ -478,9 +478,11 @@ function brush() {
     fill   : "none",
   })
 
-  const w = 5
+  const w = 4
+  const typeCount = Object.keys(stats).length
+  const xOffset = i => (w + 1) * (typeCount / 2 - i)
   boxPlots.attr({
-    transform : (_datum, i) => `translate(${w * Object.keys(stats).length / 2 - w * i} 0)`,
+    transform : (_datum, i) => `translate(${xOffset(i)} 0)`,
   })
 
   // Add median line
