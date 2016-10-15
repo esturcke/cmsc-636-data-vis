@@ -466,6 +466,11 @@ function brush() {
 
   // Collect selected therapy/organ summaries
   const stats = typeStats(selected)
+  const typeCount = Object.keys(stats).length
+
+  // box plot width
+  const w = 2
+
   const boxPlots = d3.selectAll(".axis").selectAll(".box-plot")
     .data(
       ({ label, scale }) => _.map(stats, (attributes, type) => ({ type, label, y : boxPlotValues(attributes[label]).map(scale) })),
@@ -478,15 +483,15 @@ function brush() {
     fill   : "none",
   })
 
-  const w = 4
-  const typeCount = Object.keys(stats).length
   const xOffset = i => (w + 1) * (typeCount / 2 - i)
   boxPlots.attr({
     transform : (_datum, i) => `translate(${xOffset(i)} 0)`,
   })
 
+  // Redraw box plots
+  boxPlots.selectAll("path, rect").remove()
+
   // Add median line
-  boxPlots.selectAll("path").remove()
   boxPlots.append("path").attr({
     d : ({ y }) => `
       M -${w / 2} ${y[1]} h ${w} V ${y[3]} h -${w} Z
@@ -496,7 +501,10 @@ function brush() {
     `,
   })
 
-  boxPlots.append("path").attr("stroke-dasharray", "1, 5").attr("d", ({ y }) => `
+  boxPlots.append("path").attr({
+    "stroke-dasharray" : "1, 1",
+    "stroke-opacity" : 0.4,
+  }).attr("d", ({ y }) => `
     M 0 ${y[0]} V ${y[1]}
     M 0 ${y[3]} V ${y[4]}
   `)
