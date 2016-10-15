@@ -478,8 +478,12 @@ function brush() {
     fill   : "none",
   })
 
-  // Add median line
   const w = 5
+  boxPlots.attr({
+    transform : (_datum, i) => `translate(${w * Object.keys(stats).length / 2 - w * i} 0)`,
+  })
+
+  // Add median line
   boxPlots.selectAll("path").remove()
   boxPlots.append("path").attr({
     d : ({ y }) => `
