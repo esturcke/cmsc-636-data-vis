@@ -415,19 +415,9 @@ function brush() {
       }) ? selected.push(d) : null
     })
 
-  // free text search
-  const query = d3.select("#search")[0][0].value
-  if (query.length > 0) {
-    selected = search(selected, query)
-  }
-
-  if (selected.length < data.length && selected.length > 0) {
-    d3.select("#keep-data").attr("disabled", null)
-    d3.select("#exclude-data").attr("disabled", null)
-  } else {
-    d3.select("#keep-data").attr("disabled", "disabled")
-    d3.select("#exclude-data").attr("disabled", "disabled")
-  }
+  svg.selectAll(".sample").attr({
+    visibility : d => selected.includes(d) ? "visible" : "hidden",
+  })
 
   const tallies = {} // _(selected).groupBy(function(d) {return d.Therapy})
   tallies["AIP"] = []
