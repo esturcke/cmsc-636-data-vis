@@ -15,8 +15,6 @@ let render_speed = 50
 let excluded_groups = []
 let xscale = d3.scale.ordinal().rangePoints([0, w], 1)
 let axis = d3.svg.axis().orient("left").ticks(1 + height / 50)
-let foreground
-let highlighted
 let dimensions
 let legend
 
@@ -111,6 +109,9 @@ const typeStats = _.flow(
   groups => _.mapValues(groups, attributeStats)
 )
 
+const sampleCoordinates = datum => "M" + dimensions.map(({ label, scale }) => `${xscale(label)} ${scale(datum[label])}` ).join(" L ")
+const scaleSamples = () => svg.selectAll(".sample").attr("d", sampleCoordinates)
+
 // Load the data and visualization
 d3.csv("tumor.csv", function(raw_data) {
   // Convert quantitative scales to floats
@@ -123,7 +124,6 @@ d3.csv("tumor.csv", function(raw_data) {
 
   xscale.domain(dimensions.map(({ label }) => label))
 
-  const sampleCoordinates = datum => "M" + dimensions.map(({ label, scale }) => `${xscale(label)} ${scale(datum[label])}` ).join(" L ")
   const sampleColor = ({ type }) => { const c = color(type); c.l *= 1.5; return c + "" }
   svg.selectAll(".sample")
     .data(data)
@@ -223,14 +223,6 @@ function create_legend(colors,brush) {
   return legend
 }
 
-// render polylines i to i+render_speed
-function render_range(selection, i, max, opacity) {
-  selection.slice(i,max).forEach(function(d) {
-    const col = (d.Organ === "Tumor") ? color2(d.Therapy,opacity) : color(d.Therapy,opacity)
-    path(d, foreground, col)
-  })
-}
-
 // sample data table
 function data_table(unsortedSample) {
   // sort by first column
@@ -244,8 +236,6 @@ function data_table(unsortedSample) {
     .selectAll(".row")
       .data(sample)
     .enter().append("div")
-      .on("mouseover", highlight)
-      .on("mouseout", unhighlight)
 
   table
     .append("span")
@@ -284,42 +274,6 @@ function selection_stats(opacity, n, total) {
   d3.select("#opacity").text(("" + (opacity * 100)).slice(0,4) + "%")
 }
 
-// Highlight single polyline
-function highlight(d) {
-  d3.select("#foreground").style("opacity", "0.25")
-  d3.selectAll(".row").style("opacity", p => d.Therapy === p ? null : "0.3")
-  const col = d.Organ === "Tumor" ? color2(d.Therapy,1) : color(d.Therapy,1)
-  path(d, highlighted, col)
-}
-
-// Remove highlight
-function unhighlight() {
-  d3.select("#foreground").style("opacity", null)
-  d3.selectAll(".row").style("opacity", null)
-  highlighted.clearRect(0,0,w,h)
-}
-
-function path(d, ctx, color) {
-  if (color) ctx.strokeStyle = color
-  ctx.beginPath()
-  let x0 = xscale(dimensions[0].label) - 3,
-    y0 = dimensions[0].scale(d[dimensions[0].label])
-  ctx.moveTo(x0,y0)
-  dimensions.map(function(p) {
-    const x = xscale(p.label),
-      y = p.scale(d[p.label])
-    const cp1x = x - 0.88 * (x - x0)
-    const cp1y = y0
-    const cp2x = x - 0.12 * (x - x0)
-    const cp2y = y
-    ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
-    x0 = x
-    y0 = y
-  })
-  ctx.lineTo(x0 + 3, y0)                               // right edge
-  ctx.stroke()
-}
-
 function color(d) {
   return d3.hsl(colors[d])
 }
@@ -327,8 +281,6 @@ function color(d) {
 function color2(d) {
   return colors2[d]
 }
-
-const position = ({ label }) => xscale(label)
 
 // Handles a brush event, toggling the display of foreground lines.
 // TODO refactor
@@ -595,6 +547,8 @@ window.onresize = function() {
     d.scale.range([h, 0])
   })
 
+  scaleSamples()
+
   d3.selectAll(".dimension")
     .attr("transform", function(d) { return "translate(" + xscale(d.label) + ")" })
   // update brush placement
@@ -631,9 +585,4 @@ function show_ticks() {
   d3.selectAll(".background").style("visibility", null)
   d3.selectAll("#show-ticks").attr("disabled", "disabled")
   d3.selectAll("#hide-ticks").attr("disabled", null)
-}
-
-function search(selection,str) {
-  const pattern = new RegExp(str,"i")
-  return _(selection).filter(function(d) { return pattern.exec(d.id) })
 }
