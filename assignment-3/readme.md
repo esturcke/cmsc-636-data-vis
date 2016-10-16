@@ -99,8 +99,14 @@ The following was done (not strictly in this order):
 
 ### What Went Wrong?
 
-
+There were two things especially challenging, the first technical, the second
+vis related. First, working with D3 is challenging at first. It was hard to
+wrap my mind around the idea of binding data and then even hard to figure out
+how to actually take advantage of that. I spend well over half of my time trying
+to get the box plots to redraw when brushing and filtering. The second is data
+vis issues where I was trying to get the box plots to stand out from the
+parallel coordinates with so many therapies and attributes, each one being only
+a few pixels wide. I ended up using 1/2 pixels which render well on HiDPI
+screens.
 
 ### What to Change in the Future
-
-
