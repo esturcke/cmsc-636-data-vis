@@ -50,4 +50,6 @@ bundling strength parameter might work.
 
 ### Sketch
 
+![Parallel coordinates with edge bundling](edge-bundling.jpg)
+
 ## Part 2: Implementation
