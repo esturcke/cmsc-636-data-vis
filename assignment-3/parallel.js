@@ -124,7 +124,7 @@ d3.csv("tumor.csv", function(raw_data) {
   xscale.domain(dimensions.map(({ label }) => label))
 
   const sampleCoordinates = datum => "M" + dimensions.map(({ label, scale }) => `${xscale(label)} ${scale(datum[label])}` ).join(" L ")
-  const sampleColor = ({ type }) => { const c = color(type); console.log(c); c.l *= 1.5; return c + "" }
+  const sampleColor = ({ type }) => { const c = color(type); c.l *= 1.5; return c + "" }
   svg.selectAll(".sample")
     .data(data)
     .enter().append("path").attr({
