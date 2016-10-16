@@ -139,6 +139,19 @@ d3.csv("tumor.csv", function(raw_data) {
 
   xscale.domain(dimensions.map(({ label }) => label))
 
+  const sampleCoordinates = datum => "M" + dimensions.map(({ label, scale }) => `${xscale(label)} ${scale(datum[label])}` ).join(" L ")
+  const sampleColor = ({ type }) => { const c = color(type); console.log(c); c.l *= 1.5; return c + "" }
+  svg.selectAll(".sample")
+    .data(data)
+    .enter().append("path").attr({
+      class          : "sample",
+      d              : sampleCoordinates,
+      stroke         : sampleColor,
+      "stroke-width" : 0.5,
+      opacity        : 0.5,
+      fill           : "none",
+    })
+
   const g = svg.selectAll(".dimension")
       .data(dimensions)
     .enter().append("svg:g")
@@ -324,7 +337,7 @@ function path(d, ctx, color) {
 }
 
 function color(d) {
-  return colors[d]
+  return d3.hsl(colors[d])
 }
 
 function color2(d) {
@@ -510,7 +523,7 @@ function brush() {
   `)
 
   // Render selected lines
-  paths(selected, foreground, brush_count)
+  //paths(selected, foreground, brush_count)
 }
 
 // render a set of polylines on a canvas
