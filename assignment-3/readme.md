@@ -68,6 +68,8 @@ bundling strength parameter might work.
 
 ## Part 2: Implementation
 
+![Box Plots](box-plots.png)
+
 ### Design Choices
 
 Box plots capture 5 statistic for a set of values visually by length to give
