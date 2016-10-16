@@ -48,22 +48,6 @@ const colors2 = {
 d3.select("#chart")
   .style("height", (h + m[0] + m[2]) + "px")
 
-d3.selectAll("canvas")
-  .attr("width", w)
-  .attr("height", h)
-  .style("padding", m.join("px ") + "px")
-
-// Foreground canvas for primary view
-foreground = document.getElementById("foreground").getContext("2d")
-foreground.globalCompositeOperation = "destination-over"
-foreground.strokeStyle = "rgba(0,100,160,0.1)"
-foreground.lineWidth = 1.7
-foreground.fillText("Loading...", w / 2, h / 2)
-
-// Highlight canvas for temporary interactions
-highlighted = document.getElementById("highlight").getContext("2d")
-highlighted.strokeStyle = "rgba(0,100,160,1)"
-highlighted.lineWidth = 4
 
 // SVG for ticks, labels, and interactions
 const svg = d3.select("svg")
@@ -599,11 +583,6 @@ window.onresize = function() {
 
   d3.select("#chart")
       .style("height", (h + m[0] + m[2]) + "px")
-
-  d3.selectAll("canvas")
-      .attr("width", w)
-      .attr("height", h)
-      .style("padding", m.join("px ") + "px")
 
   d3.select("svg")
       .attr("width", w + m[1] + m[3])
