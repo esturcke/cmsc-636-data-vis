@@ -85,6 +85,22 @@ plots belong to.
 
 ### Steps to Produce the Visualization
 
+The following was done (not strictly in this order):
+
+  - Cleaned up exiting code/stripping out things not needed for the assignment.
+  - Converted from canvas to SVG since there are not many lines in the parallel
+    coordinates and we are only showing/hiding them based on filters.
+  - Enabled update while brushing.
+  - Implemented overlapping box plots.
+  - Changed box plots to be side by side.
+  - Visual styling to take advantage of HiDPI display, placed a thin white
+    border to separate adjacent box plots and muted the colors of the parallel
+    coordinates.
+
 ### What Went Wrong?
 
+
+
 ### What to Change in the Future
+
+
