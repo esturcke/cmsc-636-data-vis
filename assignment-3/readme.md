@@ -67,3 +67,13 @@ bundling strength parameter might work.
     log scale axes.
 
 ## Part 2: Implementation
+
+### Design Choices
+
+Why is box and whisker plot good/bad?
+
+### Steps to Produce the Visualization
+
+### What Went Wrong?
+
+### What to Change in the Future
