@@ -52,4 +52,18 @@ bundling strength parameter might work.
 
 ![Parallel coordinates with edge bundling](edge-bundling.jpg)
 
+### Pros & Cons
+
+#### Pros
+
+  - Less overlap of lines between different therapies.
+  - Easier to see (bimodal) distribution of therapies.
+  - General cleaner aesthetic and more attractive.
+
+#### Cons
+
+  - No longer possible to see direct/indirect correlation between axis. This
+    doesn't actually apply in the example we are working with because of the
+    log scale axes.
+
 ## Part 2: Implementation
