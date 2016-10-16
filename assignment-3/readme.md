@@ -110,3 +110,8 @@ a few pixels wide. I ended up using 1/2 pixels which render well on HiDPI
 screens.
 
 ### What to Change in the Future
+
+  - Reimplement all the features I stripped out.
+  - Animate transitions when filtering and brushing.
+  - Try to add edge bundling.
+  - Try different colors (the yellow specifically is hard to see)
