@@ -10,8 +10,6 @@ const m = [60, 0, 10, 0]
 let data
 let w = width - m[1] - m[3]
 let h = height - m[0] - m[2]
-let brush_count = 0
-let render_speed = 50
 let excluded_groups = []
 let xscale = d3.scale.ordinal().rangePoints([0, w], 1)
 let axis = d3.svg.axis().orient("left").ticks(1 + height / 50)
@@ -33,19 +31,9 @@ const colors = {
   "Untreated Tumor" : "#b15928",
 }
 
-const colors2 = {
-  "AIP"       : "#1f78b4",
-  "AIV"       : "#33a02c",
-  "IPV"       : "#e31a1c",
-  "APV"       : "#ff7f00",
-  "AIPV"      : "#6a3d9a",
-  "Untreated" : "#b15928",
-}
-
 // Scale chart and canvas height
 d3.select("#chart")
   .style("height", (h + m[0] + m[2]) + "px")
-
 
 // SVG for ticks, labels, and interactions
 const svg = d3.select("svg")
@@ -53,7 +41,6 @@ const svg = d3.select("svg")
     .attr("height", h + m[0] + m[2])
   .append("svg:g")
     .attr("transform", "translate(" + m[3] + "," + m[0] + ")")
-
 
 const ratioAttributes = [
   "Tumor mass (mg)",
@@ -124,7 +111,7 @@ d3.csv("tumor.csv", function(raw_data) {
 
   xscale.domain(dimensions.map(({ label }) => label))
 
-  const sampleColor = ({ type }) => { const c = color(type); c.l *= 1.3; return c + "" }
+  const sampleColor = ({ type }) => { const c = color(type); c.s *= 0.7; c.l *= 1.1; return c + "" }
   svg.selectAll(".sample")
     .data(data)
     .enter().append("path").attr({
@@ -132,7 +119,7 @@ d3.csv("tumor.csv", function(raw_data) {
       d              : sampleCoordinates,
       stroke         : sampleColor,
       "stroke-width" : 0.5,
-      opacity        : 0.5,
+      opacity        : 0.8,
       fill           : "none",
     })
 
@@ -223,69 +210,13 @@ function create_legend(colors,brush) {
   return legend
 }
 
-// sample data table
-function data_table(unsortedSample) {
-  // sort by first column
-  const sample = unsortedSample.sort(function(a,b) {
-    const col = d3.keys(a)[0]
-    return a[col] < b[col] ? -1 : 1
-  })
-
-  const table = d3.select("#clinic-list")
-    .html("")
-    .selectAll(".row")
-      .data(sample)
-    .enter().append("div")
-
-  table
-    .append("span")
-      .attr("class", "color-block")
-      .style("background", function(d) {
-        const col = (d.Organ === "Tumor") ? color2(d.Therapy,0.85) : color(d.Therapy,0.85)
-        return col })
-
-  table
-    .append("span")
-      .text(function(d) {
-        return d.Organ + ", Therapy: " + d.Therapy + ", Tumor mass (mg): " + d["Tumor mass (mg)"]  })
-}
-
-// Adjusts rendering speed
-function optimize(timer) {
-  const delta = (new Date()).getTime() - timer
-  render_speed = Math.max(Math.ceil(render_speed * 30 / delta), 8)
-  render_speed = Math.min(render_speed, 300)
-  return (new Date()).getTime()
-}
-
-// Feedback on rendering progress
-function render_stats(i,n,render_speed) {
-  d3.select("#rendered-count").text(i)
-  d3.select("#rendered-bar")
-    .style("width", (100 * i / n) + "%")
-  d3.select("#render-speed").text(render_speed)
-}
-
-// Feedback on selection
-function selection_stats(opacity, n, total) {
-  d3.select("#data-count").text(total)
-  d3.select("#selected-count").text(n)
-  d3.select("#selected-bar").style("width", (100 * n / total) + "%")
-  d3.select("#opacity").text(("" + (opacity * 100)).slice(0,4) + "%")
-}
-
 function color(d) {
   return d3.hsl(colors[d])
-}
-
-function color2(d) {
-  return colors2[d]
 }
 
 // Handles a brush event, toggling the display of foreground lines.
 // TODO refactor
 function brush() {
-  brush_count++
   const actives = dimensions.filter(p => !p.scale.brush.empty()),
     extents = actives.map(p => p.scale.brush.extent())
 
@@ -466,82 +397,6 @@ function brush() {
     M 0 ${y[0]} V ${y[1]}
     M 0 ${y[3]} V ${y[4]}
   `)
-
-  // Render selected lines
-  //paths(selected, foreground, brush_count)
-}
-
-// render a set of polylines on a canvas
-function paths(selected, ctx, count) {
-  const n = selected.length,
-    opacity = d3.min([2 / Math.pow(n,0.3),1])
-  let i = 0,
-    timer = (new Date()).getTime()
-  selection_stats(opacity, n, data.length)
-
-  const shuffled_data = _.shuffle(selected)
-
-  data_table(shuffled_data.slice(0,108))
-
-  ctx.clearRect(0,0,w + 1,h + 1)
-
-  // render all lines until finished or a new brush event
-  function animloop() {
-    if (i >= n || count < brush_count) return true
-    const max = d3.min([i + render_speed, n])
-    render_range(shuffled_data, i, max, opacity)
-    render_stats(max,n,render_speed)
-    i = max
-    timer = optimize(timer)  // adjusts render_speed
-  }
-
-  d3.timer(animloop)
-}
-
-// transition ticks for reordering, rescaling and inverting
-function update_ticks(d, extent) {
-  // update brushes
-  if (d) {
-    const brush_el = d3.selectAll(".brush")
-        .filter(function(key) { return key == d })
-    // single tick
-    if (extent) {
-      // restore previous extent
-      brush_el.call(d.scale.brush = d3.svg.brush().y(d.scale).extent(extent).on("brush", brush))
-    } else {
-      brush_el.call(d.scale.brush = d3.svg.brush().y(d.scale).on("brush", brush))
-    }
-  } else {
-    // all ticks
-    d3.selectAll(".brush")
-      .each(function(d) { d3.select(this).call(d.scale.brush = d3.svg.brush().y(d.scale).on("brush", brush)) })
-  }
-
-  brush_count++
-
-  show_ticks()
-
-  // update axes
-  d3.selectAll(".axis")
-    .each(function(d) {
-      // hide lines for better performance
-      d3.select(this).selectAll("line").style("display", "none")
-
-      // transition axis numbers
-      d3.select(this)
-        .transition()
-        .duration(720)
-        .call(axis.scale(d.scale))
-
-      // bring lines back
-      d3.select(this).selectAll("line").transition().delay(800).style("display", null)
-
-      d3.select(this)
-        .selectAll("text")
-        .style("font-weight", null)
-        .style("font-size", null)
-        .style("display", null)
-    })
 }
 
 // scale to window size
@@ -573,7 +428,6 @@ window.onresize = function() {
   // update brush placement
   d3.selectAll(".brush")
     .each(function(d) { d3.select(this).call(d.scale.brush = d3.svg.brush().y(d.scale).on("brush", brush)) })
-  brush_count++
 
   // update axis placement
   axis = axis.ticks(1 + height / 50),
