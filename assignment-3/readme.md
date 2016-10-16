@@ -70,7 +70,18 @@ bundling strength parameter might work.
 
 ### Design Choices
 
-Why is box and whisker plot good/bad?
+Box plots capture 5 statistic for a set of values visually by length to give
+some sense of the distribution. It won't show bimadal distributions, but is
+well suited for Gaussian distributions. It is also fairly simple to compare to
+other distributes side by side.
+
+The initial overlapping box plots were very difficult to make sense of,
+especially overlaying the parallel coordinates. Placing them side by side makes
+the comparison between box plots much easier, but space is very limited with 12
+distributes per attribute and 33 attribute for a total of 396 box plots on the
+unfiltered data. On a standard HD display that leaves less than 5 pixels per box
+plot and at that point it starts to become hard to tell which attribute the box
+plots belong to.
 
 ### Steps to Produce the Visualization
 
