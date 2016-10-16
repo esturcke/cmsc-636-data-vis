@@ -124,7 +124,7 @@ d3.csv("tumor.csv", function(raw_data) {
 
   xscale.domain(dimensions.map(({ label }) => label))
 
-  const sampleColor = ({ type }) => { const c = color(type); c.l *= 1.5; return c + "" }
+  const sampleColor = ({ type }) => { const c = color(type); c.l *= 1.3; return c + "" }
   svg.selectAll(".sample")
     .data(data)
     .enter().append("path").attr({
@@ -408,7 +408,9 @@ function brush() {
   const typeCount = Object.keys(stats).length
 
   // box plot width
-  const w = 2
+  const w  = 3
+  const w2 = 6
+  const w3 = 8
 
   const boxPlots = d3.selectAll(".axis").selectAll(".box-plot")
     .data(
@@ -420,6 +422,7 @@ function brush() {
     class  : "box-plot",
     stroke : ({ type }) => colors[type],
     fill   : "none",
+    "stroke-width" : 0.5,
   })
 
   const xOffset = i => (w + 1) * (typeCount / 2 - i)
@@ -430,19 +433,35 @@ function brush() {
   // Redraw box plots
   boxPlots.selectAll("path, rect").remove()
 
+  // Add box
+  boxPlots.append("rect").attr({
+    x      : -w / 2,
+    width  : w,
+    y      : ({ y }) => y[3],
+    height : ({ y }) => y[1] - y[3],
+    fill   : ({ type }) => color(type),
+    stroke : "white",
+  })
+
   // Add median line
   boxPlots.append("path").attr({
+    d : ({ y }) => `M -${w3 / 2} ${y[2]} h ${w3}`,
+  })
+  boxPlots.append("path").attr({
+    d : ({ y }) => `M -${w / 2} ${y[2]} h ${w}`,
+    stroke : "white",
+  })
+
+  // Whiskers
+  boxPlots.append("path").attr({
     d : ({ y }) => `
-      M -${w / 2} ${y[1]} h ${w} V ${y[3]} h -${w} Z
-      M -${w / 2} ${y[0]} h ${w}
-      M -${w / 2} ${y[2]} h ${w}
-      M -${w / 2} ${y[4]} h ${w}
+      M -${w2 / 2} ${y[0]} h ${w2}
+      M -${w2 / 2} ${y[4]} h ${w2}
     `,
   })
 
   boxPlots.append("path").attr({
-    "stroke-dasharray" : "1, 1",
-    "stroke-opacity" : 0.4,
+    opacity : 0.7,
   }).attr("d", ({ y }) => `
     M 0 ${y[0]} V ${y[1]}
     M 0 ${y[3]} V ${y[4]}
