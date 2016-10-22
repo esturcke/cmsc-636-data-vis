@@ -16,7 +16,7 @@
 
 #### Task 2
 
-> What are the new encounters patients are likely to experience? what are the
+> What are the new encounters patients are likely to experience? What are the
 > rare encounters?
 
 #### Task 3
