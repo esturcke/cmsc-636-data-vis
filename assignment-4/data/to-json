@@ -1,0 +1,112 @@
+#!/usr/bin/env node
+
+const fs         = require("fs")
+const d3         = require("d3")
+const assignWith = require("lodash/assignWith")
+const isNull     = require("lodash/isNull")
+const flow       = require("lodash/flow")
+const sortBy     = require("lodash/sortBy")
+const mapValues  = require("lodash/mapValues")
+const assign     = require("lodash/assign")
+const values     = require("lodash/values")
+const min        = require("lodash/min")
+const max        = require("lodash/max")
+const assert     = require("assert")
+
+// Read the data
+const FILE = "./ehr-raw.csv"
+const text = fs.readFileSync(FILE, { encoding : "utf8" })
+const rows = d3.csvParse(text)
+
+const DEFAULTED = "No valid match found.  Defaulted"
+const normalizeGender = ({ gender }) => gender === DEFAULTED ? null : gender.toLowerCase()
+const normalizeFlag   = flag =>
+  flag === "0" || flag === "N" ? false :
+  flag === "1" || flag === "Y" ? true  : null
+const yearsInMs = t => t * 1000 * 3600 * 24 * 365.25
+const msInDays  = t => t / 1000 / 3600 / 24
+
+const birthDateRange = (date, age) => [date - yearsInMs(age + 1), date - yearsInMs(age)]
+const normalize = row => {
+  const injuryDate      = Date.parse(row.injuryDate)
+  const encounterDate   = Date.parse(row.encounterDate)
+  const daysSinceInjury = parseInt(row.daysSinceInjury)
+
+  assert.equal((encounterDate - injuryDate) / (1000 * 60 * 60 * 24), daysSinceInjury)
+
+  return {
+    id     : row.id,
+    gender : normalizeGender(row),
+    injury : {
+      age        : parseInt(row.ageInjury),
+      date       : injuryDate,
+      type       : row.injuryType,
+      warRelated : normalizeFlag(row.warRelated),
+    },
+    encounters : [{
+      id                : row.encounterId,
+      age               : parseInt(row.age),
+      date              : encounterDate,
+      daysSinceInjury   : daysSinceInjury,
+      source            : row.encounterSource,
+      providerSpecialty : row.providerSpecialty,
+      providerType      : row.providerType,
+      productLine       : row.productLine,
+      injuryEncounter   : normalizeFlag(row.injuryEncounter),
+      stress            : normalizeFlag(row.stress),
+      ptsd              : normalizeFlag(row.ptsd),
+      speech            : normalizeFlag(row.speech),
+      anxiety           : normalizeFlag(row.anxiety),
+      depression        : normalizeFlag(row.depression),
+      headache          : normalizeFlag(row.headache),
+      sleep             : normalizeFlag(row.sleep),
+      audiology         : normalizeFlag(row.audiology),
+      vision            : normalizeFlag(row.vision),
+      neurologic        : normalizeFlag(row.neurologic),
+      alzheimer         : normalizeFlag(row.alzheimer),
+      cognitive         : normalizeFlag(row.cognitive),
+      pcs               : normalizeFlag(row.pcs),
+      endocrine         : normalizeFlag(row.endocrine),
+      skullInjury       : normalizeFlag(row.skullInjury),
+      nonSkullInjury    : normalizeFlag(row.nonSkullInjury),
+      birthDateRange    : birthDateRange(encounterDate, parseInt(row.age)),
+    }],
+  }
+}
+
+// Reorganize the data
+const constantMerge = (patient, row, field) => {
+  if (isNull(patient[field])) return row[field]
+  if (isNull(row[field]))     return patient[field]
+  assert.deepEqual(row[field], patient[field], `Field ${field} is not constant for ${row.id}: ${patient[field]} -> ${row[field]}`)
+  return patient[field]
+}
+
+const merge = (patient, row) => {
+  if (!patient) return row
+  return {
+    id         : patient.id,
+    gender     : constantMerge(patient, row, "gender"),
+    injury     : constantMerge(patient, row, "injury"),
+    encounters : [ ...patient.encounters, ...row.encounters ],
+  }
+}
+
+const data = flow(
+  // Reorganize rows of encounters into a set of patient records
+  rows => assignWith(...rows.map(r => ({ [r.id] : normalize(r) })), merge),
+
+  // Sort the encounters
+  data => mapValues(data, v => assign(v, { encounters : sortBy(v.encounters, e => e.date) })),
+
+  // Find birth date range
+  data => mapValues(data, v => assign(v, { birthDateRange : [max(v.encounters.map(e => e.birthDateRange[0])), min(v.encounters.map(e => e.birthDateRange[1]))] })),
+
+  // Find average birth date and range
+  data => mapValues(data, v => assign(v, { birthDate : (v.birthDateRange[0] + v.birthDateRange[1])/2, birthDateRangeWidth : msInDays(v.birthDateRange[1] - v.birthDateRange[0]) })),
+
+  // Just keep the values, sorted by age at injury
+  data => values(data).sort((a, b) => a.injury.age - b.injury.age).map((patient, i) => Object.assign(patient, { i })).map(patient => ({ patient }))
+)(rows)
+
+console.info(JSON.stringify(data, undefined, 2))
