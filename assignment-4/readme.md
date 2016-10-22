@@ -5,6 +5,24 @@
 
 ## Part 1: Design & Discussion
 
+### Change Tasks
+
+#### Task 1
+
+> It is possible to group these patients into cohort where each cohort shares
+> similar encounters. A cohort is a group of patient with similar attributes
+> (e.g., age, gender, encounters, temporal progress). What are those encounters
+> that are co-occurring?
+
+#### Task 2
+
+> What are the new encounters patients are likely to experience? what are the
+> rare encounters?
+
+#### Task 3
+
+> What are the encounters repeating themselves? 
+
   * tasks and dataset attributes description (R0, 20 points)
   * mapping tasks and data needs in encoding process (15 points)
   * encoding choices comparisons (4(b) above, 20 points)
