@@ -7,5 +7,4 @@
 ## Assignments
 
   - [Assignment 1: Visualization Construction](https://github.com/esturcke/cmsc-636-data-vis/tree/master/assignment-1)
-  - [Assignment 2: Literature Review](https://github.com/esturcke/cmsc-636-data-vis/tree/master/assignment-2)
   - [Assignment 3: MultiD with Parallel Coordinates: Overview Technique](https://github.com/esturcke/cmsc-636-data-vis/tree/master/assignment-3)
