@@ -1,6 +1,6 @@
 "use strict"
 
-/* global d3 */
+/* global d3, _ */
 
 // patient data source
 const data = "https://gist.githubusercontent.com/esturcke/2c0a1dcfa6bce8e37f697e8525c814c2/raw/aa86bdba4c69c22b0635e46e16906c0dc8693797/ehr.json"
@@ -44,20 +44,27 @@ const symptoms = [
   "endocrine",
 ]
 
+const hadSymptom = ({ encounters }, symptom) => _.some(encounters, encounter => encounter[symptom])
+
 const symptomColor  = d3.scaleOrdinal(d3.schemeCategory20).domain(symptoms)
 const encounter = ({ encounter }, i, nodes) => {
   const current = d3.select(nodes[i])
-  current.append("line").attrs({ class : "encounter", x1 : 0, x2 : 0, y1 : -5, y2 : 5 })
+  current.append("line").attrs({ "stroke-width" : 0.5, class : "encounter", x1 : 0, x2 : 0, y1 : 0, y2 : 5 })
 }
 
-const encounterSymptoms = ({ encounter }, i, nodes) => {
+const length = 6
+const encounterSymptoms = ({ patient, encounter }, i, nodes) => {
   const current = d3.select(nodes[i])
   symptoms
-    .filter(symptom => encounter[symptom])
-    .forEach((symptom, i) => current.append("circle").attrs({
-      class     : "symptom",
-      fill      : symptomColor(symptom),
-      transform : `translate(0 ${5 - 2 - i * 5})`,
+    .filter( symptom => hadSymptom(patient, symptom) )
+    .forEach((symptom, i) => current.append("path").attrs({
+      class      : "symptom",
+      stroke     : symptomColor(symptom),
+      "stroke-width" : 1,
+      fill       : "none",
+      d          : `M 0 0 v ${length}`,
+      visibility : encounter[symptom] ? "visible"  : "hidden",
+      transform  : `translate(0 -${i * (1 + length)})`,
     }))
 }
 
