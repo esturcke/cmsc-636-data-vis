@@ -103,7 +103,7 @@ const data = flow(
   data => mapValues(data, v => assign(v, { birthDateRange : [max(v.encounters.map(e => e.birthDateRange[0])), min(v.encounters.map(e => e.birthDateRange[1]))] })),
 
   // Find average birth date and range
-  data => mapValues(data, v => assign(v, { birthDate : (v.birthDateRange[0] + v.birthDateRange[1])/2, birthDateRangeWidth : msInDays(v.birthDateRange[1] - v.birthDateRange[0]) })),
+  data => mapValues(data, v => assign(v, { birthDate : (v.birthDateRange[0] + v.birthDateRange[1]) / 2, birthDateRangeWidth : msInDays(v.birthDateRange[1] - v.birthDateRange[0]) })),
 
   // Just keep the values, sorted by age at injury
   data => values(data).sort((a, b) => a.injury.age - b.injury.age).map((patient, i) => Object.assign(patient, { i })).map(patient => ({ patient }))
