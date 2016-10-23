@@ -4,8 +4,12 @@
 
 // patient data source
 //const data = "https://gist.githubusercontent.com/esturcke/2c0a1dcfa6bce8e37f697e8525c814c2/raw/aa86bdba4c69c22b0635e46e16906c0dc8693797/ehr.json"
-const data = "./data/ehr.json"
+const data = new Promise((resolve, reject) => {
+  const dataFile = "./data/ehr.json"
+  d3.json(dataFile, (error, data) => error ? reject(error) : resolve(data))
+})
 
+  /*
 // time conversion
 const msInYears = t => t / 1000 / 3600 / 24 / 365.25
 
@@ -226,3 +230,5 @@ d3.json(data, (error, data) => {
 
 
 })
+
+*/
