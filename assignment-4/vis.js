@@ -25,6 +25,26 @@ const indexRange = flow([
   ([low, high]) => range(low)(high + 1),
 ])
 
+const symptoms = [
+  "stress",
+  "ptsd",
+  "speech",
+  "anxiety",
+  "depression",
+  "headache",
+  "sleep",
+  "audiology",
+  "vision",
+  "neurologic",
+  "alzheimer",
+  "cognitive",
+  "pcs",
+  "endocrine",
+]
+
+const arrayDefault = (array, empty) => array.length ? array : [empty]
+const symptomsOrNone = encounter => arrayDefault(symptoms.filter(s => encounter[s]), "none")
+
 const setup = data => {
   d3.select("body").append("svg")
       .data([{
@@ -40,6 +60,14 @@ const setup = data => {
     .selectAll(".encounter")
       .data(({ encounters }) => encounters, ({ id }) => id)
       .enter().append("g").attrs({ class : "encounter" })
+    .selectAll(".symptom")
+      .data(symptomsOrNone)
+      .enter().append("rect").attrs({
+        class          : "symptom",
+        fill           : "black",
+        stroke         : "white",
+        "stroke-width" : 0.5,
+      })
 }
 
 const dimensions = () => {
@@ -70,6 +98,11 @@ const draw = () => {
 
   d3.selectAll(".encounter").attrs({
     transform : ({ i }) => `translate(${x(i)} 0)`,
+  })
+
+  d3.selectAll(".symptom").attrs({
+    width  : x.bandwidth(),
+    height : y.bandwidth(),
   })
 }
 
