@@ -10,6 +10,7 @@ const {
   map,
   max,
   min,
+  range,
 } = _
 
 // Load data
@@ -21,13 +22,14 @@ const data = new Promise((resolve, reject) => {
 const indexRange = flow([
   map(({ encounters }) => [first(encounters).i, last(encounters).i]),
   pairs => [min(pairs.map(([low, _high]) => low)), max(pairs.map(([_low, high]) => high))],
+  ([low, high]) => range(low)(high + 1),
 ])
 
 const setup = data => {
   d3.select("body").append("svg")
       .data([{
         scale : {
-          x : d3.scaleLinear().domain(indexRange(data)).nice(),
+          x : d3.scaleBand().domain(indexRange(data)),
           y : d3.scaleBand().domain(data.map(({ id }) => id)),
         },
         margin : { top : 40, right : 40, bottom : 100, left : 60 },
