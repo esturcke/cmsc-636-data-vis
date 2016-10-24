@@ -2,11 +2,24 @@
 
 /* global d3, _ */
 
+const {
+  debounce,
+} = _
+
 // Load data
 const data = new Promise((resolve, reject) => {
   const dataFile = "./data/ehr.json"
   d3.json(dataFile, (error, data) => error ? reject(error) : resolve(data))
 })
+
+const setup = data => {}
+const draw  = () => { console.log("updating") }
+
+// Setup and draw on resize
+data
+  .then(setup)
+  .then(draw)
+  .then(() => window.addEventListener("resize", debounce(100)(draw)))
 
   /*
 // time conversion
