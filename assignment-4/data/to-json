@@ -9,8 +9,6 @@ const sortBy     = require("lodash/sortBy")
 const mapValues  = require("lodash/mapValues")
 const assign     = require("lodash/assign")
 const values     = require("lodash/values")
-const min        = require("lodash/min")
-const max        = require("lodash/max")
 const findIndex  = require("lodash/findIndex")
 const assert     = require("assert")
 
@@ -24,10 +22,7 @@ const normalizeGender = ({ gender }) => gender === DEFAULTED ? null : gender.toL
 const normalizeFlag   = flag =>
   flag === "0" || flag === "N" ? false :
   flag === "1" || flag === "Y" ? true  : null
-const yearsInMs = t => t * 1000 * 3600 * 24 * 365.25
-const msInDays  = t => t / 1000 / 3600 / 24
 
-const birthDateRange = (date, age) => [date - yearsInMs(age + 1), date - yearsInMs(age)]
 const normalize = row => {
   const injuryDate      = Date.parse(row.injuryDate)
   const encounterDate   = Date.parse(row.encounterDate)
@@ -70,7 +65,6 @@ const normalize = row => {
       endocrine         : normalizeFlag(row.endocrine),
       skullInjury       : normalizeFlag(row.skullInjury),
       nonSkullInjury    : normalizeFlag(row.nonSkullInjury),
-      birthDateRange    : birthDateRange(encounterDate, parseInt(row.age)),
     }],
   }
 }
