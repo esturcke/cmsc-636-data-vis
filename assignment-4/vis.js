@@ -4,6 +4,12 @@
 
 const {
   debounce,
+  first,
+  flow,
+  last,
+  map,
+  max,
+  min,
 } = _
 
 // Load data
@@ -12,8 +18,14 @@ const data = new Promise((resolve, reject) => {
   d3.json(dataFile, (error, data) => error ? reject(error) : resolve(data))
 })
 
+const indexRange = flow([
+  map(({ encounters }) => [first(encounters).i, last(encounters).i]),
+  pairs => ({ min : min(pairs.map(([low, _high]) => low)), max : max(pairs.map(([_low, high]) => high)) }),
+])
+
 const setup = data => {
   d3.select("body").append("svg")
+      .data([{ index : indexRange(data) }])
     .selectAll(".patient")
       .data(data)
       .enter().append("g").attrs({ class : "patient" })
@@ -27,7 +39,7 @@ const dimensions = () => {
   return { width, height }
 }
 
-const draw  = () => {
+const draw = () => {
   const { width, height } = dimensions()
   d3.select("svg").attrs({ width, height })
 }
