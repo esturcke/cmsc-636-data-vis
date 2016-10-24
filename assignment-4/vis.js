@@ -13,10 +13,13 @@ const data = new Promise((resolve, reject) => {
 })
 
 const setup = data => {
-  const svg = d3.select("body").append("svg")
-  svg.selectAll(".encounter")
-    .data(data)
-    .enter().append("g").attrs({ class : "encounter" })
+  d3.select("body").append("svg")
+    .selectAll(".patient")
+      .data(data)
+      .enter().append("g").attrs({ class : "patient" })
+    .selectAll(".encounter")
+      .data(({ encounters }) => encounters)
+      .enter().append("g").attrs({ class : "encounter" })
 }
 
 const dimensions = () => {
