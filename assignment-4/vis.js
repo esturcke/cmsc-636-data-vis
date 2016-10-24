@@ -2,8 +2,7 @@
 
 /* global d3, _ */
 
-// patient data source
-//const data = "https://gist.githubusercontent.com/esturcke/2c0a1dcfa6bce8e37f697e8525c814c2/raw/aa86bdba4c69c22b0635e46e16906c0dc8693797/ehr.json"
+// Load data
 const data = new Promise((resolve, reject) => {
   const dataFile = "./data/ehr.json"
   d3.json(dataFile, (error, data) => error ? reject(error) : resolve(data))
@@ -34,6 +33,7 @@ const to        = (xVal, yVal) => datum => translate(x(xVal(datum)), y(yVal(datu
 
 //
 const symptoms = [
+  "stress",
   "ptsd",
   "speech",
   "anxiety",
