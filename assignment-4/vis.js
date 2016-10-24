@@ -28,6 +28,7 @@ const setup = data => {
       .data([{
         scale : {
           x : d3.scaleLinear().domain(indexRange(data)).nice(),
+          y : d3.scaleBand().domain(data.map(({ id }) => id)),
         },
       }])
       .selectAll(".patient")
