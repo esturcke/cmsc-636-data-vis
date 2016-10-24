@@ -12,8 +12,22 @@ const data = new Promise((resolve, reject) => {
   d3.json(dataFile, (error, data) => error ? reject(error) : resolve(data))
 })
 
-const setup = data => {}
-const draw  = () => { console.log("updating") }
+const setup = data => {
+  const svg = d3.select("body").append("svg")
+  svg.selectAll(".encounter")
+    .data(data)
+    .enter().append("g").attrs({ class : "encounter" })
+}
+
+const dimensions = () => {
+  const { innerWidth : width, innerHeight : height } = window
+  return { width, height }
+}
+
+const draw  = () => {
+  const { width, height } = dimensions()
+  d3.select("svg").attrs({ width, height })
+}
 
 // Setup and draw on resize
 data
