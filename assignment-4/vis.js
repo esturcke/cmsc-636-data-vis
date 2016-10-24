@@ -20,13 +20,17 @@ const data = new Promise((resolve, reject) => {
 
 const indexRange = flow([
   map(({ encounters }) => [first(encounters).i, last(encounters).i]),
-  pairs => ({ min : min(pairs.map(([low, _high]) => low)), max : max(pairs.map(([_low, high]) => high)) }),
+  pairs => [min(pairs.map(([low, _high]) => low)), max(pairs.map(([_low, high]) => high))],
 ])
 
 const setup = data => {
   d3.select("body").append("svg")
-      .data([{ index : indexRange(data) }])
-    .selectAll(".patient")
+      .data([{
+        scale : {
+          x : d3.scaleLinear().domain(indexRange(data)).nice(),
+        },
+      }])
+      .selectAll(".patient")
       .data(data)
       .enter().append("g").attrs({ class : "patient" })
     .selectAll(".encounter")
