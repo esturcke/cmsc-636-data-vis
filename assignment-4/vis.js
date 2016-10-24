@@ -55,7 +55,7 @@ const draw = () => {
   const svg = d3.select("svg")
 
   const { width, height } = dimensions()
-  const { scale : { y } } = svg.datum()
+  const { scale : { x, y } } = svg.datum()
 
   svg.datum(flow([
     setRanges({ width, height }),
@@ -64,6 +64,10 @@ const draw = () => {
 
   d3.selectAll(".patient").attrs({
     transform : ({ id }) => `translate(0 ${y(id)})`,
+  })
+
+  d3.selectAll(".encounter").attrs({
+    transform : ({ i }) => `translate(${x(i)} 0)`,
   })
 }
 
