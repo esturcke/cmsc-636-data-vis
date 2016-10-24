@@ -30,6 +30,7 @@ const setup = data => {
           x : d3.scaleLinear().domain(indexRange(data)).nice(),
           y : d3.scaleBand().domain(data.map(({ id }) => id)),
         },
+        margin : { top : 40, right : 40, bottom : 100, left : 60 },
       }])
     .selectAll(".patient")
       .data(data, ({ id }) => id)
@@ -44,9 +45,26 @@ const dimensions = () => {
   return { width, height }
 }
 
+const setRanges = ({ width, height }) => d => {
+  d.scale.x.range([0, width])
+  d.scale.y.range([0, height])
+  return d
+}
+
 const draw = () => {
+  const svg = d3.select("svg")
+
   const { width, height } = dimensions()
-  d3.select("svg").attrs({ width, height })
+  const { scale : { y } } = svg.datum()
+
+  svg.datum(flow([
+    setRanges({ width, height }),
+  ]))
+  svg.attrs({ width, height })
+
+  d3.selectAll(".patient").attrs({
+    transform : ({ id }) => `translate(0 ${y(id)})`,
+  })
 }
 
 // Setup and draw on resize
