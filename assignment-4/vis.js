@@ -31,11 +31,11 @@ const setup = data => {
           y : d3.scaleBand().domain(data.map(({ id }) => id)),
         },
       }])
-      .selectAll(".patient")
-      .data(data)
+    .selectAll(".patient")
+      .data(data, ({ id }) => id)
       .enter().append("g").attrs({ class : "patient" })
     .selectAll(".encounter")
-      .data(({ encounters }) => encounters)
+      .data(({ encounters }) => encounters, ({ id }) => id)
       .enter().append("g").attrs({ class : "encounter" })
 }
 
