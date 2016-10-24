@@ -11,6 +11,7 @@ const assign     = require("lodash/assign")
 const values     = require("lodash/values")
 const min        = require("lodash/min")
 const max        = require("lodash/max")
+const findIndex  = require("lodash/findIndex")
 const assert     = require("assert")
 
 // Read the data
@@ -74,6 +75,8 @@ const normalize = row => {
   }
 }
 
+const tbiEncounterIndex = encounters => findIndex(encounters, ({ daysSinceInjury }) => daysSinceInjury >= 0)
+
 // Reorganize the data
 const constantMerge = (patient, row, field) => {
   if (isNull(patient[field])) return row[field]
@@ -103,7 +106,7 @@ const data = flow(
   data => values(data).sort((a, b) => a.injury.age - b.injury.age),
 
   // Add encounter index with respect to first encounter from TBI
-  data => data.map(patient => assign(patient, { encounters : patient.encounters.map((e, i) => assign(e, { i })) }))
+  data => data.map(patient => assign(patient, { encounters : patient.encounters.map((e, i) => assign(e, { i : i - tbiEncounterIndex(patient.encounters) })) }))
 
 )(rows)
 
