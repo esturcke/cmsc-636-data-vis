@@ -100,7 +100,10 @@ const data = flow(
   data => mapValues(data, v => assign(v, { encounters : sortBy(v.encounters, e => e.date) })),
 
   // Just keep the values, sorted by age at injury
-  data => values(data).sort((a, b) => a.injury.age - b.injury.age)
+  data => values(data).sort((a, b) => a.injury.age - b.injury.age),
+
+  // Add encounter index with respect to first encounter from TBI
+  data => data.map(patient => assign(patient, { encounters : patient.encounters.map((e, i) => assign(e, { i })) }))
 
 )(rows)
 
