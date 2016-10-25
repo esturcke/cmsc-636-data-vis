@@ -52,8 +52,9 @@ const setup = data => {
   d3.select("body").append("svg")
       .data([{
         scale : {
-          x : d3.scaleBand().domain(indexRange(data)),
-          y : d3.scaleBand().domain(data.map(({ id }) => id)),
+          x             : d3.scaleBand().domain(indexRange(data)),
+          y             : d3.scaleBand().domain(data.map(({ id }) => id)),
+          symptomOffset : d3.scaleBand().domain(symptoms),
         },
         margin : { top : 40, right : 40, bottom : 100, left : 60 },
       }])
@@ -81,6 +82,7 @@ const dimensions = () => {
 const setRanges = ({ width, height }) => d => {
   d.scale.x.range([0, width])
   d.scale.y.range([0, height])
+  d.scale.symptomOffset.range([0, d.scale.y.bandwidth()])
   return d
 }
 
@@ -88,7 +90,7 @@ const draw = () => {
   const svg = d3.select("svg")
 
   const { width, height } = dimensions()
-  const { scale : { x, y } } = svg.datum()
+  const { scale : { x, y, symptomOffset } } = svg.datum()
 
   svg.datum(flow([
     setRanges({ width, height }),
@@ -104,8 +106,9 @@ const draw = () => {
   })
 
   d3.selectAll(".symptom").attrs({
+    y      : s => s === "none" ? 0 : symptomOffset(s),
     width  : x.bandwidth(),
-    height : y.bandwidth(),
+    height : s => s === "none" ? y.bandwidth() : symptomOffset.bandwidth(),
   })
 }
 
