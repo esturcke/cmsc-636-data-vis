@@ -8,6 +8,7 @@ const flow       = require("lodash/flow")
 const sortBy     = require("lodash/sortBy")
 const mapValues  = require("lodash/mapValues")
 const assign     = require("lodash/assign")
+const fromPairs  = require("lodash/fromPairs")
 const values     = require("lodash/values")
 const findIndex  = require("lodash/findIndex")
 const assert     = require("assert")
@@ -22,6 +23,23 @@ const normalizeGender = ({ gender }) => gender === DEFAULTED ? null : gender.toL
 const normalizeFlag   = flag =>
   flag === "0" || flag === "N" ? false :
   flag === "1" || flag === "Y" ? true  : null
+
+const symptoms = [
+  "stress",
+  "ptsd",
+  "speech",
+  "anxiety",
+  "depression",
+  "headache",
+  "sleep",
+  "audiology",
+  "vision",
+  "neurologic",
+  "alzheimer",
+  "cognitive",
+  "pcs",
+  "endocrine",
+]
 
 const normalize = row => {
   const injuryDate      = Date.parse(row.injuryDate)
@@ -39,33 +57,22 @@ const normalize = row => {
       type       : row.injuryType,
       warRelated : normalizeFlag(row.warRelated),
     },
-    encounters : [{
-      id                : row.encounterId,
-      age               : parseInt(row.age),
-      date              : encounterDate,
-      daysSinceInjury   : daysSinceInjury,
-      source            : row.encounterSource,
-      providerSpecialty : row.providerSpecialty,
-      providerType      : row.providerType,
-      productLine       : row.productLine,
-      injuryEncounter   : normalizeFlag(row.injuryEncounter),
-      stress            : normalizeFlag(row.stress),
-      ptsd              : normalizeFlag(row.ptsd),
-      speech            : normalizeFlag(row.speech),
-      anxiety           : normalizeFlag(row.anxiety),
-      depression        : normalizeFlag(row.depression),
-      headache          : normalizeFlag(row.headache),
-      sleep             : normalizeFlag(row.sleep),
-      audiology         : normalizeFlag(row.audiology),
-      vision            : normalizeFlag(row.vision),
-      neurologic        : normalizeFlag(row.neurologic),
-      alzheimer         : normalizeFlag(row.alzheimer),
-      cognitive         : normalizeFlag(row.cognitive),
-      pcs               : normalizeFlag(row.pcs),
-      endocrine         : normalizeFlag(row.endocrine),
-      skullInjury       : normalizeFlag(row.skullInjury),
-      nonSkullInjury    : normalizeFlag(row.nonSkullInjury),
-    }],
+    encounters : [assign(
+      {
+        id                : row.encounterId,
+        age               : parseInt(row.age),
+        date              : encounterDate,
+        daysSinceInjury   : daysSinceInjury,
+        source            : row.encounterSource,
+        providerSpecialty : row.providerSpecialty,
+        providerType      : row.providerType,
+        productLine       : row.productLine,
+        injuryEncounter   : normalizeFlag(row.injuryEncounter),
+        nonSkullInjury    : normalizeFlag(row.nonSkullInjury),
+        skullInjury       : normalizeFlag(row.skullInjury),
+      },
+      fromPairs(symptoms.map(s => [s, normalizeFlag(row[s])]))
+    )],
   }
 }
 
