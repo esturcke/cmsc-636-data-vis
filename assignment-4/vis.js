@@ -42,6 +42,9 @@ const symptoms = [
   "endocrine",
 ]
 
+const colors = d3.schemeCategory20
+const symptomColor = d3.scaleOrdinal().domain(symptoms).range(colors)
+
 const arrayDefault = (array, empty) => array.length ? array : [empty]
 const symptomsOrNone = encounter => arrayDefault(symptoms.filter(s => encounter[s]), "none")
 
@@ -64,7 +67,7 @@ const setup = data => {
       .data(symptomsOrNone)
       .enter().append("rect").attrs({
         class          : "symptom",
-        fill           : s => s === "none" ? "black" : "none",
+        fill           : s => s === "none" ? "black" : symptomColor(s),
         stroke         : "white",
         "stroke-width" : 0.5,
       })
