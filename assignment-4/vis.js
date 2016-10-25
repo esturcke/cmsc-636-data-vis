@@ -64,7 +64,7 @@ const setup = data => {
       .data(symptomsOrNone)
       .enter().append("rect").attrs({
         class          : "symptom",
-        fill           : "black",
+        fill           : s => s === "none" ? "black" : "none",
         stroke         : "white",
         "stroke-width" : 0.5,
       })
