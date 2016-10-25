@@ -8,6 +8,7 @@ const flow       = require("lodash/flow")
 const sortBy     = require("lodash/sortBy")
 const mapValues  = require("lodash/mapValues")
 const assign     = require("lodash/assign")
+const some       = require("lodash/some")
 const fromPairs  = require("lodash/fromPairs")
 const values     = require("lodash/values")
 const findIndex  = require("lodash/findIndex")
@@ -107,7 +108,10 @@ const data = flow(
   data => values(data).sort((a, b) => a.injury.age - b.injury.age),
 
   // Add encounter index with respect to first encounter from TBI
-  data => data.map(patient => assign(patient, { encounters : patient.encounters.map((e, i) => assign(e, { i : i - tbiEncounterIndex(patient.encounters) })) }))
+  data => data.map(patient => assign(patient, { encounters : patient.encounters.map((e, i) => assign(e, { i : i - tbiEncounterIndex(patient.encounters) })) })),
+
+  // Add symptoms list for patient
+  data => data.map(patient => assign(patient, { symtoms : symptoms.filter(s => some(patient.encounters, e => e[s])) }))
 
 )(rows)
 
