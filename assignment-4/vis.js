@@ -3,11 +3,14 @@
 /* global d3, _ */
 
 const {
+  assign,
   debounce,
   first,
   flow,
+  fromPairs,
   last,
   map,
+  forEach,
   max,
   min,
   range,
@@ -52,9 +55,9 @@ const setup = data => {
   d3.select("body").append("svg")
       .data([{
         scale : {
-          x             : d3.scaleBand().domain(indexRange(data)),
-          y             : d3.scaleBand().domain(data.map(({ id }) => id)),
-          symptomOffset : d3.scaleBand().domain(symptoms),
+          x              : d3.scaleBand().domain(indexRange(data)),
+          y              : d3.scaleBand().domain(data.map(({ id }) => id)),
+          symptomOffsets : fromPairs(data.map(({ id, symptoms }) => [id, d3.scaleBand().domain(symptoms)])),
         },
         margin : { top : 40, right : 40, bottom : 100, left : 60 },
       }])
@@ -62,10 +65,10 @@ const setup = data => {
       .data(data, ({ id }) => id)
       .enter().append("g").attrs({ class : "patient" })
     .selectAll(".encounter")
-      .data(({ encounters }) => encounters, ({ id }) => id)
+      .data(({ id : patientId, encounters }) => encounters.map(e => assign(e, { patientId })), ({ id }) => id)
       .enter().append("g").attrs({ class : "encounter" })
     .selectAll(".symptom")
-      .data(symptomsOrNone)
+      .data(encounter => symptomsOrNone(encounter).map(symptom => ({ symptom, patientId : encounter.patientId })))
       .enter().append("rect").attrs({
         class          : "symptom",
         fill           : s => s === "none" ? "black" : symptomColor(s),
@@ -82,7 +85,9 @@ const dimensions = () => {
 const setRanges = ({ width, height }) => d => {
   d.scale.x.range([0, width])
   d.scale.y.range([0, height])
-  d.scale.symptomOffset.range([0, d.scale.y.bandwidth()])
+  console.log(d.scale.syptomOffsets)
+  forEach(d.scale.symptomOffsets, scale => scale.range([0, d.scale.y.bandwidth()]))
+  console.log(d.scale.syptomOffsets)
   return d
 }
 
@@ -90,8 +95,8 @@ const draw = () => {
   const svg = d3.select("svg")
 
   const { width, height } = dimensions()
-  const { scale : { x, y, symptomOffset } } = svg.datum()
-
+  const { scale : { x, y, symptomOffsets } } = svg.datum()
+console.log(symptomOffsets)
   svg.datum(flow([
     setRanges({ width, height }),
   ]))
@@ -106,9 +111,9 @@ const draw = () => {
   })
 
   d3.selectAll(".symptom").attrs({
-    y      : s => s === "none" ? 0 : symptomOffset(s),
+    y      : ({ symptom, patientId }) => symptom === "none" ? 0 : symptomOffsets[patientId](symptom),
     width  : x.bandwidth(),
-    height : s => s === "none" ? y.bandwidth() : symptomOffset.bandwidth(),
+    height : ({ symptom, patientId }) => symptom === "none" ? y.bandwidth() : symptomOffsets[patientId].bandwidth(),
   })
 }
 

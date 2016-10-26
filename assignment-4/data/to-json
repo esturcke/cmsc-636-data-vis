@@ -111,7 +111,7 @@ const data = flow(
   data => data.map(patient => assign(patient, { encounters : patient.encounters.map((e, i) => assign(e, { i : i - tbiEncounterIndex(patient.encounters) })) })),
 
   // Add symptoms list for patient
-  data => data.map(patient => assign(patient, { symtoms : symptoms.filter(s => some(patient.encounters, e => e[s])) }))
+  data => data.map(patient => assign(patient, { symptoms : symptoms.filter(s => some(patient.encounters, e => e[s])) }))
 
 )(rows)
 
