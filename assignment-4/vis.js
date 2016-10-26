@@ -29,6 +29,7 @@ const indexRange = flow([
 ])
 
 const symptoms = [
+  "none",
   "stress",
   "ptsd",
   "speech",
@@ -45,7 +46,7 @@ const symptoms = [
   "endocrine",
 ]
 
-const colors = d3.schemeCategory20
+const colors = ["black", ...d3.schemeCategory20]
 const symptomColor = d3.scaleOrdinal().domain(symptoms).range(colors)
 
 const arrayDefault = (array, empty) => array.length ? array : [empty]
@@ -71,7 +72,7 @@ const setup = data => {
       .data(encounter => symptomsOrNone(encounter).map(symptom => ({ symptom, patientId : encounter.patientId })))
       .enter().append("rect").attrs({
         class          : "symptom",
-        fill           : ({ symptom }) => symptom === "none" ? "black" : symptomColor(symptom),
+        fill           : ({ symptom }) => symptomColor(symptom),
         stroke         : "white",
         "stroke-width" : 0.5,
       })
