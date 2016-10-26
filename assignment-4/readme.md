@@ -14,6 +14,8 @@
 > (e.g., age, gender, encounters, temporal progress). What are those encounters
 > that are co-occurring?
 
+  - **Change Task 1:** Forming cohorts of patients with a certain symptom....
+
 #### Task 2
 
 > What are the new encounters patients are likely to experience? What are the
