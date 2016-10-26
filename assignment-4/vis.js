@@ -110,7 +110,7 @@ const draw = () => {
   })
 
   d3.selectAll(".symptom").attrs({
-    y      : ({ symptom, patientId }) => symptom === "none" ? 0 : symptomOffsets[patientId](symptom),
+    y      : ({ symptom, patientId }) => symptomOffsets[patientId](symptom),
     width  : x.bandwidth(),
     height : ({ symptom, patientId }) => symptom === "none" ? y.bandwidth() : symptomOffsets[patientId].bandwidth(),
   })
