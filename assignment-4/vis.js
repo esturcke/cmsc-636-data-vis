@@ -46,8 +46,16 @@ const symptoms = [
   "endocrine",
 ]
 
-const colors = ["black", ...d3.schemeCategory20]
+const colors = ["#f4f4f4", ...d3.schemeCategory20]
+const lightness = d3.scaleLinear().domain([0, 6 * 356.25]).range([0.6, 1]).clamp(true)
+const lighten = (color, days) => { color.l *= lightness(days); return color }
+const timeLighten = days => color => lighten(color, Math.abs(days))
 const symptomColor = d3.scaleOrdinal().domain(symptoms).range(colors)
+const color = ({ symptom, daysSinceInjury }) => flow([
+  symptomColor,
+  d3.hsl,
+  timeLighten(daysSinceInjury),
+])(symptom)
 
 const arrayDefault = (array, empty) => array.length ? array : [empty]
 const symptomsOrNone = encounter => arrayDefault(symptoms.filter(s => encounter[s]), "none")
@@ -69,10 +77,10 @@ const setup = data => {
       .data(({ id : patientId, encounters }) => encounters.map(e => assign(e, { patientId })), ({ id }) => id)
       .enter().append("g").attrs({ class : "encounter" })
     .selectAll(".symptom")
-      .data(encounter => symptomsOrNone(encounter).map(symptom => ({ symptom, patientId : encounter.patientId })))
+      .data(encounter => symptomsOrNone(encounter).map(symptom => ({ symptom, patientId : encounter.patientId, daysSinceInjury : encounter.daysSinceInjury })))
       .enter().append("rect").attrs({
         class          : "symptom",
-        fill           : ({ symptom }) => symptomColor(symptom),
+        fill           : color,
         stroke         : "white",
         "stroke-width" : 0.5,
       })
