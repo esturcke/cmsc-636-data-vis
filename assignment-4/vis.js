@@ -71,7 +71,7 @@ const setup = data => {
       .data(encounter => symptomsOrNone(encounter).map(symptom => ({ symptom, patientId : encounter.patientId })))
       .enter().append("rect").attrs({
         class          : "symptom",
-        fill           : s => s === "none" ? "black" : symptomColor(s),
+        fill           : ({ symptom }) => symptom === "none" ? "black" : symptomColor(symptom),
         stroke         : "white",
         "stroke-width" : 0.5,
       })
@@ -85,9 +85,7 @@ const dimensions = () => {
 const setRanges = ({ width, height }) => d => {
   d.scale.x.range([0, width])
   d.scale.y.range([0, height])
-  console.log(d.scale.syptomOffsets)
-  forEach(d.scale.symptomOffsets, scale => scale.range([0, d.scale.y.bandwidth()]))
-  console.log(d.scale.syptomOffsets)
+  forEach(scale => scale.range([0, d.scale.y.bandwidth()]))(d.scale.symptomOffsets)
   return d
 }
 
@@ -96,7 +94,7 @@ const draw = () => {
 
   const { width, height } = dimensions()
   const { scale : { x, y, symptomOffsets } } = svg.datum()
-console.log(symptomOffsets)
+
   svg.datum(flow([
     setRanges({ width, height }),
   ]))
