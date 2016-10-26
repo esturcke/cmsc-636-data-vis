@@ -1,4 +1,4 @@
-# Assignment 1: Seeing Changes in Temporal Data
+# Assignment 4: Seeing Changes in Temporal Data
 
 [Assigment statement](https://sites.google.com/a/umbc.edu/datavisualization/assignments/assignment-4-temporal-data-visualization)  
 [Group proposal](https://github.com/esturcke/cmsc-636-data-vis/tree/master/assignment-4/BoyerJusticeStoreySturckeProposal.pdf)  
