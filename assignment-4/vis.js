@@ -47,7 +47,7 @@ const symptoms = [
 ]
 
 const colors = ["#f4f4f4", ...d3.schemeCategory20]
-const lightness = d3.scaleLinear().domain([0, 6 * 356.25]).range([0.6, 1]).clamp(true)
+const lightness = d3.scaleLinear().domain([0, 10 * 365.25]).range([0.6, 1.1]).clamp(true)
 const lighten = (color, days) => { color.l *= lightness(days); return color }
 const timeLighten = days => color => lighten(color, Math.abs(days))
 const symptomColor = d3.scaleOrdinal().domain(symptoms).range(colors)
