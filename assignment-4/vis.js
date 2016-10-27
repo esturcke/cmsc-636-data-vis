@@ -84,6 +84,13 @@ const setup = data => {
         stroke         : "white",
         "stroke-width" : 0.5,
       })
+
+  // Add label and axis
+  const svg = d3.select("svg")
+  svg.append("path").attrs({
+    class          : "tbi",
+    stroke         : "#ddd",
+  })
 }
 
 const dimensions = () => {
@@ -121,6 +128,11 @@ const draw = () => {
     y      : ({ symptom, patientId }) => symptomOffsets[patientId](symptom),
     width  : x.bandwidth(),
     height : ({ symptom, patientId }) => symptom === "none" ? y.bandwidth() : symptomOffsets[patientId].bandwidth(),
+  })
+
+  d3.select(".tbi").attrs({
+    d : `M${x(0) + x.bandwidth() / 2},0 v${height}`,
+    "stroke-width" : x.bandwidth(),
   })
 }
 
