@@ -65,7 +65,7 @@ const setup = data => {
       .data([{
         scale : {
           x              : d3.scaleBand().domain(indexRange(data)),
-          y              : d3.scaleBand().domain(data.map(({ id }) => id)),
+          y              : d3.scaleBand().domain(data.sort((a, b) => b.injury.age - a.injury.age).map(({ id }) => id)),
           symptomOffsets : fromPairs(data.map(({ id, symptoms }) => [id, d3.scaleBand().domain(symptoms)])),
         },
         margin : { top : 40, right : 40, bottom : 100, left : 60 },
