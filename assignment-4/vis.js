@@ -25,7 +25,7 @@ const data = new Promise((resolve, reject) => {
 const indexRange = flow([
   map(({ encounters }) => [first(encounters).i, last(encounters).i]),
   pairs => [min(pairs.map(([low, _high]) => low)), max(pairs.map(([_low, high]) => high))],
-  ([low, high]) => range(low)(high + 1),
+  ([low, high]) => range(low)(high + 2),
 ])
 
 const symptoms = [
@@ -114,7 +114,7 @@ const draw = () => {
   })
 
   d3.selectAll(".encounter").attrs({
-    transform : ({ i }) => `translate(${x(i)} 0)`,
+    transform : ({ i }) => `translate(${x(i < 0 ? i : i + 1)} 0)`,
   })
 
   d3.selectAll(".symptom").attrs({
