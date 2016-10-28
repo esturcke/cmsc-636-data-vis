@@ -10,7 +10,7 @@ const {
   fromPairs,
   last,
   map,
-  difference,
+  isUndefined,
   forEach,
   max,
   min,
@@ -47,15 +47,16 @@ const symptoms = [
   "endocrine",
 ]
 
-const colors = ["#f4f4f4", ...d3.schemeCategory20]
-const lightness = d3.scaleLinear().domain([0, 10 * 365.25]).range([0.6, 1.1]).clamp(true)
+const colors = ["rgb(243,243,243)", "rgb(30,123,32)", "rgb(236,159,231)", "rgb(98,206,117)", "rgb(213,71,202)", "rgb(65,201,220)", "rgb(254,29,102)", "rgb(15,118,122)", "rgb(159,168,225)", "rgb(120,91,174)", "rgb(160,180,96)", "rgb(182,69,59)", "rgb(254,165,59)", "rgb(118,103,98)", "rgb(210,160,136)"]
+
+const lightness = d3.scaleLinear().domain([0, 10 * 365.25]).range([0.8, 1.1]).clamp(true)
 const lighten = (color, days) => { color.l *= lightness(days); return color }
 const timeLighten = days => color => lighten(color, Math.abs(days))
 const symptomColor = d3.scaleOrdinal().domain(symptoms).range(colors)
-const color = ({ symptom, daysSinceInjury = 0 }) => flow([
+const color = ({ symptom, daysSinceInjury }) => flow([
   symptomColor,
   d3.hsl,
-  timeLighten(daysSinceInjury),
+  isUndefined(daysSinceInjury) ? c => c : timeLighten(daysSinceInjury),
 ])(symptom)
 
 const arrayDefault = (array, empty) => array.length ? array : [empty]
