@@ -79,15 +79,16 @@ const setupLegend = svg => {
   const width      = 100
   const padding    = 10
   const height     = lineHeight * symptoms.length + 2 * padding
-  const margin     = 10
   const swatchSize = 8
+
+  const { margin : { left, bottom } } = svg.datum()
 
   const legend = svg
     .append("g").attrs({
       class : "legend",
     })
     .append("g").attrs({
-      transform : `translate(${margin} ${-(margin + height)})`,
+      transform : `translate(${left} ${-(bottom + height)})`,
     })
   legend.append("rect").attrs({
     width,
@@ -100,7 +101,22 @@ const setupLegend = svg => {
     .call(setupLabel, swatchSize, lineHeight)
 }
 
+const setupAxes = svg => {
+  const { margin : { left } } = svg.datum()
+  svg.append("g").attrs({
+    class : "encounter-axis",
+  })
+  .append("g").attrs({
+    transform : `translate(${left} -4)`,
+  })
+  .append("text").text("encounter since TBI").attrs({
+    "text-anchor" : "start",
+  })
+}
+
 const setup = data => {
+  const margin    = 10
+  const axisWidth = 30
   d3.select("body").append("svg")
       .data([{
         scale : {
@@ -108,7 +124,7 @@ const setup = data => {
           y              : d3.scaleBand().domain(data.sort((a, b) => b.injury.age - a.injury.age).map(({ id }) => id)),
           symptomOffsets : fromPairs(data.map(({ id, symptoms }) => [id, d3.scaleBand().domain(symptoms)])),
         },
-        margin : { top : 40, right : 40, bottom : 100, left : 60 },
+        margin : { top : margin, right : margin, bottom : margin + 2 * axisWidth, left : margin + axisWidth },
       }])
     .selectAll(".patient")
       .data(data, ({ id }) => id)
@@ -128,10 +144,12 @@ const setup = data => {
   // Add label and axis
   const svg = d3.select("svg")
   svg.append("path").attrs({
-    class          : "tbi",
-    stroke         : "#aaa",
+    class  : "tbi",
+    stroke : "#aaa",
   })
 
+  // set up x-axis
+  svg.call(setupAxes)
   svg.call(setupLegend)
 }
 
@@ -140,9 +158,9 @@ const dimensions = () => {
   return { width, height }
 }
 
-const setRanges = ({ width, height }) => d => {
-  d.scale.x.range([0, width])
-  d.scale.y.range([0, height])
+const setRanges = ({ width, height, margin : { left, right, top, bottom } }) => d => {
+  d.scale.x.range([left, width - right])
+  d.scale.y.range([top, height - bottom])
   forEach(scale => scale.range([0, d.scale.y.bandwidth()]))(d.scale.symptomOffsets)
   return d
 }
@@ -180,10 +198,10 @@ const draw = () => {
   const svg = d3.select("svg")
 
   const { width, height } = dimensions()
-  const { scale : { x, y, symptomOffsets } } = svg.datum()
+  const { margin, scale : { x, y, symptomOffsets } } = svg.datum()
 
   svg.datum(flow([
-    setRanges({ width, height }),
+    setRanges({ width, height, margin }),
   ]))
   svg.attrs({ width, height })
 
@@ -202,13 +220,17 @@ const draw = () => {
   })
 
   d3.select(".tbi").attrs({
-    d : `M${x(0) + x.bandwidth() / 2},0 v${height}`,
+    d : `M${x(0) + x.bandwidth() / 2}, ${margin.top} V${height - margin.bottom}`,
     "stroke-width" : x.bandwidth(),
   })
 
   d3.select(".legend").attrs({
     transform : () => `translate(0 ${height})`,
   })
+
+  d3.select(".encounter-axis").attrs({
+    transform : `translate(0 ${height - 40})`,
+  }).call(d3.axisBottom(x).tickValues([-200, -100, 0, 100, 200, 300]))
 }
 
 // Setup and draw on resize
