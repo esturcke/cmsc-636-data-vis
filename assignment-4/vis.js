@@ -93,7 +93,7 @@ const setupLegend = svg => {
     width,
     height,
     fill   : "none",
-    stroke : "#777",
+    stroke : "#ddd",
   })
   legend.selectAll(".symptom-key").data(symptoms).enter()
     .append("g").attrs({ class : "symptom-key", transform : (_, i) => `translate(${padding} ${i * lineHeight + padding})` })
@@ -129,7 +129,7 @@ const setup = data => {
   const svg = d3.select("svg")
   svg.append("path").attrs({
     class          : "tbi",
-    stroke         : "#ddd",
+    stroke         : "#aaa",
   })
 
   svg.call(setupLegend)
