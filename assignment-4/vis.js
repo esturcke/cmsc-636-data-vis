@@ -10,6 +10,7 @@ const {
   fromPairs,
   last,
   map,
+  difference,
   forEach,
   max,
   min,
@@ -51,7 +52,7 @@ const lightness = d3.scaleLinear().domain([0, 10 * 365.25]).range([0.6, 1.1]).cl
 const lighten = (color, days) => { color.l *= lightness(days); return color }
 const timeLighten = days => color => lighten(color, Math.abs(days))
 const symptomColor = d3.scaleOrdinal().domain(symptoms).range(colors)
-const color = ({ symptom, daysSinceInjury }) => flow([
+const color = ({ symptom, daysSinceInjury = 0 }) => flow([
   symptomColor,
   d3.hsl,
   timeLighten(daysSinceInjury),
@@ -59,6 +60,44 @@ const color = ({ symptom, daysSinceInjury }) => flow([
 
 const arrayDefault = (array, empty) => array.length ? array : [empty]
 const symptomsOrNone = encounter => arrayDefault(symptoms.filter(s => encounter[s]), "none")
+
+const setupLabel = (node, swatchSize, lineHeight) => {
+  node.append("rect").attrs({
+    fill   : symptom  => color({ symptom }),
+    y      : (lineHeight - swatchSize) / 2,
+    width  : swatchSize,
+    height : swatchSize,
+  })
+  node.append("g").attrs({
+    transform : `translate(${swatchSize + 4} ${lineHeight - 2})`,
+  }).append("text").text(s => s)
+}
+
+const setupLegend = svg => {
+  const lineHeight = 12
+  const width      = 100
+  const padding    = 10
+  const height     = lineHeight * symptoms.length + 2 * padding
+  const margin     = 10
+  const swatchSize = 8
+
+  const legend = svg
+    .append("g").attrs({
+      class : "legend",
+    })
+    .append("g").attrs({
+      transform : `translate(${margin} ${-(margin + height)})`,
+    })
+  legend.append("rect").attrs({
+    width,
+    height,
+    fill   : "none",
+    stroke : "#777",
+  })
+  legend.selectAll(".symptom-key").data(symptoms).enter()
+    .append("g").attrs({ class : "symptom-key", transform : (_, i) => `translate(${padding} ${i * lineHeight + padding})` })
+    .call(setupLabel, swatchSize, lineHeight)
+}
 
 const setup = data => {
   d3.select("body").append("svg")
@@ -91,6 +130,8 @@ const setup = data => {
     class          : "tbi",
     stroke         : "#ddd",
   })
+
+  svg.call(setupLegend)
 }
 
 const dimensions = () => {
@@ -103,6 +144,35 @@ const setRanges = ({ width, height }) => d => {
   d.scale.y.range([0, height])
   forEach(scale => scale.range([0, d.scale.y.bandwidth()]))(d.scale.symptomOffsets)
   return d
+}
+
+
+const legend = svg => {
+    /*
+  const x = 100
+  const y = 100
+  const legend = svg.select(".legend").enter().appendattrs({
+    class     : "legend",
+    transform : translate(20, height - 150),
+  })
+  legend.append("rect").attrs({
+    x         : 0,
+    y         : 0,
+    width     : 160,
+    height    : 160,
+  })
+  legend.append("text").text("Encounters").attrs({ class : "legend-label", transform : translate(5, 12) })
+  legend.append("g").attrs({ transform : translate(70, 8) }).selectAll("encounter").data([1, 3, 5, 6, 12, 15, 19]).enter()
+    .append("line").attrs({ class : "encounter", x1 : x => x, x2 : x => x, y1 : -5, y2 : 5 })
+  legend.append("text").text("Symptoms").attrs({ class : "legend-label", transform : translate(5, 24) })
+  legend.selectAll("symptom-key").data(symptoms).enter()
+    .append("g").attrs({ transform : (_, i) => translate(80, 24 + (symptoms.length - i - 1) * 11) })
+    .each((symptom, i, nodes) => {
+      const node = d3.select(nodes[i])
+      node.append("circle").attrs({ transform : translate(-5, -3), class : "symptom", fill : symptomColor(symptom) })
+      node.append("text").text(symptom).attrs({ stroke : "none", fill : "#eee" })
+    })
+    */
 }
 
 const draw = () => {
@@ -133,6 +203,10 @@ const draw = () => {
   d3.select(".tbi").attrs({
     d : `M${x(0) + x.bandwidth() / 2},0 v${height}`,
     "stroke-width" : x.bandwidth(),
+  })
+
+  d3.select(".legend").attrs({
+    transform : () => `translate(0 ${height})`,
   })
 }
 
