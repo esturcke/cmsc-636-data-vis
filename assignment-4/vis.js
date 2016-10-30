@@ -47,6 +47,8 @@ const symptoms = [
   "endocrine",
 ]
 
+const hiddenSymptoms = new Set()
+
 const colors = ["rgb(243,243,243)", "rgb(30,123,32)", "rgb(236,159,231)", "rgb(98,206,117)", "rgb(213,71,202)", "rgb(65,201,220)", "rgb(254,29,102)", "rgb(15,118,122)", "rgb(159,168,225)", "rgb(120,91,174)", "rgb(160,180,96)", "rgb(182,69,59)", "rgb(254,165,59)", "rgb(118,103,98)", "rgb(210,160,136)"]
 
 const lightness = d3.scaleLinear().domain([0, 10 * 365.25]).range([0.8, 1.1]).clamp(true)
@@ -62,7 +64,48 @@ const color = ({ symptom, daysSinceInjury }) => flow([
 const arrayDefault = (array, empty) => array.length ? array : [empty]
 const symptomsOrNone = encounter => arrayDefault(symptoms.filter(s => encounter[s]), "none")
 
-const setupLabel = (node, swatchSize, lineHeight) => {
+const highlightSymptom = symptom => {
+  d3.selectAll(".patient").attrs({ display : ({ symptoms }) => symptoms.includes(symptom) ? "inline" : "none" })
+  d3.selectAll(".symptom-key .background").attrs({
+    opacity : s => s === symptom ? 1 : 0,
+  })
+  d3.selectAll(".symptom").attrs({
+    opacity : ({ symptom : s }) => s === symptom ? 1 : 0.2,
+  })
+}
+
+const highlightNothing = () => {
+  d3.selectAll(".symptom-key .background").attrs({
+    opacity : 0,
+  })
+  d3.selectAll(".symptom").attrs({
+    opacity : 1,
+  })
+}
+
+const toggleSymptom = symptom => {
+  if (hiddenSymptoms.has(symptom))
+    hiddenSymptoms.delete(symptom)
+  else
+    hiddenSymptoms.add(symptom)
+  d3.selectAll(".symptom-key").transition().attrs({ opacity : symptom => hiddenSymptoms.has(symptom) ? 0.2 : 1 })
+}
+
+const setupLabel = (node, swatchSize, lineHeight, padding) => {
+  node
+    .attrs({ opacity : 1 })
+    .on("mouseover",  highlightSymptom)
+    .on("mouseleave", highlightNothing)
+    .on("click",      toggleSymptom)
+    .attrs({ cursor : "pointer" })
+  node.append("rect").transition().attrs({
+    class   : "background",
+    x       : -padding,
+    fill    : "#eee",
+    opacity : 0,
+    width   : 100,
+    height  : lineHeight,
+  })
   node.append("rect").attrs({
     fill   : symptom  => color({ symptom }),
     y      : (lineHeight - swatchSize) / 2,
@@ -98,7 +141,7 @@ const setupLegend = svg => {
   })
   legend.selectAll(".symptom-key").data(symptoms).enter()
     .append("g").attrs({ class : "symptom-key", transform : (_, i) => `translate(${padding} ${i * lineHeight + padding})` })
-    .call(setupLabel, swatchSize, lineHeight)
+    .call(setupLabel, swatchSize, lineHeight, padding)
 }
 
 const setupAxes = svg => {
@@ -138,7 +181,9 @@ const setup = data => {
         class          : "symptom",
         fill           : color,
         stroke         : "white",
+        opacity        : 1,
         "stroke-width" : 0.5,
+        "data-symptom" : ({ symptom }) => symptom,
       })
 
   // Add label and axis
@@ -163,35 +208,6 @@ const setRanges = ({ width, height, margin : { left, right, top, bottom } }) => 
   d.scale.y.range([top, height - bottom])
   forEach(scale => scale.range([0, d.scale.y.bandwidth()]))(d.scale.symptomOffsets)
   return d
-}
-
-
-const legend = svg => {
-    /*
-  const x = 100
-  const y = 100
-  const legend = svg.select(".legend").enter().appendattrs({
-    class     : "legend",
-    transform : translate(20, height - 150),
-  })
-  legend.append("rect").attrs({
-    x         : 0,
-    y         : 0,
-    width     : 160,
-    height    : 160,
-  })
-  legend.append("text").text("Encounters").attrs({ class : "legend-label", transform : translate(5, 12) })
-  legend.append("g").attrs({ transform : translate(70, 8) }).selectAll("encounter").data([1, 3, 5, 6, 12, 15, 19]).enter()
-    .append("line").attrs({ class : "encounter", x1 : x => x, x2 : x => x, y1 : -5, y2 : 5 })
-  legend.append("text").text("Symptoms").attrs({ class : "legend-label", transform : translate(5, 24) })
-  legend.selectAll("symptom-key").data(symptoms).enter()
-    .append("g").attrs({ transform : (_, i) => translate(80, 24 + (symptoms.length - i - 1) * 11) })
-    .each((symptom, i, nodes) => {
-      const node = d3.select(nodes[i])
-      node.append("circle").attrs({ transform : translate(-5, -3), class : "symptom", fill : symptomColor(symptom) })
-      node.append("text").text(symptom).attrs({ stroke : "none", fill : "#eee" })
-    })
-    */
 }
 
 const draw = () => {
