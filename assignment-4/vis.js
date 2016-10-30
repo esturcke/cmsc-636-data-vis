@@ -248,3 +248,9 @@ const draw = () => {
     transform : `translate(0 ${height - 40})`,
   }).call(d3.axisBottom(x).tickValues([-200, -100, 0, 100, 200, 300]))
 }
+
+// Setup and draw on resize
+data
+  .then(setup)
+  .then(draw)
+  .then(() => window.addEventListener("resize", debounce(100)(draw)))
