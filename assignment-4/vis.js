@@ -156,6 +156,17 @@ const setupAxes = svg => {
   .append("text").text("encounter since TBI").attrs({
     "text-anchor" : "start",
   })
+  svg.append("text")
+    .text("patients ordered by age at time of injury")
+    .attrs({
+      "text-anchor" : "end",
+      transform : "translate(22 20) rotate(-90)",
+    })
+  svg.selectAll(".patient").each(patient => {
+    svg.append("g").datum(patient).text(patient.injury.age).attrs({
+      class : "patient-age",
+    }).append("text").text(patient.injury.age)
+  })
 }
 
 const updateVisible = () => {
@@ -174,7 +185,7 @@ const setup = data => {
           y              : d3.scaleBand().domain(data.sort((a, b) => b.injury.age - a.injury.age).map(({ id }) => id)),
           symptomOffsets : fromPairs(data.map(({ id, symptoms }) => [id, d3.scaleBand().domain(symptoms)])),
         },
-        margin : { top : margin, right : margin, bottom : margin + 2 * axisWidth, left : margin + axisWidth },
+        margin : { top : margin, right : margin, bottom : margin + 2 * axisWidth, left : margin + 2 * axisWidth },
       }])
     .selectAll(".patient")
       .data(data, ({ id }) => id)
@@ -255,6 +266,10 @@ const draw = () => {
   d3.select(".encounter-axis").attrs({
     transform : `translate(0 ${height - 40})`,
   }).call(d3.axisBottom(x).tickValues([-200, -100, 0, 100, 200, 300]))
+
+  d3.selectAll(".patient-age").attrs({
+    transform : ({ id }) => `translate(32 ${10 + y(id) + (y.bandwidth() - 12) / 2})`,
+  })
 }
 
 // Setup and draw on resize
