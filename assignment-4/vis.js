@@ -67,19 +67,20 @@ const symptomsOrNone = encounter => arrayDefault(symptoms.filter(s => encounter[
 const highlightSymptom = symptom => {
   d3.selectAll(".patient").attrs({ display : ({ symptoms }) => symptoms.includes(symptom) ? "inline" : "none" })
   d3.selectAll(".symptom-key .background").attrs({
-    opacity : s => s === symptom ? 1 : 0,
+    "fill-opacity" : s => s === symptom ? 1 : 0,
   })
   d3.selectAll(".symptom").attrs({
-    opacity : ({ symptom : s }) => s === symptom ? 1 : 0.2,
+    "fill-opacity" : ({ symptom : s }) => s === symptom ? 1 : 0.2,
   })
 }
 
 const highlightNothing = () => {
+  d3.selectAll(".patient").attrs({ display : "inline" })
   d3.selectAll(".symptom-key .background").attrs({
-    opacity : 0,
+    "fill-opacity" : 0,
   })
   d3.selectAll(".symptom").attrs({
-    opacity : 1,
+    "fill-opacity" : 1,
   })
 }
 
@@ -88,23 +89,22 @@ const toggleSymptom = symptom => {
     hiddenSymptoms.delete(symptom)
   else
     hiddenSymptoms.add(symptom)
-  d3.selectAll(".symptom-key").transition().attrs({ opacity : symptom => hiddenSymptoms.has(symptom) ? 0.2 : 1 })
+  d3.selectAll(".symptom-key").transition().attrs({ opacity: symptom => hiddenSymptoms.has(symptom) ? 0.2 : 1 })
 }
 
 const setupLabel = (node, swatchSize, lineHeight, padding) => {
   node
-    .attrs({ opacity : 1 })
     .on("mouseover",  highlightSymptom)
     .on("mouseleave", highlightNothing)
     .on("click",      toggleSymptom)
-    .attrs({ cursor : "pointer" })
+    .attrs({ opacity : 1, cursor : "pointer" })
   node.append("rect").transition().attrs({
-    class   : "background",
-    x       : -padding,
-    fill    : "#eee",
-    opacity : 0,
-    width   : 100,
-    height  : lineHeight,
+    class          : "background",
+    x              : -padding,
+    fill           : "#eee",
+    "fill-opacity" : 0,
+    width          : 100,
+    height         : lineHeight,
   })
   node.append("rect").attrs({
     fill   : symptom  => color({ symptom }),
