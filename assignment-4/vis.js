@@ -29,6 +29,34 @@ const indexRange = flow([
   ([low, high]) => range(low)(high + 2),
 ])
 
+const yearsToDays = y => y * 365.25
+
+const within = ({ daysSinceInjury }, [from, to]) => from <= daysSinceInjury && daysSinceInjury <= to
+
+const showOnly = range => {
+  d3.selectAll(".encounter").attrs({
+     opacity : encounter => within(encounter, range) ? 1 : 0.2,
+  })
+}
+
+const showAll = () => {
+  d3.selectAll(".encounter").attrs({
+    opacity : 1,
+  })
+}
+
+const brushed = time => {
+  return function brushed() {
+    const selection = d3.brushSelection(this)
+    if (selection)
+      showOnly(selection.map(time.invert).map(yearsToDays))
+    else
+      showAll()
+  }
+}
+
+const timeBrush = d3.brushX()
+
 const symptoms = [
   "none",
   "stress",
@@ -156,6 +184,22 @@ const setupAxes = svg => {
   .append("text").text("encounter since TBI").attrs({
     "text-anchor" : "start",
   })
+
+  const timeAxis = svg.append("g").attrs({
+    class : "time-axis",
+  })
+
+  timeAxis.append("g").attrs({ class : "axis" })
+
+  timeAxis.append("g").attrs({
+    transform : `translate(${left} -4)`,
+  }).append("text").text("years since TBI (use for brushing)").attrs({
+    "text-anchor" : "start",
+  })
+
+  timeAxis.append("g")
+    .attr("class", "brush")
+
   svg.append("text")
     .text("patients ordered by age at time of injury")
     .attrs({
@@ -184,6 +228,7 @@ const setup = data => {
           x              : d3.scaleBand().domain(indexRange(data)),
           y              : d3.scaleBand().domain(data.sort((a, b) => b.injury.age - a.injury.age).map(({ id }) => id)),
           symptomOffsets : fromPairs(data.map(({ id, symptoms }) => [id, d3.scaleBand().domain(symptoms)])),
+          time           : d3.scaleLinear().domain([-9, 6]),
         },
         margin : { top : margin, right : margin, bottom : margin + 2 * axisWidth, left : margin + 2 * axisWidth },
       }])
@@ -223,6 +268,7 @@ const dimensions = () => {
 
 const setRanges = ({ width, height, margin : { left, right, top, bottom } }) => d => {
   d.scale.x.range([left, width - right])
+  d.scale.time.range([left, width - right])
   d.scale.y.range([top, height - bottom])
   forEach(scale => scale.range([0, d.scale.y.bandwidth()]))(d.scale.symptomOffsets)
   return d
@@ -232,7 +278,7 @@ const draw = () => {
   const svg = d3.select("svg")
 
   const { width, height } = dimensions()
-  const { margin, scale : { x, y, symptomOffsets } } = svg.datum()
+  const { margin, scale : { x, y, symptomOffsets, time } } = svg.datum()
 
   svg.datum(flow([
     setRanges({ width, height, margin }),
@@ -260,12 +306,21 @@ const draw = () => {
   })
 
   d3.select(".legend").attrs({
-    transform : () => `translate(0 ${height})`,
+    transform : () => `translate(0 ${height - 20})`,
   })
 
   d3.select(".encounter-axis").attrs({
-    transform : `translate(0 ${height - 40})`,
+    transform : `translate(0 ${height - 66})`,
   }).call(d3.axisBottom(x).tickValues([-200, -100, 0, 100, 200, 300]))
+
+  d3.select(".time-axis").attrs({
+    transform : `translate(0 ${height - 30})`,
+  }).select(".axis").call(d3.axisBottom(time).tickValues([-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]))
+
+  timeBrush.extent([[margin.left, 2], [width - margin.right, 25]])
+  timeBrush.on("brush end", brushed(time))
+  d3.select(".time-axis .brush")
+    .call(timeBrush)
 
   d3.selectAll(".patient-age").attrs({
     transform : ({ id }) => `translate(32 ${10 + y(id) + (y.bandwidth() - 12) / 2})`,

@@ -10,8 +10,7 @@ body, text {
 }
 
 text {
-  fill      : #333;
-  font-size : 12px;
+  fill        : #333;
+  font-size   : 12px;
+  user-select : none;
 }
-
-
