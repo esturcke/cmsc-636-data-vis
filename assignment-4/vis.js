@@ -90,6 +90,7 @@ const toggleSymptom = symptom => {
   else
     hiddenSymptoms.add(symptom)
   d3.selectAll(".symptom-key").transition().attrs({ opacity: symptom => hiddenSymptoms.has(symptom) ? 0.2 : 1 })
+  updateVisible()
 }
 
 const setupLabel = (node, swatchSize, lineHeight, padding) => {
@@ -155,6 +156,12 @@ const setupAxes = svg => {
   .append("text").text("encounter since TBI").attrs({
     "text-anchor" : "start",
   })
+}
+
+const updateVisible = () => {
+  const { scale : { symptomOffsets } } = d3.select("svg").datum()
+  d3.selectAll(".patient").each(({ id, symptoms }) => symptomOffsets[id].domain(symptoms.filter( s => !hiddenSymptoms.has(s) )))
+  draw()
 }
 
 const setup = data => {
@@ -230,9 +237,10 @@ const draw = () => {
   })
 
   d3.selectAll(".symptom").attrs({
-    y      : ({ symptom, patientId }) => symptomOffsets[patientId](symptom),
-    width  : x.bandwidth(),
-    height : ({ symptom, patientId }) => symptom === "none" ? y.bandwidth() : symptomOffsets[patientId].bandwidth(),
+    y       : ({ symptom, patientId }) => symptomOffsets[patientId](symptom),
+    width   : x.bandwidth(),
+    height  : ({ symptom, patientId }) => symptom === "none" ? y.bandwidth() : symptomOffsets[patientId].bandwidth(),
+    display : ({ symptom }) => hiddenSymptoms.has(symptom) ? "none" : "inline",
   })
 
   d3.select(".tbi").attrs({
