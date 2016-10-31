@@ -1,6 +1,6 @@
 "use strict"
 
-/* global d3, _ */
+/* global dataFile, d3, _ */
 
 const {
   assign,
@@ -19,7 +19,6 @@ const {
 
 // Load data
 const data = new Promise((resolve, reject) => {
-  const dataFile = "./data/ehr.json"
   d3.json(dataFile, (error, data) => error ? reject(error) : resolve(data))
 })
 
@@ -35,7 +34,7 @@ const within = ({ daysSinceInjury }, [from, to]) => from <= daysSinceInjury && d
 
 const showOnly = range => {
   d3.selectAll(".encounter").attrs({
-     opacity : encounter => within(encounter, range) ? 1 : 0.2,
+    opacity : encounter => within(encounter, range) ? 1 : 0.2,
   })
 }
 
