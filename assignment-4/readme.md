@@ -107,13 +107,20 @@ can generate palettes beyond 12 colors unlike
 
 > How have the encounters reduced between the first and the second three months? 
 
-...
+Many had very similar encounters from the first to the second three months. One
+patient stopped having neurological symptoms, but then started having
+depression and headaches. Another stopped having PCS and congestive, but they also
+had very few encounters overall. 
 
 #### Change Task 2
 
 > How have the frequency of encounters (hospital visits) changed from the first to the second three months? 
 
-...
+For some patients they increased, and for others they decreased.
+
+These questions are very hard to answer because we are showing ordinal encounter number
+and time is encoded only by lightness which is difficult to use for quantitative
+attributes.
 
 #### Pros
 
