@@ -54,7 +54,9 @@ The code to find the trajectories is in
 `from` and `to` symptom along with the `ehs.json` patient data, this code finds
 all the transition encounter pairs for the trajectory.
 
-The trajectory data is written to `data/trajectories.json` via [`tools/trajectories.js`](tools/trajectories.js) and can be run via:
+The trajectory data is written to
+[`data/trajectories.json`](data/trajectories.json) via
+[`tools/trajectories.js`](tools/trajectories.js) and can be run via:
 
 ```bash
 yarn trajectories
