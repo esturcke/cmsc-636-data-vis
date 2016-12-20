@@ -47,9 +47,12 @@ AACB[CDEB] 2
 
 The order of the trajectories is determined by the completion of the trajectory.
 
-###  Trajectory
+### Finding Trajectories
 
-The process
+The code to find the trajectories is in
+[`/src/lib/trajectories.js`](assignment-5/src/lib/trajectories.js). Given a
+`from` and `to` symptom along with the `ehs.json` patient data, this code finds
+all the transition encounter pairs for the trajectory.
 
 ## Visualization
 
