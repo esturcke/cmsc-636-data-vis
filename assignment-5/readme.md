@@ -2,7 +2,17 @@
 
 [Assigment statement](https://sites.google.com/a/umbc.edu/datavisualization/assignments/assignment-5)  
 
+## Setup
+
+This projects requires [`Yarn`](https://yarnpkg.com/) (or npm) to install dependencies using:
+
+```
+yarn
+```
+
 ## Preprocessing
+
+### Assumptions
 
 Given a sequence `A → B`, we have to search for encounter trajectories where
 the patient exhibited the given symptoms. I will assume that we are not
@@ -36,6 +46,10 @@ AACB[CDEB] 2
 ```
 
 The order of the trajectories is determined by the completion of the trajectory.
+
+###  Trajectory
+
+The process
 
 ## Visualization
 
