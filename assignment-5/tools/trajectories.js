@@ -1,3 +1,4 @@
+import fs                       from "fs"
 import { flow, map, mapValues } from "lodash/fp"
 import { merge }                from "lodash"
 import trajectories             from "~/lib/trajectories"
@@ -29,4 +30,8 @@ const allTrajectories = flow(
   results => merge(...results),
   mapValues(({ trajectories, ...rest }) => ({ ...rest, trajectories : trajectories.sort(byIndex) }))
 )(sequences)
-console.log(JSON.stringify(allTrajectories, null, 2))
+
+fs.writeFileSync(
+  "data/trajectories.json",
+  JSON.stringify(allTrajectories, null, 2),
+)
