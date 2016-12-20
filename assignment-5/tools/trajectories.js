@@ -1,6 +1,24 @@
 import trajectories from "~/lib/trajectories"
-
-const [,, from, to] = process.argv
+import product      from "~/lib/cartesian-product"
 
 const patients = require("../data/ehr.json")
-console.log(JSON.stringify(trajectories(from, to)(patients), null, 2))
+const symptoms = [
+  "stress",
+  "ptsd",
+  "speech",
+  "anxiety",
+  "depression",
+  "headache",
+  "sleep",
+  "audiology",
+  "vision",
+  "neurologic",
+  "alzheimer",
+  "cognitive",
+  "pcs",
+  "endocrine",
+]
+
+const sequences       = product(symptoms, symptoms).filter(([from, to]) => from !== to)
+const allTrajectories = sequences.map(([from, to]) => trajectories(from, to)(patients))
+console.log(JSON.stringify(allTrajectories, null, 2))
