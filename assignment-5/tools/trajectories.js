@@ -1,11 +1,6 @@
-import fs from "fs"
 import trajectories from "~/lib/trajectories"
 
 const [,, from, to] = process.argv
 
-trajectories()
-
-
-
-console.log(from)
-console.log(to)
+const patients = require("../data/ehr.json")
+console.log(JSON.stringify(trajectories(from, to)(patients), null, 2))
