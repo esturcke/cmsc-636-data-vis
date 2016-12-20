@@ -27,6 +27,7 @@ const fromEncounters = (from, to) => flow(
 
 const trajectories = (from, to) => flow(
   map(({ id, injury, encounters }) => ({ id, injury, trajectories : fromEncounters(from, to)(encounters) })),
+  filter(({ trajectories }) => trajectories.length),
   keyBy("id"),
 )
 
