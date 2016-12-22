@@ -1,11 +1,11 @@
 {
-  "name": "assignment-5",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/esturcke/cmsc-636-data-vis/",
-  "author": "Erik J. Sturcke",
-  "license": "BSD-3-Clause",
-  "scripts": {
+  "name"       : "assignment-5",
+  "version"    : "1.0.0",
+  "main"       : "index.js",
+  "repository" : "https://github.com/esturcke/cmsc-636-data-vis/",
+  "author"     : "Erik J. Sturcke",
+  "license"    : "BSD-3-Clause",
+  "scripts"    : {
     "trajectories" : "babel-node tools/trajectories.js",
     "build"        : "node scripts/build.js",
     "lint"         : "eslint src/",
