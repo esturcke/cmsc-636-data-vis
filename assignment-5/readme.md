@@ -64,6 +64,23 @@ yarn trajectories
 
 ## Visualization
 
+![Symbol 1](src/components/Symbol/assets/symbol-1.svg)
+![Symbol 2](src/components/Symbol/assets/symbol-2.svg)
+![Symbol 3](src/components/Symbol/assets/symbol-3.svg)
+![Symbol 4](src/components/Symbol/assets/symbol-4.svg)
+![Symbol 5](src/components/Symbol/assets/symbol-5.svg)
+![Symbol 6](src/components/Symbol/assets/symbol-6.svg)
+![Symbol 7](src/components/Symbol/assets/symbol-7.svg)
+![Symbol 8](src/components/Symbol/assets/symbol-8.svg)
+![Symbol 9](src/components/Symbol/assets/symbol-9.svg)
+![Symbol 10](src/components/Symbol/assets/symbol-10.svg)
+![Symbol 11](src/components/Symbol/assets/symbol-11.svg)
+![Symbol 12](src/components/Symbol/assets/symbol-12.svg)
+![Symbol 13](src/components/Symbol/assets/symbol-13.svg)
+![Symbol 14](src/components/Symbol/assets/symbol-14.svg)
+![Symbol 15](src/components/Symbol/assets/symbol-15.svg)
+![Symbol 16](src/components/Symbol/assets/symbol-16.svg)
+
 ## Critical Evaluation
 
 ## Extra Credit
