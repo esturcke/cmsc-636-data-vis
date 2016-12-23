@@ -9,9 +9,9 @@ import trajectories       from "../../../data/trajectories.json"
 class App extends React.Component {
   state = {
     assignments : {
-      0 : "headache-depression",
-      1 : "depression-ptsd",
-      2 : "anxiety-depression",
+      1 : "headache-depression",
+      2 : "depression-ptsd",
+      3 : "anxiety-depression",
       4 : "depression-vision",
     },
   }
