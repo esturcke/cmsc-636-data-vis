@@ -7,7 +7,11 @@ import trajectories  from "../../../data/trajectories.json"
 
 class App extends React.Component {
   state = {
-    assignments : {},
+    assignments : {
+      0 : "headache-depression",
+      1 : "depression-ptsd",
+      2 : "anxiety-depression",
+    },
   }
 
   assignSymbol = (symbol, trajectory) => this.setState(({ assignments }) => ({ assignments : { ...assignments, symbol : trajectory }}))
