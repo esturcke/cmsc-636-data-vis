@@ -68,6 +68,7 @@
     "react-dev-utils": "^0.4.2",
     "react-dimensions": "1.1.1",
     "react-dom": "^15.4.1",
+    "react-popover": "^0.4.4",
     "recursive-readdir": "^2.1.0",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.1.1",
