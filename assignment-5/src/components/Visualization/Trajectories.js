@@ -7,7 +7,7 @@ const Trajectories = ({ trajectories, trajectorySymbols, trajectoryScale }) => (
   <g>{flow([
     filter(({ trajectory }) => has(trajectory)(trajectorySymbols)),
     map(({ i, id, trajectory }) => (
-      <g key={`${id[1]}-${trajectory}`} transform={`translate(${trajectoryScale(i[1])} 0)`}>
+      <g key={`${id[1]}-${trajectory}`} transform={`translate(${trajectoryScale(i[1])} 0)`} opacity="0.9">
         <Glyph n={trajectorySymbols[trajectory]}/>
       </g>
     )),

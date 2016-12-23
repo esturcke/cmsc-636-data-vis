@@ -4,15 +4,17 @@ import Trajectories from "./Trajectories"
 import T            from "~/lib/propTypes"
 
 const Patients = ({ trajectories, trajectorySymbols, patientScale, trajectoryScale }) => (
-  <g>{map(({ id, trajectories }) => (
-    <g key={id} transform={`translate(0 ${patientScale(id)})`}>
-      <Trajectories
-        trajectories={trajectories}
-        trajectorySymbols={trajectorySymbols}
-        trajectoryScale={trajectoryScale}
-      />
+  <g>
+    {map(({ id, trajectories }) => (
+      <g key={id} transform={`translate(0 ${patientScale(id)})`}>
+        <Trajectories
+          trajectories={trajectories}
+          trajectorySymbols={trajectorySymbols}
+          trajectoryScale={trajectoryScale}
+        />
+      </g>
+    ))(trajectories)}
   </g>
-  ))(trajectories)}</g>
 )
 
 Patients.propTypes = {
