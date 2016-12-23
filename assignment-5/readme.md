@@ -1,6 +1,7 @@
 # Assignment 5: Highlight Temporal Trajectories
 
 [Assigment statement](https://sites.google.com/a/umbc.edu/datavisualization/assignments/assignment-5)  
+[Live Demo](https://maiholz.org/temporal-trajectories/)
 
 ## Setup
 

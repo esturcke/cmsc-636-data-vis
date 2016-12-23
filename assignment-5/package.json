@@ -5,6 +5,7 @@
   "repository": "https://github.com/esturcke/cmsc-636-data-vis/",
   "author": "Erik J. Sturcke",
   "license": "BSD-3-Clause",
+  "homepage": "https://maiholz.org/temporal-trajectories/",
   "scripts": {
     "trajectories": "babel-node tools/trajectories.js",
     "build": "node scripts/build.js",
@@ -12,7 +13,7 @@
     "lint-fix": "eslint --fix src/",
     "start": "node scripts/start.js",
     "test": "node scripts/test.js --env=jsdom",
-    "push": "rsync -avz -e ssh build/ maiholz   : ~/www/temporal-trajectories"
+    "push": "rsync -avz -e ssh build/ maiholz:~/www/temporal-trajectories"
   },
   "dependencies": {
     "@typopro/web-fira-sans": "^3.4.9",
