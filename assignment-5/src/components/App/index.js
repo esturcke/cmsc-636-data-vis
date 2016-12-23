@@ -3,6 +3,7 @@ import React              from "react"
 import { invert, filter } from "lodash"
 import Legend             from "~/components/Legend"
 import Visualization      from "~/components/Visualization"
+import styles             from "./app.scss"
 import trajectories       from "../../../data/trajectories.json"
 
 class App extends React.Component {
@@ -23,7 +24,9 @@ class App extends React.Component {
   render = () => (
     <div>
       <Legend assignSymbol={this.assignSymbol} assignments={this.state.assignments}/>
-      <Visualization trajectories={trajectories} trajectorySymbols={this.trajectorySymbols()}/>
+      <div className={styles.fill}>
+        <Visualization trajectories={trajectories} trajectorySymbols={this.trajectorySymbols()}/>
+      </div>
     </div>
   )
 }
