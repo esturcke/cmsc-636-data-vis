@@ -1,6 +1,7 @@
 /* eslint-disable react/no-set-state */
 import React    from "react"
 import Popover  from "react-popover"
+import Remove   from "~/assets/remove.svg"
 import T        from "~/lib/propTypes"
 import Selector from "./Selector"
 import styles   from "./legend.scss"
@@ -30,7 +31,13 @@ class Assignment extends React.Component {
         body={<Selector assignment={this.props.assignment} assignGlyph={this.props.assignGlyph}/>}
         onOuterAction={this.toggleOpen}
       >
-        <span className={styles.target} onClick={this.toggleOpen}/>
+        <span className={styles.target} onClick={this.toggleOpen}>
+          <Remove className={styles.remove} onClick={(e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            this.props.assignGlyph()
+          }}/>
+        </span>
       </Popover>
       {this.props.assignment ? <Label assignment={this.props.assignment}/> : null}
     </span>
