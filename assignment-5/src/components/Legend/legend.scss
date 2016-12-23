@@ -42,12 +42,6 @@
       right    : -2px;
       display  : none;
       background : white;
-
-      &:hover {
-        transition : filter 0.2s, transform 0.2s;
-        transform  : scale(1.25);
-        filter     : drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
-      }
     }
 
     &:hover .remove {

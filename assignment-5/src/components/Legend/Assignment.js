@@ -32,11 +32,11 @@ class Assignment extends React.Component {
         onOuterAction={this.toggleOpen}
       >
         <span className={styles.target} onClick={this.toggleOpen}>
-          <Remove className={styles.remove} onClick={(e) => {
+          {this.props.assignment ? <Remove className={styles.remove} onClick={(e) => {
             e.stopPropagation()
             e.preventDefault()
             this.props.assignGlyph()
-          }}/>
+          }}/> : null}
         </span>
       </Popover>
       {this.props.assignment ? <Label assignment={this.props.assignment}/> : null}
