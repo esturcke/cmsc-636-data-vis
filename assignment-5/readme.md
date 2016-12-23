@@ -67,6 +67,8 @@ yarn trajectories
 
 ![Symbols](symbols.png)
 
+![Temporal trajectories visualization](vis.png)
+
 ## Critical Evaluation
 
 ## Extra Credit
