@@ -1,6 +1,9 @@
-import React  from "react"
-import T      from "~/lib/propTypes"
-import styles from "./legend.scss"
+/* eslint-disable react/no-set-state */
+import React    from "react"
+import Popover  from "react-popover"
+import T        from "~/lib/propTypes"
+import Selector from "./Selector"
+import styles   from "./legend.scss"
 
 const Label = ({ assignment : [ from, to ] }) => (
   <span className={styles.label}>
@@ -13,10 +16,25 @@ Label.propTypes = {
 }
 
 class Assignment extends React.Component {
+  state = {
+    open : false,
+  }
+
+  toggleOpen = () => this.setState(({ open }) => ({ open : !open }))
 
   render = () => (
     <span>
-      <span className={styles.target}/>
+      <Popover
+        isOpen={this.state.open}
+        place="right"
+        body={<Selector assignment={this.props.assignment} onSelect={trajectory=> {
+          this.props.assignGlyph(trajectory)
+          this.toggleOpen()
+        }}/>}
+        onOuterAction={this.toggleOpen}
+      >
+        <span className={styles.target} onClick={this.toggleOpen} ref={me => this.me = me}/>
+      </Popover>
       {this.props.assignment ? <Label assignment={this.props.assignment}/> : null}
     </span>
   )

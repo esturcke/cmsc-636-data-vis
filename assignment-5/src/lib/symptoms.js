@@ -1,0 +1,16 @@
+export default [
+  "alzheimer",
+  "anxiety",
+  "audiology",
+  "cognitive",
+  "depression",
+  "endocrine",
+  "headache",
+  "neurologic",
+  "pcs",
+  "ptsd",
+  "sleep",
+  "speech",
+  "stress",
+  "vision",
+]

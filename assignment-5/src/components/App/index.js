@@ -1,11 +1,10 @@
 /* eslint-disable react/no-set-state */
-import React                       from "react"
-import { filter }                  from "lodash"
-import { flow, invert, mapValues } from "lodash/fp"
-import Legend                      from "~/components/Legend"
-import Visualization               from "~/components/Visualization"
-import styles                      from "./app.scss"
-import trajectories                from "../../../data/trajectories.json"
+import React                                        from "react"
+import { omitBy, flow, invert, mapValues, isEqual } from "lodash/fp"
+import Legend                                       from "~/components/Legend"
+import Visualization                                from "~/components/Visualization"
+import styles                                       from "./app.scss"
+import trajectories                                 from "../../../data/trajectories.json"
 
 class App extends React.Component {
   state = {
@@ -19,7 +18,7 @@ class App extends React.Component {
   }
 
   assignGlyph = n => trajectory => this.setState(({ assignments }) => ({
-    assignments : { ...filter(assignments, t => t !== trajectory), [n] : trajectory },
+    assignments : { ...omitBy(isEqual(trajectory))(assignments), [n] : trajectory },
   }))
 
   trajectoryGlyphs = () => flow([

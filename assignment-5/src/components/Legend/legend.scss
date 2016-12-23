@@ -37,4 +37,28 @@
     left     : 0;
     z-index  : 2;
   }
+
+  .selector {
+    display     : flex;
+    align-items : center;
+
+    .selected {
+      color      : hsl(12, 95%, 45%);
+      background : #ccc;
+    }
+
+    ul {
+      padding : 0 4px;
+    }
+
+    li {
+      padding : 0 12px;
+      cursor  : pointer;
+
+      &:hover {
+        background : #ccc;
+        color      : #333;
+      }
+    }
+  }
 }

@@ -2,3 +2,10 @@ body {
   font                 : 12px/1.4 "Fira Sans", "TypoPRO Fira Sans", sans-serif;
   font-variant-numeric : oldstyle-nums;
 }
+
+.Popover-body {
+  background    : black;
+  padding       : 8px;
+  border-radius : 4px;
+  color         : #eee;
+}
