@@ -27,13 +27,10 @@ class Assignment extends React.Component {
       <Popover
         isOpen={this.state.open}
         place="right"
-        body={<Selector assignment={this.props.assignment} onSelect={trajectory=> {
-          this.props.assignGlyph(trajectory)
-          this.toggleOpen()
-        }}/>}
+        body={<Selector assignment={this.props.assignment} assignGlyph={this.props.assignGlyph}/>}
         onOuterAction={this.toggleOpen}
       >
-        <span className={styles.target} onClick={this.toggleOpen} ref={me => this.me = me}/>
+        <span className={styles.target} onClick={this.toggleOpen}/>
       </Popover>
       {this.props.assignment ? <Label assignment={this.props.assignment}/> : null}
     </span>

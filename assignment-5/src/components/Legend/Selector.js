@@ -24,29 +24,29 @@ List.propTypes = {
 
 class Selector extends React.Component {
   state = {
-    from : undefined,
-    to   : undefined,
+    from : get(this, "props.assignment[0]"),
+    to   : get(this, "props.assignment[1]"),
   }
 
   setFrom = from => this.setState({ from }, this.update)
   setTo   = to   => this.setState({ to },   this.update)
   update  = ()   => {
     if (this.state.from && this.state.to)
-      this.props.onSelect([this.state.from, this.state.to])
+      this.props.assignGlyph([this.state.from, this.state.to])
   }
 
   render = () => (
     <div className={styles.selector}>
-      <List selected={this.state.from || get(this, "props.assignment[0]")} onClick={this.setFrom}/>
+      <List selected={this.state.from} onClick={this.setFrom}/>
       <span>→</span>
-      <List selected={this.state.to || get(this, "props.assignment[1]")} onClick={this.setTo}/>
+      <List selected={this.state.to} onClick={this.setTo}/>
     </div>
   )
 }
 
 Selector.propTypes = {
-  assignment : T.arrayOf(T.string),
-  onSelect   : T.func.isRequired,
+  assignment  : T.arrayOf(T.string),
+  assignGlyph : T.func.isRequired,
 }
 
 export default Selector
