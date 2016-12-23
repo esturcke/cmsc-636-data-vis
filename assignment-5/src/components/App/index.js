@@ -1,9 +1,9 @@
 /* eslint-disable react/no-set-state */
-import React         from "react"
-import { invert }    from "lodash"
-import Legend        from "~/components/Legend"
-import Visualization from "~/components/Visualization"
-import trajectories  from "../../../data/trajectories.json"
+import React              from "react"
+import { invert, filter } from "lodash"
+import Legend             from "~/components/Legend"
+import Visualization      from "~/components/Visualization"
+import trajectories       from "../../../data/trajectories.json"
 
 class App extends React.Component {
   state = {
@@ -14,7 +14,9 @@ class App extends React.Component {
     },
   }
 
-  assignSymbol = (symbol, trajectory) => this.setState(({ assignments }) => ({ assignments : { ...assignments, symbol : trajectory }}))
+  assignSymbol = (symbol, trajectory) => this.setState(({ assignments }) => ({
+    assignments : { ...filter(assignments, t => t !== trajectory), symbol : trajectory },
+  }))
 
   trajectorySymbols = () => invert(this.state.assignments)
 
