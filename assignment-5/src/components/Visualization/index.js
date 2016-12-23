@@ -26,22 +26,26 @@ const patientScale = (trajectories, height) => {
 
 const trajectoryScale = width => scaleLinear().domain([-250, 350]).range([padding.left, width - padding.right - padding.left])
 
-const Visualization = ({ trajectories, trajectoryGlyphs, containerWidth, containerHeight }) => (
-  <svg width={containerWidth} height={containerHeight}>
-    <Axis x={0} y={containerHeight - 20}
-      padding={padding}
-      label="encounter since TBI"
-      scale={trajectoryScale(containerWidth)}
-      tickValues={[-200, -100, 0, 100, 200, 300]}
-    />
-    <Patients
-      trajectories={trajectories}
-      trajectoryGlyphs={trajectoryGlyphs}
-      patientScale={patientScale(trajectories, containerHeight)}
-      trajectoryScale={trajectoryScale(containerWidth)}
-    />
-  </svg>
-)
+const Visualization = ({ trajectories, trajectoryGlyphs, containerWidth, containerHeight }) => {
+  const x = trajectoryScale(containerWidth)
+  return (
+    <svg width={containerWidth} height={containerHeight}>
+      <Axis x={0} y={containerHeight - 20}
+        padding={padding}
+        label="encounter since TBI"
+        scale={x}
+        tickValues={[-200, -100, 0, 100, 200, 300]}
+      />
+      <path d={`M ${x(0)} ${padding.top} l 0 ${containerHeight - padding.top - padding.bottom}`} stroke="#ccc" strokeWidth={0.5}/>
+      <Patients
+        trajectories={trajectories}
+        trajectoryGlyphs={trajectoryGlyphs}
+        patientScale={patientScale(trajectories, containerHeight)}
+        trajectoryScale={x}
+      />
+    </svg>
+  )
+}
 
 Visualization.propTypes = {
   trajectories     : T.object.isRequired,
