@@ -11,7 +11,7 @@ const padding = {
   top    : 15,
   right  : 15,
   bottom : 25,
-  left   : 40,
+  left   : 50,
 }
 
 const patientScale = (trajectories, height) => {

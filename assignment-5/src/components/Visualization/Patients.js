@@ -5,8 +5,10 @@ import T            from "~/lib/propTypes"
 
 const Patients = ({ trajectories, trajectorySymbols, patientScale, trajectoryScale }) => (
   <g>
-    {map(({ id, trajectories }) => (
+    <text fill="black" x={-10} y={18} textAnchor="end" transform="rotate(-90)">patients ordered by age at time of injury</text>
+    {map(({ id, injury : { age }, trajectories }) => (
       <g key={id} transform={`translate(0 ${patientScale(id)})`}>
+        <text fill="black" x={40} y={3} textAnchor="end">{age}</text>
         <Trajectories
           trajectories={trajectories}
           trajectorySymbols={trajectorySymbols}
