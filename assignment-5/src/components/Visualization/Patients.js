@@ -3,7 +3,7 @@ import { map }      from "lodash/fp"
 import Trajectories from "./Trajectories"
 import T            from "~/lib/propTypes"
 
-const Patients = ({ trajectories, trajectorySymbols, patientScale, trajectoryScale }) => (
+const Patients = ({ trajectories, trajectoryGlyphs, patientScale, trajectoryScale }) => (
   <g>
     <text fill="black" x={-10} y={18} textAnchor="end" transform="rotate(-90)">patients ordered by age at time of injury</text>
     {map(({ id, injury : { age }, trajectories }) => (
@@ -11,7 +11,7 @@ const Patients = ({ trajectories, trajectorySymbols, patientScale, trajectorySca
         <text fill="black" x={40} y={3} textAnchor="end">{age}</text>
         <Trajectories
           trajectories={trajectories}
-          trajectorySymbols={trajectorySymbols}
+          trajectoryGlyphs={trajectoryGlyphs}
           trajectoryScale={trajectoryScale}
         />
       </g>
@@ -20,10 +20,10 @@ const Patients = ({ trajectories, trajectorySymbols, patientScale, trajectorySca
 )
 
 Patients.propTypes = {
-  trajectories      : T.object.isRequired,
-  trajectorySymbols : T.object.isRequired,
-  patientScale      : T.func.isRequired,
-  trajectoryScale   : T.func.isRequired,
+  trajectories     : T.object.isRequired,
+  trajectoryGlyphs : T.object.isRequired,
+  patientScale     : T.func.isRequired,
+  trajectoryScale  : T.func.isRequired,
 }
 
 export default Patients

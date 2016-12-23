@@ -26,7 +26,7 @@ const patientScale = (trajectories, height) => {
 
 const trajectoryScale = width => scaleLinear().domain([-250, 350]).range([padding.left, width - padding.right - padding.left])
 
-const Visualization = ({ trajectories, trajectorySymbols, containerWidth, containerHeight }) => (
+const Visualization = ({ trajectories, trajectoryGlyphs, containerWidth, containerHeight }) => (
   <svg width={containerWidth} height={containerHeight}>
     <Axis x={0} y={containerHeight - 20}
       padding={padding}
@@ -36,7 +36,7 @@ const Visualization = ({ trajectories, trajectorySymbols, containerWidth, contai
     />
     <Patients
       trajectories={trajectories}
-      trajectorySymbols={trajectorySymbols}
+      trajectoryGlyphs={trajectoryGlyphs}
       patientScale={patientScale(trajectories, containerHeight)}
       trajectoryScale={trajectoryScale(containerWidth)}
     />
@@ -44,10 +44,10 @@ const Visualization = ({ trajectories, trajectorySymbols, containerWidth, contai
 )
 
 Visualization.propTypes = {
-  trajectories      : T.object.isRequired,
-  trajectorySymbols : T.object.isRequired,
-  containerWidth    : T.number.isRequired,
-  containerHeight   : T.number.isRequired,
+  trajectories     : T.object.isRequired,
+  trajectoryGlyphs : T.object.isRequired,
+  containerWidth   : T.number.isRequired,
+  containerHeight  : T.number.isRequired,
 }
 
 export default Dimensions({ debounce : 50 })(Visualization)
