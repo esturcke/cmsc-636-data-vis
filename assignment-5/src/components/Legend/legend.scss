@@ -1,8 +1,30 @@
 :local {
   .trajectories {
+    border   : 1px solid #ddd;
+    padding  : 4px;
     position : absolute;
-    left : 50px;
-    bottom : 50px;
+    left     : 50px;
+    bottom   : 50px;
+    z-index  : 1;
+
+    > li {
+      height      : 16px;
+      display     : flex;
+      align-items : center;
+      display     : relative;
+
+      svg {
+        
+      }
+    }
   }
 
+  .label {
+    color : #999;
+    > span {
+      display   : inline-block;
+      min-width : 10ch;
+      color     : #333;
+    }
+  }
 }

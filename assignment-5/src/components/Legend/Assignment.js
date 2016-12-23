@@ -1,13 +1,23 @@
-import React from "react"
-import T     from "~/lib/propTypes"
+import React  from "react"
+import T      from "~/lib/propTypes"
+import styles from "./legend.scss"
 
+const Label = ({ assignment : [ from, to ] }) => (
+  <span className={styles.label}>
+    <span>{from}</span> → <span>{to}</span>
+  </span>
+)
+
+Label.propTypes = {
+  assignment : T.arrayOf(T.string).isRequired,
+}
 
 class Assignment extends React.Component {
 
   render = () => (
-    <div>
-      {this.props.assignment ? <span>{this.props.assignment[0]} → {this.props.assignment[1]}</span> : null}
-    </div>
+    <span>
+      {this.props.assignment ? <Label assignment={this.props.assignment}/> : null}
+    </span>
   )
 }
 
