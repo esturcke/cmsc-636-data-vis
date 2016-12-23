@@ -12,6 +12,7 @@ class App extends React.Component {
       0 : "headache-depression",
       1 : "depression-ptsd",
       2 : "anxiety-depression",
+      4 : "depression-vision",
     },
   }
 
