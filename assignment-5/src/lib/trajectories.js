@@ -11,10 +11,10 @@ const consecutiveDuplicate = (from, to) => (encounter, i, encounters) => encount
   : encounters[i - 1] && encounters[i - 1][from] // keep the first for `to`, but always discard if at the beginning
 
 const pairAsTrajectory = (from, to) => ([encounterFrom, encounterTo]) => ({
-  trjectory : `${from}-${to}`,
-  id        : [encounterFrom.id, encounterTo.id],
-  date      : [encounterFrom.date, encounterTo.date],
-  i         : [encounterFrom.i, encounterTo.i],
+  trajectory : `${from}-${to}`,
+  id         : [encounterFrom.id, encounterTo.id],
+  date       : [encounterFrom.date, encounterTo.date],
+  i          : [encounterFrom.i, encounterTo.i],
 })
 
 const fromEncounters = (from, to) => flow(

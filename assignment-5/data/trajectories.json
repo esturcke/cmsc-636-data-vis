@@ -9,7 +9,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "vision-headache",
+        "trajectory": "vision-headache",
         "id": [
           "756328192",
           "755849632"
@@ -24,7 +24,7 @@
         ]
       },
       {
-        "trjectory": "vision-headache",
+        "trajectory": "vision-headache",
         "id": [
           "857139494",
           "1637057637"
@@ -39,7 +39,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-headache",
+        "trajectory": "neurologic-headache",
         "id": [
           "2145107504",
           "2095174523"
@@ -54,7 +54,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "2177335208",
           "2205003275"
@@ -69,7 +69,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-headache",
+        "trajectory": "neurologic-headache",
         "id": [
           "2205003275",
           "2230216410"
@@ -84,7 +84,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "2205003275",
           "2230209867"
@@ -99,7 +99,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-vision",
+        "trajectory": "neurologic-vision",
         "id": [
           "2205003275",
           "2253545666"
@@ -125,7 +125,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "vision-depression",
+        "trajectory": "vision-depression",
         "id": [
           "1452684876",
           "1452684871"
@@ -151,7 +151,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "neurologic-vision",
+        "trajectory": "neurologic-vision",
         "id": [
           "306443366",
           "394501882"
@@ -166,7 +166,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "580546559",
           "582343620"
@@ -181,7 +181,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "607376716",
           "1797604944"
@@ -207,7 +207,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "cognitive-headache",
+        "trajectory": "cognitive-headache",
         "id": [
           "44564570",
           "1872482016"
@@ -233,7 +233,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1377716721",
           "1377716726"
@@ -248,7 +248,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1377716726",
           "1377469395"
@@ -263,7 +263,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1377469395",
           "1377716728"
@@ -278,7 +278,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1377716728",
           "1376550767"
@@ -293,7 +293,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1376550767",
           "1377716729"
@@ -308,7 +308,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1377716729",
           "1399415712"
@@ -323,7 +323,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1399415712",
           "1409041012"
@@ -338,7 +338,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1409041012",
           "1397006262"
@@ -353,7 +353,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1397006262",
           "1397006263"
@@ -368,7 +368,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1397006263",
           "1400367002"
@@ -383,7 +383,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1400367002",
           "1397006264"
@@ -398,7 +398,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1397006264",
           "1426118411"
@@ -413,7 +413,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1426118411",
           "1427972339"
@@ -428,7 +428,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1427972339",
           "1454584356"
@@ -443,7 +443,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1454584356",
           "1478195670"
@@ -458,7 +458,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1478195670",
           "1502324809"
@@ -473,7 +473,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "1454545492",
           "1529589620"
@@ -488,7 +488,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1502324809",
           "1529589620"
@@ -503,7 +503,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1529589620",
           "1525926502"
@@ -518,7 +518,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1525926502",
           "1577054721"
@@ -533,7 +533,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "1594227328",
           "1598263119"
@@ -548,7 +548,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "1586298547",
           "1586417517"
@@ -563,7 +563,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "1586298549",
           "1586509327"
@@ -578,7 +578,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "1610986040",
           "1611888864"
@@ -593,7 +593,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "1610986041",
           "1610850960"
@@ -608,7 +608,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "1611591368",
           "1624336332"
@@ -623,7 +623,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1577054721",
           "1635171753"
@@ -638,7 +638,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-depression",
+        "trajectory": "neurologic-depression",
         "id": [
           "1611591368",
           "1635171753"
@@ -653,7 +653,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "1635171753",
           "1684458470"
@@ -668,7 +668,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-neurologic",
+        "trajectory": "endocrine-neurologic",
         "id": [
           "1700068807",
           "1877816454"
@@ -683,7 +683,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "1877816454",
           "1939913334"
@@ -698,7 +698,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "1877533468",
           "1907026440"
@@ -713,7 +713,7 @@
         ]
       },
       {
-        "trjectory": "sleep-anxiety",
+        "trajectory": "sleep-anxiety",
         "id": [
           "1907026440",
           "1907032158"
@@ -728,7 +728,7 @@
         ]
       },
       {
-        "trjectory": "sleep-anxiety",
+        "trajectory": "sleep-anxiety",
         "id": [
           "1907032158",
           "1907070810"
@@ -754,7 +754,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1774639605",
           "1685726085"
@@ -769,7 +769,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1686484477",
           "1687364248"
@@ -784,7 +784,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1775207956",
           "1686603034"
@@ -799,7 +799,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1797672096",
           "1696520400"
@@ -814,7 +814,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1793012428",
           "1696623204"
@@ -829,7 +829,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1695807162",
           "1766234705"
@@ -844,7 +844,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1765537541",
           "1765569525"
@@ -859,7 +859,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1765561499",
           "1766381149"
@@ -874,7 +874,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1818521727",
           "1818528180"
@@ -889,7 +889,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1818346974",
           "1844215954"
@@ -904,7 +904,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1843847843",
           "1844442722"
@@ -919,7 +919,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1870490145",
           "1991841297"
@@ -934,7 +934,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1901485099",
           "1991033532"
@@ -949,7 +949,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1959264849",
           "1992065116"
@@ -964,7 +964,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "2048760306",
           "2048721887"
@@ -979,7 +979,7 @@
         ]
       },
       {
-        "trjectory": "anxiety-depression",
+        "trajectory": "anxiety-depression",
         "id": [
           "2048721887",
           "2096693762"
@@ -1005,7 +1005,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "vision-audiology",
+        "trajectory": "vision-audiology",
         "id": [
           "1035601186",
           "2363937468"
@@ -1031,7 +1031,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "vision-depression",
+        "trajectory": "vision-depression",
         "id": [
           "1417379779",
           "1806479110"
@@ -1057,7 +1057,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "vision-headache",
+        "trajectory": "vision-headache",
         "id": [
           "865862146",
           "2414005705"
@@ -1083,7 +1083,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "neurologic-vision",
+        "trajectory": "neurologic-vision",
         "id": [
           "631090976",
           "703688211"
@@ -1098,7 +1098,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-anxiety",
+        "trajectory": "neurologic-anxiety",
         "id": [
           "1660953338",
           "1686094754"
@@ -1124,7 +1124,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "vision-pcs",
+        "trajectory": "vision-pcs",
         "id": [
           "1207327207",
           "1768498358"
@@ -1150,7 +1150,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "neurologic-audiology",
+        "trajectory": "neurologic-audiology",
         "id": [
           "1568534960",
           "1781960636"
@@ -1165,7 +1165,7 @@
         ]
       },
       {
-        "trjectory": "sleep-depression",
+        "trajectory": "sleep-depression",
         "id": [
           "1829914380",
           "1837666451"
@@ -1180,7 +1180,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1837666451",
           "1848419092"
@@ -1195,7 +1195,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1837843720",
           "1880415812"
@@ -1210,7 +1210,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "2248609485",
           "2245400093"
@@ -1225,7 +1225,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "2245400093",
           "2337957208"
@@ -1251,7 +1251,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "cognitive-neurologic",
+        "trajectory": "cognitive-neurologic",
         "id": [
           "1167951474",
           "1176506172"
@@ -1266,7 +1266,7 @@
         ]
       },
       {
-        "trjectory": "cognitive-neurologic",
+        "trajectory": "cognitive-neurologic",
         "id": [
           "1169825886",
           "1192974027"
@@ -1281,7 +1281,7 @@
         ]
       },
       {
-        "trjectory": "cognitive-neurologic",
+        "trajectory": "cognitive-neurologic",
         "id": [
           "1192974027",
           "1217952786"
@@ -1296,7 +1296,7 @@
         ]
       },
       {
-        "trjectory": "cognitive-neurologic",
+        "trajectory": "cognitive-neurologic",
         "id": [
           "1217952786",
           "1233937245"
@@ -1311,7 +1311,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-audiology",
+        "trajectory": "neurologic-audiology",
         "id": [
           "1233937245",
           "1271066182"
@@ -1326,7 +1326,7 @@
         ]
       },
       {
-        "trjectory": "sleep-depression",
+        "trajectory": "sleep-depression",
         "id": [
           "1298143544",
           "1298764744"
@@ -1341,7 +1341,7 @@
         ]
       },
       {
-        "trjectory": "audiology-neurologic",
+        "trajectory": "audiology-neurologic",
         "id": [
           "1271066182",
           "1297368083"
@@ -1356,7 +1356,7 @@
         ]
       },
       {
-        "trjectory": "sleep-depression",
+        "trajectory": "sleep-depression",
         "id": [
           "1297450791",
           "1300343609"
@@ -1371,7 +1371,7 @@
         ]
       },
       {
-        "trjectory": "sleep-depression",
+        "trajectory": "sleep-depression",
         "id": [
           "1300343609",
           "1301327389"
@@ -1386,7 +1386,7 @@
         ]
       },
       {
-        "trjectory": "sleep-headache",
+        "trajectory": "sleep-headache",
         "id": [
           "1297198282",
           "1326278747"
@@ -1401,7 +1401,7 @@
         ]
       },
       {
-        "trjectory": "sleep-depression",
+        "trajectory": "sleep-depression",
         "id": [
           "1297198282",
           "1326278747"
@@ -1416,7 +1416,7 @@
         ]
       },
       {
-        "trjectory": "sleep-depression",
+        "trajectory": "sleep-depression",
         "id": [
           "1332323523",
           "1326327173"
@@ -1431,7 +1431,7 @@
         ]
       },
       {
-        "trjectory": "sleep-depression",
+        "trajectory": "sleep-depression",
         "id": [
           "1350279737",
           "1350688645"
@@ -1446,7 +1446,7 @@
         ]
       },
       {
-        "trjectory": "depression-sleep",
+        "trajectory": "depression-sleep",
         "id": [
           "1350688645",
           "1406057232"
@@ -1461,7 +1461,7 @@
         ]
       },
       {
-        "trjectory": "sleep-depression",
+        "trajectory": "sleep-depression",
         "id": [
           "2147252131",
           "2511962393"
@@ -1487,7 +1487,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "vision-cognitive",
+        "trajectory": "vision-cognitive",
         "id": [
           "1084455188",
           "2676657144"
@@ -1513,7 +1513,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "alzheimer-depression",
+        "trajectory": "alzheimer-depression",
         "id": [
           "964728342",
           "1054533218"
@@ -1528,7 +1528,7 @@
         ]
       },
       {
-        "trjectory": "alzheimer-depression",
+        "trajectory": "alzheimer-depression",
         "id": [
           "1054533218",
           "1131929896"
@@ -1543,7 +1543,7 @@
         ]
       },
       {
-        "trjectory": "alzheimer-depression",
+        "trajectory": "alzheimer-depression",
         "id": [
           "1131929896",
           "1143171907"
@@ -1558,7 +1558,7 @@
         ]
       },
       {
-        "trjectory": "alzheimer-depression",
+        "trajectory": "alzheimer-depression",
         "id": [
           "1143171907",
           "1163338061"
@@ -1573,7 +1573,7 @@
         ]
       },
       {
-        "trjectory": "alzheimer-depression",
+        "trajectory": "alzheimer-depression",
         "id": [
           "1163338061",
           "1213543364"
@@ -1588,7 +1588,7 @@
         ]
       },
       {
-        "trjectory": "alzheimer-depression",
+        "trajectory": "alzheimer-depression",
         "id": [
           "1213543364",
           "1221473256"
@@ -1603,7 +1603,7 @@
         ]
       },
       {
-        "trjectory": "alzheimer-depression",
+        "trajectory": "alzheimer-depression",
         "id": [
           "1221473256",
           "1290523859"
@@ -1618,7 +1618,7 @@
         ]
       },
       {
-        "trjectory": "alzheimer-depression",
+        "trajectory": "alzheimer-depression",
         "id": [
           "1290523859",
           "1367878876"
@@ -1633,7 +1633,7 @@
         ]
       },
       {
-        "trjectory": "alzheimer-depression",
+        "trajectory": "alzheimer-depression",
         "id": [
           "1367878876",
           "1443211077"
@@ -1648,7 +1648,7 @@
         ]
       },
       {
-        "trjectory": "alzheimer-depression",
+        "trajectory": "alzheimer-depression",
         "id": [
           "1443211077",
           "1455097072"
@@ -1663,7 +1663,7 @@
         ]
       },
       {
-        "trjectory": "alzheimer-depression",
+        "trajectory": "alzheimer-depression",
         "id": [
           "1455097072",
           "1475866858"
@@ -1678,7 +1678,7 @@
         ]
       },
       {
-        "trjectory": "cognitive-depression",
+        "trajectory": "cognitive-depression",
         "id": [
           "1978095218",
           "2001387409"
@@ -1693,7 +1693,7 @@
         ]
       },
       {
-        "trjectory": "cognitive-alzheimer",
+        "trajectory": "cognitive-alzheimer",
         "id": [
           "1978095218",
           "2001387409"
@@ -1719,7 +1719,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "headache-anxiety",
+        "trajectory": "headache-anxiety",
         "id": [
           "1716958743",
           "1584593304"
@@ -1734,7 +1734,7 @@
         ]
       },
       {
-        "trjectory": "sleep-headache",
+        "trajectory": "sleep-headache",
         "id": [
           "1764265438",
           "1592486785"
@@ -1749,7 +1749,7 @@
         ]
       },
       {
-        "trjectory": "sleep-headache",
+        "trajectory": "sleep-headache",
         "id": [
           "1764265437",
           "1764265442"
@@ -1764,7 +1764,7 @@
         ]
       },
       {
-        "trjectory": "headache-depression",
+        "trajectory": "headache-depression",
         "id": [
           "1764265442",
           "1764265441"
@@ -1790,7 +1790,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "2171676862",
           "2277847820"
@@ -1816,7 +1816,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "278301740",
           "317017514"
@@ -1831,7 +1831,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "317017514",
           "345544253"
@@ -1846,7 +1846,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "345544253",
           "341647280"
@@ -1861,7 +1861,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "341647280",
           "341650171"
@@ -1876,7 +1876,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "341650171",
           "365552158"
@@ -1891,7 +1891,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "365552158",
           "361280797"
@@ -1906,7 +1906,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "361280797",
           "365942071"
@@ -1921,7 +1921,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "365942071",
           "386854289"
@@ -1936,7 +1936,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "386854289",
           "391590591"
@@ -1951,7 +1951,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "391590591",
           "436208910"
@@ -1966,7 +1966,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "436208910",
           "455732850"
@@ -1981,7 +1981,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "455732850",
           "474821236"
@@ -1996,7 +1996,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "474821236",
           "480066571"
@@ -2011,7 +2011,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "480066571",
           "579586186"
@@ -2026,7 +2026,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "579586186",
           "640648947"
@@ -2041,7 +2041,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "640648947",
           "647004089"
@@ -2056,7 +2056,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-audiology",
+        "trajectory": "neurologic-audiology",
         "id": [
           "647354178",
           "794661704"
@@ -2071,7 +2071,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "647004089",
           "799244352"
@@ -2086,7 +2086,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "799244352",
           "825921793"
@@ -2101,7 +2101,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "825921793",
           "851407158"
@@ -2116,7 +2116,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "851407158",
           "946408768"
@@ -2131,7 +2131,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "946408768",
           "977577984"
@@ -2146,7 +2146,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "977577984",
           "998965161"
@@ -2161,7 +2161,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "998965161",
           "1003492798"
@@ -2176,7 +2176,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1003492798",
           "1024226212"
@@ -2191,7 +2191,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1024226212",
           "1028295373"
@@ -2206,7 +2206,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1028295373",
           "1054992212"
@@ -2221,7 +2221,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1054992212",
           "1288517521"
@@ -2236,7 +2236,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1288517521",
           "2137669355"
@@ -2251,7 +2251,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-audiology",
+        "trajectory": "neurologic-audiology",
         "id": [
           "1451875547",
           "2180840109"
@@ -2266,7 +2266,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "2137669355",
           "2180840109"
@@ -2281,7 +2281,7 @@
         ]
       },
       {
-        "trjectory": "ptsd-depression",
+        "trajectory": "ptsd-depression",
         "id": [
           "2180840109",
           "2159885658"
@@ -2296,7 +2296,7 @@
         ]
       },
       {
-        "trjectory": "cognitive-neurologic",
+        "trajectory": "cognitive-neurologic",
         "id": [
           "2180826302",
           "2248844288"
@@ -2322,7 +2322,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "neurologic-vision",
+        "trajectory": "neurologic-vision",
         "id": [
           "1832653834",
           "1973473730"
@@ -2337,7 +2337,7 @@
         ]
       },
       {
-        "trjectory": "cognitive-depression",
+        "trajectory": "cognitive-depression",
         "id": [
           "2259669742",
           "2518273448"
@@ -2363,7 +2363,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "neurologic-endocrine",
+        "trajectory": "neurologic-endocrine",
         "id": [
           "1601382325",
           "2572382249"
@@ -2389,7 +2389,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "cognitive-neurologic",
+        "trajectory": "cognitive-neurologic",
         "id": [
           "140139207",
           "180144862"
@@ -2404,7 +2404,7 @@
         ]
       },
       {
-        "trjectory": "cognitive-neurologic",
+        "trajectory": "cognitive-neurologic",
         "id": [
           "311404906",
           "317216397"
@@ -2419,7 +2419,7 @@
         ]
       },
       {
-        "trjectory": "cognitive-neurologic",
+        "trajectory": "cognitive-neurologic",
         "id": [
           "546449123",
           "596526610"
@@ -2434,7 +2434,7 @@
         ]
       },
       {
-        "trjectory": "cognitive-neurologic",
+        "trajectory": "cognitive-neurologic",
         "id": [
           "867795543",
           "939479360"
@@ -2449,7 +2449,7 @@
         ]
       },
       {
-        "trjectory": "cognitive-neurologic",
+        "trajectory": "cognitive-neurologic",
         "id": [
           "1489158696",
           "1548736142"
@@ -2464,7 +2464,7 @@
         ]
       },
       {
-        "trjectory": "cognitive-neurologic",
+        "trajectory": "cognitive-neurologic",
         "id": [
           "1743613509",
           "1634005177"
@@ -2479,7 +2479,7 @@
         ]
       },
       {
-        "trjectory": "cognitive-neurologic",
+        "trajectory": "cognitive-neurologic",
         "id": [
           "1827313711",
           "1968612523"
@@ -2505,7 +2505,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "neurologic-headache",
+        "trajectory": "neurologic-headache",
         "id": [
           "1529264124",
           "1526827596"
@@ -2520,7 +2520,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-vision",
+        "trajectory": "neurologic-vision",
         "id": [
           "1526827596",
           "1569460210"
@@ -2535,7 +2535,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-headache",
+        "trajectory": "neurologic-headache",
         "id": [
           "1526827596",
           "1569460210"
@@ -2550,7 +2550,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-headache",
+        "trajectory": "neurologic-headache",
         "id": [
           "1587186313",
           "1740156298"
@@ -2565,7 +2565,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-headache",
+        "trajectory": "neurologic-headache",
         "id": [
           "1740156298",
           "1625803852"
@@ -2580,7 +2580,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-vision",
+        "trajectory": "neurologic-vision",
         "id": [
           "1740156298",
           "1755599564"
@@ -2595,7 +2595,7 @@
         ]
       },
       {
-        "trjectory": "vision-headache",
+        "trajectory": "vision-headache",
         "id": [
           "1948128568",
           "1903740135"
@@ -2610,7 +2610,7 @@
         ]
       },
       {
-        "trjectory": "vision-headache",
+        "trajectory": "vision-headache",
         "id": [
           "1903707678",
           "2046554028"
@@ -2625,7 +2625,7 @@
         ]
       },
       {
-        "trjectory": "vision-headache",
+        "trajectory": "vision-headache",
         "id": [
           "2643046403",
           "2642793638"
@@ -2640,7 +2640,7 @@
         ]
       },
       {
-        "trjectory": "vision-headache",
+        "trajectory": "vision-headache",
         "id": [
           "2642793638",
           "2668349043"
@@ -2666,7 +2666,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "sleep-depression",
+        "trajectory": "sleep-depression",
         "id": [
           "905263159",
           "931546105"
@@ -2681,7 +2681,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-vision",
+        "trajectory": "neurologic-vision",
         "id": [
           "1610606631",
           "1872634673"
@@ -2696,7 +2696,7 @@
         ]
       },
       {
-        "trjectory": "vision-sleep",
+        "trajectory": "vision-sleep",
         "id": [
           "1872634673",
           "1908313969"
@@ -2711,7 +2711,7 @@
         ]
       },
       {
-        "trjectory": "sleep-anxiety",
+        "trajectory": "sleep-anxiety",
         "id": [
           "2030970890",
           "2093784057"
@@ -2726,7 +2726,7 @@
         ]
       },
       {
-        "trjectory": "vision-depression",
+        "trajectory": "vision-depression",
         "id": [
           "1872634673",
           "2093986579"
@@ -2741,7 +2741,7 @@
         ]
       },
       {
-        "trjectory": "sleep-depression",
+        "trajectory": "sleep-depression",
         "id": [
           "2093784057",
           "2093986579"
@@ -2756,7 +2756,7 @@
         ]
       },
       {
-        "trjectory": "sleep-anxiety",
+        "trajectory": "sleep-anxiety",
         "id": [
           "2093784057",
           "2093986579"
@@ -2771,7 +2771,7 @@
         ]
       },
       {
-        "trjectory": "sleep-anxiety",
+        "trajectory": "sleep-anxiety",
         "id": [
           "2093986579",
           "2149736196"
@@ -2786,7 +2786,7 @@
         ]
       },
       {
-        "trjectory": "sleep-anxiety",
+        "trajectory": "sleep-anxiety",
         "id": [
           "2149736196",
           "2149777280"
@@ -2801,7 +2801,7 @@
         ]
       },
       {
-        "trjectory": "anxiety-sleep",
+        "trajectory": "anxiety-sleep",
         "id": [
           "2149777280",
           "2254373935"
@@ -2827,7 +2827,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "442761117",
           "631537134"
@@ -2842,7 +2842,7 @@
         ]
       },
       {
-        "trjectory": "sleep-neurologic",
+        "trajectory": "sleep-neurologic",
         "id": [
           "631537134",
           "1634234082"
@@ -2868,7 +2868,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "vision-headache",
+        "trajectory": "vision-headache",
         "id": [
           "1633933201",
           "1658168516"
@@ -2883,7 +2883,7 @@
         ]
       },
       {
-        "trjectory": "vision-headache",
+        "trajectory": "vision-headache",
         "id": [
           "1689736353",
           "1684000283"
@@ -2898,7 +2898,7 @@
         ]
       },
       {
-        "trjectory": "vision-headache",
+        "trajectory": "vision-headache",
         "id": [
           "1791700697",
           "1888670148"
@@ -2913,7 +2913,7 @@
         ]
       },
       {
-        "trjectory": "vision-headache",
+        "trajectory": "vision-headache",
         "id": [
           "1831046027",
           "1817156298"
@@ -2928,7 +2928,7 @@
         ]
       },
       {
-        "trjectory": "vision-sleep",
+        "trajectory": "vision-sleep",
         "id": [
           "1831046027",
           "1817066441"
@@ -2943,7 +2943,7 @@
         ]
       },
       {
-        "trjectory": "vision-headache",
+        "trajectory": "vision-headache",
         "id": [
           "2009433582",
           "2339468383"
@@ -2958,7 +2958,7 @@
         ]
       },
       {
-        "trjectory": "vision-headache",
+        "trajectory": "vision-headache",
         "id": [
           "2136396196",
           "2234154544"
@@ -2973,7 +2973,7 @@
         ]
       },
       {
-        "trjectory": "vision-sleep",
+        "trajectory": "vision-sleep",
         "id": [
           "2136396196",
           "2518161080"
@@ -2988,7 +2988,7 @@
         ]
       },
       {
-        "trjectory": "cognitive-sleep",
+        "trajectory": "cognitive-sleep",
         "id": [
           "2639520756",
           "2620723563"
@@ -3014,7 +3014,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "audiology-depression",
+        "trajectory": "audiology-depression",
         "id": [
           "1175965682",
           "1216050281"
@@ -3029,7 +3029,7 @@
         ]
       },
       {
-        "trjectory": "audiology-depression",
+        "trajectory": "audiology-depression",
         "id": [
           "1416913808",
           "1485136287"
@@ -3044,7 +3044,7 @@
         ]
       },
       {
-        "trjectory": "audiology-depression",
+        "trajectory": "audiology-depression",
         "id": [
           "1512926646",
           "1730921725"
@@ -3059,7 +3059,7 @@
         ]
       },
       {
-        "trjectory": "audiology-headache",
+        "trajectory": "audiology-headache",
         "id": [
           "1512926646",
           "1731348832"
@@ -3074,7 +3074,7 @@
         ]
       },
       {
-        "trjectory": "audiology-depression",
+        "trajectory": "audiology-depression",
         "id": [
           "1945121943",
           "2311274679"
@@ -3100,7 +3100,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "neurologic-sleep",
+        "trajectory": "neurologic-sleep",
         "id": [
           "1024959089",
           "1700324122"
@@ -3115,7 +3115,7 @@
         ]
       },
       {
-        "trjectory": "headache-neurologic",
+        "trajectory": "headache-neurologic",
         "id": [
           "1700324122",
           "1138128415"
@@ -3130,7 +3130,7 @@
         ]
       },
       {
-        "trjectory": "neurologic-endocrine",
+        "trajectory": "neurologic-endocrine",
         "id": [
           "1712258456",
           "1793643518"
@@ -3156,7 +3156,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "1229028968",
           "1254408413"
@@ -3171,7 +3171,7 @@
         ]
       },
       {
-        "trjectory": "ptsd-depression",
+        "trajectory": "ptsd-depression",
         "id": [
           "1254408413",
           "2431556957"
@@ -3186,7 +3186,7 @@
         ]
       },
       {
-        "trjectory": "cognitive-depression",
+        "trajectory": "cognitive-depression",
         "id": [
           "2423164608",
           "2431556957"
@@ -3212,7 +3212,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "vision-pcs",
+        "trajectory": "vision-pcs",
         "id": [
           "349696907",
           "1423987280"
@@ -3238,7 +3238,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "vision-anxiety",
+        "trajectory": "vision-anxiety",
         "id": [
           "1987140759",
           "2087397064"
@@ -3253,7 +3253,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "2033982433",
           "2048694725"
@@ -3268,7 +3268,7 @@
         ]
       },
       {
-        "trjectory": "vision-depression",
+        "trajectory": "vision-depression",
         "id": [
           "1987140759",
           "2048694725"
@@ -3283,7 +3283,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "2048694725",
           "2203008184"
@@ -3298,7 +3298,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "2203008184",
           "2230135425"
@@ -3313,7 +3313,7 @@
         ]
       },
       {
-        "trjectory": "vision-sleep",
+        "trajectory": "vision-sleep",
         "id": [
           "1987140759",
           "2318823167"
@@ -3328,7 +3328,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "2230135425",
           "2364910291"
@@ -3343,7 +3343,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "2364910291",
           "2365221935"
@@ -3358,7 +3358,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "2365221935",
           "2418576907"
@@ -3373,7 +3373,7 @@
         ]
       },
       {
-        "trjectory": "depression-ptsd",
+        "trajectory": "depression-ptsd",
         "id": [
           "2418576907",
           "2592816193"
@@ -3399,7 +3399,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "vision-sleep",
+        "trajectory": "vision-sleep",
         "id": [
           "804484342",
           "880136811"
@@ -3414,7 +3414,7 @@
         ]
       },
       {
-        "trjectory": "sleep-depression",
+        "trajectory": "sleep-depression",
         "id": [
           "1377735324",
           "1818613154"
@@ -3440,7 +3440,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "vision-headache",
+        "trajectory": "vision-headache",
         "id": [
           "1268909341",
           "1575362956"
@@ -3455,7 +3455,7 @@
         ]
       },
       {
-        "trjectory": "depression-anxiety",
+        "trajectory": "depression-anxiety",
         "id": [
           "1219108190",
           "1733937429"
@@ -3470,7 +3470,7 @@
         ]
       },
       {
-        "trjectory": "vision-headache",
+        "trajectory": "vision-headache",
         "id": [
           "2094648244",
           "2225760308"
@@ -3485,7 +3485,7 @@
         ]
       },
       {
-        "trjectory": "vision-anxiety",
+        "trajectory": "vision-anxiety",
         "id": [
           "2094648244",
           "2298507347"
@@ -3511,7 +3511,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "392832059",
           "407070799"
@@ -3526,7 +3526,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "408783284",
           "430632899"
@@ -3541,7 +3541,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "435440249",
           "435440497"
@@ -3556,7 +3556,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "458122898",
           "477964991"
@@ -3571,7 +3571,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "1233170424",
           "1261644416"
@@ -3586,7 +3586,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "1293113265",
           "1447026469"
@@ -3601,7 +3601,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "1461607147",
           "1558513277"
@@ -3616,7 +3616,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "1558513276",
           "1565619132"
@@ -3631,7 +3631,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "1567148526",
           "1580558343"
@@ -3646,7 +3646,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "1604332791",
           "1649924896"
@@ -3661,7 +3661,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "1665474854",
           "1689652091"
@@ -3676,7 +3676,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "1805781789",
           "1805728453"
@@ -3691,7 +3691,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "1856152223",
           "1879497614"
@@ -3706,7 +3706,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-neurologic",
+        "trajectory": "endocrine-neurologic",
         "id": [
           "1856152223",
           "1999032960"
@@ -3721,7 +3721,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "1999032960",
           "1999071552"
@@ -3736,7 +3736,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "2040640624",
           "2107755191"
@@ -3751,7 +3751,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "2146012157",
           "2311911563"
@@ -3766,7 +3766,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "2328839513",
           "2421037439"
@@ -3781,7 +3781,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-neurologic",
+        "trajectory": "endocrine-neurologic",
         "id": [
           "2434882708",
           "2421225957"
@@ -3796,7 +3796,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-neurologic",
+        "trajectory": "endocrine-neurologic",
         "id": [
           "2431192995",
           "2435192093"
@@ -3811,7 +3811,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "2500411412",
           "2521817052"
@@ -3826,7 +3826,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "2521817052",
           "2574299278"
@@ -3841,7 +3841,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-sleep",
+        "trajectory": "endocrine-sleep",
         "id": [
           "2626115644",
           "2676359197"
@@ -3856,7 +3856,7 @@
         ]
       },
       {
-        "trjectory": "endocrine-headache",
+        "trajectory": "endocrine-headache",
         "id": [
           "2626115644",
           "2676359197"
@@ -3882,7 +3882,7 @@
     },
     "trajectories": [
       {
-        "trjectory": "endocrine-pcs",
+        "trajectory": "endocrine-pcs",
         "id": [
           "2427546443",
           "2594805899"
