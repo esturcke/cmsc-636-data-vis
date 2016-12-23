@@ -1,5 +1,7 @@
 import { PropTypes as T } from "react"
 
+const glyph = T.oneOfType([ T.string, T.number ])
+
 const trajectory = T.shape({
   trajectory : T.string.isRequired,
   id         : T.arrayOf(T.string.isRequired).isRequired,
@@ -8,6 +10,7 @@ const trajectory = T.shape({
 })
 
 const propTypes = {
+  glyph,
   trajectory,
   ...T,
 }

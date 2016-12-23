@@ -1,0 +1,12 @@
+$color : hsl(12, 95%, 45%);
+
+:local {
+  .highlight {
+    path, circle {
+      stroke : $color !important;
+    }
+    circle {
+      fill : $color !important;
+    }
+  }
+}

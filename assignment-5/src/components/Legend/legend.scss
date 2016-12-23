@@ -11,7 +11,7 @@
       height      : 16px;
       display     : flex;
       align-items : center;
-      display     : relative;
+      position    : relative;
 
       svg {
         
@@ -26,5 +26,15 @@
       min-width : 10ch;
       color     : #333;
     }
+  }
+
+  .target {
+    cursor   : pointer;
+    position : absolute;
+    top      : 0;
+    right    : 0;
+    bottom   : 0;
+    left     : 0;
+    z-index  : 2;
   }
 }

@@ -16,6 +16,7 @@ class Assignment extends React.Component {
 
   render = () => (
     <span>
+      <span className={styles.target}/>
       {this.props.assignment ? <Label assignment={this.props.assignment}/> : null}
     </span>
   )

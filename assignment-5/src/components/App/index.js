@@ -9,6 +9,7 @@ import trajectories                from "../../../data/trajectories.json"
 
 class App extends React.Component {
   state = {
+    highlight   : null,
     assignments : {
       1 : ["headache"   , "depression"],
       2 : ["depression" , "ptsd"      ],
@@ -26,11 +27,23 @@ class App extends React.Component {
     invert,
   ])(this.state.assignments)
 
+  highlightGlyph = (highlight = null) => this.setState({ highlight })
+
   render = () => (
     <div>
-      <Legend assignGlyph={this.assignGlyph} assignments={this.state.assignments}/>
+      <Legend
+        assignGlyph={this.assignGlyph}
+        assignments={this.state.assignments}
+        highlightGlyph={this.highlightGlyph}
+        highlight={this.state.highlight}
+      />
       <div className={styles.fill}>
-        <Visualization trajectories={trajectories} trajectoryGlyphs={this.trajectoryGlyphs()}/>
+        <Visualization
+          trajectories={trajectories}
+          trajectoryGlyphs={this.trajectoryGlyphs()}
+          highlightGlyph={this.highlightGlyph}
+          highlight={this.state.highlight}
+        />
       </div>
     </div>
   )
