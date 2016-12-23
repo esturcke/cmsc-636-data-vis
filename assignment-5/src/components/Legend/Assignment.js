@@ -27,7 +27,7 @@ class Assignment extends React.Component {
     <span>
       <Popover
         isOpen={this.state.open}
-        place="right"
+        place="left"
         body={<Selector assignment={this.props.assignment} assignGlyph={this.props.assignGlyph}/>}
         onOuterAction={this.toggleOpen}
       >
