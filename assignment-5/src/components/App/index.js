@@ -10,10 +10,11 @@ class App extends React.Component {
   state = {
     highlight   : null,
     assignments : {
-      1 : ["headache"   , "depression"],
-      2 : ["depression" , "ptsd"      ],
-      3 : ["anxiety"    , "depression"],
-      4 : ["depression" , "vision"    ],
+      1 : [ "depression" , "ptsd"       ],
+      2 : [ "anxiety"    , "depression" ],
+      3 : [ "depression" , "anxiety"    ],
+      4 : [ "sleep"      , "depression" ],
+      5 : [ "endocrine"  , "headache"   ],
     },
   }
 
