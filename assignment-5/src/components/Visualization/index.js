@@ -10,10 +10,10 @@ const patientScale = (trajectories, height) => {
   const n = keys(trajectories).length
   return scaleOrdinal()
     .domain(flow([
-      orderBy("injury.age"),
+      orderBy("injury.age")("desc"),
       map("id"),
     ])(trajectories))
-    .range(range(n).map(i => height / n))
+    .range(range(n).map(i => i * height / n))
 }
 
 const trajectoryScale = width => scaleLinear().domain([-250, 350]).range([0, width])
