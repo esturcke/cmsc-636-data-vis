@@ -74,4 +74,4 @@ yarn trajectories
 Clicking on a row in the legend allows the user to pick the pattern to mark
 with the symbol.
 
-![Assigning a symbol to a pattern](assign-symbol.png)
+![Assigning a symbol to a pattern](assign-pattern.png)
