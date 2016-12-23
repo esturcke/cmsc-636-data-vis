@@ -6,7 +6,7 @@ const context = require.context("./assets/", false, /\.svg$/)
 const Glyph = ({ n }) => React.createElement(context(`./glyph-${n}.svg`))
 
 Glyph.propTypes = {
-  n : T.number.isRequired,
+  n : T.string.isRequired,
 }
 
 export default Glyph
