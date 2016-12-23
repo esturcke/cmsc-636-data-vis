@@ -29,6 +29,8 @@ const trajectoryScale = width => scaleLinear().domain([-250, 350]).range([paddin
 const Visualization = ({ trajectories, trajectorySymbols, containerWidth, containerHeight }) => (
   <svg width={containerWidth} height={containerHeight}>
     <Axis x={0} y={containerHeight - 20}
+      padding={padding}
+      label="encounter since TBI"
       scale={trajectoryScale(containerWidth)}
       tickValues={[-200, -100, 0, 100, 200, 300]}
     />
