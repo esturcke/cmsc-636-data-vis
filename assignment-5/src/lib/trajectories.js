@@ -22,7 +22,7 @@ const fromEncounters = (from, to) => flow(
   flatMap(duplicateIfBoth(from, to)),                    // duplicate encounters that have both with `to` first
   filter(consecutiveDuplicate(from, to)),                // remove consecutive duplicates
   chunk(2),                                              // chunk alternating encounters that are now a from → to
-  map(pairAsTrajectory(from, to)),                       // format the trjectory
+  map(pairAsTrajectory(from, to)),                       // format the trajectory
 )
 
 const trajectories = (from, to) => flow(
