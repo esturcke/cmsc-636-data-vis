@@ -223,12 +223,23 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
-autoprefixer@^6.3.1, autoprefixer@^6.5.4:
+autoprefixer@^6.3.1:
   version "6.5.4"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-6.5.4.tgz#1386eb6708ccff36aefff70adc694ecfd60af1b0"
   dependencies:
     browserslist "~1.4.0"
     caniuse-db "^1.0.30000597"
+    normalize-range "^0.1.2"
+    num2fraction "^1.2.2"
+    postcss "^5.2.6"
+    postcss-value-parser "^3.2.3"
+
+autoprefixer@^6.6.0:
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-6.6.0.tgz#d5b347ebbaf79e79d30b81c0ee3e482b288527bf"
+  dependencies:
+    browserslist "~1.5.1"
+    caniuse-db "^1.0.30000602"
     normalize-range "^0.1.2"
     num2fraction "^1.2.2"
     postcss "^5.2.6"
@@ -1168,6 +1179,12 @@ browserslist@^1.4.0, browserslist@~1.4.0:
   dependencies:
     caniuse-db "^1.0.30000539"
 
+browserslist@~1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-1.5.1.tgz#67c3f2a1a6ad174cd01d25d2362e6e6083b26986"
+  dependencies:
+    caniuse-db "^1.0.30000601"
+
 bser@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/bser/-/bser-1.0.2.tgz#381116970b2a6deea5646dd15dd7278444b56169"
@@ -1247,6 +1264,10 @@ camelcase@^3.0.0:
 caniuse-db@^1.0.30000539, caniuse-db@^1.0.30000597:
   version "1.0.30000601"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000601.tgz#073c9d1c62edb399ecc783a7ab40698b5694d2fe"
+
+caniuse-db@^1.0.30000601, caniuse-db@^1.0.30000602:
+  version "1.0.30000602"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000602.tgz#06b2cbfb6c3aeef7ddb18cd588043549ad1a2d4e"
 
 cardinal@^1.0.0:
   version "1.0.0"
