@@ -65,9 +65,24 @@ yarn trajectories
 
 ## Visualization
 
+Per the assignment, the symbols follow a system given by Jacques Bertin in
+*Semiology of Graphics: Diagrams, Networks, Maps*. The claim is that the symbols
+are easily distinguishable, yet none are visual salient. The SVG for the
+symbols were written by hand.
+
 ![Symbols](symbols.png)
 
+Each symbol can be assigned to an ordered pair of symptoms describing a
+trajectory. The vertical axis are patients ordered by age at the time of the
+injury. Horizontally, the symbols are placed according to encounter relative to
+the injury.
+
 ![Temporal trajectories visualization](vis.png)
+
+There's significant overlap and so I added the ability to hover over the legend
+to highlight the given symbol in the visualization.
+
+![Highlghting a symbol](highlight.png)
 
 ## Critical Evaluation
 
