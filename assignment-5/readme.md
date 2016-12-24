@@ -79,12 +79,50 @@ the injury.
 
 ![Temporal trajectories visualization](vis.png)
 
+The trajectories were all precomputed as part of the first part of the
+assignment.
+
 There's significant overlap and so I added the ability to hover over the legend
 to highlight the given symbol in the visualization.
 
 ![Highlghting a symbol](highlight.png)
 
 ## Critical Evaluation
+
+The first claim is that using this system of symbols is no visual saliency, yet
+still visually distinguishable. The second is that is an effective way to
+highlight temporal changes in symptoms.
+
+I do agree that between the symbols themselves, none are visually salient. They
+are also remain visually distinguishable even down to sizes of around 5px on an
+HiDPI screen. 
+
+The problem comes with high density areas. The symbols run together and become
+very hard to distinguish. Additionally, these high density areas become very
+salient. 
+
+![High density use of symbols](high-density.png)
+
+In terms of effectiveness, I was not able to gain any new understanding of the
+data using this visualization. Patients vary considerably in terms of symptoms.
+One thing that did stand out again is that there seems to be a bias towards
+symptoms prior to the first TBI. Perhaps this is because there was loss of life,
+or simply the end of when data was collected for this data set. Perhaps also
+the TBI resulted in removal from combat and so while the patient might still be
+seeking treatment for the TBI, they have fewer other reasons to have
+encounters.
+
+### Pros
+
+  - Not visually salient yet still distinguishable even at small sizes on HiDPI
+    screens
+  - Black and white and so suitable print and also freeing up color for other
+    encoding
+
+### Cons
+
+  - High density areas are very hard to tell what's going on
+  - Was not able to discover any interesting trends across patients
 
 ## Extra Credit
 
